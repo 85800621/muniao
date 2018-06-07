@@ -17,7 +17,13 @@ public class RoomServiceImpl implements RoomService{
 
     @Override
     public List<Room> findAllByFeature(int featureId) {
-        List<Room> list= roomDao.findByFeature(featureId);
-        return list;
+        return roomDao.findByFeature(featureId);
     }
+
+    @Override
+    public Integer selectCountRoom(int featureId) {
+        int num = roomDao.selectCountRoom(featureId);
+        return num;
+    }
+
 }

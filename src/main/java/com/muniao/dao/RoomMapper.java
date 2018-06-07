@@ -12,5 +12,17 @@ import java.util.List;
  */
 @Repository
 public interface RoomMapper {
+    /**
+     * 查询特房间信息
+     * @param featureId 特色id
+     * @return 返回room对象
+     */
     List<Room> findByFeature(int featureId);
+
+    /**
+     * 查询特色房间数量
+     * @param featureId 特色id
+     * @return 返回数量int
+     */
+    Integer selectCountRoom(int featureId);
 }

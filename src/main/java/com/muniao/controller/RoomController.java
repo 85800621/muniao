@@ -17,8 +17,10 @@ public class RoomController {
 
     @RequestMapping(value = "/list/{featureId}")
     public String list(@PathVariable("featureId")int featureId, Model model){
+        int number = roomService.selectCountRoom(featureId);
         List<Room> rooms = roomService.findAllByFeature(featureId);
         model.addAttribute("rooms",rooms);
+        model.addAttribute("number",number);
         return "/room/list";
     }
 }
