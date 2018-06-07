@@ -27,7 +27,7 @@
 
         <property name="freemarkerVariables"><!--设置一些常用的全局变量-->
             <map>
-                <entry key="imagesRoot" value="http://39.105.123.156/images"></entry>
+                <entry key="staticRoot" value="http://39.105.123.156"></entry>
             </map>
         </property>
 
