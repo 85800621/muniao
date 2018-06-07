@@ -25,10 +25,17 @@ public class UserTestController {
         return "/index";
     }
 
+
     @RequestMapping(value = "/register")
     public String register(){
         return "/register";
     }
+
+    @RequestMapping(value = "/features")
+    public String features(){
+        return "/features";
+    }
+
 
     @RequestMapping(value = "/getInfo")
     public String info(String id,Model model){
