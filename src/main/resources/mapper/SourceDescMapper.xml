@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.PriceIntervalMapper">
+  <resultMap id="BaseResultMap" type="com.muniao.entity.RoomPriceInterval">
+    <id column="roomSource_desc_id" jdbcType="INTEGER" property="roomSourceDesecId" />
+    <result column="roomSource_desc" jdbcType="VARCHAR" property="roomSourceDesc" />
+    <result column="car_route" jdbcType="VARCHAR" property="carRoute" />
+    <result column="surrounding_facility" jdbcType="VARCHAR" property="surroundingFacility" />
+    <result column="landmark" jdbcType="VARCHAR" property="landMark" />
+    <result column="business_cirle_desc" jdbcType="VARCHAR" property="businessCirle" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+      roomSource_desc_id,roomSource_desc,car_route,surrounding_facility,landmark,business_cirle_desc
+  </sql>
+
+  <select id="selectByDescId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_roomSource_desc
+    WHERE roomSource_desc_id=#{descId,jdbcType=INTEGER}
+  </select>
+
+</mapper>

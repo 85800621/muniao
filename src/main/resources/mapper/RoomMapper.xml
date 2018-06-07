@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.RoomMapper">
+  <resultMap id="BaseResultMap" type="com.muniao.entity.Room">
+    <id column="room_id" jdbcType="INTEGER" property="roomId" />
+    <result column="room_name" jdbcType="VARCHAR" property="roomName" />
+    <result column="room_price" jdbcType="INTEGER" property="roomPrice" />
+    <result column="room_status" jdbcType="INTEGER" property="roomStatus" />
+    <result column="room_location" jdbcType="VARCHAR" property="roomLocation" />
+    <result column="room_longitude" jdbcType="VARCHAR" property="roomLongitude" />
+    <result column="room_latitude" jdbcType="VARCHAR" property="roomLatitude" />
+    <collection property="roomType" column="room_type_id" select="com.muniao.dao.RoomTypeMapper.selectByTypeId"/>
+    <collection property="roomInterval" column="price_interval_id" select="com.muniao.dao.PriceIntervalMapper.selectByIntervalId"/>
+    <collection property="roomFeature" column="room_feature_id" select="com.muniao.dao.RoomFeatureMapper.selectByFeatureId"/>
+    <collection property="roomFacility" column="room_facility_id" select="com.muniao.dao.RoomFacilityMapper.selectByFacilityId"/>
+    <collection property="roomDesc" column="roomSource_desc_id" select="com.muniao.dao.SourceDescMapper.selectByDescId"/>
+    <collection property="refundRule" column="refund_rule_id" select="com.muniao.dao.RefundRuleMapper.selectByRuleId"/>
+    <collection property="roomInfo" column="room_info_id" select="com.muniao.dao.RoomInfoMapper.selectByInfoId"/>
+    <collection property="landlord" column="user_id" select="com.muniao.dao.UserMapper.selectByUserId"/>
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    room_id,room_name,room_price,room_status,room_location,room_longitude,room_latitude,
+    room_type_id,price_interval_id,room_feature_id,room_facility_id,roomSource_desc_id,
+    refund_rule_id,room_info_id,user_id
+  </sql>
+
+  <select id="findByFeature" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_room
+    WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER}
+  </select>
+
+</mapper>

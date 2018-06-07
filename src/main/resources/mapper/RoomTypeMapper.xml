@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.RoomTypeMapper">
+  <resultMap id="BaseResultMap" type="com.muniao.entity.RoomType">
+    <id column="room_type_id" jdbcType="INTEGER" property="typeId" />
+    <result column="room_type" jdbcType="VARCHAR" property="roomType" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+      room_type_id,room_type
+  </sql>
+
+  <select id="selectByTypeId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_room_type
+    WHERE room_type_id=#{typeId,jdbcType=INTEGER}
+  </select>
+
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.RefundRuleMapper">
+  <resultMap id="BaseResultMap" type="com.muniao.entity.RefundRule">
+    <id column="refund_rule_id" jdbcType="INTEGER" property="ruleId" />
+    <result column="rule_type" jdbcType="VARCHAR" property="ruleType"/>
+    <result column="rule_content" jdbcType="VARCHAR" property="ruleContent" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+      refund_rule_id,rule_type,rule_content
+  </sql>
+
+  <select id="selectByRuleId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_refund_rule
+    WHERE refund_rule_id=#{ruleId,jdbcType=INTEGER}
+  </select>
+
+</mapper>
