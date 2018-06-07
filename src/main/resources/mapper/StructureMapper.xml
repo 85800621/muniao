@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.StructureMapper">
+  <resultMap id="BaseResultMap" type="com.muniao.entity.RoomStructure">
+    <id column="room_structure_id" jdbcType="INTEGER" property="structureId" />
+    <result column="bedroom_num" jdbcType="INTEGER" property="bedroomNum"/>
+    <result column="livingroom_num" jdbcType="INTEGER" property="livingroomNum" />
+    <result column="kitchen_num" jdbcType="INTEGER" property="kitchenNum" />
+    <result column="personal_bathroom_num" jdbcType="INTEGER" property="bathroomNum" />
+    <result column="public_bathroom_num" jdbcType="INTEGER" property="pubbathroomNum" />
+  </resultMap>
+  <sql id="Base_Column_List">
+      room_structure_id,bedroom_num,livingroom_num,kitchen_num,personal_bathroom_num,public_bathroom_num
+  </sql>
+
+  <select id="selectByStructureId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_room_strture
+    WHERE room_structure_id=#{structureId,jdbcType=INTEGER}
+  </select>
+
+</mapper>

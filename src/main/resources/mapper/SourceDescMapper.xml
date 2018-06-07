@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.muniao.dao.PriceIntervalMapper">
-  <resultMap id="BaseResultMap" type="com.muniao.entity.RoomPriceInterval">
+<mapper namespace="com.muniao.dao.SourceDescMapper">
+  <resultMap id="BaseResultMap" type="com.muniao.entity.RoomSourceDesc">
     <id column="roomSource_desc_id" jdbcType="INTEGER" property="roomSourceDesecId" />
     <result column="roomSource_desc" jdbcType="VARCHAR" property="roomSourceDesc" />
     <result column="car_route" jdbcType="VARCHAR" property="carRoute" />

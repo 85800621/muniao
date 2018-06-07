@@ -44,8 +44,10 @@ public class Room {
     private RefundRule refundRule;
     /**
      * 房间信息
+     * private RoomInfo roomInfo;
+     * 一整合该字段
      */
-    private RoomInfo roomInfo;
+
     /**
      * 房东
      */
@@ -66,6 +68,67 @@ public class Room {
      * 房间纬度
      */
     private String roomLatitude;
+
+    /**
+     * 户型
+     */
+    private RoomStructure roomStructure;
+    /**
+     * 出租方式
+     */
+    private RentalMethod rentalMethod;
+    /**
+     * 房间面积
+     */
+    private RoomAvaliableArea avaliableArea;
+    /**
+     * 床位信息
+     */
+    private RoomBedInfo roomBedInfo;
+    /**
+     * 是否可以增加床位.
+     */
+    private String bedAvaliable;
+
+    public RoomStructure getRoomStructure() {
+        return roomStructure;
+    }
+
+    public void setRoomStructure(RoomStructure roomStructure) {
+        this.roomStructure = roomStructure;
+    }
+
+    public RentalMethod getRentalMethod() {
+        return rentalMethod;
+    }
+
+    public void setRentalMethod(RentalMethod rentalMethod) {
+        this.rentalMethod = rentalMethod;
+    }
+
+    public RoomAvaliableArea getAvaliableArea() {
+        return avaliableArea;
+    }
+
+    public void setAvaliableArea(RoomAvaliableArea avaliableArea) {
+        this.avaliableArea = avaliableArea;
+    }
+
+    public RoomBedInfo getRoomBedInfo() {
+        return roomBedInfo;
+    }
+
+    public void setRoomBedInfo(RoomBedInfo roomBedInfo) {
+        this.roomBedInfo = roomBedInfo;
+    }
+
+    public String getBedAvaliable() {
+        return bedAvaliable;
+    }
+
+    public void setBedAvaliable(String bedAvaliable) {
+        this.bedAvaliable = bedAvaliable;
+    }
 
     public int getRoomId() {
         return roomId;
@@ -139,13 +202,13 @@ public class Room {
         this.refundRule = refundRule;
     }
 
-    public RoomInfo getRoomInfo() {
-        return roomInfo;
-    }
-
-    public void setRoomInfo(RoomInfo roomInfo) {
-        this.roomInfo = roomInfo;
-    }
+//    public RoomInfo getRoomInfo() {
+//        return roomInfo;
+//    }
+//
+//    public void setRoomInfo(RoomInfo roomInfo) {
+//        this.roomInfo = roomInfo;
+//    }
 
     public User getLandlord() {
         return landlord;

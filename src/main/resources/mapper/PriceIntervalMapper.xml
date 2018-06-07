@@ -10,7 +10,7 @@
       price_interval_id,price_interval
   </sql>
 
-  <select id="selectByFeatureId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByIntervalId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     FROM tb_price_interval

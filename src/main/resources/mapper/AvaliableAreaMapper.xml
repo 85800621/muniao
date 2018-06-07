@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.AvaliableAreaMapper">
+  <resultMap id="BaseResultMap" type="com.muniao.entity.RoomAvaliableArea">
+    <id column="room_avaliableArea_id" jdbcType="INTEGER" property="areaId" />
+    <result column="standard_population" jdbcType="VARCHAR" property="standPop"/>
+    <result column="room_area" jdbcType="VARCHAR" property="roomArea" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+      room_avaliableArea_id,standard_population,room_area
+  </sql>
+
+  <select id="selectAreaId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_room_avaliableArea
+    WHERE room_avaliableArea_id=#{areaId,jdbcType=INTEGER}
+  </select>
+
+</mapper>

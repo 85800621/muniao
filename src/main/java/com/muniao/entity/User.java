@@ -31,7 +31,7 @@ public class User {
     /**
      * 房间名称
      */
-    private String roomNmae;
+    private String roomName;
     /**
      * 用户密码
      */
@@ -121,12 +121,12 @@ public class User {
         this.email = email;
     }
 
-    public String getRoomNmae() {
-        return roomNmae;
+    public String getRoomName() {
+        return roomName;
     }
 
-    public void setRoomNmae(String roomNmae) {
-        this.roomNmae = roomNmae;
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
     }
 
     public String getPassword() {
