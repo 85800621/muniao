@@ -1,5 +1,7 @@
 package com.muniao.entity;
 
+import java.util.List;
+
 /**
  * 2018/6/7
  * 史国纲创建
@@ -33,7 +35,7 @@ public class Room {
     /**
      * 房间设施
      */
-    private RoomFacility roomFacility;
+    private List<RoomFacility> roomFacility;
     /**
      * 房源描述
      */
@@ -178,11 +180,11 @@ public class Room {
         this.roomFeature = roomFeature;
     }
 
-    public RoomFacility getRoomFacility() {
+    public List<RoomFacility> getRoomFacility() {
         return roomFacility;
     }
 
-    public void setRoomFacility(RoomFacility roomFacility) {
+    public void setRoomFacility(List<RoomFacility> roomFacility) {
         this.roomFacility = roomFacility;
     }
 

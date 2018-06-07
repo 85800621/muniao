@@ -11,16 +11,14 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
-@RequestMapping("/room")
+@RequestMapping("/")
 public class RoomController {
     @Resource private RoomService roomService;
 
-    @RequestMapping(value = "/list/{featureId}")
+    @RequestMapping(value = "features/{featureId}")
     public String list(@PathVariable("featureId")int featureId, Model model){
-        int number = roomService.selectCountRoom(featureId);
         List<Room> rooms = roomService.findAllByFeature(featureId);
         model.addAttribute("rooms",rooms);
-        model.addAttribute("number",number);
-        return "/room/list";
+        return "/features";
     }
 }
