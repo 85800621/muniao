@@ -12,7 +12,7 @@ public class UtilsCode {
         String host = "https://feginesms.market.alicloudapi.com";
         String path = "/codeNotice";
         String method = "GET";
-        String appcode = "b4597ed5545d408e90da3910c58e9215";
+        String appcode = "58c988cbcc754512a859061487ee7f25";
         Map<String, String> headers = new HashMap<String, String>();
         //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 83359fd73fe94948385f570e3c139105
         headers.put("Authorization", "APPCODE " + appcode);
