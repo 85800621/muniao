@@ -484,6 +484,11 @@
                 <a href="https://www.muniao.com/features.html" title="主题特色房">主题特色房</a>
             </div>
         </div>
+
+        <#list rooms as room>
+            ${room.roomFacility.facilityContent}
+        </#list>
+
     </div>
     <div class="s_mn_fbody">
         <div class="s_mn_center2">
