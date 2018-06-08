@@ -488,6 +488,7 @@
         <#list rooms as room>
             ${room.roomFacility.facilityContent}
         </#list>
+        ${countroom}
 
     </div>
     <div class="s_mn_fbody">

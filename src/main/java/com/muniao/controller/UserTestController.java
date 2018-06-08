@@ -45,6 +45,12 @@ public class UserTestController {
         return "/landlordorder";
     }
 
+    @RequestMapping(value = "/orderdetail")
+    public String orderdetail(){
+        return "/orderdetail";
+    }
+
+
     @RequestMapping(value = "/roommanagement")
     public String roommanagement(){
         return "/roommanagement";
