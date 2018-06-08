@@ -9,25 +9,25 @@ public class RoomFacility {
     /**
      * 设施ID
      */
-    private int FacilityId;
+    private int facilityId;
     /**
      * 设施内容
      */
-    private String FacilityContent;
+    private String facilityContent;
 
     public int getFacilityId() {
-        return FacilityId;
+        return facilityId;
     }
 
     public void setFacilityId(int facilityId) {
-        FacilityId = facilityId;
+        this.facilityId = facilityId;
     }
 
     public String getFacilityContent() {
-        return FacilityContent;
+        return facilityContent;
     }
 
     public void setFacilityContent(String facilityContent) {
-        FacilityContent = facilityContent;
+        this.facilityContent = facilityContent;
     }
 }

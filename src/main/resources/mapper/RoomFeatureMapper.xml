@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.RoomFeatureMapper">
+  <resultMap id="BaseResultMap" type="com.muniao.entity.RoomFeature">
+    <id column="room_feature_id" jdbcType="INTEGER" property="roomFeatureId" />
+    <result column="room_feature" jdbcType="VARCHAR" property="roomFeature" />
+    <result column="feature_image" jdbcType="VARCHAR" property="featureImage" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+      room_feature_id,room_feature,feature_image
+  </sql>
+
+  <select id="selectByFeatureId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_room_feature
+    WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER}
+  </select>
+
+</mapper>

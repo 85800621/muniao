@@ -107,7 +107,7 @@
                 /vendor/**=anon
                 <!--authc需要登录才能访问-->
                 <!--user配合rememberMe使用有效，authc不能配合rememberMe使用-->
-                /**=user
+                /**=anon
             </value>
         </property>
 

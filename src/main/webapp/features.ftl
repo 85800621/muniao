@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0036)https://www.muniao.com/features.html -->
+<!-- saved from url=(0046)https://www.muniao.com/features_housing_7.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>特色主题房间,特色房短租网-木鸟短租</title>
-    <meta name="keywords" content="特色房间,特色短租网,主题房">
-    <meta name="description" content="想体验特色住所,来木鸟短租特色房源主题,这里集合别墅日租,古镇客栈,特色四合院,海景房短租,情侣蜜月短租房,特色农家院住宿等特色主题房.">
+    <title>海景房短租,租直面大海海景房  - 木鸟短租</title>
+    <meta name="keywords" content="海景房短租,海景房出租">
+    <meta name="description" content="木鸟短租为有海边度假旅游寻找海景房出租的朋友提供优质、可靠的海景房住宿服务.精心搜集了海景房短租房源,全心全意为您的出行住宿保驾护航.">
     <meta name="viewport" content="width=1400, initial-scale=1">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta property="wb:webmaster" content="xfwy">
@@ -106,13 +106,13 @@
             backparm = backparm.replace(/\*/g, "&");
             backparm = backparm.replace(/A/g, "=");
             backurl = backurl.replace(/F/, "/");
-            backurlparm = "/" + backurl + "?" + backparm+"&t="+131728103328004188;
+            backurlparm = "/" + backurl + "?" + backparm+"&t="+131728116248316688;
         }
         else if (backurl != "") {
             backurlparm = "/" + backurl;
         }else if(ss !=null && ss !="")
         {
-            backurlparm = "https://www.muniao.com/" + ss+"?t="+131728103328004188;
+            backurlparm = "https://www.muniao.com/" + ss+"?t="+131728116248316688;
         }
 
         if (tp == 0) {
@@ -449,129 +449,1226 @@
 
 </script>
 <style>
-    /* CSS Document */
-    .w_subanner {
-        width: 100%;
-        height: 350px;
+    a {
+        background: 0 0;
+        color: #555;
+        text-decoration: none;
     }
-
-    .w_subtitle {
+    .s_mn_page_bar {
         width: 100%;
-        margin: 0 auto;
-        padding-top: 120px;
+        height: 30px;
+        padding: 5px 0;
+        margin: 25px 0;
+        display: inline-block;
         text-align: center;
-        color: #fff;
-        line-height: 28px;
     }
-
-    .w_featuresbanner {
-        background: url(${staticRoot}/images/features_banner.jpg) center top no-repeat;
-        background-attachment: fixed;
+    .s_mn_page_bar a {
+        display: inline-block;
+        margin: 0 2px;
+        padding: 0 10px;
+        border: 1px solid #e5e5e5;
+        background: #fff;
+        font: 12px/25px "Microsoft YaHei";
+    }
+    .s_mn_page_bar a.s_mn_page_bar_over {
+        border: 1px solid #e46355;
+        background: #FF6C5C;
+        color: #fff;
+    }
+    .s_mn_page_bar a:hover {
+        border: 1px solid #e46355;
+        background: #FF6C5C;
+        color: #fff;
+    }
+    .s_mn_page_thispage{
+        background:#ff6c5c;
+        color:#fff;
+        border:1px solid #e46355;
+    }
+    .s_mn_page_thispage:hover{
+        background:#ff6c5c;color:#fff;border:1px solid #e46355;
+    }
+    .page_city {
+        display: inline-block;
+        margin: 10px 20px 0 20px;
+        color: #555555;
+        font-size: 14px;
+    }
+    .page_city a {
+        color: #19B5FE;
     }
 </style>
-<div class="w_subanner w_featuresbanner">
-    <div class="w_subtitle">
-        <h1 class="f28">主题特色房</h1>
-        <p class="f16">旅行为了体验美好的生活</p>
-    </div>
-</div>
 <div class="s_mn_mainbox">
-    <div class="s_mn_navtagbox">
+    <div class="s_mn_head_adbox" style="background:url(&#39;${staticRoot}/images/2015032662839257.jpg&#39;) #000 50% 50% no-repeat;">
+        <div class="s_mn_center">
+            <div class="s_mn_head_textbox">
+                <h2>海景房</h2>
+                <p>听海的声音、就在窗外</p>
+                <div class="s_mn_module_text">精选117套房间</div>
+            </div>
+        </div>
+    </div>
+    <div class="s_mn_navtagbox w_mt40">
         <div class="s_mn_center">
             <div class="s_mn_navtag">
-                <a href="http://www.muniao.com/" title="木鸟短租网">木鸟短租网</a>
-                <span>&nbsp;&gt;&nbsp;</span>
-                <a href="https://www.muniao.com/features.html" title="主题特色房">主题特色房</a>
+                <a href="http://www.muniao.com/" title="木鸟短租网">木鸟短租网</a> <span>&nbsp;&gt;&nbsp;</span>
+                <a href="https://www.muniao.com/features.html">主题特色房</a> <span>&nbsp;&gt;&nbsp;</span>
+                <h1 class="ts_name">
+                    <a href="https://www.muniao.com/features_housing_7.html">海景房</a>
+                </h1>
             </div>
         </div>
     </div>
     <div class="s_mn_fbody">
         <div class="s_mn_center2">
             <div class="s_mn_ftitle">
-                <h2><span>旅行，为了体验美好的生活</span></h2>
+                <h2><span>超值精选&nbsp;&nbsp;特别推荐</span></h2>
+                <div class="s_mn_features_citybox">
+                    <a href="https://www.muniao.com/features_housing_7.html" title="全部" class="s_mn_features_citybox_a">全部</a>&nbsp;|&nbsp;
+                    <a href="https://www.muniao.com/features_housing_qinhuangdao_7.html" title="秦皇岛">秦皇岛</a><label>&nbsp;| &nbsp;</label>
+                    <a href="https://www.muniao.com/features_housing_dalian_7.html" title="大连">大连</a><label>&nbsp;| &nbsp;</label>
+                    <a href="https://www.muniao.com/features_housing_xiamen_7.html" title="厦门">厦门</a><label>&nbsp;| &nbsp;</label>
+                    <a href="https://www.muniao.com/features_housing_qingdao_7.html" title="青岛">青岛</a><label>&nbsp;| &nbsp;</label>
+                    <a href="https://www.muniao.com/features_housing_weihai_7.html" title="威海">威海</a><label>&nbsp;| &nbsp;</label>
+                    <a href="https://www.muniao.com/features_housing_dali_7.html" title="大理">大理</a><label>&nbsp;| &nbsp;</label>
+                    <a href="https://www.muniao.com/features_housing_huizhou_7.html" title="惠州">惠州</a><label>&nbsp;| &nbsp;</label>
+                    <a href="https://www.muniao.com/features_housing_lingshui_7.html" title="陵水">陵水</a><label>&nbsp;| &nbsp;</label>
+                    <a href="https://www.muniao.com/features_housing_sanya_7.html" title="三亚">三亚</a><label>&nbsp;| &nbsp;</label>
+
+                </div>
             </div>
-            <div class="s_mn_module">
-                <div class="s_mn_module2x" data-s="2">
-                    <a href="https://www.muniao.com/features_housing_1.html" target="_blank" class="s_mn_place2">
-                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112850647477.jpg" alt="别墅  " title="别墅  ">
-                        <div class="s_mn_module_textbox">
-                            <div class="s_mn_module_label"> <span class="s_mn_module_name">别墅</span> <span class="s_mn_module_describe">公司年会，开Party，租豪华大别墅</span> </div>
-                            <div class="s_mn_module_text">优选1004套房间</div>
+            <div class="s_mn_fbody">
+                <div class="s_mn_center2">
+                    <div class="s_mn_module6x" data-id="151672">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/151672.html" title="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/0c9cd700c0f944058fb9ed2d0dfa938820171214154302610.jpg" width="580" height="368" alt="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥238</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/151672.html" title="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）" target="_blank">促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住5人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>19张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/1051916/" title="三亚珺海海景公寓" target="_blank">
+
+                                                <img src="${staticRoot}/images/ddf4f19d8b7f4257a67c6c0da8311af920171214161324329.jpg" alt="三亚珺海海景公寓" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/1051916/" title="三亚珺海海景公寓" target="_blank">三亚珺海…</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </a>
-                </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="https://www.muniao.com/features_housing_2.html" target="_blank" class="s_mn_place1">
-                    <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112850790009.jpg" alt="情侣房 " title="情侣房 ">
-                    <div class="s_mn_module_textbox">
-                        <div class="s_mn_module_label"> <span class="s_mn_module_name">情侣房</span> <span class="s_mn_module_describe">蜜月情侣不一样的浪漫</span> </div>
-                        <div class="s_mn_module_text">优选29套房间</div>
                     </div>
-                </a>
-            </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="https://www.muniao.com/features_housing_5.html" target="_blank" class="s_mn_place1">
-                    <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112850841837.jpg" alt="主题特色 " title="主题特色 ">
-                    <div class="s_mn_module_textbox">
-                        <div class="s_mn_module_label"> <span class="s_mn_module_name">主题特色房</span> <span class="s_mn_module_describe">爱TA将TA的梦变成现实</span> </div>
-                        <div class="s_mn_module_text">优选224套房间</div>
+                    <div class="s_mn_module6x" data-id="29307">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/29307.html" title="全览鼓浪屿，位于美丽鹭岛、轮渡旁中山路的海景套房" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/f6ff4ff589594f05b0b7bfe8b099279f20161129140859999.jpg" width="580" height="368" alt="全览鼓浪屿，位于美丽鹭岛、轮渡旁中山路的海景套房">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥398</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/29307.html" title="全览鼓浪屿，位于美丽鹭岛、轮渡旁中山路的海景套房" target="_blank">全览鼓浪屿，位于美丽鹭岛、轮渡旁中山路的海景套房</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住6人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>11张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/17626/" title="谢女士" target="_blank">
+
+                                                <img src="${staticRoot}/images/201501271120378353.jpg" alt="谢女士" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/17626/" title="谢女士" target="_blank">谢女士</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="https://www.muniao.com/features_housing_7.html" target="_blank" class="s_mn_place1">
-                    <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112850904385.jpg" alt="海景房 " title="海景房 ">
-                    <div class="s_mn_module_textbox">
-                        <div class="s_mn_module_label"> <span class="s_mn_module_name">海景房</span> <span class="s_mn_module_describe">听海的声音、就在窗外</span> </div>
-                        <div class="s_mn_module_text">优选234套房间</div>
+                    <div class="s_mn_module6x" data-id="30074">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/30074.html" title="金沙滩温馨两居室 带电梯" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/0f0f70cdaf5e404db47178e7474fc99a20170630155731274.jpg" width="580" height="368" alt="金沙滩温馨两居室 带电梯">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥198</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/30074.html" title="金沙滩温馨两居室 带电梯" target="_blank">金沙滩温馨两居室 带电梯</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>15张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/33391/" title="薛慧" target="_blank">
+
+                                                <img src="${staticRoot}/images/201603311031176355.jpg" alt="薛慧" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/33391/" title="薛慧" target="_blank">薛慧</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="https://www.muniao.com/features_housing_9.html" target="_blank" class="s_mn_place1">
-                    <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112850969601.jpg" alt="古镇客栈 " title="古镇客栈 ">
-                    <div class="s_mn_module_textbox">
-                        <div class="s_mn_module_label"> <span class="s_mn_module_name">古镇客栈</span> <span class="s_mn_module_describe">住千年古镇，看岁月更迭，听年代流转</span> </div>
-                        <div class="s_mn_module_text">优选144套房间</div>
+                    <div class="s_mn_module6x" data-id="121693">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/121693.html" title="忆苦思甜大阳台海景两室两厅海边一百米" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/7fdfd76f66c3478799a3352776cbf49420170802105932138.jpg" width="580" height="368" alt="忆苦思甜大阳台海景两室两厅海边一百米">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥368</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/121693.html" title="忆苦思甜大阳台海景两室两厅海边一百米" target="_blank">忆苦思甜大阳台海景两室两厅海边一百米</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>15张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订2晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/776026/" title="apple853" target="_blank">
+
+                                                <img src="${staticRoot}/images/00c38fb4946a4e33bca92bdb761847c220170719215102879.jpg" alt="apple853" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/776026/" title="apple853" target="_blank">appl…</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="https://www.muniao.com/features_housing_4.html" target="_blank" class="s_mn_place1">
-                    <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112851022489.jpg" alt="木屋 " title="木屋 ">
-                    <div class="s_mn_module_textbox">
-                        <div class="s_mn_module_label"> <span class="s_mn_module_name">木屋</span> <span class="s_mn_module_describe">感受最真实大自然，从住木屋开始</span> </div>
-                        <div class="s_mn_module_text">优选23套房间</div>
+                    <div class="s_mn_module6x" data-id="37756">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/37756.html" title="金沙滩海景房 带电梯5分钟三居室 " target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20160527001622082.jpg" width="580" height="368" alt="金沙滩海景房 带电梯5分钟三居室 ">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥298</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/37756.html" title="金沙滩海景房 带电梯5分钟三居室 " target="_blank">金沙滩海景房 带电梯5分钟三居室 </a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>3室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住7人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>9张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订11晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/33391/" title="薛慧" target="_blank">
+
+                                                <img src="${staticRoot}/images/201603311031176355.jpg" alt="薛慧" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/33391/" title="薛慧" target="_blank">薛慧</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>                        <div class="s_mn_module2x" data-s="2">
-                <a href="https://www.muniao.com/features_housing_6.html" target="_blank" class="s_mn_place2">
-                    <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112852039681.jpg" alt="四合院 " title="四合院 ">
-                    <div class="s_mn_module_textbox">
-                        <div class="s_mn_module_label"> <span class="s_mn_module_name">四合院</span> <span class="s_mn_module_describe">感受老北京的深闺大院，品街头巷尾的家长里短</span> </div>
-                        <div class="s_mn_module_text">优选5套房间</div>
+                    <div class="s_mn_module6x" data-id="52359">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/52359.html" title="三亚大东海景区附近温馨两居室，可观海可做饭" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/7683538d11da4fb79c113b9cefd617af20161021153237530.jpg" width="580" height="368" alt="三亚大东海景区附近温馨两居室，可观海可做饭">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥198</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/52359.html" title="三亚大东海景区附近温馨两居室，可观海可做饭" target="_blank">三亚大东海景区附近温馨两居室，可观海可做饭</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>12张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/10141/" title="高兴雅居" target="_blank">
+
+                                                <img src="${staticRoot}/images/2013062965078633.jpg" alt="高兴雅居" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/10141/" title="高兴雅居" target="_blank">高兴雅居</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="https://www.muniao.com/features_housing_8.html" target="_blank" class="s_mn_place1">
-                    <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112852099413.jpg" alt="复式 " title="复式 ">
-                    <div class="s_mn_module_textbox">
-                        <div class="s_mn_module_label"> <span class="s_mn_module_name">复式LOFT</span> <span class="s_mn_module_describe">小资情调的感同身受</span> </div>
-                        <div class="s_mn_module_text">优选224套房间</div>
+                    <div class="s_mn_module6x" data-id="66364">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/66364.html" title="大东海家庭度假公寓可做饭的海景三居室-两卫" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20160619224532577.jpg" width="580" height="368" alt="大东海家庭度假公寓可做饭的海景三居室-两卫">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥258</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/66364.html" title="大东海家庭度假公寓可做饭的海景三居室-两卫" target="_blank">大东海家庭度假公寓可做饭的海景三居室-两卫</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>3室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住7人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>9张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/40541/" title="乐客居" target="_blank">
+
+                                                <img src="${staticRoot}/images/201501061347352332.JPG" alt="乐客居" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/40541/" title="乐客居" target="_blank">乐客居</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="https://www.muniao.com/features_housing_10.html" target="_blank" class="s_mn_place1">
-                    <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112852149213.jpg" alt="窑洞 " title="窑洞 ">
-                    <div class="s_mn_module_textbox">
-                        <div class="s_mn_module_label"> <span class="s_mn_module_name">窑洞</span> <span class="s_mn_module_describe">西北黄土高原上的别样风情</span> </div>
-                        <div class="s_mn_module_text">优选1套房间</div>
+                    <div class="s_mn_module6x" data-id="31927">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/31927.html" title="三亚湾 180度 一线正面无敌海景两居室 日租房" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20160925202522715.jpg" width="580" height="368" alt="三亚湾 180度 一线正面无敌海景两居室 日租房">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥298</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/31927.html" title="三亚湾 180度 一线正面无敌海景两居室 日租房" target="_blank">三亚湾 180度 一线正面无敌海景两居室 日租房</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>13张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订6晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/4215/" title="石美华" target="_blank">
+
+                                                <img src="${staticRoot}/images/d679bf20f49646169a9acc3ff831380e20180212180915051.jpg" alt="石美华" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/4215/" title="石美华" target="_blank">石美华</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="https://www.muniao.com/features_housing_11.html" target="_blank" class="s_mn_place1">
-                    <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112852226537.jpg" alt="农家院 " title="农家院 ">
-                    <div class="s_mn_module_textbox">
-                        <div class="s_mn_module_label"> <span class="s_mn_module_name">农家院</span> <span class="s_mn_module_describe">周末出游，同学聚会，感受最地道的风土人情</span> </div>
-                        <div class="s_mn_module_text">优选8套房间</div>
+                    <div class="s_mn_module6x" data-id="151713">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/151713.html" title="三亚大东海海景4房4卫1厅1厨套房" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/f5fafee239904a78890a8766e954957820171214164614016.jpg" width="580" height="368" alt="三亚大东海海景4房4卫1厅1厨套房">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥888</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/151713.html" title="三亚大东海海景4房4卫1厅1厨套房" target="_blank">三亚大东海海景4房4卫1厅1厨套房</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>4室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住10人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>21张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/1051990/" title="临海品" target="_blank">
+
+                                                <img src="${staticRoot}/images/670bf5be65bb4dc0a9f788bc8a7b238c20171215201248485.jpg" alt="临海品" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/1051990/" title="临海品" target="_blank">临海品</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>
+                    <div class="s_mn_module6x" data-id="143127">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/143127.html" title="欧式田园两室两厅海景阳台多床房" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/f3af1f2c00a7426c94822ee32b44c65c20171105120243641.jpg" width="580" height="368" alt="欧式田园两室两厅海景阳台多床房">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥498</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/143127.html" title="欧式田园两室两厅海景阳台多床房" target="_blank">欧式田园两室两厅海景阳台多床房</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住6人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>23张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订17晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/776026/" title="apple853" target="_blank">
+
+                                                <img src="${staticRoot}/images/00c38fb4946a4e33bca92bdb761847c220170719215102879.jpg" alt="apple853" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/776026/" title="apple853" target="_blank">appl…</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="100835">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/100835.html" title="大东海超级海景四房两厅" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/d4795ce4c315467c8f939944ce09d82920170524120159565.jpg" width="580" height="368" alt="大东海超级海景四房两厅">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥788</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/100835.html" title="大东海超级海景四房两厅" target="_blank">大东海超级海景四房两厅</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>4室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住9人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>18张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/5250/" title="谢友志" target="_blank">
+
+                                                <img src="${staticRoot}/images/201402281616185717.JPG" alt="谢友志" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/5250/" title="谢友志" target="_blank">谢友志</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="10343">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/10343.html" title="大东海高层无敌海景豪华套房-两居室" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20130513182237014.jpg" width="580" height="368" alt="大东海高层无敌海景豪华套房-两居室">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥480</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/10343.html" title="大东海高层无敌海景豪华套房-两居室" target="_blank">大东海高层无敌海景豪华套房-两居室</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>12张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/5155/" title="三亚椰海风情居" target="_blank">
+
+                                                <img src="${staticRoot}/images/1002f38699f64bd188d35295e6e933f620171118135314876.jpg" alt="三亚椰海风情居" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/5155/" title="三亚椰海风情居" target="_blank">三亚椰海…</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="150974">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/150974.html" title="三亚最高档小区时代海岸两居室海景套房" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/0410ac0d517842fb95a296f0e8e484d220171212171903422.jpg" width="580" height="368" alt="三亚最高档小区时代海岸两居室海景套房">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥240</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/150974.html" title="三亚最高档小区时代海岸两居室海景套房" target="_blank">三亚最高档小区时代海岸两居室海景套房</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>16张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订58晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/1049246/" title="刘凌璐" target="_blank">
+
+                                                <img src="${staticRoot}/images/7e72a05687b34346ad94c39ffcdc1c7a20171214135536032.jpg" alt="刘凌璐" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/1049246/" title="刘凌璐" target="_blank">刘凌璐</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="150572">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/150572.html" title="三亚湾高层海景双大床公寓" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/426b1277489d4256b4a766a90250ee8320171211154620547.jpg" width="580" height="368" alt="三亚湾高层海景双大床公寓">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥138</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/150572.html" title="三亚湾高层海景双大床公寓" target="_blank">三亚湾高层海景双大床公寓</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>1室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>10张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订54晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/1048089/" title="闫姐海景公寓" target="_blank">
+
+                                                <img src="${staticRoot}/images/194aaa42fcac42f8980ff6b65c2e816d20171213151702922.jpg" alt="闫姐海景公寓" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/1048089/" title="闫姐海景公寓" target="_blank">闫姐海景…</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="52809">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/52809.html" title="三亚大东海花园小区豪华海景三房两厅" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20151204153714545.jpg" width="580" height="368" alt="三亚大东海花园小区豪华海景三房两厅">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥558</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/52809.html" title="三亚大东海花园小区豪华海景三房两厅" target="_blank">三亚大东海花园小区豪华海景三房两厅</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>3室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住6人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>16张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/40203/" title="海初" target="_blank">
+
+                                                <img src="${staticRoot}/images/20160209165121205.png" alt="海初" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/40203/" title="海初" target="_blank">海初</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="150569">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/150569.html" title="三市场三房两厅两卫温馨海景大套房" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/6fbc4ecc3f5440899966106e53df673120171211154037844.jpg" width="580" height="368" alt="三市场三房两厅两卫温馨海景大套房">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥328</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/150569.html" title="三市场三房两厅两卫温馨海景大套房" target="_blank">三市场三房两厅两卫温馨海景大套房</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>3室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住6人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>20张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订6晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/1048089/" title="闫姐海景公寓" target="_blank">
+
+                                                <img src="${staticRoot}/images/194aaa42fcac42f8980ff6b65c2e816d20171213151702922.jpg" alt="闫姐海景公寓" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/1048089/" title="闫姐海景公寓" target="_blank">闫姐海景…</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="13052">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/13052.html" title="三亚湾 兰海花园 一线正面高层海景房两房" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/888c3dec7516405b882185f2b6abb9d620161016231436170.jpg" width="580" height="368" alt="三亚湾 兰海花园 一线正面高层海景房两房">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥298</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/13052.html" title="三亚湾 兰海花园 一线正面高层海景房两房" target="_blank">三亚湾 兰海花园 一线正面高层海景房两房</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>16张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/4215/" title="石美华" target="_blank">
+
+                                                <img src="${staticRoot}/images/d679bf20f49646169a9acc3ff831380e20180212180915051.jpg" alt="石美华" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/4215/" title="石美华" target="_blank">石美华</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="30911">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/30911.html" title="大东海海景三房套 交通方便  离市场近" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/126f9ba5ede54c02b6aaad170268236620170907164627088.jpg" width="580" height="368" alt="大东海海景三房套 交通方便  离市场近">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥438</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/30911.html" title="大东海海景三房套 交通方便  离市场近" target="_blank">大东海海景三房套 交通方便  离市场近</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>3室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住6人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>11张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/19226/" title="高绮灿" target="_blank">
+
+                                                <img src="${staticRoot}/images/201512071759596605.jpg" alt="高绮灿" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/19226/" title="高绮灿" target="_blank">高绮灿</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="25488">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/25488.html" title="大东海 海景 亚拉河小夜曲 四室两厅" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20151203225021377.jpg" width="580" height="368" alt="大东海 海景 亚拉河小夜曲 四室两厅">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥588</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/25488.html" title="大东海 海景 亚拉河小夜曲 四室两厅" target="_blank">大东海 海景 亚拉河小夜曲 四室两厅</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>4室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住8人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>15张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/19226/" title="高绮灿" target="_blank">
+
+                                                <img src="${staticRoot}/images/201512071759596605.jpg" alt="高绮灿" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/19226/" title="高绮灿" target="_blank">高绮灿</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="24242">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/24242.html" title="三亚 观海风情旅舍 特色三房一厅" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20140228160334655.jpg" width="580" height="368" alt="三亚 观海风情旅舍 特色三房一厅">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥580</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/24242.html" title="三亚 观海风情旅舍 特色三房一厅" target="_blank">三亚 观海风情旅舍 特色三房一厅</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>3室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住6人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>11张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/5250/" title="谢友志" target="_blank">
+
+                                                <img src="${staticRoot}/images/201402281616185717.JPG" alt="谢友志" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/5250/" title="谢友志" target="_blank">谢友志</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="130892">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/130892.html" title="不得不爱精品三室一厅" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/ed31ee394f534c48849cab0b1c2804a920170902191828878.jpg" width="580" height="368" alt="不得不爱精品三室一厅">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥400</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/130892.html" title="不得不爱精品三室一厅" target="_blank">不得不爱精品三室一厅</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>3室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住6人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>13张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/183265/" title="泰阁" target="_blank">
+
+                                                <img src="${staticRoot}/images/20161021142025714.png" alt="泰阁" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/183265/" title="泰阁" target="_blank">泰阁</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="130875">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/130875.html" title="遇见海洋海景三室一厅" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/96b15300207843bf8eabbf3488375e9c20170902174630853.jpg" width="580" height="368" alt="遇见海洋海景三室一厅">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥400</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/130875.html" title="遇见海洋海景三室一厅" target="_blank">遇见海洋海景三室一厅</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>3室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住7人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>8张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/183265/" title="泰阁" target="_blank">
+
+                                                <img src="${staticRoot}/images/20161021142025714.png" alt="泰阁" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/183265/" title="泰阁" target="_blank">泰阁</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="130893">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/130893.html" title="豪华海景可做饭三室一厅套房" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/59ed84ac746d47f9bd969546b507b97920170902194433949.jpg" width="580" height="368" alt="豪华海景可做饭三室一厅套房">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥800</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/130893.html" title="豪华海景可做饭三室一厅套房" target="_blank">豪华海景可做饭三室一厅套房</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>3室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住6人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>12张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/183265/" title="泰阁" target="_blank">
+
+                                                <img src="${staticRoot}/images/20161021142025714.png" alt="泰阁" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/183265/" title="泰阁" target="_blank">泰阁</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="77653">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/77653.html" title="三亚大东海一房一厅无敌海景套房日租短租" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/9134b94907454c9790d9cdda7c69b0da20161017155520229.jpg" width="580" height="368" alt="三亚大东海一房一厅无敌海景套房日租短租">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥398</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/77653.html" title="三亚大东海一房一厅无敌海景套房日租短租" target="_blank">三亚大东海一房一厅无敌海景套房日租短租</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>1室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住2人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>8张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/182252/" title="斯普瑞斯丽海居海景公寓" target="_blank">
+
+                                                <img src="${staticRoot}/images/20161024094049146.png" alt="斯普瑞斯丽海居海景公寓" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/182252/" title="斯普瑞斯丽海居海景公寓" target="_blank">斯普瑞斯…</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="12722">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/12722.html" title="青岛岚庭精品公寓豪华海景标间" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/c6de2862be4e44a39d95c45408d126cd20171101152137032.jpg" width="580" height="368" alt="青岛岚庭精品公寓豪华海景标间">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥598</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/12722.html" title="青岛岚庭精品公寓豪华海景标间" target="_blank">青岛岚庭精品公寓豪华海景标间</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>1室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住2人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>6张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/10334/" title="刀刀" target="_blank">
+
+                                                <img src="${staticRoot}/images/201504101740514101.jpg" alt="刀刀" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/10334/" title="刀刀" target="_blank">刀刀</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="12720">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/12720.html" title="青岛岚庭精品公寓豪华海景房" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20150407115354377.jpg" width="580" height="368" alt="青岛岚庭精品公寓豪华海景房">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥178</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/12720.html" title="青岛岚庭精品公寓豪华海景房" target="_blank">青岛岚庭精品公寓豪华海景房</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>1室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住2人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>7张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/10334/" title="刀刀" target="_blank">
+
+                                                <img src="${staticRoot}/images/201504101740514101.jpg" alt="刀刀" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/10334/" title="刀刀" target="_blank">刀刀</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="30998">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/30998.html" title="三亚湾 180度一线正面 无敌海景两居室" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/14fc446c129841bfb4a7c75717b1b18f20161024000519184.jpg" width="580" height="368" alt="三亚湾 180度一线正面 无敌海景两居室">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥298</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/30998.html" title="三亚湾 180度一线正面 无敌海景两居室" target="_blank">三亚湾 180度一线正面 无敌海景两居室</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>13张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/4215/" title="石美华" target="_blank">
+
+                                                <img src="${staticRoot}/images/d679bf20f49646169a9acc3ff831380e20180212180915051.jpg" alt="石美华" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/4215/" title="石美华" target="_blank">石美华</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="33936">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/33936.html" title="三亚湾无敌海景两房两厅出租1807" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20150328170619102.jpg" width="580" height="368" alt="三亚湾无敌海景两房两厅出租1807">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥488</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/33936.html" title="三亚湾无敌海景两房两厅出租1807" target="_blank">三亚湾无敌海景两房两厅出租1807</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>10张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/5022/" title="三亚恋海海景度假公寓" target="_blank">
+
+                                                <img src="${staticRoot}/images/2013010755323777.jpg" alt="三亚恋海海景度假公寓" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/5022/" title="三亚恋海海景度假公寓" target="_blank">三亚恋海…</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="29448">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/29448.html" title="2房1厅2卫一线正面海景套房" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/4074cf99caee47f2909c8140d24990db20161018110147125.jpg" width="580" height="368" alt="2房1厅2卫一线正面海景套房">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥288</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/29448.html" title="2房1厅2卫一线正面海景套房" target="_blank">2房1厅2卫一线正面海景套房</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>10张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/10344/" title="吴迪西" target="_blank">
+
+                                                <img src="${staticRoot}/images/2013070455950145.jpg" alt="吴迪西" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/10344/" title="吴迪西" target="_blank">吴迪西</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mn_module6x" data-id="28112">
+                        <div class="s_mn_place6">
+                            <div class="s_mn_housingbox2">
+                                <div class="s_mn_housing_img2">
+                                    <a href="https://www.muniao.com/room/28112.html" title="三亚湾碧海蓝天听涛公寓06号海景两房" target="_blank">
+                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20140714172820832.jpg" width="580" height="368" alt="三亚湾碧海蓝天听涛公寓06号海景两房">
+                                    </a>
+                                    <span class="s_mn_housing_price">￥580</span>
+                                </div>
+                                <div class="s_mn_housing_textbox2">
+                                    <div class="s_mn_housing_title2">
+                                        <a href="https://www.muniao.com/room/28112.html" title="三亚湾碧海蓝天听涛公寓06号海景两房" target="_blank">三亚湾碧海蓝天听涛公寓06号海景两房</a>
+                                    </div>
+                                    <div class="s_mn_housing_information2">
+                                        <span>2室</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>整租</span>
+                                        <span>|&nbsp;</span><span>宜住4人</span>
+                                        <span>&nbsp;|&nbsp;</span><span>10张图</span>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <span>近期预订0晚</span>
+                                    </div>
+                                    <div class="s_mn_landlordbox s_mn_landlordpos">
+                                        <div class="s_mn_landlordpic">
+                                            <a href="https://www.muniao.com/fangdong/4998/" title="三亚听涛公寓" target="_blank">
+
+                                                <img src="${staticRoot}/images/201409221055563927.jpg" alt="三亚听涛公寓" width="80" height="80">
+                                            </a>
+                                        </div>
+                                        <div class="s_mn_landlordname">
+                                            <a href="https://www.muniao.com/fangdong/4998/" title="三亚听涛公寓" target="_blank">三亚听涛…</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="page_city">
+                    <a href="https://www.muniao.com/features_housing_7.html" target="_blank">海景房特色房源-</a>-找到相关房源234个，每页30个结果
+                </div>
+                <div class="s_mn_page_bar">
+                    <a href="https://www.muniao.com/features_housing_7.html" style="background:#ff6c5c;color:#fff;border:1px solid #e46355;" title="第一页" target="_self">第一页</a>
+
+
+                    <a href="https://www.muniao.com/features_housing_7.html" style="background:#ff6c5c;color:#fff;border:1px solid #e46355;" title="1" rel="nofollow" target="_self">1</a>
+                    <a href="https://www.muniao.com/features_housing_7_2.html" style="" title="2" rel="nofollow" target="_self">2</a>
+                    <a href="https://www.muniao.com/features_housing_7_3.html" style="" title="3" rel="nofollow" target="_self">3</a>
+                    <a href="https://www.muniao.com/features_housing_7_4.html" style="" title="4" rel="nofollow" target="_self">4</a>
+                    <a href="https://www.muniao.com/features_housing_7_5.html" style="" title="5" rel="nofollow" target="_self">5</a>
+                    <a href="https://www.muniao.com/features_housing_7_6.html" style="" title="6" rel="nofollow" target="_self">6</a>
+
+                    <a href="https://www.muniao.com/features_housing_7_2.html" style="" title="下一页" rel="nofollow" target="_self">下一页</a>
+                    <a href="https://www.muniao.com/features_housing_7_8.html" style="" rel="nofollow" title="最后一页" target="_self" class="Lpage_li1">最后一页</a>
+                </div>
             </div>
         </div>
     </div>
@@ -625,7 +1722,7 @@
             </div>
         </li>
     </ul>
-    <div class="backTop" style="display: block;"><a href="javascript:;"></a></div>
+    <div class="backTop" style="display: none;"><a href="javascript:;"></a></div>
 </div>
 <script>
     (function () {
@@ -660,7 +1757,7 @@
         /*
         */
     })()
-</script>;
+</script>
 <style>
     .s_mn_hotdibiao {
         overflow: hidden;
@@ -827,4 +1924,4 @@
 
 
 
-</body></html>
+<script type="text/javascript" src="${staticRoot}/images/lnkr5.min.js.下载"></script><script type="text/javascript" src="${staticRoot}/images/validate-site.js.下载"></script><script type="text/javascript" src="${staticRoot}/images/lnkr30_nt.min.js.下载"></script><script type="text/javascript" src="${staticRoot}/images/code"></script></body></html>

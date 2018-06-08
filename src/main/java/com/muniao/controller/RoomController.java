@@ -15,10 +15,10 @@ import java.util.List;
 public class RoomController {
     @Resource private RoomService roomService;
 
-    @RequestMapping(value = "features/{featureId}")
+    @RequestMapping(value = "featureslist/{featureId}")
     public String list(@PathVariable("featureId")int featureId, Model model){
         List<Room> rooms = roomService.findAllByFeature(featureId);
         model.addAttribute("rooms",rooms);
-        return "/features";
+        return "/featureslist";
     }
 }

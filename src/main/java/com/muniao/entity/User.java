@@ -85,14 +85,14 @@ public class User {
      * 言
      *
      */
-    private String salt;
+    private String passwordSalt;
 
-    public String getSalt() {
-        return salt;
+    public String getPasswordSalt() {
+        return passwordSalt;
     }
 
-    public void setSalt(String salt) {
-        this.salt = salt;
+    public void setPasswordSalt(String passwordSalt) {
+        this.passwordSalt = passwordSalt;
     }
 
     public int getUserId() {
