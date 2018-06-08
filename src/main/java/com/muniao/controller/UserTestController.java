@@ -25,7 +25,6 @@ public class UserTestController {
         return "/index";
     }
 
-
     @RequestMapping(value = "/register")
     public String register(){
         return "/register";
@@ -34,6 +33,11 @@ public class UserTestController {
     @RequestMapping(value = "/features")
     public String features(){
         return "/features";
+    }
+
+    @RequestMapping(value = "/lodgerorder")
+    public String logderorder(){
+        return "/lodgerorder";
     }
 
 
