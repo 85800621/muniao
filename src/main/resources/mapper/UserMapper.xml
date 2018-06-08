@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.muniao.dao.BedMapper">
-  <resultMap id="BaseResultMap" type="com.muniao.entity.RoomBedInfo">
-    <id column="room_bedInfo_id" jdbcType="INTEGER" property="bedInfoId" />
-    <result column="bed_type" jdbcType="VARCHAR" property="benType"/>
-    <result column="bed_length" jdbcType="VARCHAR" property="bedLength" />
-    <result column="bed_width" jdbcType="VARCHAR" property="bedWidth" />
-    <result column="bed_number" jdbcType="VARCHAR" property="bedNumber" />
+<mapper namespace="com.muniao.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.muniao.entity.User">
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+    <result column="user_number" jdbcType="VARCHAR" property="userNumber" />
+    <result column="telephone" jdbcType="VARCHAR" property="telephone" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="room_name" jdbcType="VARCHAR" property="roomName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="password_salt" jdbcType="VARCHAR" property="salt" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birth" jdbcType="VARCHAR" property="birth" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="hometown" jdbcType="VARCHAR" property="hometown" />
+    <result column="blood" jdbcType="VARCHAR" property="blood" />
+    <result column="work" jdbcType="VARCHAR" property="work" />
+    <result column="edu" jdbcType="VARCHAR" property="edu" />
+    <result column="other_tel" jdbcType="VARCHAR" property="otherTEL" />
+    <result column="hobby" jdbcType="VARCHAR" property="hobby" />
+    <result column="introduce" jdbcType="VARCHAR" property="introduce" />
+    <result column="picture" jdbcType="VARCHAR" property="picture" />
   </resultMap>
 
   <sql id="Base_Column_List">
-      room_bedInfo_id,bed_type,bed_length,bed_width,bed_number
+
   </sql>
 
-  <select id="selectBedId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
-    <include refid="Base_Column_List" />
-    FROM tb_room_bedInfo
-    WHERE room_bedInfo_id=#{bedInfoId,jdbcType=INTEGER}
+    *
+    FROM tb_user
+    WHERE user_id=#{userId,jdbcType=INTEGER}
   </select>
 
 </mapper>

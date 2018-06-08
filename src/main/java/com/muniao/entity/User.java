@@ -81,6 +81,20 @@ public class User {
      */
     private String picture;
 
+    /**
+     * 言
+     *
+     */
+    private String salt;
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
     public int getUserId() {
         return userId;
     }

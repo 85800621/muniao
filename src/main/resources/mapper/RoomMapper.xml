@@ -13,14 +13,14 @@
     <collection property="roomType" column="room_type_id" select="com.muniao.dao.RoomTypeMapper.selectByTypeId"/>
     <collection property="roomInterval" column="price_interval_id" select="com.muniao.dao.PriceIntervalMapper.selectByIntervalId"/>
     <collection property="roomFeature" column="room_feature_id" select="com.muniao.dao.RoomFeatureMapper.selectByFeatureId"/>
-    <collection property="roomFacility" column="room_facility_id" select="com.muniao.dao.RoomFacilityMapper.selectByFacilityId"/>
+    <collection property="roomFacility" column="room_facility_id" select="com.muniao.dao.RoomFacilityMapper.selectFacilityById"/>
     <collection property="roomDesc" column="roomSource_desc_id" select="com.muniao.dao.SourceDescMapper.selectByDescId"/>
     <collection property="refundRule" column="refund_rule_id" select="com.muniao.dao.RefundRuleMapper.selectByRuleId"/>
     <collection property="landlord" column="user_id" select="com.muniao.dao.UserMapper.selectByUserId"/>
     <collection property="roomStructure" column="room_structure_id" select="com.muniao.dao.StructureMapper.selectByStructureId"/>
-    <collection property="rentalMethod" column="room_method_id" select="com.muniao.dao.StructureMapper.selectByMethodId"/>
-    <collection property="avaliableArea" column="room_avaliableArea_id" select="com.muniao.dao.StructureMapper.selectAreaId"/>
-    <collection property="roomBedInfo" column="room_bedInfo_id" select="com.muniao.dao.StructureMapper.selectBedId"/>
+    <collection property="rentalMethod" column="room_method_id" select="com.muniao.dao.RentalMethodMapper.selectByMethodId"/>
+    <collection property="avaliableArea" column="room_avaliableArea_id" select="com.muniao.dao.AvaliableAreaMapper.selectAreaId"/>
+    <collection property="roomBedInfo" column="room_bedInfo_id" select="com.muniao.dao.BedMapper.selectBedId"/>
 
   </resultMap>
 

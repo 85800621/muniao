@@ -10,8 +10,8 @@
       facility_content,room_facility_id
   </sql>
 
-  <select id="selectAllFacility" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-      SELECT * FROM tb_room_facility;
+  <select id="selectFacilityById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+      SELECT facility_content FROM tb_room_facility WHERE room_facility_id=#{FacilityId,jdbcType=INTEGER};
   </select>
 
 </mapper>
