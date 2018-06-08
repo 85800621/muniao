@@ -5,6 +5,8 @@ import com.muniao.service.LoginService;
 import com.muniao.utils.UtilsCode;
 import com.muniao.utils.UtilsPicCode;
 import com.muniao.utils.UtilsTools;
+import com.sun.image.codec.jpeg.JPEGCodec;
+import com.sun.image.codec.jpeg.JPEGImageEncoder;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +14,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -125,10 +126,10 @@ public class LoginController {
             graphics.drawString(a+"",20*i,20);
         }
 
-
         session.setAttribute("code",new String(charcode));
 
-        ImageIO.write(bufferedImg,"png",response.getOutputStream());
+        JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(response.getOutputStream());
+        encoder.encode(bufferedImg);
 
     }
 
