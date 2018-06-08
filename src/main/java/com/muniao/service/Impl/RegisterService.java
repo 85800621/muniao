@@ -1,9 +1,10 @@
-package com.muniao.service;
+package com.muniao.service.Impl;
 
 
 import com.muniao.dao.UserMapper;
 import com.muniao.dao.UserRoleMapper;
 import com.muniao.entity.User;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +29,21 @@ public class RegisterService {
      * @param user
      * @return
      */
-    public Integer registerUser(User user){
+    public Integer registerUser(User user,String pwd){
+        SimpleHash simpleHash = new SimpleHash("MD5", pwd, "12345");
+        user.setPassword(simpleHash.toString());
+        user.setPasswordSalt("12345");
+        tbUserMapper.insertSelective(user);
+        return user.getUserId();
+    }
+
+
+    /**
+     * 插入用户，无密码
+     * @param user
+     * @return
+     */
+    public Integer registerUserNoPwd(User user){
         tbUserMapper.insertSelective(user);
         return user.getUserId();
     }

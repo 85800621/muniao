@@ -1,7 +1,9 @@
 package com.muniao.controller;
 
 import com.muniao.entity.JsonResult;
-import com.muniao.service.LoginService;
+import com.muniao.entity.User;
+import com.muniao.service.Impl.LoginService;
+import com.muniao.service.Impl.RegisterService;
 import com.muniao.utils.UtilsCode;
 import com.muniao.utils.UtilsPicCode;
 import com.muniao.utils.UtilsTools;
@@ -32,10 +34,13 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
+    @Autowired
+    private RegisterService registerService;
+
     String codeStr = null ;
 
     /**
-     * 快捷登陆（用户名密码登陆）
+     * 普通登陆（用户名密码登陆）
      * @param tel
      * @param password
      * @return
@@ -61,6 +66,14 @@ public class LoginController {
 
     }
 
+    /**
+     * 快捷登陆(手机号码+图形验证码+手机短信验证码)
+     * @param Tel_M
+     * @param MsgCode
+     * @param ValidCode
+     * @param session
+     * @return
+     */
     @RequestMapping("/CheckLoginFast")
     @ResponseBody
     public Object login(String Tel_M, String MsgCode,String ValidCode,HttpSession session){
@@ -76,12 +89,26 @@ public class LoginController {
             jsonResult = UtilsTools.returnJsonResult(-1,"图形验证码错误");
             return jsonResult;
         }else {
+            User user = loginService.checkTelePhone(Tel_M);
+            if(null != user){
+                session.setAttribute("user",user);
+            }else{
+                User user1 = new User();
+                user1.setTelephone(Tel_M);
+                registerService.registerUserNoPwd(user);
+                session.setAttribute("user",user1);
+            }
             jsonResult = UtilsTools.returnJsonResult(1,"登陆成功");
             return jsonResult;
         }
 
     }
 
+    /**
+     * 获取短信验证码
+     * @param tel
+     * @return
+     */
     @RequestMapping("/getCode")
     @ResponseBody
     public Object checkCode(String tel){
@@ -102,6 +129,13 @@ public class LoginController {
     }
 
 
+    /**
+     * 获取图片验证码
+     * @param request
+     * @param response
+     * @param session
+     * @throws IOException
+     */
     @ResponseBody
     @RequestMapping("/pic")
     public void getPic(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IOException {

@@ -1,4 +1,4 @@
-package com.muniao.service;
+package com.muniao.service.Impl;
 
 import com.muniao.dao.UserMapper;
 import com.muniao.dao.UserRoleMapper;

@@ -3,10 +3,8 @@ package com.muniao.controller;
 
 import com.muniao.entity.JsonResult;
 import com.muniao.entity.User;
-import com.muniao.service.PreRegisterService;
-import com.muniao.service.RegisterService;
-import com.muniao.utils.UtilsCode;
-import com.muniao.utils.UtilsPicCode;
+import com.muniao.service.Impl.PreRegisterService;
+import com.muniao.service.Impl.RegisterService;
 import com.muniao.utils.UtilsTools;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,14 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import javax.imageio.ImageIO;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.Random;
 
 
 /**
@@ -57,10 +48,10 @@ public class RegisterController {
         }else {
             User user1 = new User();
             user1.setTelephone(tel_M);
-            user1.setPassword(pwd);
+           // user1.setPassword(pwd);
             user1.setEmail(email);
             user1.setUserName(userName);
-            Integer integer = registerService.registerUser(user1);
+            Integer integer = registerService.registerUser(user1,pwd);
             System.out.println("userType============="+userType);
             if(userType.equals("1")){
                 registerService.insertRoleUser(2,integer);
