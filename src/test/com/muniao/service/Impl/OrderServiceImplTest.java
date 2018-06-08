@@ -31,7 +31,8 @@ public class OrderServiceImplTest {
         for(com.muniao.entity.Order order:orders ){
 
             OrderDetail orderDetail=order.getOrderDetail();
-            System.out.println(orderDetail.getCheckInTime()+"+"+orderDetail.getDepartureTime());
+            System.out.println(orderDetail.getCheckInTime()+"+"+orderDetail.getDepartureTime()
+            +"+"+orderDetail.getRoom().getRoomName());
         }
     }
 
