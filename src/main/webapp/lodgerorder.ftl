@@ -1438,9 +1438,9 @@
                                 <a href="http://www.muniao.com/home/detail?id=108419" target="_blank"><img
                                         src="${staticRoot}/images/91b99e01a5194868be377831142e687420170519164942639.jpg_275_173.jpg"
                                         width="175" height="128" class="myorderimgbg"></a>
-                                <p>房间编号：${orders.room.roomId}</p>
+                                <p>房间编号：${orders.orderDetail.room.roomId}</p>
                                 <p>
-                                    <a href="http://www.muniao.com/home/detail?id=108419" target="_blank" class="aBlue">${orders.room.roomName}
+                                    <a href="http://www.muniao.com/home/detail?id=108419" target="_blank" class="aBlue">${orders.orderDetail.room.roomName}
                                        </a>
                                 </p>
                             </td>
