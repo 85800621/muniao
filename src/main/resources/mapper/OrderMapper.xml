@@ -6,7 +6,7 @@
         <result column="order_buyer_id" jdbcType="INTEGER" property="orderBuyerId"/>
         <result column="order_seller_id" jdbcType="INTEGER" property="orderSellerId" />
         <result column="order_status" javaType="String" property="orderStatus"/>
-        <association property="room" resultMap="RoomResultMap" />
+
         <association property="orderDetail" resultMap="OrderDetailResultMap"/>
     </resultMap>
 
@@ -56,7 +56,9 @@
     <select id="selectBuyerOrders" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
         *
-        FROM tb_order tor inner join tb_order_detail tod on tor.order_detail_id=tod.order_detail_id and order_buyer_id=#{id};
+        FROM tb_order tor inner join tb_order_detail tod on tor.order_detail_id=tod.order_detail_id
+        inner join tb_room tro on tod.room_id=tro.room_id
+        and order_buyer_id=#{id};
     </select>
 
 </mapper>
