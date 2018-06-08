@@ -774,7 +774,7 @@
     {
         document.getElementById("ValidImg").src = "login/pic?random=" + Math.random();
     }
-</script>random
+</script>
 <style>
     input::-ms-reveal {
         display: none;
