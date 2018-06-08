@@ -93,50 +93,8 @@ public class RegisterController {
         }
     }
 
-    @RequestMapping("/getCode")
-    public Object checkCode(String tel){
-        System.out.println("---------------");
-        JsonResult jsonResult = new JsonResult();
-        try{
-            codeStr = UtilsPicCode.getCode();
-            UtilsCode.sendCode(codeStr, tel);
-            jsonResult.setCode(3);
-            jsonResult.setResult("验证码已发送");
-            return jsonResult;
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        jsonResult.setCode(4);
-        jsonResult.setResult("验证码发送失败");
-       return jsonResult;
-    }
-
-    @ResponseBody
-    @RequestMapping("/pic")
-    public void getPic(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IOException{
-
-        BufferedImage bufferedImg=new BufferedImage(100,35,BufferedImage.TYPE_INT_RGB);
-        Graphics graphics=bufferedImg.getGraphics();
-        graphics.setColor(Color.WHITE);
-        graphics.fillRect(0,0, 100, 37);
-
-        graphics.setColor(Color.BLACK);
-        Random random=new Random();
-        int lengthCode= UtilsPicCode.PIC_CODE.length();
-        char[] charcode=new char[4];
-        for(int i=0;i<4;i++) {
-            int index=random.nextInt(lengthCode);
-            char a= UtilsPicCode.PIC_CODE.charAt(index);
-            charcode[i]=a;
-            graphics.setColor(new Color(random.nextInt(100),random.nextInt(200),random.nextInt(100)));
-            graphics.drawString(a+"",20*i,20);
-        }
 
 
-        session.setAttribute("code",new String(charcode));
 
-        ImageIO.write(bufferedImg,"png",response.getOutputStream());
-
-    }
 
 }
