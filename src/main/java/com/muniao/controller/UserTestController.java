@@ -46,4 +46,8 @@ public class UserTestController {
 
         return "/info";
     }
+    @RequestMapping(value = "booking")
+    public String booking(){
+        return "/booking";
+    }
 }
