@@ -1,23 +1,20 @@
-package com.muniao.dao;
-
+package com.muniao.service;
 
 import com.muniao.entity.Room;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
- * 史国纲 2018-06-07 14:30
+ * 史国纲 2018/6/7
  * 房间
  */
-@Repository
-public interface RoomMapper {
+public interface RoomService {
     /**
      * 查询特房间信息
      * @param featureId 特色id
      * @return 返回room对象
      */
-    List<Room> findByFeature(int featureId);
+    List<Room> findAllByFeature(int featureId);
 
     /**
      * 查询特色房间数量

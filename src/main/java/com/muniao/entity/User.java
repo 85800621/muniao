@@ -6,7 +6,6 @@ import java.util.Date;
  * 用户
  * 2018/6/7
  * 史国纲
- * 修改林浩 20180607
  */
 public class User {
     /**
@@ -37,11 +36,6 @@ public class User {
      * 用户密码
      */
     private String password;
-
-    /**
-     * 密码盐
-     */
-    private String passwordSalt;
     /**
      * 性别
      */
@@ -87,13 +81,18 @@ public class User {
      */
     private String picture;
 
+    /**
+     * 言
+     *
+     */
+    private String salt;
 
-    public String getPasswordSalt() {
-        return passwordSalt;
+    public String getSalt() {
+        return salt;
     }
 
-    public void setPasswordSalt(String passwordSalt) {
-        this.passwordSalt = passwordSalt;
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 
     public int getUserId() {
@@ -136,12 +135,12 @@ public class User {
         this.email = email;
     }
 
-    public String getRoomNmae() {
+    public String getRoomName() {
         return roomName;
     }
 
-    public void setRoomNmae(String roomNmae) {
-        this.roomName = roomNmae;
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
     }
 
     public String getPassword() {

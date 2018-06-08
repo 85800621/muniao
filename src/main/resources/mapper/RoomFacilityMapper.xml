@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.RoomFacilityMapper">
+  <resultMap id="BaseResultMap" type="com.muniao.entity.RoomFacility">
+    <id column="room_facility_id" jdbcType="INTEGER" property="FacilityId" />
+    <result column="facility_content" jdbcType="VARCHAR" property="FacilityContent" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+      facility_content,room_facility_id
+  </sql>
+
+  <select id="selectFacilityById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+      SELECT facility_content FROM tb_room_facility WHERE room_facility_id=#{FacilityId,jdbcType=INTEGER};
+  </select>
+
+</mapper>
