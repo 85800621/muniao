@@ -38,8 +38,8 @@
     WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER}
   </select>
 
-  <select id="selectCountRoom" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    SELECT COUNT (1) FROM tb_room WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER};
+  <select id="selectCountRoom" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    SELECT COUNT(*) FROM tb_room WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER};
   </select>
 
 </mapper>

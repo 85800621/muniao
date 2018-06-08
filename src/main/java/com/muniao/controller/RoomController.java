@@ -19,6 +19,9 @@ public class RoomController {
     public String list(@PathVariable("featureId")int featureId, Model model){
         List<Room> rooms = roomService.findAllByFeature(featureId);
         model.addAttribute("rooms",rooms);
+        Integer countRoom = roomService.selectCountRoom(featureId);
+        model.addAttribute("countroom",countRoom);
+
         return "/featureslist";
     }
 }
