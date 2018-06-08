@@ -1432,6 +1432,52 @@
                             <td width="77" height="30" align="center" valign="middle" class="myordertd2">操作</td>
                         </tr>
                         <tr>
+                            <#list orders as orders>
+                            <td height="205" align="center" valign="middle"
+                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
+                                <a href="http://www.muniao.com/home/detail?id=108419" target="_blank"><img
+                                        src="${staticRoot}/images/91b99e01a5194868be377831142e687420170519164942639.jpg_275_173.jpg"
+                                        width="175" height="128" class="myorderimgbg"></a>
+                                <p>房间编号：${orders.room.roomId}</p>
+                                <p>
+                                    <a href="http://www.muniao.com/home/detail?id=108419" target="_blank" class="aBlue">${orders.room.roomName}
+                                       </a>
+                                </p>
+                            </td>
+                            <td height="205" align="center" valign="middle"
+                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
+                                ${orders.orderId}
+                            </td>
+                            <td width="151" height="205" valign="middle"
+                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px; padding-top: 0px; padding-bottom: 0px;">
+                                <p>总房款：￥${orders.orderDetail.totalPrice}</p>
+                                <p>总订金：￥${orders.orderDetail.totalDeposit}</p>
+                                <p>实付：￥${orders.orderDetail.actuallyPaid}</p>
+                                <p>需到店支付：￥${orders.orderDetail.toShopPayment}</p>
+                            </td>
+                            <td width="111" height="205" valign="middle"
+                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px; padding-top: 0px; padding-bottom: 0px;">
+                                <p>入住时间：</p>
+                                <p>${orders.orderDetail.checkInTime?date}</p>
+                                <p>退房时间：</p>
+                                <p>${orders.orderDetail.departureTime?date}</p>
+                            </td>
+                            <td height="205" align="center" valign="middle"
+                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"><span
+                                    class="aGreen">${orders.orderStatus}<br></span></td>
+                            <td height="205" align="center" valign="middle"
+                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"></td>
+                            <td width="77" height="205" align="center" valign="middle"
+                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
+                                <a href="http://www.muniao.com/home/detail?id=108419" class="aBlue"
+                                   target="_blank">再次预订</a><br><br>
+                                <a onclick="orderdelete(&#39;381521&#39;)" class="aBlue">删除订单</a><br><br>
+                                <a href="http://user2.muniao.com/Order/Detail?orderid=381521&amp;utp=2" class="aBlue">详情&gt;&gt;</a>
+                                <br><br>
+                            </td>
+                            </#list>
+                        </tr>
+                        <tr>
                             <td height="205" align="center" valign="middle"
                                 style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
                                 <a href="http://www.muniao.com/home/detail?id=108419" target="_blank"><img

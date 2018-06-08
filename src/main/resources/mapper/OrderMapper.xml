@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.OrderMapper">
+    <resultMap id="BaseResultMap" type="com.muniao.entity.Order">
+        <id column="order_id" jdbcType="INTEGER" property="orderId" />
+        <result column="order_buyer_id" jdbcType="INTEGER" property="orderBuyerId"/>
+        <result column="order_seller_id" jdbcType="INTEGER" property="orderSellerId" />
+        <result column="order_status" javaType="String" property="orderStatus"/>
+        <association property="room" resultMap="RoomResultMap" />
+        <association property="orderDetail" resultMap="OrderDetailResultMap"/>
+    </resultMap>
+
+    <resultMap id="RoomResultMap" type="com.muniao.entity.Room">
+        <id column="room_id" jdbcType="INTEGER" property="roomId" />
+        <result column="room_name" jdbcType="VARCHAR" property="roomName" />
+        <result column="room_price" jdbcType="INTEGER" property="roomPrice" />
+        <result column="room_status" jdbcType="INTEGER" property="roomStatus" />
+        <result column="room_location" jdbcType="VARCHAR" property="roomLocation" />
+        <result column="room_longitude" jdbcType="VARCHAR" property="roomLongitude" />
+        <result column="room_latitude" jdbcType="VARCHAR" property="roomLatitude" />
+        <result column="room_bed_avaliable" jdbcType="VARCHAR" property="bedAvaliable" />
+        <collection property="roomType" column="room_type_id" select="com.muniao.dao.RoomTypeMapper.selectByTypeId"/>
+        <collection property="roomInterval" column="price_interval_id" select="com.muniao.dao.PriceIntervalMapper.selectByIntervalId"/>
+        <collection property="roomFeature" column="room_feature_id" select="com.muniao.dao.RoomFeatureMapper.selectByFeatureId"/>
+        <collection property="roomFacility" column="room_facility_id" select="com.muniao.dao.RoomFacilityMapper.selectFacilityById"/>
+        <collection property="roomDesc" column="roomSource_desc_id" select="com.muniao.dao.SourceDescMapper.selectByDescId"/>
+        <collection property="refundRule" column="refund_rule_id" select="com.muniao.dao.RefundRuleMapper.selectByRuleId"/>
+        <collection property="landlord" column="user_id" select="com.muniao.dao.UserMapper.selectByUserId"/>
+        <collection property="roomStructure" column="room_structure_id" select="com.muniao.dao.StructureMapper.selectByStructureId"/>
+        <collection property="rentalMethod" column="room_method_id" select="com.muniao.dao.RentalMethodMapper.selectByMethodId"/>
+        <collection property="avaliableArea" column="room_avaliableArea_id" select="com.muniao.dao.AvaliableAreaMapper.selectAreaId"/>
+        <collection property="roomBedInfo" column="room_bedInfo_id" select="com.muniao.dao.BedMapper.selectBedId"/>
+    </resultMap>
+
+    <resultMap id="OrderDetailResultMap" type="com.muniao.entity.OrderDetail">
+        <id column="order_detail_id" property="orderDetailId" javaType="INTEGER"/>
+        <result column="booking_time" property="bookingTime" javaType="Date"/>
+        <result column="check_in_time" property="checkInTime" javaType="Date"/>
+        <result column="departure_time" property="departureTime" javaType="Date"/>
+        <result column="check_in_population" property="checkInPopulation" javaType="INTEGER"/>
+        <result column="price_detail" property="priceDetail" javaType="String"/>
+        <result column="total_price" property="totalPrice" javaType="double"/>
+        <result column="total_deposit" property="totalDeposit" javaType="double"/>
+        <result column="actually_paid" property="actuallyPaid" javaType="double"/>
+        <result column="to_shop_payment" property="toShopPayment" javaType="double"/>
+        <association property="room" resultMap="RoomResultMap"/>
+        <association property="refundRule" resultMap="RefundRuleResultMap"/>
+    </resultMap>
+
+    <resultMap id="RefundRuleResultMap" type="com.muniao.entity.RefundRule">
+        <id column="refund_rule_id" jdbcType="INTEGER" property="ruleId" />
+        <result column="rule_type" jdbcType="VARCHAR" property="ruleType"/>
+        <result column="rule_content" jdbcType="VARCHAR" property="ruleContent" />
+    </resultMap>
+
+    <select id="selectBuyerOrders" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        *
+        FROM tb_order tor inner join tb_order_detail tod on tor.order_detail_id=tod.order_detail_id and order_buyer_id=#{id};
+    </select>
+
+</mapper>
