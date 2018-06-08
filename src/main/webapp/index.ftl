@@ -625,7 +625,7 @@
         }, function (data) {
             var State = JSON.parse(data).State;
             if (State == 1) {
-                //$('#hd_MsgCode').val(JSON.parse(data).Code);
+                //$('#hd_MsgCode').val(JSON.parse(data).UtilsCode);
 
                 /*设置样式*/
                 var name = $(obj).html();

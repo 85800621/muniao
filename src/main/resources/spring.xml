@@ -83,6 +83,51 @@
 
 	<tx:annotation-driven></tx:annotation-driven>
 
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.user.dao" />
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+    </bean>
+
+    <bean name="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <!--指定登录界面-->
+        <property name="loginUrl" value="/register.ftl"/>
+
+        <property name="filterChainDefinitions">
+            <value>
+                <!--anon不需要登录-->
+                /login/checkLogin=anon
+                /Regist/RegistSubmit=anon
+                /css/**=anon
+                /dist/**=anon
+                /images/**=anon
+                /js/**=anon
+                /vendor/**=anon
+                <!--authc需要登录才能访问-->
+                <!--user配合rememberMe使用有效，authc不能配合rememberMe使用-->
+                /**=user
+            </value>
+        </property>
+
+    </bean>
+
+    <bean name="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <!--  <property name="realms" ref="UserRealmByPhone"/>
+          <property name="realm" ref="UserRealmByEmail"/>  -->
+        <property name="realms">
+            <list>
+                <ref bean="UserRealmByEmail"/>
+                <ref bean="UserRealmByPhone"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="UserRealmByPhone" class="com.muniao.Realm.UserRealmByPhone"/>
+
+    <bean id="UserRealmByEmail" class="com.muniao.Realm.UserRealmByEmail"/>
+
+
     <!--################################  备注备用  ################################-->
 
     <!-- 配置通知（配置事务执行的方法定义的名称规则） -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.UserRoleMapper">
+  <resultMap id="BaseResultMap" type="com.muniao.entity.UserRole">
+    <id column="user_role_id" jdbcType="INTEGER" property="userRoleId" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_role_id, role_id, user_id
+  </sql>
+
+  <insert id="userRole" parameterType="java.lang.Integer">
+    insert into tb_user_role(role_id,user_id)VALUES
+    (#{roleId},#{userId})
+  </insert>
+
+</mapper>
