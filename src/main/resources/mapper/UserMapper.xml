@@ -28,6 +28,13 @@
     sex, birth, city, hometown, blood, work, edu, other_tel, hobby, introduce, picture
   </sql>
 
+  <select id="selectByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    *
+    FROM tb_user
+    WHERE user_id=#{userId,jdbcType=INTEGER}
+  </select>
+
     <insert id="insertSelective" keyProperty="userId" useGeneratedKeys="true" parameterType="com.muniao.entity.User">
         insert into tb_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
