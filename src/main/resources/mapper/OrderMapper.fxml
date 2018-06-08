@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.BedMapper">
+    <resultMap id="BaseResultMap" type="com.muniao.entity.RoomBedInfo">
+        <id column="room_bedInfo_id" jdbcType="INTEGER" property="bedInfoId" />
+        <result column="bed_type" jdbcType="VARCHAR" property="benType"/>
+        <result column="bed_length" jdbcType="VARCHAR" property="bedLength" />
+        <result column="bed_width" jdbcType="VARCHAR" property="bedWidth" />
+        <result column="bed_number" jdbcType="VARCHAR" property="bedNumber" />
+    </resultMap>
+
+
+
+</mapper>
