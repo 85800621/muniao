@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  */
 //@SessionAttributes("currentUser")
 @Controller
-@RequestMapping("/")
+@RequestMapping("/ddddddd")
 public class UserTestController {
 
     @Resource

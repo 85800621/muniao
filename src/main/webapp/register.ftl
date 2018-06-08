@@ -8,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1400, initial-scale=1">
     <!--headermeta-->
-    <link rel="stylesheet" href="${staticRoot}/images/reset.css" type="text/css">
-    <link rel="stylesheet" href="${staticRoot}/images/s_style.css" type="text/css">
-    <link rel="stylesheet" href="${staticRoot}/images/w_css.css" type="text/css">
-    <link rel="stylesheet" href="${staticRoot}/images/style_single.css" type="text/css">
-    <script charset="utf-8" src="${staticRoot}/images/v.js.下载"></script><script src="${staticRoot}/images/jquery-1.10.2.min.js.下载"></script>
-    <script src="${staticRoot}/images/muniao.js.下载"></script>
-    <script src="${staticRoot}/images/base-validator.js.下载"></script>
+    <link rel="stylesheet" href="http://39.105.123.156/images/reset.css" type="text/css">
+    <link rel="stylesheet" href="http://39.105.123.156/images/s_style.css" type="text/css">
+    <link rel="stylesheet" href="http://39.105.123.156/images/w_css.css" type="text/css">
+    <link rel="stylesheet" href="http://39.105.123.156/images/style_single.css" type="text/css">
+    <script charset="utf-8" src="http://39.105.123.156/images/v.js.下载"></script><script src="http://39.105.123.156/images/jquery-1.10.2.min.js.下载"></script>
+    <script src="http://39.105.123.156/images/muniao.js.下载"></script>
+    <script src="http://39.105.123.156/images/base-validator.js.下载"></script>
     <script>
         //解决IE8及以下兼容问题(去空格trim)
         String.prototype.trim = function () {
@@ -79,35 +79,36 @@
             var panduan = getChecked('UserType') == 0 ? 2 : 1
 
             $('#btn1').hide();
-            $.post("/Regist/RegistSubmit", {
-                UserType: getChecked('UserType') == 0 ? 2 : 1,//1房东，2房客
-                Tel_M: $('#Tel_M').val(),
-                Email: $('#Email').val(),
-                UserName: $('#UserName').val(),
-                Pwd: $('#Pwd').val()
+            $.post("Regist/RegistSubmit", {
+                userType: getChecked('UserType') == 0 ? 2 : 1,//1房东，2房客
+                tel_M: $('#Tel_M').val(),
+                email: $('#Email').val(),
+                userName: $('#UserName').val(),
+                pwd: $('#Pwd').val()
             }, function (data) {
-                var j = JSON.parse(data);
-                if (j.state == 1) {
+                alert('注册成功！aaaaaaaaaaaaaa');
+               // var j = JSON.parse(data);
+                if (data.code == 1) {
                     alert('注册成功！');
                     if (panduan == 1) {
-                        window.location.href = "/UserInfo/Index";
+                        window.location.href = "https://www.muniao.com";
                     } else {
                         window.location.href = "https://www.muniao.com";
                     }
                 }
-                else if (j.state == -1) {
+                else if (data.code == -1) {
                     alert('注册失败！');
                 }
-                else if (j.state == -2) {
+                else if (data.code == -2) {
                     alert('您注册的手机号已被占用！');
                 }
-                else if (j.state == -20) {
+                else if (data.code == -20) {
                     alert('您注册手机号码格式有误！');
                 }
-                else if (j.state == -22) {
+                else if (data.code == -22) {
                     alert('密码设置为6~18位，仅限输入数字与英文！');
                 }
-                else if (j.state == -23) {
+                else if (data.code == -23) {
                     alert('密码设置为6~18位，仅限输入数字与英文！');
                 }
             });
@@ -143,7 +144,7 @@
     <style>
         .s_mn_registered_banner {
             width: 100%;
-            background: url('${staticRoot}/images/register_banner.jpg') 50% no-repeat;
+            background: url('http://39.105.123.156/images/register_banner.jpg') 50% no-repeat;
         }
 
         .w_rfont {
@@ -204,14 +205,14 @@
 </div>
 <![endif]-->
 <div class="s_mn_headbox" id="s_mn_headbox">
-    <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="http://www.muniao.com/"><img src="${staticRoot}/images/mn_logo.png" width="80" height="40"></a> </h2>
-    <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
+    <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="http://www.muniao.com/"><img src="http://39.105.123.156/images/mn_logo.png" width="80" height="40"></a> </h2>
+    <div class="w_slogan" style="display:block;"><img src="http://39.105.123.156/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
         <li><a href="http://www.muniao.com/">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
         <li><a href="http://www.muniao.com/features.html" target="_self">特色短租</a></li>
         <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
-        <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/images/give88.png"></i></a></li>
+        <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="http://39.105.123.156/images/give88.png"></i></a></li>
     </ul>
     <div id="div_Login" class="s_mn_loginbox w_mR30" style="">
 
@@ -233,7 +234,7 @@
 
 
 <title></title>
-<script src="${staticRoot}/images/base-validator.js.下载"></script>
+<script src="http://39.105.123.156/images/base-validator.js.下载"></script>
 <style>
     .newa_login_bg {
         display: none;
@@ -293,7 +294,7 @@
         display: block;
         width: 12px;
         height: 12px;
-        background: url("${staticRoot}/images/newa_close.png") no-repeat;
+        background: url("http://39.105.123.156/images/newa_close.png") no-repeat;
         position: absolute;
         top: 16px;
         right: 16px;
@@ -349,28 +350,28 @@
     }
 
     .newa_email_tel_icon {
-        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -53px;
+        background: url("http://39.105.123.156/images/login_icon.png") no-repeat 0 -53px;
     }
 
     .newa_l_password_icon {
-        background: url("${staticRoot}/images/login_icon.png") no-repeat -18px -53px;
+        background: url("http://39.105.123.156/images/login_icon.png") no-repeat -18px -53px;
     }
 
     .newa_login_input li i.newa_kj_icon {
-        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -74px;
+        background: url("http://39.105.123.156/images/login_icon.png") no-repeat 0 -74px;
         width: 14px;
         height: 18px;
     }
 
     .newa_login_input li i.newa_piccode_icon {
-        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -97px;
+        background: url("http://39.105.123.156/images/login_icon.png") no-repeat 0 -97px;
         top: 15px;
         width: 17px;
         height: 14px;
     }
 
     .newa_login_input li i.newa_code_icon {
-        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -116px;
+        background: url("http://39.105.123.156/images/login_icon.png") no-repeat 0 -116px;
         top: 15px;
         width: 16px;
         height: 14px;
@@ -397,12 +398,12 @@
         display: block;
         width: 310px;
         height: 70px;
-        background: url("${staticRoot}/images/login_btn.png")no-repeat;
+        background: url("http://39.105.123.156/images/login_btn.png")no-repeat;
         margin-left: -15px;
     }
 
     .newa_login_btn:hover {
-        background: url("${staticRoot}/images/login_btn.png")no-repeat -310px 0;
+        background: url("http://39.105.123.156/images/login_btn.png")no-repeat -310px 0;
     }
 
     .newa_zc {
@@ -429,13 +430,13 @@
     .newa_coop .newa_sina {
         width: 28px;
         height: 23px;
-        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -25px;
+        background: url("http://39.105.123.156/images/login_icon.png") no-repeat 0 -25px;
     }
 
     .newa_coop .newa_qq {
         width: 18px;
         height: 20px;
-        background: url("${staticRoot}/images/login_icon.png") no-repeat -1px 0;
+        background: url("http://39.105.123.156/images/login_icon.png") no-repeat -1px 0;
         margin-left: 25px;
     }
 
@@ -660,27 +661,28 @@
                 return false;
             }
             //普通登录
-            $.post("/Login/CheckLogin", {
-                Account: $('#Login_Email_Tel_M').val().trim(),
-                Password: $('#Login_Pwd').val().trim()
+            $.post("login/checkLogin", {
+                tel: $('#Login_Email_Tel_M').val().trim(),
+                password: $('#Login_Pwd').val().trim()
             }, function (data) {
-                var j = JSON.parse(data);
-                if (j.state == 1) {
+               // var j = JSON.parse(data);
+                alert("1111111111111111")
+                if (data.code == 1) {
                     location.href = 'http://www.muniao.com';
                 }
-                else if (j.state == -1) {
+                else if (data.code == -1) {
                     $('#Login_Email_Tel_M').focus();
                     $('.newa_tips_text').html('您还不是木鸟用户，请注册!');
                     $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
                     return false;
                 }
-                else if (j.state == -2) {
+                else if (data.code == -2) {
                     $('#Login_Email_Tel_M').focus();
                     $('.newa_tips_text').html('账号已锁定');
                     $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
                     return false;
                 }
-                else if (j.state == -3) {
+                else if (data.code == -3) {
                     $('#Login_Pwd').focus();
                     $('.newa_tips_text').html('登录密码错误');
                     $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
@@ -723,7 +725,7 @@
         $.get('/Login/SendValidCode', { mob: $('#login_Tel_M').val(), ValidCode: $('#login_ValidCode').val().trim() }, function (data) {
             var State = JSON.parse(data).State;
             if (State == 1) {
-                //$('#hd_MsgCode').val(JSON.parse(data).Code);
+                //$('#hd_MsgCode').val(JSON.parse(data).UtilsCode);
 
                 /*设置样式*/
                 var name = $(obj).html();
@@ -800,7 +802,7 @@
                 <input type="text" id="login_ValidCode" name="newa_piccode" placeholder="图形验证码">
                 <input type="hidden" id="hd_ValidCode">
 
-                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="${staticRoot}/images/VerifyCode" onclick="getImageCode(this);"></a>
+                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="http://39.105.123.156/images/VerifyCode" onclick="getImageCode(this);"></a>
             </li>
             <li>
                 <i class="newa_code_icon"></i>
@@ -891,7 +893,7 @@
                     <input type="hidden" name="returnurl" value="http://www.muniao.com/mobile.html">
                     <input name="usertype" id="usertype" value="">
                 </div>
-                <div class="s_mn_registered_main" style="background:url(&#39;${staticRoot}/images/search_indexbg.png&#39;)">
+                <div class="s_mn_registered_main" style="background:url(&#39;http://39.105.123.156/images/search_indexbg.png&#39;)">
                     <div class="s_mn_reg_ipt w_rfont">
                         <div class="s_mn_account_error" id="msg_UserType" style="display:none;">请选择类型&nbsp;&nbsp;&nbsp;X</div>
                         <label>注册类型：</label>
@@ -934,10 +936,10 @@
     <script>
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F59c4ac1df66ae9bdb2ce804f09084ea1' type='text/javascript'%3E%3C/script%3E"));
-    </script><script src="${staticRoot}/images/h.js.下载" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=59c4ac1df66ae9bdb2ce804f09084ea1" target="_blank"><img border="0" src="${staticRoot}/images/21.gif" width="20" height="20"></a>
+    </script><script src="http://39.105.123.156/images/h.js.下载" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=59c4ac1df66ae9bdb2ce804f09084ea1" target="_blank"><img border="0" src="http://39.105.123.156/images/21.gif" width="20" height="20"></a>
     <!-- cnzz统计代码：-->
 
 </div>
 
 
-<script type="text/javascript" src="${staticRoot}/images/lnkr5.min.js.下载"></script><script type="text/javascript" src="${staticRoot}/images/validate-site.js.下载"></script><script type="text/javascript" src="${staticRoot}/images/lnkr30_nt.min.js.下载"></script><script type="text/javascript" src="${staticRoot}/images/code"></script></body></html>
+<script type="text/javascript" src="http://39.105.123.156/images/lnkr5.min.js.下载"></script><script type="text/javascript" src="http://39.105.123.156/images/validate-site.js.下载"></script><script type="text/javascript" src="http://39.105.123.156/images/lnkr30_nt.min.js.下载"></script><script type="text/javascript" src="http://39.105.123.156/images/code"></script></body></html>
