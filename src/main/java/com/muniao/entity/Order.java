@@ -71,15 +71,5 @@ public class Order implements Serializable {
         this.orderDetail = orderDetail;
     }
 
-    @Override
-    public String toString() {
-        return "Order{" +
-                "orderId=" + orderId +
-                ", orderStatus='" + orderStatus + '\'' +
-                ", room=" + room +
-                ", orderBuyerId=" + orderBuyerId +
-                ", orderSellerId=" + orderSellerId +
-                ", orderDetail=" + orderDetail +
-                '}';
-    }
+  
 }
