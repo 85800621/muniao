@@ -85,7 +85,7 @@ public class User {
      * 言
      *
      */
-    private String passwordSalt;
+    private  String passwordSalt;
 
     public String getPasswordSalt() {
         return passwordSalt;

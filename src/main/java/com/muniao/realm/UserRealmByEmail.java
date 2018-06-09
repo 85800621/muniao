@@ -1,4 +1,4 @@
-package com.muniao.Realm;
+package com.muniao.realm;
 
 
 import com.muniao.dao.UserMapper;
@@ -6,6 +6,7 @@ import com.muniao.entity.User;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,14 +62,16 @@ public class UserRealmByEmail extends AuthorizingRealm {
         }
 
         String dbPassword = tbUser.getPassword();
+
         char[] tokenPassword = usernamePasswordToken.getPassword();
         String userPassword = new String(tokenPassword);
+        SimpleHash simpleHash = new SimpleHash("MD5", userPassword, tbUser.getPasswordSalt());
         System.out.println("userPassword==="+userPassword+"---------------"+"dbPassword==="+dbPassword);
-        if (null == dbPassword || !dbPassword.equals(userPassword)) {
+        if (null == dbPassword || !dbPassword.equals(simpleHash.toString())) {
             throw new IncorrectCredentialsException("密码错误");
         }
 
-        SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(email, dbPassword, getName());
+        SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(email, userPassword, getName());
 
         return authenticationInfo;
 

@@ -2,7 +2,6 @@ package com.muniao.service.Impl;
 
 import com.muniao.entity.User;
 import com.muniao.entity.UserTest;
-import com.muniao.service.RegisterService;
 import com.muniao.service.TestService;
 import com.muniao.service.UserTestService;
 import org.junit.Test;
@@ -31,6 +30,9 @@ public class UserTestServiceTest {
     @Autowired
     private TestService testService;
 
+    @Autowired
+    private LoginService loginService;
+
 
     @Test
     public void getUserTestById() throws Exception {
@@ -56,19 +58,28 @@ public class UserTestServiceTest {
     @Test
     public void testCase2(){
         User user = new User();
-        user.setUserName("maozedong");
-        user.setEmail("maozedong@qq.com");
-        user.setPassword("123123");
+        user.setUserName("aa");
+        user.setEmail("aa@qq.com");
+     //   user.setPassword("123123");
 //        testService.insert(user);
 
-        Integer integer = registerService.registerUser(user);
+        Integer integer = registerService.registerUser(user,"12345");
         System.out.println(integer);
     }
 
     @Test
     public void testCase3(){
         testService.insertRoleUser(2,29);
+    }
 
+
+    @Test
+    public void testCase4(){
+        try {
+            loginService.login("18792074922","12345");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 

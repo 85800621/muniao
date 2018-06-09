@@ -605,34 +605,34 @@
                 return false;
             }
             //登录
-            $.post("/Login/CheckLoginFast", {
+            $.post("login/CheckLoginFast", {
                 Tel_M: $('#login_Tel_M').val().trim(),
                 ValidCode: $('#login_ValidCode').val().trim(),
                 MsgCode: $('#login_MsgCode').val().trim()
             }, function (data) {
-                var j = JSON.parse(data);
-                if (j.state == -1) {//图形验证码错误
+             //   var j = JSON.parse(data);
+                if (data.code == -1) {//图形验证码错误
                     getImageCode($("#ValidImg"));
                     $('#login_ValidCode').focus();
                     $('.newa_tips_text').html('图形验证码错误');
                     $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 126 }).addClass("newa_tips_show");
                     return false;
                 }
-                else if (j.state == -2) {//短信验证码错误
+                else if (data.code == -2) {//短信验证码错误
                     $('#login_MsgCode').focus();
                     $('.newa_tips_text').html('短信验证码错误');
                     $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
                     return false;
-                } else if (j.state==-22) {
+                } else if (data.code ==-22) {
                     $('#login_MsgCode').focus();
                     $('.newa_tips_text').html('验证码已经失效，请重新获取验证码！');
                     $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
                     return false;
                 }
-                else if (j.state == 1) {
+                else if (data.code == 1) {
                     location.href = 'http://www.muniao.com';
                 }
-                else if (j.state == 3) {
+                else if (data.code == 3) {
                     alert(j.mgs);
                 }
             });
@@ -722,7 +722,7 @@
         /*发送短信*/
         $.ajaxSettings.async = false;
         $.ajaxSetup({ cache: false });
-        $.get('/Login/SendValidCode', { mob: $('#login_Tel_M').val(), ValidCode: $('#login_ValidCode').val().trim() }, function (data) {
+        $.get('login/getCode', { tel: $('#login_Tel_M').val(), ValidCode: $('#login_ValidCode').val().trim() }, function (data) {
             var State = JSON.parse(data).State;
             if (State == 1) {
                 //$('#hd_MsgCode').val(JSON.parse(data).UtilsCode);
@@ -770,9 +770,9 @@
         })
     }
     //获取图片验证码
-    function getImageCode(obj)
+    function getImageCode()
     {
-        document.getElementById("ValidImg").src = '/Login/VerifyCode?' + Math.random();
+        document.getElementById("ValidImg").src = "login/pic?random=" + Math.random();
     }
 </script>
 <style>
@@ -802,7 +802,7 @@
                 <input type="text" id="login_ValidCode" name="newa_piccode" placeholder="图形验证码">
                 <input type="hidden" id="hd_ValidCode">
 
-                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="http://39.105.123.156/images/VerifyCode" onclick="getImageCode(this);"></a>
+                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="http://39.105.123.156/images/VerifyCode" onclick="getImageCode();"></a>
             </li>
             <li>
                 <i class="newa_code_icon"></i>

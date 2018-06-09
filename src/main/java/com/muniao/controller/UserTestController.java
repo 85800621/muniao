@@ -20,11 +20,10 @@ public class UserTestController {
     @Resource
     private UserTestService userTestService;
 
-    @RequestMapping(value = "/")
+    @RequestMapping(value = "/index")
     public String index(){
         return "/index";
     }
-
 
     @RequestMapping(value = "/register")
     public String register(){
@@ -34,6 +33,31 @@ public class UserTestController {
     @RequestMapping(value = "/features")
     public String features(){
         return "/features";
+    }
+
+    @RequestMapping(value = "/lodgerorder")
+    public String logderorder(){
+        return "/lodgerorder";
+    }
+
+    @RequestMapping(value = "/landlordorder")
+    public String landlordorder(){
+        return "/landlordorder";
+    }
+
+    @RequestMapping(value = "/orderdetail")
+    public String orderdetail(){
+        return "/orderdetail";
+    }
+
+    @RequestMapping(value = "/room")
+    public String room(){
+        return "/room";
+    }
+
+    @RequestMapping(value = "/roommanagement")
+    public String roommanagement(){
+        return "/roommanagement";
     }
 
 
@@ -46,9 +70,13 @@ public class UserTestController {
 
         return "/info";
     }
-//    @RequestMapping(value = "/featureslist")
-//    public String featureslist(){
-//        return "/featureslist";
-//    }
+    @RequestMapping(value = "booking")
+    public String booking(){
+        return "/booking";
+    }
 
+    @RequestMapping(value = "/pay")
+    public String pay(){
+        return "/pay";
+    }
 }
