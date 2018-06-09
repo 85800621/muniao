@@ -45,6 +45,14 @@
         <result column="to_shop_payment" property="toShopPayment" javaType="double"/>
         <association property="room" resultMap="RoomResultMap"/>
         <association property="refundRule" resultMap="RefundRuleResultMap"/>
+        <association property="checkInCustomers" resultMap="CheckInCustomerResultMap"/>
+    </resultMap>
+
+    <resultMap id="CheckInCustomerResultMap" type="com.muniao.entity.CheckInCustomer">
+        <id column="check_in_people_id" property="checkInCustomerId" javaType="INTEGER"/>
+        <result column="customer_name" property="customerName" javaType="String"/>
+        <result column="customer_IDcard" property="customerIDCard" javaType="String"/>
+        <result column="customer_phone_number" property="customerPhoneNum" javaType="String"/>
     </resultMap>
 
     <resultMap id="RefundRuleResultMap" type="com.muniao.entity.RefundRule">
@@ -58,7 +66,10 @@
         *
         FROM tb_order tor inner join tb_order_detail tod on tor.order_detail_id=tod.order_detail_id
         inner join tb_room tro on tod.room_id=tro.room_id
+        inner JOIN tb_checkIn_customer tcc on tod.order_detail_id=tcc.order_detail_id
         and order_buyer_id=#{id};
     </select>
+
+
 
 </mapper>

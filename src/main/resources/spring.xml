@@ -124,9 +124,9 @@
         </property>
     </bean>
 
-    <bean id="UserRealmByPhone" class="com.muniao.realm.UserRealmByPhone"/>
-
     <bean id="UserRealmByEmail" class="com.muniao.realm.UserRealmByEmail"/>
+
+    <bean id="UserRealmByPhone" class="com.muniao.realm.UserRealmByPhone"/>
 
 
     <!--################################  备注备用  ################################-->

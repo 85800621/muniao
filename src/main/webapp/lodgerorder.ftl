@@ -1472,7 +1472,7 @@
                                 <a href="http://www.muniao.com/home/detail?id=108419" class="aBlue"
                                    target="_blank">再次预订</a><br><br>
                                 <a onclick="orderdelete(&#39;381521&#39;)" class="aBlue">删除订单</a><br><br>
-                                <a href="http://user2.muniao.com/Order/Detail?orderid=381521&amp;utp=2" class="aBlue">详情&gt;&gt;</a>
+                                <a href="orderdetail/${orders.orderDetail.orderDetailId}" class="aBlue">详情&gt;&gt;</a>
                                 <br><br>
                             </td>
                             </#list>

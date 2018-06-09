@@ -1,6 +1,8 @@
 package com.muniao.service.Impl;
 
+import com.muniao.entity.CheckInCustomer;
 import com.muniao.entity.OrderDetail;
+import com.muniao.service.OrderDetailService;
 import com.muniao.service.OrderService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,6 +25,8 @@ import java.util.List;
 public class OrderServiceImplTest {
     @Resource
     private OrderService orderService;
+    @Resource
+    private OrderDetailService orderDetailService;
     @Test
     public void test1(){
 
@@ -33,7 +37,19 @@ public class OrderServiceImplTest {
             OrderDetail orderDetail=order.getOrderDetail();
             System.out.println(orderDetail.getCheckInTime()+"+"+orderDetail.getDepartureTime()
             +"+"+orderDetail.getRoom().getRoomName());
+            List<CheckInCustomer> checkInCustomers=orderDetail.getCheckInCustomers();
+            for (CheckInCustomer cic :checkInCustomers){
+                System.out.println(cic.getCheckInCustomerId());
+                System.out.println(cic.getCustomerName());
+                System.out.println(cic.getCustomerIDCard());
+            }
         }
+    }
+
+    @Test
+    public void test2(){
+        OrderDetail orderDetails=orderDetailService.selectOrderDetail(1);
+        System.out.println(orderDetails);
     }
 
 }
