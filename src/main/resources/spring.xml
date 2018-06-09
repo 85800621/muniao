@@ -107,6 +107,7 @@
                 /vendor/**=anon
                 <!--authc需要登录才能访问-->
                 <!--user配合rememberMe使用有效，authc不能配合rememberMe使用-->
+                /**=user
                 /**=anon
             </value>
         </property>
@@ -114,38 +115,28 @@
     </bean>
 
     <bean name="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
-        <!--  <property name="realms" ref="UserRealmByPhone"/>
-          <property name="realm" ref="UserRealmByEmail"/>  -->
         <property name="realms">
             <list>
                 <ref bean="UserRealmByEmail"/>
                 <ref bean="UserRealmByPhone"/>
             </list>
         </property>
+        <property name="rememberMeManager" ref="rememberManager"/>
+    </bean>
+
+    <bean id="rememberManager" class="org.apache.shiro.web.mgt.CookieRememberMeManager">
+
+        <property name="cookie" ref="rememberCookie"/>
+    </bean>
+
+    <bean id="rememberCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+        <constructor-arg value="rememberMe"/>
+        <property name="httpOnly" value="true"/>
+        <property name="maxAge" value="30000"/>
     </bean>
 
     <bean id="UserRealmByPhone" class="com.muniao.realm.UserRealmByPhone"/>
 
     <bean id="UserRealmByEmail" class="com.muniao.realm.UserRealmByEmail"/>
-
-
-    <!--################################  备注备用  ################################-->
-
-    <!-- 配置通知（配置事务执行的方法定义的名称规则） -->
-	<!--<tx:advice id="myAdvice" transaction-manager="transactionManager">-->
-	<!--<tx:attributes>-->
-	<!--<tx:method name="save*" propagation="REQUIRED"/>-->
-	<!--<tx:method name="del*" propagation="REQUIRED" />-->
-	<!--<tx:method name="update*" propagation="REQUIRED" />-->
-	<!--<tx:method name="*" propagation="SUPPORTS" read-only="true" />-->
-	<!--</tx:attributes>-->
-	<!--</tx:advice>-->
-
-	<!-- 配置AOP的规则 -->
-	<!--<aop:config>-->
-	<!--&lt;!&ndash; 配置切入点 &ndash;&gt;-->
-	<!--<aop:pointcut id="pc" expression="execution(* com.qianfeng.blog.service.impl.*.*(..))" />-->
-	<!--<aop:advisor pointcut-ref="pc" advice-ref="myAdvice" />-->
-	<!--</aop:config>-->
 
 </beans>
