@@ -97,6 +97,7 @@
         <property name="filterChainDefinitions">
             <value>
                 <!--anon不需要登录-->
+                /**/**=anon
                 /login/**=anon
               <!--  /login/checkLogin=anon -->
                 /Regist/RegistSubmit=anon
