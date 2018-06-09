@@ -58,7 +58,7 @@ public class RegisterController {
             }else {
                 registerService.insertRoleUser(1,integer);
             }
-            jsonResult = UtilsTools.returnJsonResult(1,user.getUserName(),Integer.parseInt(userType));
+            jsonResult = UtilsTools.returnJsonResult(1,user1.getUserName(),Integer.parseInt(userType));
             return jsonResult;
         }
 
