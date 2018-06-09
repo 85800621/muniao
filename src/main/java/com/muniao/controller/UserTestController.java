@@ -99,4 +99,9 @@ public class UserTestController {
     public String step2(){
         return "/step2";
     }
+
+    @RequestMapping(value = "/city")
+    public String city(){
+        return "/city";
+    }
 }
