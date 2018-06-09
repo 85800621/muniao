@@ -15,7 +15,7 @@
 
   <select id="selectByStructureId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
-    <include refid="Base_Column_List" />
+    *
     FROM tb_room_structure
     WHERE room_structure_id=#{structureId,jdbcType=INTEGER}
   </select>

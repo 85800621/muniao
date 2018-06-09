@@ -46,4 +46,9 @@ public class UserTestController {
 
         return "/info";
     }
+//    @RequestMapping(value = "/featureslist")
+//    public String featureslist(){
+//        return "/featureslist";
+//    }
+
 }
