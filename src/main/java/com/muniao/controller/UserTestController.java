@@ -74,4 +74,9 @@ public class UserTestController {
     public String booking(){
         return "/booking";
     }
+
+    @RequestMapping(value = "/pay")
+    public String pay(){
+        return "/pay";
+    }
 }
