@@ -50,6 +50,10 @@ public class UserTestController {
         return "/orderdetail";
     }
 
+    @RequestMapping(value = "/room")
+    public String room(){
+        return "/room";
+    }
 
     @RequestMapping(value = "/roommanagement")
     public String roommanagement(){
@@ -69,5 +73,10 @@ public class UserTestController {
     @RequestMapping(value = "booking")
     public String booking(){
         return "/booking";
+    }
+
+    @RequestMapping(value = "/pay")
+    public String pay(){
+        return "/pay";
     }
 }

@@ -1,7 +1,6 @@
 package com.muniao.dao;
 
 import com.muniao.entity.Order;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

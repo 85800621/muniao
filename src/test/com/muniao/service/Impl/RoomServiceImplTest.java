@@ -17,8 +17,8 @@ public class RoomServiceImplTest {
     @Test
     public void selectCountRoom() throws Exception {
 
-        Integer countRoom = roomService.selectCountRoom(1);
-        System.out.println(countRoom);
+//        Integer countRoom = roomService.selectCountRoom(1);
+//        System.out.println(countRoom);
     }
 
 }

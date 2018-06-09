@@ -1,5 +1,7 @@
 package com.muniao.entity;
 
+import java.util.List;
+
 /**
  * 2018/6/7
  * 史国纲创建
@@ -89,6 +91,19 @@ public class Room {
      * 是否可以增加床位.
      */
     private String bedAvaliable;
+
+    /**
+     * 房间图片
+     */
+    private List<RoomImage> lsit;
+
+    public List<RoomImage> getLsit() {
+        return lsit;
+    }
+
+    public void setLsit(List<RoomImage> lsit) {
+        this.lsit = lsit;
+    }
 
     public RoomStructure getRoomStructure() {
         return roomStructure;
