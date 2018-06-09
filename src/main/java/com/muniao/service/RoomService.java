@@ -17,9 +17,24 @@ public interface RoomService {
     List<Room> findAllByFeature(int featureId);
 
     /**
+     * 查询特色城市
+     * @param featureId 特色id
+     * @param roomLocation 城市名
+     * @return
+     */
+    List<Room> findByFeatureCity(int featureId,String roomLocation);
+
+    /**
+     * 查询出所有城市名
+     * @param featureId
+     * @return
+     */
+    List<Room> findByCityList(int featureId);
+
+    /**
      * 查询特色房间数量
      * @param featureId 特色id
      * @return 返回数量int
      */
-    Integer selectCountRoom(int featureId);
+    Integer CountFeatureList(int featureId);
 }

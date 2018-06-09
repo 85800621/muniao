@@ -3,13 +3,13 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>海景房短租,租直面大海海景房  - 木鸟短租</title>
-<#assign basePath=request.contextPath />
     <meta name="keywords" content="海景房短租,海景房出租">
     <meta name="description" content="木鸟短租为有海边度假旅游寻找海景房出租的朋友提供优质、可靠的海景房住宿服务.精心搜集了海景房短租房源,全心全意为您的出行住宿保驾护航.">
     <meta name="viewport" content="width=1400, initial-scale=1">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta property="wb:webmaster" content="xfwy">
     <meta property="qc:admins" content="329429240">
+    <#assign basePath=request.contextPath />
     <link rel="shortcut icon" href="https://assets.muniao.com/assets2/pc/favicon.ico">
     <script charset="utf-8" src="${staticRoot}/images/v.js.下载"></script><script>
         var logocode = '';
@@ -75,7 +75,7 @@
     <ul class="s_mn_nav">
         <li><a href="https://www.muniao.com/">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="${basePath}/featureslist" target="_self" class="s_mn_nav_over">特色短租</a></li>
+        <li><a href="https://www.muniao.com/features.html" target="_self" class="s_mn_nav_over">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
@@ -525,10 +525,10 @@
             <div class="s_mn_ftitle">
                 <h2><span>超值精选&nbsp;&nbsp;特别推荐</span></h2>
                 <div class="s_mn_features_citybox">
-                    <a href="" title="全部" class="s_mn_features_citybox_a">全部</a>&nbsp;|&nbsp;
+                    <a href="${basePath}/features/${roomFeature.roomFeatureId}" title="全部" >全部</a>&nbsp;|&nbsp;
                     <a href="" title="秦皇岛">秦皇岛</a><label>&nbsp;| &nbsp;</label>
-                <#list rooms as room>
-                    <a href="${basePath}/cityfeatures/${roomFeature.roomFeatureId}/${room.roomLocation}" title="${room.roomLocation}">${room.roomLocation}</a><label>&nbsp;| &nbsp;</label>
+                <#list  cityList as cityName>
+                    <a class="s_mn_features_citybox_a" href="${basePath}/cityfeatures/${roomFeature.roomFeatureId}/${cityName.roomLocation}" title="${cityName.roomLocation}">${cityName.roomLocation}</a><label>&nbsp;| &nbsp;</label>
                 </#list>
 
                 </div>

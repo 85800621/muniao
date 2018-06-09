@@ -38,8 +38,24 @@
     WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER}
   </select>
 
-  <select id="selectCountRoom" parameterType="java.lang.Integer" resultType="java.lang.Integer">
-    SELECT COUNT(*) FROM tb_room WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER};
+  <select id="findByFeatureCity" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_room
+    WHERE room_feature_id=#{featureId,jdbcType=INTEGER} AND room_location=#{roomLocation,javaType=String}
   </select>
+
+  <select id="findByCityList" resultMap="BaseResultMap">
+    SELECT DISTINCT room_location FROM tb_room WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER};
+  </select>
+
+  <select id="CountFeatureList" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    SELECT  COUNT(room_feature_id) FROM tb_room WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER};
+  </select>
+
+
+  <!--<select id="selectCountRoom" parameterType="java.lang.Integer" resultMap="BaseResultMap">-->
+    <!--SELECT COUNT (1) FROM tb_room WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER};-->
+  <!--</select>-->
 
 </mapper>
