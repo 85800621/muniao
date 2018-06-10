@@ -380,7 +380,7 @@
     <div id="div_User" class="s_mn_userbox" style="display: block"><a href="http://user2.muniao.com/Index/MoveHouse?utp=1"
                                                         class="free-publishBtn">免费发布房源</a> <span>Hi,欢迎回来！</span> <a
             class="s_mu_username" style="font:15px/45px Microsoft YaHei;" target="_blank"
-            onmouseover="$(&#39;#div_FangKe&#39;).show(); $(&#39;#div_FangDong&#39;).show();">嘉利学府</a><!--房东弹出框-->
+            onmouseover="$(&#39;#div_FangKe&#39;).show(); $(&#39;#div_FangDong&#39;).show();">${user.roomName}</a><!--房东弹出框-->
         <div id="div_FangDong" class="w_user_xl"
              style="display:none;border-radius: 3px;opacity:0.8;background-color:rgb(191, 82, 13);border:0;"
              onmouseover="$(&#39;#div_FangDong&#39;).show();" onmouseout="$(&#39;#div_FangDong&#39;).hide();">

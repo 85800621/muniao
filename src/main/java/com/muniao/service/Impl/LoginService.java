@@ -18,10 +18,12 @@ public class LoginService {
     @Autowired
     private UserMapper userDao;
 
-    public void login(String phone,String password){
-        System.out.println(phone+"--------service--------"+password);
+    public void login(String phone,String password,Boolean rememberMe){
+
+        System.out.println(phone+"--------service--------"+password+"----------"+rememberMe);
         Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken(phone, password);
+        UsernamePasswordToken token = new UsernamePasswordToken(phone, password,rememberMe);
+//        token.setRememberMe(rememberMe);
         subject.login(token);
     }
 

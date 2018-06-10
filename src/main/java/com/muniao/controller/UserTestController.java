@@ -79,4 +79,29 @@ public class UserTestController {
     public String pay(){
         return "/pay";
     }
+
+    @RequestMapping(value = "/forgetpass")
+    public String forgetpass(){
+        return "/forgetpass";
+    }
+
+    @RequestMapping(value = "/preadd")
+    public String preadd(){
+        return "/preadd";
+    }
+
+    @RequestMapping(value = "/step1")
+    public String step1(){
+        return "/step1";
+    }
+
+    @RequestMapping(value = "/step2")
+    public String step2(){
+        return "/step2";
+    }
+
+    @RequestMapping(value = "/city")
+    public String city(){
+        return "/city";
+    }
 }
