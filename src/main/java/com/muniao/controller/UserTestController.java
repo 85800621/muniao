@@ -50,14 +50,19 @@ public class UserTestController {
         return "/orderdetail";
     }
 
-    @RequestMapping(value = "/room")
-    public String room(){
-        return "/room";
-    }
+//    @RequestMapping(value = "/room")
+//    public String room(){
+//        return "/room";
+//    }
 
     @RequestMapping(value = "/roommanagement")
     public String roommanagement(){
         return "/roommanagement";
+    }
+
+    @RequestMapping(value = "/city")
+    public String roomcity(){
+        return "/city";
     }
 
 
@@ -80,5 +85,59 @@ public class UserTestController {
         return "/pay";
     }
 
+    @RequestMapping(value = "/forgetpass")
+    public String forgetpass(){
+        return "/forgetpass";
+    }
+
+    @RequestMapping(value = "/preadd")
+    public String preadd(){
+        return "/preadd";
+    }
+
+    @RequestMapping(value = "/step1")
+    public String step1(){
+        return "/step1";
+    }
+
+    @RequestMapping(value = "/step2")
+    public String step2(){
+        return "/step2";
+    }
+
+    @RequestMapping(value = "/password")
+    public String password(){
+        return "/password";
+    }
+
+    @RequestMapping(value = "/landlordinfo")
+    public String landlordinfo(){
+        return "/landlordinfo";
+    }
+
+    @RequestMapping(value = "/lodgerinfo")
+    public String lodgerinfo(){
+        return "/lodgerinfo";
+    }
+
+    @RequestMapping(value = "/paymentinfo")
+    public String paymentinfo(){
+        return "/paymentinfo";
+    }
+
+    @RequestMapping(value = "/step3")
+    public String step3(){
+        return "/step3";
+    }
+
+    @RequestMapping(value = "/step4")
+    public String step4(){
+        return "/step4";
+    }
+
+    @RequestMapping(value = "/step5")
+    public String step5(){
+        return "/step5";
+    }
 
 }

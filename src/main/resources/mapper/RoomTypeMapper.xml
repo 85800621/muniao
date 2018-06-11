@@ -17,4 +17,12 @@
     WHERE room_type_id=#{typeId,jdbcType=INTEGER}
   </select>
 
+  <select id="selectType" resultMap="BaseResultMap">
+    select
+    DISTINCT
+    room_type
+    FROM tb_room_type;
+  </select>
+
+
 </mapper>
