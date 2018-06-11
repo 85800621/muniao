@@ -2,6 +2,7 @@ package com.muniao.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -12,30 +13,79 @@ import java.util.Date;
  *
  */
 public class OrderDetail implements Serializable{
+    /**
+     * 订单详情id
+     *
+     */
     private Integer orderDetailId;
-
+    /**
+     * 预订时间
+     *
+     */
     private Date bookingTime;
-
+    /**
+     * 房间
+     *
+     */
     private Room room;
-
+    /**
+     * 退款规则
+     *
+     */
     private RefundRule refundRule;
-
+    /**
+     * 入住时间
+     *
+     */
     private Date checkInTime;
-
+    /**
+     * 离店时间
+     *
+     */
     private Date departureTime;
-
+    /**
+     * 入住人数
+     *
+     */
     private Integer checkInPopulation;
-
+    /**
+     * 价格详情
+     *
+     */
     private String priceDetail;
-
+    /**
+     * 总价
+     *
+     */
     private double totalPrice;
-
+    /**
+     * 总预付款
+     *
+     */
     private double totalDeposit;
-
+    /**
+     * 实付款
+     *
+     */
     private double actuallyPaid;
-
+    /**
+     * 到店付款
+     *
+     */
     private double toShopPayment;
+    /**
+     * 入住人信息
+     *
+     */
+    private List<CheckInCustomer> checkInCustomers;
 
+    public List <CheckInCustomer> getCheckInCustomers() {
+        return checkInCustomers;
+    }
+
+    public void setCheckInCustomers(List <CheckInCustomer> checkInCustomers) {
+        this.checkInCustomers = checkInCustomers;
+    }
 
     public Integer getOrderDetailId() {
         return orderDetailId;
@@ -131,5 +181,24 @@ public class OrderDetail implements Serializable{
 
     public void setToShopPayment(double toShopPayment) {
         this.toShopPayment = toShopPayment;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderDetail{" +
+                "orderDetailId=" + orderDetailId +
+                ", bookingTime=" + bookingTime +
+                ", room=" + room +
+                ", refundRule=" + refundRule +
+                ", checkInTime=" + checkInTime +
+                ", departureTime=" + departureTime +
+                ", checkInPopulation=" + checkInPopulation +
+                ", priceDetail='" + priceDetail + '\'' +
+                ", totalPrice=" + totalPrice +
+                ", totalDeposit=" + totalDeposit +
+                ", actuallyPaid=" + actuallyPaid +
+                ", toShopPayment=" + toShopPayment +
+                ", checkInCustomers=" + checkInCustomers +
+                '}';
     }
 }

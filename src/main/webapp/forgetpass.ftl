@@ -25,9 +25,9 @@
     <script>
         function getValidCode() {
             if (checkmob())
-                $.post("/ForgetPass/GetValidCode", {mobile: $('[name=mobile]').val()}, function (data) {
-                    if (data) {
-                        alert(data);
+                $.post("getCode", {tel: $('[name=mobile]').val()}, function (data) {
+                    if (data.code = 3) {
+                        alert("验证码已发送");
                     }
                 });
         }
@@ -85,17 +85,24 @@
                 alert("请输入确认密码！");
                 return false;
             }
-            $.post("/ForgetPass/ForgetPassword", {
+            $.post("reSettPassword", {
                 mobile: mobiles,
                 imgcode: imgcodes,
                 vaildatecode: vaildatecodes,
                 password: passwords,
                 newpassword: newpasswords
-            }, function (msg) {
-                var date = msg;
-                alert(date);
-                if (date == "修改成功，请使用新密码登录！") {
+            }, function (date) {
+              //  var date = msg;
+                alert(date.code);
+                if (date.code=1) {
+                    alert("1111111111111111111111111111")
                     location.href = 'http://www.muniao.com';
+                }else if(date.code=-2) {
+                    alert("短信验证码输入错误")
+                    location.href = 'http://www.baidu.com';
+                }else if(date.code=-1){
+                    alert("图形验证码错误")
+                    location.href = 'http://www.sina.com';
                 }
             });
         }
@@ -1032,8 +1039,9 @@
     }
 
     //获取图片验证码
-    function getImageCode(obj) {
-        document.getElementById("ValidImg").src = '/Login/VerifyCode?' + Math.random();
+    function getImageCode() {
+        alert("00000000000000000000000000000")
+        document.getElementById("imgPic").src = "pic?random=" + Math.random();
     }
 </script>
 <style>
@@ -1064,7 +1072,7 @@
                 <input type="text" id="login_ValidCode" name="newa_piccode" placeholder="图形验证码">
                 <input type="hidden" id="hd_ValidCode">
 
-                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="${staticRoot}/images/VerifyCode"
+                <a href="javascript:void(0);"><img id="bbb" src="pic"
                                                                         onclick="getImageCode(this);"></a>
             </li>
             <li>
@@ -1170,7 +1178,7 @@
                         </div>
                         <div class="s_mn_back_information">
                             <p>
-                                1、请提供您注册木鸟短租时使用的手机号码；<br><br>
+                                1、请提供您注册木鸟短租时使用的手机号码；aaaa<br><br>
                                 2、点击获取密码，我们将发送一条带有验证信息的短信给您；<br><br>
                                 3、在验证码处输入您获取的验证信息，即可进行密码重置。
                             </p>
@@ -1188,8 +1196,9 @@
                                     <span>验证码：</span>
                                     <input class="s_mn_back_ipt" name="imgcode" id="f_code" placeholder="请输入图形验证码"
                                            type="tel">
-                                    <a href="javascript:void(0);" id="f_img"><img src="${staticRoot}/images/VerifyCode"
-                                                                                  onclick="this.src = &#39;/Login/VerifyCode?&#39; + Math.random();"></a>
+                                    <a  href="javascript:void(0);"><img id="imgPic" src="pic"
+                                                                                            onclick="getImageCode(this);"></a>
+                                    <#--this.src ="login/pic?random=" + Math.random();-->
                                 </div>
                                 <div class="s_mn_back_input">
                                     <span>手机号：</span>

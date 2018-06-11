@@ -82,7 +82,7 @@ public class User {
     private String picture;
 
     /**
-     * 言
+     * 盐
      *
      */
     private  String passwordSalt;

@@ -29,8 +29,8 @@ import java.util.Random;
  * 林浩 20180605
  */
 @Controller
-@RequestMapping("/login")
-public class LoginController {
+@RequestMapping("/")
+public class UserController {
 
     @Autowired
     private LoginService loginService;
@@ -55,7 +55,8 @@ public class LoginController {
         try{
             loginService.login(tel,password,rememberMe);
             jsonResult.setCode(1);
-            //session.setAttribute("user",);
+            User user = loginService.checkTelePhone(tel);
+            session.setAttribute("user",user);
             return jsonResult;
         }catch (UnknownAccountException e){
             e.printStackTrace();
@@ -105,6 +106,35 @@ public class LoginController {
             return jsonResult;
         }
 
+    }
+
+
+    /**
+     * 密码重置  林浩
+     * @param mobile
+     * @param imgcode
+     * @param vaildatecode
+     * @param password
+     * @param newpassword
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/reSettPassword")
+    public Object retPassword(String mobile,String imgcode,String vaildatecode,String password,String newpassword,HttpSession session){
+        JsonResult jsonResult = new JsonResult();
+        String  codeJsp = (String) session.getAttribute("code");
+        if(!codeStr.equals(vaildatecode)||vaildatecode.equals("")){
+            jsonResult.setCode(-2);
+            return jsonResult;
+        }else if(!codeJsp.equals(imgcode)||imgcode.equals("")) {
+            jsonResult.setCode(-1);
+            return jsonResult;
+        }else {
+            User user = loginService.checkTelePhone(mobile);
+            loginService.reSetPassword(password,mobile,user.getPasswordSalt());
+            jsonResult.setCode(1);
+            return jsonResult;
+        }
     }
 
     /**
@@ -165,8 +195,45 @@ public class LoginController {
 
         JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(response.getOutputStream());
         encoder.encode(bufferedImg);
-
     }
+
+
+    /**
+     * 登陆后重新设置新的密码
+     * @param OldPwd
+     * @param NewPwd
+     * @param CNewPwd
+     * @param session
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/updatePassword")
+    public Object updatePassword(String OldPwd,String NewPwd,String CNewPwd,HttpSession session){
+        JsonResult jsonResult = new JsonResult();
+        System.out.println("----------------updatePassword----------------");
+        try {
+            User user = (User) session.getAttribute("user");
+            String telephone = user.getTelephone();
+            loginService.updatePassword(NewPwd,OldPwd,telephone);
+            jsonResult.setCode(1);
+            return jsonResult;
+        }catch (Exception e){
+            e.printStackTrace();
+            jsonResult.setCode(-2);
+            return jsonResult;
+        }
+    }
+
+    @RequestMapping("/setPersonInfo")
+    @ResponseBody
+    public Object setPersonInfo(User user,HttpServletRequest request){
+
+
+
+        return  null;
+    }
+
+
 
 
 }

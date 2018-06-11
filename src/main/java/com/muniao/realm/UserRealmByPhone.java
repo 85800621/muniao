@@ -66,34 +66,67 @@ public class UserRealmByPhone extends AuthorizingRealm {
 
         UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken) token;
         //是用户输入的用户名
-        String phone = usernamePasswordToken.getUsername();
+        String userInput = usernamePasswordToken.getUsername();
 
-
+        System.out.println("111111111111111111111111111"+userInput);
 
             User tbUser = null;
-            try {
-                tbUser = userDAO.checkTelephone(phone);
-            } catch (Exception e) {
-                e.printStackTrace();
+            if(!userInput.endsWith(".com")){
+                try {
+                    tbUser = userDAO.checkTelephone(userInput);
+                } catch (Exception e) {
+                    e.printStackTrace();
+
+                }
+
+                if (tbUser == null) {
+                    throw new UnknownAccountException("没有用户名：" + userInput);
+                }
+
+                String dbPassword = tbUser.getPassword();
+                char[] tokenPassword = usernamePasswordToken.getPassword();
+                String userPassword = new String(tokenPassword);
+                SimpleHash simpleHash = new SimpleHash("MD5", userPassword, "12345");
+                System.out.println("userPassword==="+userPassword+"---------------"+"dbPassword==="+dbPassword);
+                if (null == dbPassword || !dbPassword.equals(simpleHash.toString())) {
+                    throw new IncorrectCredentialsException("密码错误");
+                }
+
+                SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(userInput, userPassword, getName());
+
+                return authenticationInfo;
+
+            }else {
+                System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+userInput);
+                try {
+                    tbUser = userDAO.checkEmail(userInput);
+                } catch (Exception e) {
+                    e.printStackTrace();
+
+                }
+
+                if (tbUser == null) {
+                    throw new UnknownAccountException("没有用户名：" + userInput);
+                }
+
+                String dbPassword = tbUser.getPassword();
+
+                char[] tokenPassword = usernamePasswordToken.getPassword();
+                String userPassword = new String(tokenPassword);
+
+
+
+                SimpleHash simpleHash = new SimpleHash("MD5", userPassword, tbUser.getPasswordSalt());
+                System.out.println("userPassword==="+userPassword+"---------------"+"dbPassword==="+dbPassword);
+                if (null == dbPassword || !dbPassword.equals(simpleHash.toString())) {
+                    throw new IncorrectCredentialsException("密码错误");
+                }
+
+                SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(userInput, userPassword, getName());
+
+                return authenticationInfo;
 
             }
-
-            if (tbUser == null) {
-                throw new UnknownAccountException("没有用户名：" + phone);
-            }
-
-            String dbPassword = tbUser.getPassword();
-            char[] tokenPassword = usernamePasswordToken.getPassword();
-            String userPassword = new String(tokenPassword);
-            SimpleHash simpleHash = new SimpleHash("MD5", userPassword, "12345");
-            System.out.println("userPassword==="+userPassword+"---------------"+"dbPassword==="+dbPassword);
-            if (null == dbPassword || !dbPassword.equals(simpleHash.toString())) {
-                throw new IncorrectCredentialsException("密码错误");
-            }
-
-            SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(phone, userPassword, getName());
-
-            return authenticationInfo;
 
 
 

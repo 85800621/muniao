@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0057)http://user2.muniao.com/Order/Detail?orderid=379453&utp=2 -->
+<!-- saved from url=(0046)http://user2.muniao.com/BecomeHost/Index?utp=2 -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -110,16 +110,18 @@
 <!--</div>-->
 <!--</div>-->
 <!--<div id=":widgets" class="webim-widgets">-->
-<!--<div id=":webim-window" class="webim-window ui-widget webim-buddy-window  webim-window-minimize">-->
+<!--<div id=":webim-window" class="webim-window ui-widget webim-buddy-window webim-window-minimize">-->
 <!--<div class="webim-window-tab-wrap">-->
-<!--<div id=":tab" class="webim-window-tab  ui-state-default" unselectable="on"-->
+<!--<div id=":tab" class="webim-window-tab ui-state-default ui-state-default" unselectable="on"-->
 <!--style="display: block; user-select: none;">-->
 <!--<div class="webim-window-tab-inner">-->
 
 <!--<a id=":tabClose" title="关闭" class="webim-window-close"-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#close"-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#close"-->
 <!--style="display: none;"><em class="ui-icon ui-icon-close">关闭</em></a>-->
-<!--<div id=":tabCount" class="webim-window-tab-count" style="display: none;">0</div>-->
+<!--<div id=":tabCount" class="webim-window-tab-count">-->
+<!--0-->
+<!--</div>-->
 <!--<em id=":tabIcon" class="webim-icon webim-icon-buddy"></em>-->
 <!--<h4 id=":tabTitle">联系人[2/2]</h4>-->
 <!--</div>-->
@@ -131,7 +133,7 @@
 <!--<div id=":header" class="webim-window-header ui-widget-header ui-corner-top">-->
 <!--<span id=":actions" class="webim-window-actions">-->
 <!--<a id=":minimize" title="最小化"-->
-<!--class="webim-window-minimize "-->
+<!--class="webim-window-minimize"-->
 <!--href="javascript:void();"><em-->
 <!--class="ui-icon ui-icon-minus">最小化</em></a>-->
 <!--<a id=":detach" title="移动"-->
@@ -157,31 +159,32 @@
 <!--<div style="display: block;">-->
 <!--<div id=":user" class="webim-user">-->
 <!--<a id=":userPic" class="webim-user-pic ui-corner-all ui-state-active"-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#"><img-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#"><img-->
 <!--width="50" height="50" defaultsrc=""-->
 <!--onerror="var d=this.getAttribute(&#39;defaultsrc&#39;);if(d &amp;&amp; this.src!=d)this.src=d;"-->
-<!--class="ui-corner-all" src="${staticRoot}/images/pic13.jpg"></a>-->
+<!--class="ui-corner-all"-->
+<!--src="${staticRoot}/images/d590d8e4b87c4c65922d653c3812d4a620180604093556672.jpg_150_150.jpg"></a>-->
 <!--<div class="webim-user-show"><h4><a id=":userShowTrigger"-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#show"><strong-->
-<!--id=":userNick">夏冰</strong><span id=":userShow"><em-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#show"><strong-->
+<!--id=":userNick">嘉利学府</strong><span id=":userShow"><em-->
 <!--class="webim-icon webim-icon-available">在线</em>在线</span><em-->
 <!--class="ui-icon ui-icon-triangle-1-s">show_status_list</em></a>-->
 <!--</h4>-->
 <!--<p id=":userShowList" class="ui-state-active ui-corner-all"-->
 <!--style="display: none;">-->
-<!--<a href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#available"-->
+<!--<a href="http://user2.muniao.com/BecomeHost/Index?utp=2#available"-->
 <!--class="webim-user-show-available"><em-->
 <!--class="webim-icon webim-icon-available">在线</em>在线</a>-->
-<!--<a href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#dnd"-->
+<!--<a href="http://user2.muniao.com/BecomeHost/Index?utp=2#dnd"-->
 <!--class="webim-user-show-dnd"><em-->
 <!--class="webim-icon webim-icon-dnd">忙碌</em>忙碌</a>-->
-<!--<a href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#away"-->
+<!--<a href="http://user2.muniao.com/BecomeHost/Index?utp=2#away"-->
 <!--class="webim-user-show-away"><em-->
 <!--class="webim-icon webim-icon-away">离开</em>离开</a>-->
-<!--<a href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#invisible"-->
+<!--<a href="http://user2.muniao.com/BecomeHost/Index?utp=2#invisible"-->
 <!--class="webim-user-show-invisible"><em-->
 <!--class="webim-icon webim-icon-invisible">隐身</em>隐身</a>-->
-<!--<a href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#unavailable"-->
+<!--<a href="http://user2.muniao.com/BecomeHost/Index?utp=2#unavailable"-->
 <!--class="webim-user-show-unavailable"><em-->
 <!--class="webim-icon webim-icon-unavailable">离线</em>离线</a>-->
 <!--</p>-->
@@ -206,7 +209,19 @@
 <!--<hr class="webim-line ui-state-default">-->
 <!--<ul>-->
 <!--<li title="" class="webim-buddy-available"><a-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#url"-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#url"-->
+<!--rel="56599" class="ui-helper-clearfix">-->
+<!--<div id=":tabCount" class="webim-window-tab-count">0</div>-->
+<!--<em class="webim-icon ui-icon ui-icon-trash"-->
+<!--style="display:none;cursor:pointer;"></em><em-->
+<!--class="webim-icon webim-icon-available" title="在线">available</em><img-->
+<!--width="25"-->
+<!--src="${staticRoot}/images/45da02ee0b8a4ccf9f58ff7ddd10657620180401193028296.jpg_150_150.jpg"-->
+<!--defaultsrc=""-->
+<!--onerror="var d=this.getAttribute(&#39;defaultsrc&#39;);if(d &amp;&amp; this.src!=d)this.src=d;"><strong>张雪艳</strong><span>&nbsp;</span></a>-->
+<!--</li>-->
+<!--<li title="" class="webim-buddy-available"><a-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#url"-->
 <!--rel="363368" class="ui-helper-clearfix">-->
 <!--<div id=":tabCount" class="webim-window-tab-count">0</div>-->
 <!--<em class="webim-icon ui-icon ui-icon-trash"-->
@@ -216,18 +231,6 @@
 <!--src="${staticRoot}/images/7fc93e87a9334a339509b3ff0e6ec09b20180525163701649.jpg_150_150.jpg"-->
 <!--defaultsrc=""-->
 <!--onerror="var d=this.getAttribute(&#39;defaultsrc&#39;);if(d &amp;&amp; this.src!=d)this.src=d;"><strong>逅客崇文门天安门前门店</strong><span>&nbsp;</span></a>-->
-<!--</li>-->
-<!--<li title="" class="webim-buddy-available"><a-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#url"-->
-<!--rel="969857" class="ui-helper-clearfix">-->
-<!--<div id=":tabCount" class="webim-window-tab-count">0</div>-->
-<!--<em class="webim-icon ui-icon ui-icon-trash"-->
-<!--style="display:none;cursor:pointer;"></em><em-->
-<!--class="webim-icon webim-icon-available" title="在线">available</em><img-->
-<!--width="25"-->
-<!--src="${staticRoot}/images/24bb9d9113a7404282c5ae9ca7501fe620180518152803336.jpg_150_150.jpg"-->
-<!--defaultsrc=""-->
-<!--onerror="var d=this.getAttribute(&#39;defaultsrc&#39;);if(d &amp;&amp; this.src!=d)this.src=d;"><strong>班海东</strong><span>&nbsp;</span></a>-->
 <!--</li>-->
 <!--</ul>-->
 <!--</li>-->
@@ -247,7 +250,7 @@
 <!--<strong id=":tabTipC">公告</strong>-->
 <!--</div>-->
 <!--<a id=":tabClose" title="关闭" class="webim-window-close"-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#close"-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#close"-->
 <!--style="display: none;"><em class="ui-icon ui-icon-close">关闭</em></a>-->
 <!--<div id=":tabCount" class="webim-window-tab-count">-->
 <!--0-->
@@ -398,17 +401,17 @@
 温馨提示：您目前的浏览器版本过低，网站部分功能无法正常使用，建议尽快升级：
 <a href="http://www.chromeliulanqi.com/" target="_blank" name="升级谷歌浏览器" id="upgrade_firefox"
    style="display:inline-block;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;_margin-bottom:4px;"><img
-        src="/Content/images/google_Icon.jpg"/></a>
+        src="${staticRoot}/images/google_Icon.jpg"/></a>
 <a href="http://www.firefox.com.cn" target="_blank" name="升级火狐浏览器" id="upgrade_firefox"
    style="display:inline-block;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;_margin-bottom:4px;"><img
-        src="/Content/images/firefox_Icon.jpg"/></a>
+        src="${staticRoot}/images/firefox_Icon.jpg"/></a>
 </div>
 <![endif]-->
 <div class="s_mn_headbox" id="s_mn_headbox">
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"><a href="http://www.muniao.com/"><img
             src="${staticRoot}/images/mn_logo.png" width="80" height="40"></a></h2>
-    <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活">
-    </div>
+    <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活"
+                                                      title="一间房一种生活"></div>
     <ul class="s_mn_nav">
         <li><a href="http://www.muniao.com/">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
@@ -417,26 +420,47 @@
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
-    <div id="div_FangKe1" class="s_mn_release w_mR30" style="">
+    <div id="div_FangKe1" class="s_mn_release w_mR30" style="display:none;">
         <a href="http://user2.muniao.com/Index/MoveHouse?utp=1" class="s_mn_navbutt" rel="nofollow">我要成为房东</a>
     </div>
     <div id="div_User" class="s_mn_userbox" style="">
+        <a href="http://user2.muniao.com/Index/MoveHouse?utp=1" class="free-publishBtn">免费发布房源</a>
 
         <span>Hi,欢迎回来！</span>
         <a class="s_mu_username" style="font:15px/45px Microsoft YaHei;" target="_blank"
-           onmouseover="$(&#39;#div_FangKe&#39;).show(); $(&#39;#div_FangDong&#39;).show();">夏冰</a>
-        <!--房客弹出框-->
-        <div id="div_FangKe" class="s_mu_usermenubox" style="display:none;"
-             onmouseover="$(&#39;#div_FangKe&#39;).show();" onmouseout="$(&#39;#div_FangKe&#39;).hide();">
-            <div class="s_mu_user_jt">&nbsp;</div>
-            <ul class="s_mu_usermenu" style="opacity:0.8;background-color:rgb(191, 82, 13);border:0;">
-                <li><a href="http://user2.muniao.com/Order/Index?utp=2&amp;type=8"
-                       style="font-size:12px;font-family:微软雅黑;color:#fff;">我的订单</a></li>
-                <li><a href="http://www.muniao.com/mobile.html?utp=2"
-                       style="font-size:12px;font-family:微软雅黑;color:#fff;">木鸟APP</a></li>
-                <li><a href="javascript:void(0);" style="font-size:12px;font-family:微软雅黑;color:#fff;"
-                       onclick="logout()">退出</a></li>
-            </ul>
+           onmouseover="$(&#39;#div_FangKe&#39;).show(); $(&#39;#div_FangDong&#39;).show();">嘉利学府</a>
+        <!--房东弹出框-->
+        <div id="div_FangDong" class="w_user_xl"
+             style="border-radius: 3px; opacity: 0.8; background-color: rgb(191, 82, 13); border: 0px; display: none;"
+             onmouseover="$(&#39;#div_FangDong&#39;).show();" onmouseout="$(&#39;#div_FangDong&#39;).hide();">
+            <div class="w_user_xlfd">
+                <div class="w_user_tt w_user_font" style="text-align:left;"><a
+                        href="http://user2.muniao.com/SystemMsg/Index?utp=1" rel="nofollow" target="_blank"
+                        style="font-family:微软雅黑;color:#fff;">房东中心</a></div>
+                <ul class="w_user_list w_user_font clearfix">
+                    <li><a href="http://user2.muniao.com/Index/MoveHouse?utp=1"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">发布房间</a></li>
+                    <li><a href="http://user2.muniao.com/Order/Index?utp=1&amp;type=8"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">订单管理</a></li>
+                    <li><a href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">房源管理</a></li>
+                    <li><a href="http://www.muniao.com/fd_mobile.html"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">房东助手</a></li>
+                </ul>
+                <div class="w_user_tt w_user_font w_ft10" style="text-align:left;"><a
+                        href="http://user2.muniao.com/SystemMsg/Index?utp=2" rel="nofollow" target="_blank"
+                        style="font-family:微软雅黑;color:#fff;">房客中心</a></div>
+                <ul class="w_user_list w_user_font clearfix">
+                    <li><a href="http://user2.muniao.com/Order/Index?utp=2&amp;type=8"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">我的订单</a></li>
+                    <li><a href="http://www.muniao.com/mobile.html?utp=2"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">木鸟APP</a></li>
+                </ul>
+                <div class="w_user_tc w_user_font" style="margin:60px auto 0;"><a href="javascript:void(0);"
+                                                                                  onclick="logout()"
+                                                                                  style="font-size:12px;font-family:微软雅黑;color:#fff;">退出</a>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -1074,8 +1098,8 @@
         <a class="newa_login_btn newa_ordinary" href="javascript:void(0);" onclick="toLogin(1)"></a>
         <p class="newa_zc">还没有木鸟账号？<a href="http://user2.muniao.com/regist">立即注册</a></p>
         <div class="newa_coop">
-            <a class="newa_sina" href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#"></a>
-            <a class="newa_qq" href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#"></a>
+            <a class="newa_sina" href="http://user2.muniao.com/BecomeHost/Index?utp=2#"></a>
+            <a class="newa_qq" href="http://user2.muniao.com/BecomeHost/Index?utp=2#"></a>
         </div>
     </div>
     <!---tips--->
@@ -1122,9 +1146,10 @@
 <div class="usercon">
     <div class="userL" style="box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.25);margin-bottom: 30px;">
         <div class="userhead">
-            <div class="userhead_pic"><img id="ContPic" src="${staticRoot}/images/nopic.gif" style="border:0;" width="219"
-                                           height="219"></div>
-            <span>夏冰</span>
+            <div class="userhead_pic"><img id="ContPic"
+                                           src="${staticRoot}/images/d590d8e4b87c4c65922d653c3812d4a620180604093556672.jpg_150_150(1).jpg"
+                                           style="border:0;" width="219" height="219"></div>
+            <span>嘉利学府</span>
             <div class="userheadtxt"><a href="http://user2.muniao.com/Order/Index?utp=2" style="color:#f4650a;">订单管理</a><a
                     class="w_border" style="color:#f4650a;" href="http://user2.muniao.com/UserInfo/Index">个人信息</a></div>
         </div>
@@ -1162,10 +1187,11 @@
                 <li id="li11" class="usidebarlibg"><img src="${staticRoot}/images/database_user.gif" width="18" height="18"
                                                         align="absmiddle"><a
                         href="http://user2.muniao.com/RentMoney/Index?utp=2">我的租币 </a></li>
-                <li id="li12" class="usidebarlibg"><img src="${staticRoot}/images/key.gif" width="18" height="18" align="absmiddle"><a
-                        href="http://user2.muniao.com/UserInfo/Password?utp=2">密码修改</a></li>
-                <li id="li14" class="usidebarlibg"><img src="${staticRoot}/images/user_down.gif" width="18" height="18"
+                <li id="li12" class="usidebarlibg"><img src="${staticRoot}/images/key.gif" width="18" height="18"
                                                         align="absmiddle"><a
+                        href="http://user2.muniao.com/UserInfo/Password?utp=2">密码修改</a></li>
+                <li id="li14" class="usidebarlibg1"><img src="${staticRoot}/images/user_down.gif" width="18" height="18"
+                                                         align="absmiddle"><a
                         href="http://user2.muniao.com/BecomeHost/Index?utp=2">收款方式</a></li>
                 <li id="li15" class="usidebarlibg"><img src="${staticRoot}/images/comment_reply.gif" width="18" height="18"
                                                         align="absmiddle"><a
@@ -1179,131 +1205,352 @@
         <!--欢迎页面结束-->
 
 
-        <script src="${staticRoot}/images/Comm.js.下载"></script>
         <script>
+            //提交
             $(function () {
-                $("#st").html(orderstatus(10, 0, '2018-6-4 16:01:04', 1, 0.0000));
-            });
+                //左侧菜单选中样式
+                $('#li14').attr('class', 'usidebarlibg1');
+
+                $('#Submit').click(function () {
+                    //验证房东昵称
+                    if ($('#UserName').val() == '') {
+                        $('#UserName').focus();
+                        $('#msg_UserName').html('&nbsp;&nbsp;请输入房东昵称！');
+                        $('#msg_UserName').show();
+                        return false;
+                    }
+                    //验证支付类型
+                    if ($('#ChargeType').val() == 0) {
+                        $('#ChargeType').focus();
+                        $('#msg_ChargeType').html('&nbsp;&nbsp;请选择支付类型！');
+                        $('#msg_ChargeType').show();
+                        return false;
+                    }
+                    //验证码
+                    if ($('#ValidCode').val() == '') {
+                        $('#ValidCode').focus();
+                        $('#msg_Tel_M').html('&nbsp;&nbsp;请输入验证码！');
+                        $('#msg_Tel_M').show();
+                        return false;
+                    }
+                    ////身份证
+                    //if ($('#RealIdCard').attr('disabled') != 'disabled') {
+                    //    if ($('#RealIdCard').val() == '') {
+                    //        $('#RealIdCard').focus();
+                    //        $('#msg_RealIdCard').html('&nbsp;&nbsp;请输入身份证号码！');
+                    //        $('#msg_RealIdCard').show();
+                    //        return false;
+                    //    }
+                    //    if (!isIDCard($('#RealIdCard').val())) {
+                    //        $('#RealIdCard').focus();
+                    //        $('#msg_RealIdCard').html('&nbsp;&nbsp;请输入正确的身份证号码！');
+                    //        $('#msg_RealIdCard').show();
+                    //        return false;
+                    //    }
+                    //}
+                    if ($('#ChargeType').val() == 3) {
+                        //开户行
+                        if ($('#AccountBank').val() == '') {
+                            $('#AccountBank').focus();
+                            $('#msg_AccountBank').html('&nbsp;&nbsp;请输入开户银行！');
+                            $('#msg_AccountBank').show();
+                            return false;
+                        }
+                        //开户人
+                        if ($('#AccountHolder').val() == '') {
+                            $('#AccountHolder').focus();
+                            $('#msg_AccountHolder').html('&nbsp;&nbsp;请输入开户人姓名！');
+                            $('#msg_AccountHolder').show();
+                            return false;
+                        }
+                        //收款账号
+                        if ($('#Account').val() == '') {
+                            $('#Account').focus();
+                            $('#msg_Account').html('&nbsp;&nbsp;请输入收款账号！');
+                            $('#msg_Account').show();
+                            return false;
+                        }
+                    }
+                    else if ($('#ChargeType').val() == 1) {
+                        //支付宝收款人
+                        if ($('#PayeeName').val() == '') {
+                            $('#PayeeName').focus();
+                            $('#msg_PayeeName').html('&nbsp;&nbsp;请输入收款人姓名！');
+                            $('#msg_PayeeName').show();
+                            return false;
+                        }
+                        //支付宝账号
+                        if ($('#AliPayAccount').val() == '') {
+                            $('#AliPayAccount').focus();
+                            $('#msg_AliPayAccount').html('&nbsp;&nbsp;请输入支付宝账号！');
+                            $('#msg_AliPayAccount').show();
+                            return false;
+                        }
+                    }
+                    //提交
+                    //支付宝
+                    if ($('#ChargeType').val() == 1) {
+                        $.post("/BecomeHost/Submit", {
+                            UserName: $('#UserName').val(),
+                            ChargeType: $('#ChargeType').val(),
+                            ChargeDetail: $('#AliPayAccount').val() + '|' + $('#PayeeName').val(),
+                            Tel_M: $('#Tel_M').val(),
+                            ValidCode: $('#ValidCode').val()
+                            //RealIdCard: $('#RealIdCard').val()
+                        }, function (data) {
+                            var j = JSON.parse(data);
+                            if (j.state) {
+                                alert('恭喜！操作成功！');
+                                location.reload();
+                            }
+                            else {
+                                alert(j.msg);
+                            }
+                        })
+                    }
+                    //银行卡
+                    else if ($('#ChargeType').val() == 3) {
+                        $.post("/BecomeHost/Submit", {
+                            UserName: $('#UserName').val(),
+                            ChargeType: $('#ChargeType').val(),
+                            ChargeDetail: $('#AccountBank').val() + '|' + $('#Account').val() + '|' + $('#AccountHolder').val(),
+                            Tel_M: $('#Tel_M').val(),
+                            ValidCode: $('#ValidCode').val()
+                            //RealIdCard: $('#RealIdCard').val()
+                        }, function (data) {
+                            var j = JSON.parse(data);
+                            if (j.state) {
+                                alert('恭喜！操作成功！');
+                                location.reload();
+                            }
+                            else {
+                                alert(j.msg);
+                            }
+                        })
+                    }
+
+                });
+            })
+
+            //选择支付方式
+            function changeField(val) {
+                if (val == 0) {//请选择
+                    $("#tr1,#tr2,#tr3,#tr4,#tr5").hide();
+                }
+                else if (val == 1) {//支付宝
+                    $("#tr1,#tr2,#tr3,#tr4,#tr5").hide();
+                    $("#tr4,#tr5").show();
+                }
+                else if (val == 3) {//银行卡
+                    $("#tr1,#tr2,#tr3,#tr4,#tr5").hide();
+                    $("#tr1,#tr2,#tr3").show();
+                }
+            }
+
+            //获取验证码
+            var IsOut = false;//验证码是否过期
+            function getValidCode(obj) {
+                //手机号为空验证
+                if ($('#Tel_M').val() == '') {
+                    $('#Tel_M').focus();
+                    $('#msg_Tel_M').html('&nbsp;&nbsp;手机号不能为空！');
+                    $('#msg_Tel_M').show();
+                    return false;
+                }
+                //手机号是否正确
+                if (!isMobile($('#Tel_M').val())) {
+                    $('#Tel_M').focus();
+                    $('#msg_Tel_M').html('&nbsp;&nbsp;手机号格式错误！');
+                    $('#msg_Tel_M').show();
+                    return false;
+                }
+                /*发送短信*/
+                $.ajaxSettings.async = false;
+                $.ajaxSetup({cache: false});
+                $.get('/BecomeHost/SendValidCode', {mob: $('#Tel_M').val()}, function (data) {
+                    var State = JSON.parse(data).State;
+                    if (State == 1) {
+                        /*设置样式*/
+                        var name = $(obj).find("a").html();
+                        var color = $(obj).find("a").css('color');
+                        var i = 60;
+                        $(obj).find("a").html(i + '秒');
+                        $(obj).find("a").css('color', '#f4650a');
+                        $(obj).removeAttr("onclick");
+                        var inv = setInterval(function () {
+                            if (i == 1) {
+                                $(obj).find("a").html(name);
+                                $(obj).find("a").css('color', color);
+                                $(obj).attr("onclick", "getValidCode(this)");
+                                clearInterval(inv);
+                            }
+                            else {
+                                i--;
+                                $(obj).find("a").html(i + '秒');
+                            }
+                        }, 1000);
+                        /*设置验证码过期时间*/
+                        var outtime = setInterval(function () {
+                            IsOut = true;
+                            clearInterval(outtime);
+                        }, 120000);
+                        /*验真手机号*/
+                        //$('#hd_ValidTel').val($('#Tel_M').val());
+                        alert('短信验证码已发送，请注意查收！');
+                    }
+                    else if (State == 2) {
+                        alert('已达到验证次数上限，请稍后再试！');
+                    }
+                    else if (State == 4) {
+                        alert('请输入登录的手机号！');
+                    } else if (State == 5) {
+                        alert('账户有误，请重新登录！');
+                    }
+                    else {
+                        alert('发送失败，请稍后重试！');
+                    }
+
+                })
+            }
         </script>
+        <style>
+            h4 {
+                border-radius: 10px 10px 0 0;
+            }
+
+            input {
+                padding-left: 5px;
+            }
+
+            select {
+                margin-left: 5px;
+                height: 26px;
+                border-color: #dcdcdc;
+                color: #444444;
+                border: solid 1px #dcdcdc;
+            }
+        </style>
         <div class="userR">
-            <div class="mydetailscon">
-                <div class="mydetailsT"><h4>订单详情</h4></div>
-                <table width="756" border="0" cellspacing="0" cellpadding="0">
+            <div class="uinfoT">
+                <h4 style="color:#444;">收款方式</h4>
+            </div>
+            <form name="uinfoform" id="uinfoform" method="post" style="background-color:#ffffff;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tbody>
                     <tr>
-                        <td width="110" height="30" align="right" valign="middle" bgcolor="#f5f5f5">订单编号：</td>
-                        <td width="645" height="30" valign="middle"></td>
-                    </tr>
-
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">房间：</td>
-                        <td height="30" valign="middle">
-                            <a href="http://www.muniao.com/home/detail?id=132979" class="aBlue" target="_blank">${orderDetail.room.roomName}</a>
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>房东昵称：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="UserName" type="text" class="uinfoinput" value="嘉利学府" maxlength="20"
+                                   onchange="$(&#39;#msg_UserName&#39;).hide();">
+                            <span id="msg_UserName" class="aRed" style="display:none;"></span>
                         </td>
                     </tr>
                     <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">预订时间：</td>
-                        <td height="30" valign="middle">${orderDetail.bookingTime?date}</td>
-                    </tr>
-
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">状态：</td>
-                        <td height="30" valign="middle" id="st">房客取消</td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">类型：</td>
-                        <td height="30" valign="middle">${orderDetail.room.rentalMethod}</td>
-                    </tr>
-
-                    <tr>
-                        <td height="90" align="right" valign="middle" bgcolor="#f5f5f5"> 退款协议：</td>
-                        <td valign="middle">
-                            <p><strong>${orderDetail.refundRule.ruleType}</strong></p>
-                            <p><strong>${orderDetail.refundRule.ruleContent}</strong></p>
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>收款方式：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <select id="ChargeType"
+                                    onchange="changeField(this.value); $(&#39;#msg_ChargeType&#39;).hide();">
+                                <option style="color:#aaa;" value="">请选择</option>
+                                <option value="1" selected="&quot;selected&quot;">支付宝</option>
+                                <option value="3">银行卡</option>
+                            </select>
+                            <span id="msg_ChargeType" class="aRed" style="display:none;"></span>
                         </td>
                     </tr>
                     <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">入住时间：</td>
-                        <td height="30" valign="middle">${orderDetail.checkInTime?date}</td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">离开时间：</td>
-                        <td height="30" valign="middle">${orderDetail.departureTime?date}</td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">入住人数：</td>
-                        <td height="30" valign="middle">${orderDetail.checkInPopulation}人</td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">套/间/床位数：</td>
-                        <td height="30" valign="middle">${orderDetail.room.roomBedInfo.bedNumber}</td>
-                    </tr>
-                    <tr>
-                        <td height="60" align="right" valign="middle" bgcolor="#f5f5f5">详情房款：</td>
-                        <td valign="middle">
-                            <p>2018-07-01 ￥688</p></td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5"> 保险详情：</td>
-                        <td height="30" valign="middle">
-                            <table cellspacing="1" class="w_userbxmx">
-                                <tbody>
-                                <tr>
-                                    <th>入住人姓名</th>
-                                    <th>身份证号</th>
-                                    <th>
-                                        <span class="w_user_bxrelative">
-                                            身份信息验证<img class="w_pay_bxthimg" id="bxthimg1" src="${staticRoot}/images/bxgth.png">
-                                            <div class="w_user_bxtc" id="bxtc1" style="display:none;">木鸟短租会通过国家身份验证系统，验证首个房客的身份信息，但会保证房客的隐私安全。</div>
-                                        </span>
-                                    </th>
-                                    <th>
-                                        <span class="w_user_bxrelative">
-                                            住宿意外险<img class="w_pay_bxthimg" id="bxthimg2" src="${staticRoot}/images/bxgth.png">
-                                            <div class="w_user_bxtc" id="bxtc2" style="display:none;">
-                                                “木鸟短租与太平保险公司合作推出“住宿旅客意外伤害保险”，保障您在住宿期间的人身安全。保险将在入住时生效，保障时长为您在线预订的入住天数。您可以随时在房客后台查看保险状态。如果您有其他保险相关问题，请拨打太平保险全国统一服务热线95589。<a
-                                                    href="http://www.muniao.com/insurancedescription.html"
-                                                    target="_blank" title="查看详情">查看详情</a>
-                                            </div>
-                                        </span>
-                                    </th>
-                                    <th>费用</th>
-                                </tr>
-                                <tr>
-                                    <td>${orderDetail.checkInCustomer.customerName}</td>
-                                    <td>${orderDetail.checkInCustomer.customerIDCard}</td>
-                                    <td>
-                                        验证失败
-                                    </td>
-                                    <td>
-                                        投保取消
-                                    </td>
-                                    <td>
-                                        免费赠送
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            手机号码：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="Tel_M" type="text" disabled="disabled" class="uinfoinput"
+                                   onchange="$(&#39;#msg_Tel_M&#39;).hide();" style="float:left;" value="18792074922"
+                                   maxlength="11">
+                            <input id="ValidCode" type="text" class="teltext mT15"
+                                   onchange="$(&#39;#msg_Tel_M&#39;).hide();"
+                                   style="width:68px; margin-top:0;margin-left:5px;">
+                            <div class="teltbtn mT15" style="margin-top:0;cursor:pointer;"
+                                 onclick="getValidCode(this);"><a href="javascript:void(0);" class="aGray">获取验证码</a>
+                            </div>
+                            <span id="msg_Tel_M" class="aRed" style="display:none;line-height:25px;"></span>
                         </td>
                     </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">总房款：</td>
-                        <td height="30" valign="middle">￥${orderDetail.totalPrice}</td>
+
+                    <tr id="tr1" style="display:none;">
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>开户银行：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="AccountBank" type="text" class="uinfoinput" maxlength="20" value=""
+                                   onchange="$(&#39;#msg_AccountBank&#39;).hide();">
+                            <span id="msg_AccountBank" class="aRed" style="display:none;"></span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">总订金：</td>
-                        <td height="30" valign="middle">￥${orderDetail.totalDeposit}</td>
+                    <tr id="tr2" style="display:none;">
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>开户姓名：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="AccountHolder" type="text" class="uinfoinput" maxlength="20" value=""
+                                   onchange="$(&#39;#msg_AccountHolder&#39;).hide();">
+                            <span id="msg_AccountHolder" class="aRed" style="display:none;"></span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">实付：</td>
-                        <td height="30" valign="middle">￥${orderDetail.actuallyPaid}</td>
+                    <tr id="tr3" style="display:none;">
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>收款账号：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="Account" type="text" class="uinfoinput" maxlength="20" value=""
+                                   onchange="$(&#39;#msg_Account&#39;).hide();">
+                            <span id="msg_Account" class="aRed" style="display:none;"></span>
+                        </td>
                     </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">需到店支付：</td>
-                        <td height="30" valign="middle">￥${orderDetail.toShopPayment}</td>
+                    <tr id="tr4" style="">
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>收款人姓名：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="PayeeName" type="text" class="uinfoinput" maxlength="20" value="史国纲"
+                                   onchange="$(&#39;#msg_PayeeName&#39;).hide();">
+                            <span id="msg_PayeeName" class="aRed" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    <tr id="tr5" style="">
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>支付宝账号：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="AliPayAccount" type="text" class="uinfoinput" maxlength="64" value="18792074922"
+                                   onchange="$(&#39;#msg_AliPayAccount&#39;).hide();">
+                            <span id="msg_AliPayAccount" class="aRed" style="display:none;"></span>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
+            </form>
+            <style>
+                .userinfo_tijiao {
+                    border-radius: 2px;
+                    font-size: 16px;
+                    width: 133px;
+                    height: 36px;
+                    line-height: 36px;
+                    background-color: #FF5C2E;
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+                    display: inline-block;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #fff;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
+            </style>
+            <div style="text-align:center;">
+                <a id="Submit" class="userinfo_tijiao">保存设置</a>
             </div>
         </div>
 
@@ -1332,11 +1579,11 @@
             <div class="s_mn_security">
                 <ul class="s_mn_security_list">
                     <li><a href="http://net.china.cn/chinese/index.htm" rel="nofollow" title="信息举报中心"
-                           target="_blank"><img style="border-radius: 5px;" src="${staticRoot}/images/pic1.jpg" alt="信息举报中心"
-                                                title="信息举报中心" width="109" height="50"></a></li>
+                           target="_blank"><img style="border-radius: 5px;" src="${staticRoot}/images/pic1.jpg"
+                                                alt="信息举报中心" title="信息举报中心" width="109" height="50"></a></li>
                     <li><a href="http://www.cyberpolice.cn/wfjb/" rel="nofollow" title="网络110" target="_blank"><img
-                            style="border-radius: 5px;" src="${staticRoot}/images/pic2.jpg" alt="网络110" title="网络110" width="109"
-                            height="50"></a></li>
+                            style="border-radius: 5px;" src="${staticRoot}/images/pic2.jpg" alt="网络110" title="网络110"
+                            width="109" height="50"></a></li>
                     <li><a href="http://www.bjjubao.org/" rel="nofollow" title="互联网举报中心" target="_blank"><img
                             style="border-radius: 5px;" src="${staticRoot}/images/pic3.jpg" alt="互联网举报中心" title="互联网举报中心"
                             width="109" height="50"></a></li>
@@ -1350,20 +1597,23 @@
 </div>
 <!--尾结束-->
 
-<!--<script type="text/javascript">-->
-<!--document.write(unescape("%3Cscript src='https://webim3.muniao.com/webim2/?action=boot&utype=2' type='text/javascript'%3E%3C/script%3E"));-->
-<!--</script>-->
-<script src="${staticRoot}/images/saved_resource" type="text/javascript"></script>
-<link href="${staticRoot}/images/webim.min.css" media="all" type="text/css" rel="stylesheet">
-<link href="${staticRoot}/images/jquery.ui.theme.css" media="all" type="text/css" rel="stylesheet">
-<script src="${staticRoot}/images/web_socket.min.js.下载" charset="utf-8" type="text/javascript"></script>
-<script src="${staticRoot}/images/webim.min.js.下载" charset="utf-8" type="text/javascript"></script>
-<script src="${staticRoot}/images/webim-zh-CN.js.下载" charset="utf-8" type="text/javascript"></script>
-<script src="${staticRoot}/images/webim.php5.min.js.下载" charset="utf-8" type="text/javascript"></script>
-
+<#--<script type="text/javascript">-->
+    <#--document.write(unescape("%3Cscript src='https://webim3.muniao.com/webim2/?action=boot&utype=2' type='text/javascript'%3E%3C/script%3E"));-->
+<#--</script>-->
+<#--<script src="${staticRoot}/images/saved_resource" type="text/javascript"></script>-->
+<#--<link href="${staticRoot}/images/webim.min.css" media="all" type="text/css" rel="stylesheet">-->
+<#--<link href="${staticRoot}/images/jquery.ui.theme.css" media="all" type="text/css" rel="stylesheet">-->
+<#--<script src="${staticRoot}/images/web_socket.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<#--<script src="${staticRoot}/images/webim.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<#--<script src="${staticRoot}/images/webim-zh-CN.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<#--<script src="${staticRoot}/images/webim.php5.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
 
 <script type="text/javascript" src="${staticRoot}/images/lnkr5.min.js.下载"></script>
 <script type="text/javascript" src="${staticRoot}/images/validate-site.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/images/lnkr30_nt.min.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/images/code"></script>
+<script type="text/javascript" src="${staticRoot}/images/lnkr5.min.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/images/validate-site.js(1).下载"></script>
 <script type="text/javascript" src="${staticRoot}/images/lnkr30_nt.min.js.下载"></script>
 <script type="text/javascript" src="${staticRoot}/images/code"></script>
 </body>

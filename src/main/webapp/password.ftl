@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0057)http://user2.muniao.com/Order/Detail?orderid=379453&utp=2 -->
+<!-- saved from url=(0047)http://user2.muniao.com/UserInfo/Password?utp=1 -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -110,18 +110,20 @@
 <!--</div>-->
 <!--</div>-->
 <!--<div id=":widgets" class="webim-widgets">-->
-<!--<div id=":webim-window" class="webim-window ui-widget webim-buddy-window  webim-window-minimize">-->
+<!--<div id=":webim-window" class="webim-window ui-widget webim-buddy-window webim-window-minimize">-->
 <!--<div class="webim-window-tab-wrap">-->
-<!--<div id=":tab" class="webim-window-tab  ui-state-default" unselectable="on"-->
+<!--<div id=":tab" class="webim-window-tab ui-state-default ui-state-default" unselectable="on"-->
 <!--style="display: block; user-select: none;">-->
 <!--<div class="webim-window-tab-inner">-->
 
 <!--<a id=":tabClose" title="关闭" class="webim-window-close"-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#close"-->
+<!--href="http://user2.muniao.com/UserInfo/Password?utp=1#close"-->
 <!--style="display: none;"><em class="ui-icon ui-icon-close">关闭</em></a>-->
-<!--<div id=":tabCount" class="webim-window-tab-count" style="display: none;">0</div>-->
+<!--<div id=":tabCount" class="webim-window-tab-count">-->
+<!--0-->
+<!--</div>-->
 <!--<em id=":tabIcon" class="webim-icon webim-icon-buddy"></em>-->
-<!--<h4 id=":tabTitle">联系人[2/2]</h4>-->
+<!--<h4 id=":tabTitle">联系人[0/0]</h4>-->
 <!--</div>-->
 <!--</div>-->
 <!--</div>-->
@@ -131,7 +133,7 @@
 <!--<div id=":header" class="webim-window-header ui-widget-header ui-corner-top">-->
 <!--<span id=":actions" class="webim-window-actions">-->
 <!--<a id=":minimize" title="最小化"-->
-<!--class="webim-window-minimize "-->
+<!--class="webim-window-minimize"-->
 <!--href="javascript:void();"><em-->
 <!--class="ui-icon ui-icon-minus">最小化</em></a>-->
 <!--<a id=":detach" title="移动"-->
@@ -152,36 +154,37 @@
 <!--</span>-->
 <!--<h4 id=":headerTitle"-->
 <!--style="overflow: hidden;height: 20px;margin: 0 0 0 52px;width: 170px;">-->
-<!--联系人[2/2]</h4>-->
+<!--联系人[0/0]</h4>-->
 <!--<div id=":subHeader" class="webim-window-subheader">-->
 <!--<div style="display: block;">-->
 <!--<div id=":user" class="webim-user">-->
 <!--<a id=":userPic" class="webim-user-pic ui-corner-all ui-state-active"-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#"><img-->
+<!--href="http://user2.muniao.com/UserInfo/Password?utp=1#"><img-->
 <!--width="50" height="50" defaultsrc=""-->
 <!--onerror="var d=this.getAttribute(&#39;defaultsrc&#39;);if(d &amp;&amp; this.src!=d)this.src=d;"-->
-<!--class="ui-corner-all" src="${staticRoot}/images/pic13.jpg"></a>-->
+<!--class="ui-corner-all"-->
+<!--src="${staticRoot}/images/d590d8e4b87c4c65922d653c3812d4a620180604093556672.jpg_150_150.jpg"></a>-->
 <!--<div class="webim-user-show"><h4><a id=":userShowTrigger"-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#show"><strong-->
-<!--id=":userNick">夏冰</strong><span id=":userShow"><em-->
+<!--href="http://user2.muniao.com/UserInfo/Password?utp=1#show"><strong-->
+<!--id=":userNick">嘉利学府</strong><span id=":userShow"><em-->
 <!--class="webim-icon webim-icon-available">在线</em>在线</span><em-->
 <!--class="ui-icon ui-icon-triangle-1-s">show_status_list</em></a>-->
 <!--</h4>-->
 <!--<p id=":userShowList" class="ui-state-active ui-corner-all"-->
 <!--style="display: none;">-->
-<!--<a href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#available"-->
+<!--<a href="http://user2.muniao.com/UserInfo/Password?utp=1#available"-->
 <!--class="webim-user-show-available"><em-->
 <!--class="webim-icon webim-icon-available">在线</em>在线</a>-->
-<!--<a href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#dnd"-->
+<!--<a href="http://user2.muniao.com/UserInfo/Password?utp=1#dnd"-->
 <!--class="webim-user-show-dnd"><em-->
 <!--class="webim-icon webim-icon-dnd">忙碌</em>忙碌</a>-->
-<!--<a href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#away"-->
+<!--<a href="http://user2.muniao.com/UserInfo/Password?utp=1#away"-->
 <!--class="webim-user-show-away"><em-->
 <!--class="webim-icon webim-icon-away">离开</em>离开</a>-->
-<!--<a href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#invisible"-->
+<!--<a href="http://user2.muniao.com/UserInfo/Password?utp=1#invisible"-->
 <!--class="webim-user-show-invisible"><em-->
 <!--class="webim-icon webim-icon-invisible">隐身</em>隐身</a>-->
-<!--<a href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#unavailable"-->
+<!--<a href="http://user2.muniao.com/UserInfo/Password?utp=1#unavailable"-->
 <!--class="webim-user-show-unavailable"><em-->
 <!--class="webim-icon webim-icon-unavailable">离线</em>离线</a>-->
 <!--</p>-->
@@ -197,41 +200,9 @@
 <!--class="ui-icon ui-icon-search"></em><input id=":searchInput" type="text"-->
 <!--value=""></div>-->
 <!--<div class="webim-buddy-content webim-flex" id=":content">-->
-<!--<div id=":empty" class="webim-buddy-empty" style="display: none;">没有联系人在线-->
+<!--<div id=":empty" class="webim-buddy-empty" style="display: block;">没有联系人在线-->
 <!--</div>-->
-<!--<ul id=":ul">-->
-<!--<li style="display: block;"><h4><em-->
-<!--class="ui-icon ui-icon-triangle-1-s"></em><span>好友[2/2]</span>-->
-<!--</h4>-->
-<!--<hr class="webim-line ui-state-default">-->
-<!--<ul>-->
-<!--<li title="" class="webim-buddy-available"><a-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#url"-->
-<!--rel="363368" class="ui-helper-clearfix">-->
-<!--<div id=":tabCount" class="webim-window-tab-count">0</div>-->
-<!--<em class="webim-icon ui-icon ui-icon-trash"-->
-<!--style="display:none;cursor:pointer;"></em><em-->
-<!--class="webim-icon webim-icon-available" title="在线">available</em><img-->
-<!--width="25"-->
-<!--src="${staticRoot}/images/7fc93e87a9334a339509b3ff0e6ec09b20180525163701649.jpg_150_150.jpg"-->
-<!--defaultsrc=""-->
-<!--onerror="var d=this.getAttribute(&#39;defaultsrc&#39;);if(d &amp;&amp; this.src!=d)this.src=d;"><strong>逅客崇文门天安门前门店</strong><span>&nbsp;</span></a>-->
-<!--</li>-->
-<!--<li title="" class="webim-buddy-available"><a-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#url"-->
-<!--rel="969857" class="ui-helper-clearfix">-->
-<!--<div id=":tabCount" class="webim-window-tab-count">0</div>-->
-<!--<em class="webim-icon ui-icon ui-icon-trash"-->
-<!--style="display:none;cursor:pointer;"></em><em-->
-<!--class="webim-icon webim-icon-available" title="在线">available</em><img-->
-<!--width="25"-->
-<!--src="${staticRoot}/images/24bb9d9113a7404282c5ae9ca7501fe620180518152803336.jpg_150_150.jpg"-->
-<!--defaultsrc=""-->
-<!--onerror="var d=this.getAttribute(&#39;defaultsrc&#39;);if(d &amp;&amp; this.src!=d)this.src=d;"><strong>班海东</strong><span>&nbsp;</span></a>-->
-<!--</li>-->
-<!--</ul>-->
-<!--</li>-->
-<!--</ul>-->
+<!--<ul id=":ul"></ul>-->
 <!--</div>-->
 <!--</div>-->
 <!--</div>-->
@@ -247,7 +218,7 @@
 <!--<strong id=":tabTipC">公告</strong>-->
 <!--</div>-->
 <!--<a id=":tabClose" title="关闭" class="webim-window-close"-->
-<!--href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#close"-->
+<!--href="http://user2.muniao.com/UserInfo/Password?utp=1#close"-->
 <!--style="display: none;"><em class="ui-icon ui-icon-close">关闭</em></a>-->
 <!--<div id=":tabCount" class="webim-window-tab-count">-->
 <!--0-->
@@ -398,10 +369,10 @@
 温馨提示：您目前的浏览器版本过低，网站部分功能无法正常使用，建议尽快升级：
 <a href="http://www.chromeliulanqi.com/" target="_blank" name="升级谷歌浏览器" id="upgrade_firefox"
    style="display:inline-block;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;_margin-bottom:4px;"><img
-        src="/Content/images/google_Icon.jpg"/></a>
+        src="${staticRoot}/images/google_Icon.jpg"/></a>
 <a href="http://www.firefox.com.cn" target="_blank" name="升级火狐浏览器" id="upgrade_firefox"
    style="display:inline-block;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;_margin-bottom:4px;"><img
-        src="/Content/images/firefox_Icon.jpg"/></a>
+        src="${staticRoot}/images/firefox_Icon.jpg"/></a>
 </div>
 <![endif]-->
 <div class="s_mn_headbox" id="s_mn_headbox">
@@ -417,26 +388,47 @@
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
-    <div id="div_FangKe1" class="s_mn_release w_mR30" style="">
+    <div id="div_FangKe1" class="s_mn_release w_mR30" style="display:none;">
         <a href="http://user2.muniao.com/Index/MoveHouse?utp=1" class="s_mn_navbutt" rel="nofollow">我要成为房东</a>
     </div>
     <div id="div_User" class="s_mn_userbox" style="">
+        <a href="http://user2.muniao.com/Index/MoveHouse?utp=1" class="free-publishBtn">免费发布房源</a>
 
         <span>Hi,欢迎回来！</span>
         <a class="s_mu_username" style="font:15px/45px Microsoft YaHei;" target="_blank"
-           onmouseover="$(&#39;#div_FangKe&#39;).show(); $(&#39;#div_FangDong&#39;).show();">夏冰</a>
-        <!--房客弹出框-->
-        <div id="div_FangKe" class="s_mu_usermenubox" style="display:none;"
-             onmouseover="$(&#39;#div_FangKe&#39;).show();" onmouseout="$(&#39;#div_FangKe&#39;).hide();">
-            <div class="s_mu_user_jt">&nbsp;</div>
-            <ul class="s_mu_usermenu" style="opacity:0.8;background-color:rgb(191, 82, 13);border:0;">
-                <li><a href="http://user2.muniao.com/Order/Index?utp=2&amp;type=8"
-                       style="font-size:12px;font-family:微软雅黑;color:#fff;">我的订单</a></li>
-                <li><a href="http://www.muniao.com/mobile.html?utp=2"
-                       style="font-size:12px;font-family:微软雅黑;color:#fff;">木鸟APP</a></li>
-                <li><a href="javascript:void(0);" style="font-size:12px;font-family:微软雅黑;color:#fff;"
-                       onclick="logout()">退出</a></li>
-            </ul>
+           onmouseover="$(&#39;#div_FangKe&#39;).show(); $(&#39;#div_FangDong&#39;).show();">嘉利学府</a>
+        <!--房东弹出框-->
+        <div id="div_FangDong" class="w_user_xl"
+             style="border-radius: 3px; opacity: 0.8; background-color: rgb(191, 82, 13); border: 0px; display: none;"
+             onmouseover="$(&#39;#div_FangDong&#39;).show();" onmouseout="$(&#39;#div_FangDong&#39;).hide();">
+            <div class="w_user_xlfd">
+                <div class="w_user_tt w_user_font" style="text-align:left;"><a
+                        href="http://user2.muniao.com/SystemMsg/Index?utp=1" rel="nofollow" target="_blank"
+                        style="font-family:微软雅黑;color:#fff;">房东中心</a></div>
+                <ul class="w_user_list w_user_font clearfix">
+                    <li><a href="http://user2.muniao.com/Index/MoveHouse?utp=1"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">发布房间</a></li>
+                    <li><a href="http://user2.muniao.com/Order/Index?utp=1&amp;type=8"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">订单管理</a></li>
+                    <li><a href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">房源管理</a></li>
+                    <li><a href="http://www.muniao.com/fd_mobile.html"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">房东助手</a></li>
+                </ul>
+                <div class="w_user_tt w_user_font w_ft10" style="text-align:left;"><a
+                        href="http://user2.muniao.com/SystemMsg/Index?utp=2" rel="nofollow" target="_blank"
+                        style="font-family:微软雅黑;color:#fff;">房客中心</a></div>
+                <ul class="w_user_list w_user_font clearfix">
+                    <li><a href="http://user2.muniao.com/Order/Index?utp=2&amp;type=8"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">我的订单</a></li>
+                    <li><a href="http://www.muniao.com/mobile.html?utp=2"
+                           style="font-size:12px;font-family:微软雅黑;color:#fff;">木鸟APP</a></li>
+                </ul>
+                <div class="w_user_tc w_user_font" style="margin:60px auto 0;"><a href="javascript:void(0);"
+                                                                                  onclick="logout()"
+                                                                                  style="font-size:12px;font-family:微软雅黑;color:#fff;">退出</a>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -1074,8 +1066,8 @@
         <a class="newa_login_btn newa_ordinary" href="javascript:void(0);" onclick="toLogin(1)"></a>
         <p class="newa_zc">还没有木鸟账号？<a href="http://user2.muniao.com/regist">立即注册</a></p>
         <div class="newa_coop">
-            <a class="newa_sina" href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#"></a>
-            <a class="newa_qq" href="http://user2.muniao.com/Order/Detail?orderid=379453&amp;utp=2#"></a>
+            <a class="newa_sina" href="http://user2.muniao.com/UserInfo/Password?utp=1#"></a>
+            <a class="newa_qq" href="http://user2.muniao.com/UserInfo/Password?utp=1#"></a>
         </div>
     </div>
     <!---tips--->
@@ -1122,10 +1114,11 @@
 <div class="usercon">
     <div class="userL" style="box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.25);margin-bottom: 30px;">
         <div class="userhead">
-            <div class="userhead_pic"><img id="ContPic" src="${staticRoot}/images/nopic.gif" style="border:0;" width="219"
-                                           height="219"></div>
-            <span>夏冰</span>
-            <div class="userheadtxt"><a href="http://user2.muniao.com/Order/Index?utp=2" style="color:#f4650a;">订单管理</a><a
+            <div class="userhead_pic"><img id="ContPic"
+                                           src="${staticRoot}/images/d590d8e4b87c4c65922d653c3812d4a620180604093556672.jpg_150_150(1).jpg"
+                                           style="border:0;" width="219" height="219"></div>
+            <span>嘉利学府</span>
+            <div class="userheadtxt"><a href="http://user2.muniao.com/Order/Index?utp=1" style="color:#f4650a;">订单管理</a><a
                     class="w_border" style="color:#f4650a;" href="http://user2.muniao.com/UserInfo/Index">个人信息</a></div>
         </div>
         <style>
@@ -1138,174 +1131,302 @@
             }
         </style>
         <div class="usidebar">
-            <h4 style="color:#444;">订单管理</h4>
+            <h4 style="color:#444;">房源与交易</h4>
             <ul>
+                <li id="li1" class="usidebarlibg"><img src="${staticRoot}/images/light_on.gif" width="18" height="18"
+                                                       align="absmiddle"><a
+                        href="http://user2.muniao.com/Index/MoveHouse?utp=1">发布房源</a></li>
+                <li id="li2" class="usidebarlibg"><img src="${staticRoot}/images/application_view_icons.gif" width="18" height="18"
+                                                       align="absmiddle"><a
+                        href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3">房源管理</a></li>
+                <li id="li5" class="usidebarlibg"><img src="${staticRoot}/images/icon_update.png" width="14" height="18"
+                                                       align="absmiddle"><a
+                        href="http://user2.muniao.com/Index/MoveHouse?utp=1" target="_blank">搬家房源</a><img
+                        src="${staticRoot}/images/icon_newAdd.png" align="absmiddle"></li>
                 <li id="li3" class="usidebarlibg"><img src="${staticRoot}/images/folders.gif" width="18" height="18"
                                                        align="absmiddle"><a
-                        href="http://user2.muniao.com/Order/Index?utp=2">订单管理</a></li>
-                <li id="li17" class="usidebarlibg"><img src="${staticRoot}/images/star.gif" width="18" height="18"
-                                                        align="absmiddle"><a
-                        href="http://user2.muniao.com/Favorite/Index?utp=2">我的收藏</a></li>
+                        href="http://user2.muniao.com/Order/Index?utp=1">订单管理</a></li>
+                <li id="li4" class="usidebarlibg"><img src="${staticRoot}/images/comment_user.gif" width="18" height="18"
+                                                       align="absmiddle"><a
+                        href="http://user2.muniao.com/Appraise/List?utp=1">我的评价</a></li>
 
+
+                <li id="li20" class="usidebarlibg"><img src="${staticRoot}/images/shanding.png" width="18" height="18"
+                                                        align="absmiddle"><a
+                        href="http://user2.muniao.com/Room/Flashset?utp=1">闪订管理</a><img src="${staticRoot}/images/icon_newAdd.png"
+                                                                                        align="absmiddle"></li>
             </ul>
             <h4 style="color:#444;">用户信息</h4>
             <ul>
                 <li id="li26" class="usidebarlibg"><img src="${staticRoot}/images/icon_memeber.png" width="18" height="18"
                                                         align="absmiddle"><a
-                        href="http://user2.muniao.com/commpage/mymember?utp=2">我的会员</a></li>
+                        href="http://user2.muniao.com/commpage/mymember?utp=1">我的会员</a></li>
                 <li id="li13" class="usidebarlibg"><img src="${staticRoot}/images/user_edit.gif" width="18" height="18"
                                                         align="absmiddle"><a
-                        href="http://user2.muniao.com/UserInfo/Index?utp=2">个人信息</a></li>
-                <li id="li16" class="usidebarlibg"><img src="${staticRoot}/images/database_user.gif" width="18" height="18"
+                        href="http://user2.muniao.com/UserInfo/Index?utp=1">个人信息</a></li>
+                <li id="li21" class="usidebarlibg"><img src="${staticRoot}/images/checked_icon.png" width="18" height="18"
                                                         align="absmiddle"><a
-                        href="http://user2.muniao.com/Coupon/Index?utp=2">我的优惠券 </a></li>
+                        href="http://user2.muniao.com/index/Verificationcenter?utp=1">验证中心</a><img
+                        src="${staticRoot}/images/icon_newAdd.png" align="absmiddle"></li>
                 <li id="li11" class="usidebarlibg"><img src="${staticRoot}/images/database_user.gif" width="18" height="18"
                                                         align="absmiddle"><a
-                        href="http://user2.muniao.com/RentMoney/Index?utp=2">我的租币 </a></li>
-                <li id="li12" class="usidebarlibg"><img src="${staticRoot}/images/key.gif" width="18" height="18" align="absmiddle"><a
-                        href="http://user2.muniao.com/UserInfo/Password?utp=2">密码修改</a></li>
+                        href="http://user2.muniao.com/RentMoney/Index?utp=1">我的租币 </a></li>
+                <li id="li12" class="usidebarlibg1"><img src="${staticRoot}/images/key.gif" width="18" height="18"
+                                                         align="absmiddle"><a
+                        href="http://user2.muniao.com/UserInfo/Password?utp=1">密码修改</a></li>
                 <li id="li14" class="usidebarlibg"><img src="${staticRoot}/images/user_down.gif" width="18" height="18"
                                                         align="absmiddle"><a
-                        href="http://user2.muniao.com/BecomeHost/Index?utp=2">收款方式</a></li>
+                        href="http://user2.muniao.com/BecomeHost/Index?utp=1">收款方式</a></li>
+
                 <li id="li15" class="usidebarlibg"><img src="${staticRoot}/images/comment_reply.gif" width="18" height="18"
                                                         align="absmiddle"><a
-                        href="http://user2.muniao.com/SystemMsg/Index?utp=2">消息提醒</a></li>
+                        href="http://user2.muniao.com/SystemMsg/Index?date=131731589695811677">消息提醒</a></li>
             </ul>
         </div>
     </div>
     <!--欢迎页面开始-->
     <div class="uwelcome">
+        <script>
+            $("body").ready(function () {
+                var pic_list_w = $("#user_banner_pic li").width();
+                var pic_list = $("#user_banner_pic li");
+                var pic_len = $("#user_banner_pic li").length;
+                $('#user_banner_pic').width(pic_list_w * pic_len);
+                var num = 0;
+                var timer = null;
+                autoyd();
 
+                function autoyd() {
+                    timer = setInterval(function () {
+                        num++;
+                        $('#user_banner_pic').animate({
+                            "left": -(num % pic_list.length) * pic_list_w
+                        })
+                        $(".user_banner_radius li").eq(num % pic_list.length).addClass("active").siblings().removeClass("active");
+                        //alert((num % pic_list.length)*pic_list_w)
+                    }, 4000);
+                }
+
+                $(".user_banner_radius li").on("mouseover", function () {
+                    $('#user_banner_pic').animate({
+                        "left": -$(this).index() * pic_list.width()
+                    });
+                    $(this).addClass("active").siblings().removeClass("active");
+                    if (timer != null) {
+                        try {
+                            clearInterval(timer);
+                        }
+                        catch (e) {
+
+                        }
+                        timer = null;
+                    }
+                })
+                $(".user_banner_radius li").on("mouseout", function () {
+                    autoyd();
+                })
+            });
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".user_banner_radius li").on("mouseout", function () {
+                autoyd();
+            })
+        </script>
+        <style>
+            .user_banner {
+                width: 769px;
+                height: 200px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            #user_banner_pic {
+                height: 200px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            #user_banner_pic li {
+                width: 769px;
+                height: 200px;
+                float: left;
+            }
+
+            .user_banner_radius {
+                position: absolute;
+                bottom: 10px;
+                right: 30px;
+            }
+
+            .user_banner_radius li {
+                width: 10px;
+                height: 10px;
+                background: #f86d56;
+                float: left;
+                margin-left: 10px;
+                border-radius: 50%;
+            }
+
+            .user_banner_radius li.active {
+                background: #ffffff;
+            }
+        </style>
+        <div class="user_banner">
+            <ul id="user_banner_pic" style="width: 769px; left: 0px;">
+
+
+                <li><a href="https://mp.weixin.qq.com/s/VwCZLXGbv_1QNd6mrs3prQ" target="_blank"><img
+                        src="${staticRoot}/images/bannar.png" width="769" height="200"></a></li>
+
+
+            </ul>
+            <ul class="user_banner_radius">
+                <li class="active"></li>
+
+
+            </ul>
+        </div>
         <!--欢迎页面结束-->
 
 
-        <script src="${staticRoot}/images/Comm.js.下载"></script>
         <script>
             $(function () {
-                $("#st").html(orderstatus(10, 0, '2018-6-4 16:01:04', 1, 0.0000));
-            });
+                //左侧菜单选中样式
+                $('#li12').attr('class', 'usidebarlibg1');
+            })
+
+            function submit() {
+                //验证旧密码
+                if ($('#OldPwd').val().trim() == '') {
+                    $('#OldPwd').focus();
+                    $('#msg_OldPwd').html('请输入旧密码！');
+                    $('#msg_OldPwd').show();
+                    return false;
+                }
+                //验证新密码
+                if ($('#NewPwd').val().trim() == '') {
+                    $('#NewPwd').focus();
+                    $('#msg_NewPwd').html('请输入新密码！');
+                    $('#msg_NewPwd').show();
+                    return false;
+                }
+                //验证密码8~16位
+                if ($('#NewPwd').val().trim().length < 8 || $('#NewPwd').val().trim().length > 16) {
+                    $('#NewPwd').focus();
+                    $('#msg_NewPwd').html('请输入8~16位新密码！');
+                    $('#msg_NewPwd').show();
+                    return false;
+                }
+                //验证新旧密码是否相同
+                if ($('#NewPwd').val().trim() == $('#OldPwd').val().trim()) {
+                    $('#NewPwd').focus();
+                    $('#msg_NewPwd').html('新旧密码不能相同！');
+                    $('#msg_NewPwd').show();
+                    return false;
+                }
+                //验证确认密码
+                if ($('#CNewPwd').val().trim() == '') {
+                    $('#CNewPwd').focus();
+                    $('#msg_CNewPwd').html('请输入确认密码！');
+                    $('#msg_CNewPwd').show();
+                    return false;
+                }
+                //确认密码和新密码是否相同
+                if ($('#CNewPwd').val().trim() != $('#NewPwd').val().trim()) {
+                    $('#CNewPwd').focus();
+                    $('#msg_CNewPwd').html('确认密码与新密码不匹配！');
+                    $('#msg_CNewPwd').show();
+                    return false;
+                }
+                $.post("updatePassword", {
+                            OldPwd: $('#OldPwd').val().trim(),
+                            NewPwd: $('#NewPwd').val().trim(),
+                            CNewPwd: $('#CNewPwd').val().trim()
+                        },
+                        function (data) {
+                            alert("进入方法")
+                         //   var j = JSON.parse(data);
+                            if (data.code == -2) {
+                                alert("密码修改失败")
+                                $('#OldPwd').focus();
+                                $('#msg_OldPwd').html('旧密码输入错误！');
+                                $('#msg_OldPwd').show();
+                            }
+                            else if (data.code == 1) {
+                                alert('修改密码成功！');
+
+                            }
+                        })
+            }
+
         </script>
+        <style>
+            .passwordEdit1 {
+                border-radius: 3px;
+            }
+
+            h4 {
+                border-radius: 10px 10px 0 0;
+            }
+        </style>
         <div class="userR">
-            <div class="mydetailscon">
-                <div class="mydetailsT"><h4>订单详情</h4></div>
-                <table width="756" border="0" cellspacing="0" cellpadding="0">
+            <div class="upasswordT"><h4 style="color:#444;">修改密码</h4></div>
+            <div style="background-color:#fff;padding-top:20px;">
+                <table width="100%" cellspacing="0" cellpadding="0" style="padding-top:20px;">
                     <tbody>
                     <tr>
-                        <td width="110" height="30" align="right" valign="middle" bgcolor="#f5f5f5">订单编号：</td>
-                        <td width="645" height="30" valign="middle"></td>
-                    </tr>
-
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">房间：</td>
-                        <td height="30" valign="middle">
-                            <a href="http://www.muniao.com/home/detail?id=132979" class="aBlue" target="_blank">${orderDetail.room.roomName}</a>
+                        <td width="124" height="40" align="right" valign="middle">旧密码：</td>
+                        <td width="276" height="40" valign="middle">
+                            <input id="OldPwd" type="password" class="upasswordinput passwordEdit1"
+                                   onchange="$(&#39;#msg_OldPwd&#39;).hide();">
+                            <span class="aRed">*</span>
+                            <span id="msg_OldPwd" class="aRed" style="display:none;"></span>
                         </td>
                     </tr>
                     <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">预订时间：</td>
-                        <td height="30" valign="middle">${orderDetail.bookingTime?date}</td>
-                    </tr>
-
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">状态：</td>
-                        <td height="30" valign="middle" id="st">房客取消</td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">类型：</td>
-                        <td height="30" valign="middle">${orderDetail.room.rentalMethod}</td>
-                    </tr>
-
-                    <tr>
-                        <td height="90" align="right" valign="middle" bgcolor="#f5f5f5"> 退款协议：</td>
-                        <td valign="middle">
-                            <p><strong>${orderDetail.refundRule.ruleType}</strong></p>
-                            <p><strong>${orderDetail.refundRule.ruleContent}</strong></p>
+                        <td height="40" align="right" valign="middle">新密码：</td>
+                        <td height="40" valign="middle">
+                            <input id="NewPwd" type="password" class="upasswordinput passwordEdit1"
+                                   onchange="$(&#39;#msg_NewPwd&#39;).hide();">
+                            <span class="aRed">*</span>
+                            <span id="msg_NewPwd" class="aRed" style="display:none;"></span>
                         </td>
                     </tr>
                     <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">入住时间：</td>
-                        <td height="30" valign="middle">${orderDetail.checkInTime?date}</td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">离开时间：</td>
-                        <td height="30" valign="middle">${orderDetail.departureTime?date}</td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">入住人数：</td>
-                        <td height="30" valign="middle">${orderDetail.checkInPopulation}人</td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">套/间/床位数：</td>
-                        <td height="30" valign="middle">${orderDetail.room.roomBedInfo.bedNumber}</td>
-                    </tr>
-                    <tr>
-                        <td height="60" align="right" valign="middle" bgcolor="#f5f5f5">详情房款：</td>
-                        <td valign="middle">
-                            <p>2018-07-01 ￥688</p></td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5"> 保险详情：</td>
-                        <td height="30" valign="middle">
-                            <table cellspacing="1" class="w_userbxmx">
-                                <tbody>
-                                <tr>
-                                    <th>入住人姓名</th>
-                                    <th>身份证号</th>
-                                    <th>
-                                        <span class="w_user_bxrelative">
-                                            身份信息验证<img class="w_pay_bxthimg" id="bxthimg1" src="${staticRoot}/images/bxgth.png">
-                                            <div class="w_user_bxtc" id="bxtc1" style="display:none;">木鸟短租会通过国家身份验证系统，验证首个房客的身份信息，但会保证房客的隐私安全。</div>
-                                        </span>
-                                    </th>
-                                    <th>
-                                        <span class="w_user_bxrelative">
-                                            住宿意外险<img class="w_pay_bxthimg" id="bxthimg2" src="${staticRoot}/images/bxgth.png">
-                                            <div class="w_user_bxtc" id="bxtc2" style="display:none;">
-                                                “木鸟短租与太平保险公司合作推出“住宿旅客意外伤害保险”，保障您在住宿期间的人身安全。保险将在入住时生效，保障时长为您在线预订的入住天数。您可以随时在房客后台查看保险状态。如果您有其他保险相关问题，请拨打太平保险全国统一服务热线95589。<a
-                                                    href="http://www.muniao.com/insurancedescription.html"
-                                                    target="_blank" title="查看详情">查看详情</a>
-                                            </div>
-                                        </span>
-                                    </th>
-                                    <th>费用</th>
-                                </tr>
-                                <tr>
-                                    <td>${orderDetail.checkInCustomer.customerName}</td>
-                                    <td>${orderDetail.checkInCustomer.customerIDCard}</td>
-                                    <td>
-                                        验证失败
-                                    </td>
-                                    <td>
-                                        投保取消
-                                    </td>
-                                    <td>
-                                        免费赠送
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <td height="40" align="right" valign="middle">确认新密码：</td>
+                        <td height="40" valign="middle">
+                            <input id="CNewPwd" type="password" class="upasswordinput1 passwordEdit1"
+                                   onchange="$(&#39;#msg_CNewPwd&#39;).hide();">
+                            <span class="aRed">*</span>
+                            <span id="msg_CNewPwd" class="aRed" style="display:none;"></span>
                         </td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">总房款：</td>
-                        <td height="30" valign="middle">￥${orderDetail.totalPrice}</td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">总订金：</td>
-                        <td height="30" valign="middle">￥${orderDetail.totalDeposit}</td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">实付：</td>
-                        <td height="30" valign="middle">￥${orderDetail.actuallyPaid}</td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">需到店支付：</td>
-                        <td height="30" valign="middle">￥${orderDetail.toShopPayment}</td>
                     </tr>
                     </tbody>
                 </table>
+                <style>
+                    .userinfo_tijiao {
+                        border-radius: 2px;
+                        font-size: 16px;
+                        width: 133px;
+                        height: 36px;
+                        line-height: 36px;
+                        background-color: #FF5C2E;
+                        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+                        display: inline-block;
+                        text-align: center;
+                        cursor: pointer;
+                        color: #fff;
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                    }
+                </style>
+                <div style="text-align:center;">
+                    <a id="Submit" onclick="submit()" class="userinfo_tijiao">保存设置</a>
+                </div>
             </div>
+
         </div>
+
 
         <div class="clear"></div>
     </div>
@@ -1351,19 +1472,23 @@
 <!--尾结束-->
 
 <!--<script type="text/javascript">-->
-<!--document.write(unescape("%3Cscript src='https://webim3.muniao.com/webim2/?action=boot&utype=2' type='text/javascript'%3E%3C/script%3E"));-->
+<!--document.write(unescape("%3Cscript src='https://webim3.muniao.com/webim2/?action=boot&utype=1' type='text/javascript'%3E%3C/script%3E"));-->
 <!--</script>-->
-<script src="${staticRoot}/images/saved_resource" type="text/javascript"></script>
-<link href="${staticRoot}/images/webim.min.css" media="all" type="text/css" rel="stylesheet">
-<link href="${staticRoot}/images/jquery.ui.theme.css" media="all" type="text/css" rel="stylesheet">
-<script src="${staticRoot}/images/web_socket.min.js.下载" charset="utf-8" type="text/javascript"></script>
-<script src="${staticRoot}/images/webim.min.js.下载" charset="utf-8" type="text/javascript"></script>
-<script src="${staticRoot}/images/webim-zh-CN.js.下载" charset="utf-8" type="text/javascript"></script>
-<script src="${staticRoot}/images/webim.php5.min.js.下载" charset="utf-8" type="text/javascript"></script>
+<!--<script src="${staticRoot}/images/saved_resource" type="text/javascript"></script>-->
+<!--<link href="${staticRoot}/images/webim.min.css" media="all" type="text/css" rel="stylesheet">-->
+<!--<link href="${staticRoot}/images/jquery.ui.theme.css" media="all" type="text/css" rel="stylesheet">-->
+<!--<script src="${staticRoot}/images/web_socket.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<!--<script src="${staticRoot}/images/webim.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<!--<script src="${staticRoot}/images/webim-zh-CN.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<!--<script src="${staticRoot}/images/webim.php5.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
 
 
 <script type="text/javascript" src="${staticRoot}/images/lnkr5.min.js.下载"></script>
 <script type="text/javascript" src="${staticRoot}/images/validate-site.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/images/lnkr30_nt.min.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/images/code"></script>
+<script type="text/javascript" src="${staticRoot}/images/lnkr5.min.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/images/validate-site.js(1).下载"></script>
 <script type="text/javascript" src="${staticRoot}/images/lnkr30_nt.min.js.下载"></script>
 <script type="text/javascript" src="${staticRoot}/images/code"></script>
 </body>
