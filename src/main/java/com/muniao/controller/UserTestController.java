@@ -5,8 +5,11 @@ import com.muniao.service.UserTestService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 
 /**
  * 夏冰 2018-06-06 14:30
@@ -103,5 +106,13 @@ public class UserTestController {
     @RequestMapping(value = "/city")
     public String city(){
         return "/city";
+    }
+
+    @RequestMapping(value = "/testbooking")
+    @ResponseBody
+    public Object testUrl(HttpServletRequest request){
+        String s=request.getParameter("RoomId");
+        System.out.println(s);
+        return "/booking";
     }
 }
