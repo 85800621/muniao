@@ -21,4 +21,5 @@ public interface UserMapper {
     List<String> queryRolesByEmail(String email);
 
     void insertSelective(User user);
+
 }
