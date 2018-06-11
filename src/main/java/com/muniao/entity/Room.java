@@ -59,9 +59,37 @@ public class Room {
      */
     private int  roomStatus;
     /**
-     * 房间所在地
+     * 市
      */
     private String roomLocation;
+    /**
+     *省
+     */
+    private String privince;
+    /**
+     * 区
+     */
+    private String roomArea;
+    /**
+     * 街道
+     */
+    private String street;
+    /**
+     * 小区
+     */
+    private String build;
+    /**
+     * 单元
+     */
+    private String unit;
+    /**
+     * 门牌号
+     */
+    private String door;
+    /**
+     * 地图等级
+     */
+    private int mapType;
     /**
      * 房间经度
      */
@@ -263,5 +291,61 @@ public class Room {
 
     public void setRoomLatitude(String roomLatitude) {
         this.roomLatitude = roomLatitude;
+    }
+
+    public String getPrivince() {
+        return privince;
+    }
+
+    public void setPrivince(String privince) {
+        this.privince = privince;
+    }
+
+    public String getRoomArea() {
+        return roomArea;
+    }
+
+    public void setRoomArea(String roomArea) {
+        this.roomArea = roomArea;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getBuild() {
+        return build;
+    }
+
+    public void setBuild(String build) {
+        this.build = build;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public String getDoor() {
+        return door;
+    }
+
+    public void setDoor(String door) {
+        this.door = door;
+    }
+
+    public int getMapType() {
+        return mapType;
+    }
+
+    public void setMapType(int mapType) {
+        this.mapType = mapType;
     }
 }
