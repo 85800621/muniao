@@ -43,7 +43,7 @@ public class RegisterController {
         JsonResult jsonResult = new JsonResult();
         User user = preRegisterService.checkUserByPhone(tel_M);
         if(user!=null){
-            jsonResult = UtilsTools.returnJsonResult(UtilsTools.FAIL,UtilsTools.FAIL_STR);
+            jsonResult.setCode(-2);
             return jsonResult;
         }else {
             User user1 = new User();
@@ -58,31 +58,33 @@ public class RegisterController {
             }else {
                 registerService.insertRoleUser(1,integer);
             }
-            jsonResult = UtilsTools.returnJsonResult(UtilsTools.SUCESS_REGISTER_CODE,UtilsTools.SUCESS_REGISTER);
+            jsonResult = UtilsTools.returnJsonResult(1,user1.getUserName(),Integer.parseInt(userType));
             return jsonResult;
         }
 
     }
 
-    @RequestMapping("/reg")
-    @ResponseBody
-    public Object  register(String usertel, String code,String codePic, HttpSession session){
-
-
-        session.setAttribute("user",usertel);
-        String  code1 = (String) session.getAttribute("code");
-        System.out.println("code---"+code1);
-        if(!codeStr.equals(code)||code.equals("")){
-            JsonResult jsonResult = UtilsTools.returnJsonResult(UtilsTools.ERROR_SEND_CODE,UtilsTools.RRROR_SEND);
-            return jsonResult;
-       }else if(!code1.equals(codePic)||codePic.equals("")) {
-            JsonResult jsonResult = UtilsTools.returnJsonResult(UtilsTools.ERROR_PIC_CODE, UtilsTools.ERROR_PIC);
-            return jsonResult;
-        }else {
-            JsonResult jsonResult = UtilsTools.returnJsonResult(UtilsTools.SUCESS_REGISTER_CODE, UtilsTools.SUCESS_REGISTER);
-            return jsonResult;
-        }
-    }
+//    @RequestMapping("/reg")
+//    @ResponseBody
+//    public Object  register(String usertel, String code,String codePic, HttpSession session){
+//
+//
+//        session.setAttribute("user",usertel);
+//        String  code1 = (String) session.getAttribute("code");
+//        System.out.println("code---"+code1);
+//        if(!codeStr.equals(code)||code.equals("")){
+//            JsonResult jsonResult = UtilsTools.returnJsonResult();
+//            return jsonResult;
+//       }else if(!code1.equals(codePic)||codePic.equals("")) {
+////            JsonResult jsonResult = UtilsTools.returnJsonResult(UtilsTools.ERROR_PIC_CODE, UtilsTools.ERROR_PIC);
+////            return jsonResult;
+//        }else {
+////            JsonResult jsonResult = UtilsTools.returnJsonResult(UtilsTools.SUCESS_REGISTER_CODE, UtilsTools.SUCESS_REGISTER);
+////            return jsonResult;
+//
+//        }
+//        return null;
+//    }
 
 
 

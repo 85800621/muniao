@@ -8,7 +8,9 @@ public class JsonResult {
 
     private Integer code;
 
-    private String result;
+    private String username;
+
+    private Integer usertype;
 
     public Integer getCode() {
         return code;
@@ -18,11 +20,31 @@ public class JsonResult {
         this.code = code;
     }
 
-    public String getResult() {
-        return result;
+    public String getUsername() {
+        return username;
     }
 
-    public void setResult(String result) {
-        this.result = result;
+    public void setUsername(String username) {
+        this.username = username;
     }
+
+    public Integer getUsertype() {
+        return usertype;
+    }
+
+    public void setUsertype(Integer usertype) {
+        this.usertype = usertype;
+    }
+
+    public JsonResult(Integer code, String username, Integer usertype) {
+        this.code = code;
+        this.username = username;
+        this.usertype = usertype;
+    }
+
+    public JsonResult() {
+    }
+
+
 }
+

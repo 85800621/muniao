@@ -35,6 +35,8 @@
     WHERE user_id=#{userId,jdbcType=INTEGER}
   </select>
 
+
+
     <insert id="insertSelective" keyProperty="userId" useGeneratedKeys="true" parameterType="com.muniao.entity.User">
         insert into tb_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -165,7 +167,9 @@
     </select>
 
     <select id="checkTelephone" parameterType="java.lang.String" resultMap="BaseResultMap">
-        SELECT telephone , password from tb_user
+        SELECT
+        <include refid="Base_Column_List" />
+       from tb_user
         WHERE telephone=#{phone}
     </select>
 

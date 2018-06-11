@@ -76,7 +76,7 @@ public class UserTestServiceTest {
     @Test
     public void testCase4(){
         try {
-            loginService.login("18792074922","12345");
+           // loginService.login("18792074922","12345");
         }catch (Exception e){
             e.printStackTrace();
         }

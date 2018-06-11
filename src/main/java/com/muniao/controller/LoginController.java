@@ -48,20 +48,22 @@ public class LoginController {
      */
     @RequestMapping("/checkLogin")
     @ResponseBody
-    public Object login(String tel,String password){
-        System.out.println(tel+"--------Controller--------"+password);
-        JsonResult jsonResult = null ;
+    public Object login(String tel,String password,Boolean rememberMe,HttpSession session){
+      //  rememberMe = true ;
+        System.out.println(tel+"--------Controller--------"+password+"------------"+rememberMe);
+        JsonResult jsonResult = new JsonResult() ;
         try{
-            loginService.login(tel,password);
-            jsonResult= UtilsTools.returnJsonResult(1, "登陆成功");
+            loginService.login(tel,password,rememberMe);
+            jsonResult.setCode(1);
+            //session.setAttribute("user",);
             return jsonResult;
         }catch (UnknownAccountException e){
             e.printStackTrace();
-            jsonResult = UtilsTools.returnJsonResult(-1,"账户不存在");
+            jsonResult.setCode(-1);
             return jsonResult ;
         }catch (IncorrectCredentialsException e){
             e.printStackTrace();
-            jsonResult = UtilsTools.returnJsonResult(-3,"密码错误");
+            jsonResult.setCode(-3);
             return jsonResult;
         }
 
@@ -80,14 +82,14 @@ public class LoginController {
     public Object login(String Tel_M, String MsgCode,String ValidCode,HttpSession session){
 
         System.out.println(Tel_M+"--------Controller--------"+ValidCode);
-        JsonResult jsonResult = null ;
+        JsonResult jsonResult = new JsonResult();
         System.out.println("msgcode---"+MsgCode);
         String  codeJsp = (String) session.getAttribute("code");
         if(!codeStr.equals(MsgCode)||MsgCode.equals("")){
-            jsonResult = UtilsTools.returnJsonResult(-2,"短信验证码错误");
+            jsonResult.setCode(-2);
             return jsonResult;
         }else if(!codeJsp.equals(ValidCode)||ValidCode.equals("")) {
-            jsonResult = UtilsTools.returnJsonResult(-1,"图形验证码错误");
+            jsonResult.setCode(-1);
             return jsonResult;
         }else {
             User user = loginService.checkTelePhone(Tel_M);
@@ -99,7 +101,7 @@ public class LoginController {
                 registerService.registerUserNoPwd(user);
                 session.setAttribute("user",user1);
             }
-            jsonResult = UtilsTools.returnJsonResult(1,"登陆成功");
+            jsonResult.setCode(1);
             return jsonResult;
         }
 
@@ -119,13 +121,12 @@ public class LoginController {
             codeStr = UtilsPicCode.getCode();
             UtilsCode.sendCode(codeStr, tel);
             jsonResult.setCode(3);
-            jsonResult.setResult("验证码已发送");
+
             return jsonResult;
         }catch (Exception e){
             e.printStackTrace();
         }
         jsonResult.setCode(4);
-        jsonResult.setResult("验证码发送失败");
         return jsonResult;
     }
 
@@ -141,12 +142,12 @@ public class LoginController {
     @RequestMapping("/pic")
     public void getPic(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IOException {
 
-        System.out.println("================================");
+        System.out.println("===============controller/pic=================");
 
         BufferedImage bufferedImg=new BufferedImage(100,35,BufferedImage.TYPE_INT_RGB);
         Graphics graphics=bufferedImg.getGraphics();
         graphics.setColor(Color.WHITE);
-        graphics.fillRect(0,0, 100, 37);
+        graphics.fillRect(0,0, 100, 55);
 
         graphics.setColor(Color.BLACK);
         Random random=new Random();
@@ -157,7 +158,7 @@ public class LoginController {
             char a= UtilsPicCode.PIC_CODE.charAt(index);
             charcode[i]=a;
             graphics.setColor(new Color(random.nextInt(100),random.nextInt(200),random.nextInt(100)));
-            graphics.drawString(a+"",20*i,20);
+            graphics.drawString(a+"",30*i,25);
         }
 
         session.setAttribute("code",new String(charcode));

@@ -55,13 +55,14 @@ public class UtilsTools {
     /**
      * 返回给页面的对象封装
      * @param code
-     * @param msg
+     * @param
      * @return
      */
-    public static JsonResult returnJsonResult(Integer code , String msg ){
+    public static JsonResult returnJsonResult(Integer code , String username , Integer usertype ){
         JsonResult jsonResult = new JsonResult();
         jsonResult.setCode(code);
-        jsonResult.setResult(msg);
+        jsonResult.setUsername(username);
+        jsonResult.setUsertype(usertype);
         return jsonResult;
     }
 }
