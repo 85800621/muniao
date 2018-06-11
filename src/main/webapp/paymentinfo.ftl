@@ -1,115 +1,70 @@
-<!DOCTYPE html>
-<!-- saved from url=(0034)http://user2.muniao.com/forgetpass -->
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0046)http://user2.muniao.com/BecomeHost/Index?utp=2 -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script charset="utf-8" src="${staticRoot}/images/v.js.下载"></script>
-    <script type="text/javascript" async="" src="${staticRoot}/images/mv.js.下载"></script>
-    <script type="text/javascript" async="" src="${staticRoot}/images/mba.js.下载"></script>
-    <script type="text/javascript" async="" src="${staticRoot}/images/mvl.js.下载"></script>
-    <script src="${staticRoot}/images/push.js.下载"></script>
-    <title>找回密码-木鸟短租</title>
+    <title>用户中心-木鸟短租</title>
 
-    <script type="text/javascript" src="${staticRoot}/images/api"></script>
-    <script type="text/javascript" src="${staticRoot}/images/getscript"></script>
-    <script src="${staticRoot}/images/jquery-1.10.2.min.js.下载"></script>
-    <script src="${staticRoot}/images/city_info.js.下载"></script>
-    <script src="${staticRoot}/images/city_cn2en.js.下载"></script>
-    <script src="${staticRoot}/images/CheckBrowser.js.下载"></script>
-    <link href="${staticRoot}/images/jquery.datetimepicker.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, IE=10">
+    <link rel="shortcut icon" href="http://user2.muniao.com/favicon.ico">
+    <link href="${staticRoot}/images/userpublic.css" rel="stylesheet">
+    <link href="${staticRoot}/images/user.css" rel="stylesheet">
+    <script src="${staticRoot}/images/muniao.js.下载"></script>
 
-    <link href="${staticRoot}/images/reset.css" rel="stylesheet">
-    <link href="${staticRoot}/images/style_single.css" rel="stylesheet">
-    <link href="${staticRoot}/images/style.css" rel="stylesheet" type="text/css">
-    <link href="${staticRoot}/images/webuploader.css" rel="stylesheet" type="text/css">
+    <script src="${staticRoot}/images/jquery-1.11.2.min.js.下载"></script>
+    <style>
+        .personCenter-dialog {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(000, 000, 000, .6);
+            z-index: 2000;
+        }
+
+        .background-mask {
+            width: 100%;
+            height: 100%;
+            filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#6F000000, endcolorstr=#6F000000);
+        }
+
+        .center-dialogClose {
+            display: block;
+            position: absolute;
+            right: 292px;
+            top: 0;
+            width: 41px;
+            height: 135px;
+            background: url(${staticRoot}/images/centerClose.png);
+            z-index: 200;
+        }
+
+        .personCenter-main {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 722px;
+            height: 417px;
+            margin: -204px 0 0 -361px;
+        }
+    </style>
+    <link rel="stylesheet" href="${staticRoot}/images/reset.css" type="text/css">
+    <link rel="stylesheet" href="${staticRoot}/images/style_single.css" type="text/css">
+
     <script>
-        function getValidCode() {
-            if (checkmob())
-                $.post("getCode", {tel: $('[name=mobile]').val()}, function (data) {
-                    if (data.code = 3) {
-                        alert("验证码已发送");
-                    }
-                });
+        //解决IE8及以下兼容问题(去空格trim)
+        String.prototype.trim = function () {
+            return this.replace(/(^\s*)|(\s*$)/g, "");
         }
-
-        // 判断手机号码
-        function checkmob() {
-            if ($.trim($('[name=mobile]').val()).length == 0) {
-                alert("手机号没有输入");
-                return false;
-            } else {
-                if (!isPhoneNo($.trim($('[name=mobile]').val()))) {
-                    alert("手机号码不正确");
-                    return false;
-                }
-                else {
-                    return true;
-                }
-            }
-        }
-
-        // 验证手机号
-        function isPhoneNo(phone) {
-            var pattern = /^1[34578]\d{9}$/;
-            return pattern.test(phone);
-        }
-
-        function submit() {
-            var mobiles = $.trim($('[name=mobile]').val());
-            if (mobiles.length == 0) {
-                alert("手机号没有输入");
-                return false;
-            } else {
-                if (!isPhoneNo(mobiles)) {
-                    alert("手机号码不正确");
-                    return false;
-                }
-            }
-            var imgcodes = $.trim($('[name=imgcode]').val());
-            if (imgcodes.length == 0) {
-                alert("请输入图形验证码！");
-                return false;
-            }
-            var vaildatecodes = $.trim($('[name=vaildatecode]').val());
-            if (vaildatecodes.length == 0) {
-                alert("请输入手机验证码！");
-                return false;
-            }
-            var passwords = $.trim($('[name=password]').val());
-            if (passwords.length == 0) {
-                alert("请输入新密码！");
-                return false;
-            }
-            var newpasswords = $.trim($('[name=newpassword]').val());
-            if (newpasswords.length == 0) {
-                alert("请输入确认密码！");
-                return false;
-            }
-            $.post("reSettPassword", {
-                mobile: mobiles,
-                imgcode: imgcodes,
-                vaildatecode: vaildatecodes,
-                password: passwords,
-                newpassword: newpasswords
-            }, function (date) {
-              //  var date = msg;
-                alert(date.code);
-                if (date.code=1) {
-                    alert("1111111111111111111111111111")
-                    location.href = 'http://www.muniao.com';
-                }else if(date.code=-2) {
-                    alert("短信验证码输入错误")
-                    location.href = 'http://www.baidu.com';
-                }else if(date.code=-1){
-                    alert("图形验证码错误")
-                    location.href = 'http://www.sina.com';
-                }
-            });
-        }
+        $(function () {
+            $("body").on("click", ".center-dialogClose", function () {
+                $(this).parent().hide();
+            })
+        })
 
     </script>
 </head>
-<body style="">
+<body>
 <!--<div id="webim" class="webim webim-state-active">-->
 <!--<div class="webim-preload ui-helper-hidden-accessible">-->
 <!--<div id="webim-flashlib-c">-->
@@ -162,13 +117,13 @@
 <!--<div class="webim-window-tab-inner">-->
 
 <!--<a id=":tabClose" title="关闭" class="webim-window-close"-->
-<!--href="http://user2.muniao.com/forgetpass#close" style="display: none;"><em-->
-<!--class="ui-icon ui-icon-close">关闭</em></a>-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#close"-->
+<!--style="display: none;"><em class="ui-icon ui-icon-close">关闭</em></a>-->
 <!--<div id=":tabCount" class="webim-window-tab-count">-->
 <!--0-->
 <!--</div>-->
 <!--<em id=":tabIcon" class="webim-icon webim-icon-buddy"></em>-->
-<!--<h4 id=":tabTitle">联系人[0/0]</h4>-->
+<!--<h4 id=":tabTitle">联系人[2/2]</h4>-->
 <!--</div>-->
 <!--</div>-->
 <!--</div>-->
@@ -199,38 +154,37 @@
 <!--</span>-->
 <!--<h4 id=":headerTitle"-->
 <!--style="overflow: hidden;height: 20px;margin: 0 0 0 52px;width: 170px;">-->
-<!--联系人[0/0]</h4>-->
+<!--联系人[2/2]</h4>-->
 <!--<div id=":subHeader" class="webim-window-subheader">-->
 <!--<div style="display: block;">-->
 <!--<div id=":user" class="webim-user">-->
 <!--<a id=":userPic" class="webim-user-pic ui-corner-all ui-state-active"-->
-<!--href="http://user2.muniao.com/forgetpass#"><img width="50"-->
-<!--height="50"-->
-<!--defaultsrc=""-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#"><img-->
+<!--width="50" height="50" defaultsrc=""-->
 <!--onerror="var d=this.getAttribute(&#39;defaultsrc&#39;);if(d &amp;&amp; this.src!=d)this.src=d;"-->
 <!--class="ui-corner-all"-->
 <!--src="${staticRoot}/images/d590d8e4b87c4c65922d653c3812d4a620180604093556672.jpg_150_150.jpg"></a>-->
 <!--<div class="webim-user-show"><h4><a id=":userShowTrigger"-->
-<!--href="http://user2.muniao.com/forgetpass#show"><strong-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#show"><strong-->
 <!--id=":userNick">嘉利学府</strong><span id=":userShow"><em-->
 <!--class="webim-icon webim-icon-available">在线</em>在线</span><em-->
 <!--class="ui-icon ui-icon-triangle-1-s">show_status_list</em></a>-->
 <!--</h4>-->
 <!--<p id=":userShowList" class="ui-state-active ui-corner-all"-->
 <!--style="display: none;">-->
-<!--<a href="http://user2.muniao.com/forgetpass#available"-->
+<!--<a href="http://user2.muniao.com/BecomeHost/Index?utp=2#available"-->
 <!--class="webim-user-show-available"><em-->
 <!--class="webim-icon webim-icon-available">在线</em>在线</a>-->
-<!--<a href="http://user2.muniao.com/forgetpass#dnd"-->
+<!--<a href="http://user2.muniao.com/BecomeHost/Index?utp=2#dnd"-->
 <!--class="webim-user-show-dnd"><em-->
 <!--class="webim-icon webim-icon-dnd">忙碌</em>忙碌</a>-->
-<!--<a href="http://user2.muniao.com/forgetpass#away"-->
+<!--<a href="http://user2.muniao.com/BecomeHost/Index?utp=2#away"-->
 <!--class="webim-user-show-away"><em-->
 <!--class="webim-icon webim-icon-away">离开</em>离开</a>-->
-<!--<a href="http://user2.muniao.com/forgetpass#invisible"-->
+<!--<a href="http://user2.muniao.com/BecomeHost/Index?utp=2#invisible"-->
 <!--class="webim-user-show-invisible"><em-->
 <!--class="webim-icon webim-icon-invisible">隐身</em>隐身</a>-->
-<!--<a href="http://user2.muniao.com/forgetpass#unavailable"-->
+<!--<a href="http://user2.muniao.com/BecomeHost/Index?utp=2#unavailable"-->
 <!--class="webim-user-show-unavailable"><em-->
 <!--class="webim-icon webim-icon-unavailable">离线</em>离线</a>-->
 <!--</p>-->
@@ -246,9 +200,41 @@
 <!--class="ui-icon ui-icon-search"></em><input id=":searchInput" type="text"-->
 <!--value=""></div>-->
 <!--<div class="webim-buddy-content webim-flex" id=":content">-->
-<!--<div id=":empty" class="webim-buddy-empty" style="display: block;">没有联系人在线-->
+<!--<div id=":empty" class="webim-buddy-empty" style="display: none;">没有联系人在线-->
 <!--</div>-->
-<!--<ul id=":ul"></ul>-->
+<!--<ul id=":ul">-->
+<!--<li style="display: block;"><h4><em-->
+<!--class="ui-icon ui-icon-triangle-1-s"></em><span>好友[2/2]</span>-->
+<!--</h4>-->
+<!--<hr class="webim-line ui-state-default">-->
+<!--<ul>-->
+<!--<li title="" class="webim-buddy-available"><a-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#url"-->
+<!--rel="56599" class="ui-helper-clearfix">-->
+<!--<div id=":tabCount" class="webim-window-tab-count">0</div>-->
+<!--<em class="webim-icon ui-icon ui-icon-trash"-->
+<!--style="display:none;cursor:pointer;"></em><em-->
+<!--class="webim-icon webim-icon-available" title="在线">available</em><img-->
+<!--width="25"-->
+<!--src="${staticRoot}/images/45da02ee0b8a4ccf9f58ff7ddd10657620180401193028296.jpg_150_150.jpg"-->
+<!--defaultsrc=""-->
+<!--onerror="var d=this.getAttribute(&#39;defaultsrc&#39;);if(d &amp;&amp; this.src!=d)this.src=d;"><strong>张雪艳</strong><span>&nbsp;</span></a>-->
+<!--</li>-->
+<!--<li title="" class="webim-buddy-available"><a-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#url"-->
+<!--rel="363368" class="ui-helper-clearfix">-->
+<!--<div id=":tabCount" class="webim-window-tab-count">0</div>-->
+<!--<em class="webim-icon ui-icon ui-icon-trash"-->
+<!--style="display:none;cursor:pointer;"></em><em-->
+<!--class="webim-icon webim-icon-available" title="在线">available</em><img-->
+<!--width="25"-->
+<!--src="${staticRoot}/images/7fc93e87a9334a339509b3ff0e6ec09b20180525163701649.jpg_150_150.jpg"-->
+<!--defaultsrc=""-->
+<!--onerror="var d=this.getAttribute(&#39;defaultsrc&#39;);if(d &amp;&amp; this.src!=d)this.src=d;"><strong>逅客崇文门天安门前门店</strong><span>&nbsp;</span></a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
 <!--</div>-->
 <!--</div>-->
 <!--</div>-->
@@ -264,8 +250,8 @@
 <!--<strong id=":tabTipC">公告</strong>-->
 <!--</div>-->
 <!--<a id=":tabClose" title="关闭" class="webim-window-close"-->
-<!--href="http://user2.muniao.com/forgetpass#close" style="display: none;"><em-->
-<!--class="ui-icon ui-icon-close">关闭</em></a>-->
+<!--href="http://user2.muniao.com/BecomeHost/Index?utp=2#close"-->
+<!--style="display: none;"><em class="ui-icon ui-icon-close">关闭</em></a>-->
 <!--<div id=":tabCount" class="webim-window-tab-count">-->
 <!--0-->
 <!--</div>-->
@@ -317,7 +303,7 @@
 <!--</div>-->
 <!--</div>-->
 <!--</div>-->
-<!--start of header-->
+
 
 <style>
     .w_user_xl {
@@ -399,7 +385,6 @@
         margin: 3px 6px 0 0;
     }
 </style>
-<script src="http://js.bjglxf.com/j/adv.js"></script>
 <script>
     function logout() {
         $.get("/Login/OutLogin", function (data) {
@@ -416,17 +401,17 @@
 温馨提示：您目前的浏览器版本过低，网站部分功能无法正常使用，建议尽快升级：
 <a href="http://www.chromeliulanqi.com/" target="_blank" name="升级谷歌浏览器" id="upgrade_firefox"
    style="display:inline-block;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;_margin-bottom:4px;"><img
-        src="/Content/images/google_Icon.jpg"/></a>
+        src="${staticRoot}/images/google_Icon.jpg"/></a>
 <a href="http://www.firefox.com.cn" target="_blank" name="升级火狐浏览器" id="upgrade_firefox"
    style="display:inline-block;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;_margin-bottom:4px;"><img
-        src="/Content/images/firefox_Icon.jpg"/></a>
+        src="${staticRoot}/images/firefox_Icon.jpg"/></a>
 </div>
 <![endif]-->
 <div class="s_mn_headbox" id="s_mn_headbox">
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"><a href="http://www.muniao.com/"><img
             src="${staticRoot}/images/mn_logo.png" width="80" height="40"></a></h2>
-    <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活">
-    </div>
+    <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活"
+                                                      title="一间房一种生活"></div>
     <ul class="s_mn_nav">
         <li><a href="http://www.muniao.com/">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
@@ -542,7 +527,7 @@
         display: block;
         width: 12px;
         height: 12px;
-        background: url("../../Content/images/newa_close.png") no-repeat;
+        background: url("${staticRoot}/images/newa_close.png") no-repeat;
         position: absolute;
         top: 16px;
         right: 16px;
@@ -598,28 +583,28 @@
     }
 
     .newa_email_tel_icon {
-        background: url("../../Content/images/login_icon.png") no-repeat 0 -53px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -53px;
     }
 
     .newa_l_password_icon {
-        background: url("../../Content/images/login_icon.png") no-repeat -18px -53px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat -18px -53px;
     }
 
     .newa_login_input li i.newa_kj_icon {
-        background: url("../../Content/images/login_icon.png") no-repeat 0 -74px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -74px;
         width: 14px;
         height: 18px;
     }
 
     .newa_login_input li i.newa_piccode_icon {
-        background: url("../../Content/images/login_icon.png") no-repeat 0 -97px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -97px;
         top: 15px;
         width: 17px;
         height: 14px;
     }
 
     .newa_login_input li i.newa_code_icon {
-        background: url("../../Content/images/login_icon.png") no-repeat 0 -116px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -116px;
         top: 15px;
         width: 16px;
         height: 14px;
@@ -646,12 +631,12 @@
         display: block;
         width: 310px;
         height: 70px;
-        background: url("../../Content/images/login_btn.png") no-repeat;
+        background: url("${staticRoot}/images/login_btn.png") no-repeat;
         margin-left: -15px;
     }
 
     .newa_login_btn:hover {
-        background: url("../../Content/images/login_btn.png") no-repeat -310px 0;
+        background: url("${staticRoot}/images/login_btn.png") no-repeat -310px 0;
     }
 
     .newa_zc {
@@ -678,13 +663,13 @@
     .newa_coop .newa_sina {
         width: 28px;
         height: 23px;
-        background: url("../../Content/images/login_icon.png") no-repeat 0 -25px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -25px;
     }
 
     .newa_coop .newa_qq {
         width: 18px;
         height: 20px;
-        background: url("../../Content/images/login_icon.png") no-repeat -1px 0;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat -1px 0;
         margin-left: 25px;
     }
 
@@ -1039,9 +1024,8 @@
     }
 
     //获取图片验证码
-    function getImageCode() {
-        alert("00000000000000000000000000000")
-        document.getElementById("imgPic").src = "pic?random=" + Math.random();
+    function getImageCode(obj) {
+        document.getElementById("ValidImg").src = '/Login/VerifyCode?' + Math.random();
     }
 </script>
 <style>
@@ -1072,7 +1056,7 @@
                 <input type="text" id="login_ValidCode" name="newa_piccode" placeholder="图形验证码">
                 <input type="hidden" id="hd_ValidCode">
 
-                <a href="javascript:void(0);"><img id="bbb" src="pic"
+                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="${staticRoot}/images/VerifyCode"
                                                                         onclick="getImageCode(this);"></a>
             </li>
             <li>
@@ -1114,8 +1098,8 @@
         <a class="newa_login_btn newa_ordinary" href="javascript:void(0);" onclick="toLogin(1)"></a>
         <p class="newa_zc">还没有木鸟账号？<a href="http://user2.muniao.com/regist">立即注册</a></p>
         <div class="newa_coop">
-            <a class="newa_sina" href="http://user2.muniao.com/forgetpass#"></a>
-            <a class="newa_qq" href="http://user2.muniao.com/forgetpass#"></a>
+            <a class="newa_sina" href="http://user2.muniao.com/BecomeHost/Index?utp=2#"></a>
+            <a class="newa_qq" href="http://user2.muniao.com/BecomeHost/Index?utp=2#"></a>
         </div>
     </div>
     <!---tips--->
@@ -1157,357 +1141,479 @@
 </script>
 
 
-<!--end of header-->
-<!--内容部分start-->
-<div class="s_mn_mainbox">
-    <div class="s_mn_center2">
-        <div class="s_mn_forgetbox">
-            <div class="s_mn_forget_title">
-                <h2>找回密码</h2>
-                <div class="s_mn_forget_nav">
-                    <a href="http://www.muniao.com/">木鸟短租</a>
-                    <span>&nbsp;&gt;&nbsp;</span>
-                    <a href="javascript:void(0);">忘记密码</a>
-                </div>
-            </div>
-            <div class="s_mn_forget_main">
-                <div class="s_mn_forget_layout">
-                    <div class="s_mn_backbox">
-                        <div class="s_mn_title">
-                            <div class="s_mn_t1">手机找回密码</div>
-                        </div>
-                        <div class="s_mn_back_information">
-                            <p>
-                                1、请提供您注册木鸟短租时使用的手机号码；aaaa<br><br>
-                                2、点击获取密码，我们将发送一条带有验证信息的短信给您；<br><br>
-                                3、在验证码处输入您获取的验证信息，即可进行密码重置。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="s_mn_forget_layout">
-                    <div class="s_mn_backbox">
-                        <div class="s_mn_back_information">
-                            <div style="display:none;">
-                                <input name="muniaosdk_rand" id="f_muniaosdk_rand" value="1" type="hidden">
-                            </div>
-                            <form name="forget_form" id="f_form">
-                                <div class="s_mn_back_input" style="">
-                                    <span>验证码：</span>
-                                    <input class="s_mn_back_ipt" name="imgcode" id="f_code" placeholder="请输入图形验证码"
-                                           type="tel">
-                                    <a  href="javascript:void(0);"><img id="imgPic" src="pic"
-                                                                                            onclick="getImageCode(this);"></a>
-                                    <#--this.src ="login/pic?random=" + Math.random();-->
-                                </div>
-                                <div class="s_mn_back_input">
-                                    <span>手机号：</span>
-                                    <input class="s_mn_back_ipt" name="mobile" id="f_mobile" placeholder="请输入您注册时填写的手机号"
-                                           type="tel">
-                                    <a href="javascript:getValidCode();" id="f_getcode">获取验证码</a>
-                                </div>
-                                <div class="s_mn_back_input">
-                                    <span>验证码：</span>
-                                    <input class="s_mn_back_ipt" name="vaildatecode" id="f_validatecode"
-                                           placeholder="请输入您的短信验证码" type="tel">
-                                </div>
-                                <div class="s_mn_back_input">
-                                    <span>新密码：</span>
-                                    <input class="s_mn_back_ipt" name="password" id="f_password" placeholder="请输入新密码"
-                                           type="password">
-                                </div>
-                                <div class="s_mn_back_input">
-                                    <span>再次输入：</span>
-                                    <input class="s_mn_back_ipt" name="newpassword" id="f_newpassword"
-                                           placeholder="再次输入新密码" type="password">
-                                    <a href="javascript:void(0);" id="f_submit" onclick="submit()">确认提交</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+<!--房东管理开始-->
+<div class="userT"><a href="http://www.muniao.com/" class="aGray">首页</a> &gt; 用户中心</div>
+<div class="usercon">
+    <div class="userL" style="box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.25);margin-bottom: 30px;">
+        <div class="userhead">
+            <div class="userhead_pic"><img id="ContPic"
+                                           src="${staticRoot}/images/d590d8e4b87c4c65922d653c3812d4a620180604093556672.jpg_150_150(1).jpg"
+                                           style="border:0;" width="219" height="219"></div>
+            <span>嘉利学府</span>
+            <div class="userheadtxt"><a href="http://user2.muniao.com/Order/Index?utp=2" style="color:#f4650a;">订单管理</a><a
+                    class="w_border" style="color:#f4650a;" href="http://user2.muniao.com/UserInfo/Index">个人信息</a></div>
         </div>
-    </div>
-</div>
-<!--内容部分end-->
-<!--start of footer-->
-<br><br>
-<link href="${staticRoot}/images/w_style.css" rel="stylesheet" type="text/css">
-<div class="w_footerbox" id="s_mn_footerbox">
-    <script type="text/javascript">
-        $(window).load(function () {
-            $("#cityvalue").on("click focus", function () {
-                scrollPage($("#citywindow"))
-            });
-            $("#start_date_D").on("click focus", function () {
-                scrollPage($("#starttime"))
-            });
-            $("#s_numtext").on("click focus", function () {
-                scrollPage($("#s_number"));
-            });
-
-            function scrollPage(obj) {
-                var windowHeight = $(window).height();
-                var offsetTop = parseInt(obj.offset().top);
-                var scrollTop = $(document).scrollTop();
-                var suggestionHeight = obj.height();
-                if ((windowHeight - (offsetTop - scrollTop)) - suggestionHeight < 0) {
-                    var newTopHeight = scrollTop + (suggestionHeight + 10) - (windowHeight - (offsetTop - scrollTop));
-                    $('html,body').animate({scrollTop: newTopHeight}, 300);
-                }
+        <style>
+            .usidebar ul li img {
+                vertical-align: baseline;
             }
-        });
-    </script>
-    <div class="w_footer_nav">
-        <div class="s_mn_footer_nav">
-            <a href="http://www.muniao.com/single_2.html" rel="nofollow" target="_blank" title="关于我们">关于我们</a><span
-                class="m10">|</span><a href="http://www.muniao.com/single_3.html" target="_blank"
-                                       title="木鸟短租客服">联系我们</a><span class="m10">|</span><a
-                href="http://www.muniao.com/single_4.html" rel="nofollow" target="_blank" title="法律声明">法律声明</a><span
-                class="m10">|</span><a href="http://www.muniao.com/single_5.html" rel="nofollow" target="_blank"
-                                       title="新手指南">新手指南</a><span class="m10">|</span><a
-                href="http://www.muniao.com/single_1.html" rel="nofollow" target="_blank" title="帮助中心">帮助中心</a><span
-                class="m10">|</span><a href="http://www.muniao.com/single_7.html" rel="nofollow" target="_blank"
-                                       title="加入我们">加入我们</a><span class="m10">|</span><a
-                href="http://www.muniao.com/list_news_0_1.html" target="_blank" title="新闻资讯">新闻资讯</a><span
-                class="m10">|</span><a href="http://www.muniao.com/" target="_blank" title="短租房">短租房</a><span
-                class="m10">|</span><a href="http://www.muniao.com/single_9.html" rel="nofollow" target="_blank"
-                                       title="媒体报道">媒体报道</a>
-        </div>
-        <div class="s_mn_footer_nav f12">客服电话：400-056-0055 或 010-89180879<span
-                class="m10">客户服务：service@muniao.com</span><span class="m10">意见反馈：feedback@muniao.com</span></div>
-        <div class="s_mn_footer_nav f12">网站备案/许可证号：京ICP备12043553号-3&nbsp;京公网安备11010802011855号&nbsp;北京爱游易科技有限公司</div>
-        <div class="s_mn_security">
-            <ul class="s_mn_security_list">
-                <li><a href="http://net.china.cn/chinese/index.htm" rel="nofollow" title="信息举报中心" target="_blank"><img
-                        src="${staticRoot}/images/pic1.jpg" alt="信息举报中心" title="信息举报中心" width="109" height="50"></a></li>
-                <li><a href="http://www.cyberpolice.cn/wfjb/" rel="nofollow" title="网络110" target="_blank"><img
-                        src="${staticRoot}/images/pic2.jpg" alt="网络110" title="网络110" width="109" height="50"></a></li>
-                <li><a href="http://www.bjjubao.org/" rel="nofollow" title="互联网举报中心" target="_blank"><img
-                        src="${staticRoot}/images/pic3.jpg" alt="互联网举报中心" title="互联网举报中心" width="109" height="50"></a></li>
-                <li><a href="http://webscan.360.cn/index/checkwebsite/url/muniao.com" rel="nofollow" title="安全检测"
-                       target="_blank"><img src="${staticRoot}/images/pic6.jpg" alt="安全检测" title="安全检测" width="109" height="50"></a>
-                </li>
+
+            .usidebar ul li a {
+                vertical-align: top;
+            }
+        </style>
+        <div class="usidebar">
+            <h4 style="color:#444;">订单管理</h4>
+            <ul>
+                <li id="li3" class="usidebarlibg"><img src="${staticRoot}/images/folders.gif" width="18" height="18"
+                                                       align="absmiddle"><a
+                        href="http://user2.muniao.com/Order/Index?utp=2">订单管理</a></li>
+                <li id="li17" class="usidebarlibg"><img src="${staticRoot}/images/star.gif" width="18" height="18"
+                                                        align="absmiddle"><a
+                        href="http://user2.muniao.com/Favorite/Index?utp=2">我的收藏</a></li>
+
+            </ul>
+            <h4 style="color:#444;">用户信息</h4>
+            <ul>
+                <li id="li26" class="usidebarlibg"><img src="${staticRoot}/images/icon_memeber.png" width="18" height="18"
+                                                        align="absmiddle"><a
+                        href="http://user2.muniao.com/commpage/mymember?utp=2">我的会员</a></li>
+                <li id="li13" class="usidebarlibg"><img src="${staticRoot}/images/user_edit.gif" width="18" height="18"
+                                                        align="absmiddle"><a
+                        href="http://user2.muniao.com/UserInfo/Index?utp=2">个人信息</a></li>
+                <li id="li16" class="usidebarlibg"><img src="${staticRoot}/images/database_user.gif" width="18" height="18"
+                                                        align="absmiddle"><a
+                        href="http://user2.muniao.com/Coupon/Index?utp=2">我的优惠券 </a></li>
+                <li id="li11" class="usidebarlibg"><img src="${staticRoot}/images/database_user.gif" width="18" height="18"
+                                                        align="absmiddle"><a
+                        href="http://user2.muniao.com/RentMoney/Index?utp=2">我的租币 </a></li>
+                <li id="li12" class="usidebarlibg"><img src="${staticRoot}/images/key.gif" width="18" height="18"
+                                                        align="absmiddle"><a
+                        href="http://user2.muniao.com/UserInfo/Password?utp=2">密码修改</a></li>
+                <li id="li14" class="usidebarlibg1"><img src="${staticRoot}/images/user_down.gif" width="18" height="18"
+                                                         align="absmiddle"><a
+                        href="http://user2.muniao.com/BecomeHost/Index?utp=2">收款方式</a></li>
+                <li id="li15" class="usidebarlibg"><img src="${staticRoot}/images/comment_reply.gif" width="18" height="18"
+                                                        align="absmiddle"><a
+                        href="http://user2.muniao.com/SystemMsg/Index?utp=2">消息提醒</a></li>
             </ul>
         </div>
     </div>
+    <!--欢迎页面开始-->
+    <div class="uwelcome">
+
+        <!--欢迎页面结束-->
+
+
+        <script>
+            //提交
+            $(function () {
+                //左侧菜单选中样式
+                $('#li14').attr('class', 'usidebarlibg1');
+
+                $('#Submit').click(function () {
+                    //验证房东昵称
+                    if ($('#UserName').val() == '') {
+                        $('#UserName').focus();
+                        $('#msg_UserName').html('&nbsp;&nbsp;请输入房东昵称！');
+                        $('#msg_UserName').show();
+                        return false;
+                    }
+                    //验证支付类型
+                    if ($('#ChargeType').val() == 0) {
+                        $('#ChargeType').focus();
+                        $('#msg_ChargeType').html('&nbsp;&nbsp;请选择支付类型！');
+                        $('#msg_ChargeType').show();
+                        return false;
+                    }
+                    //验证码
+                    if ($('#ValidCode').val() == '') {
+                        $('#ValidCode').focus();
+                        $('#msg_Tel_M').html('&nbsp;&nbsp;请输入验证码！');
+                        $('#msg_Tel_M').show();
+                        return false;
+                    }
+                    ////身份证
+                    //if ($('#RealIdCard').attr('disabled') != 'disabled') {
+                    //    if ($('#RealIdCard').val() == '') {
+                    //        $('#RealIdCard').focus();
+                    //        $('#msg_RealIdCard').html('&nbsp;&nbsp;请输入身份证号码！');
+                    //        $('#msg_RealIdCard').show();
+                    //        return false;
+                    //    }
+                    //    if (!isIDCard($('#RealIdCard').val())) {
+                    //        $('#RealIdCard').focus();
+                    //        $('#msg_RealIdCard').html('&nbsp;&nbsp;请输入正确的身份证号码！');
+                    //        $('#msg_RealIdCard').show();
+                    //        return false;
+                    //    }
+                    //}
+                    if ($('#ChargeType').val() == 3) {
+                        //开户行
+                        if ($('#AccountBank').val() == '') {
+                            $('#AccountBank').focus();
+                            $('#msg_AccountBank').html('&nbsp;&nbsp;请输入开户银行！');
+                            $('#msg_AccountBank').show();
+                            return false;
+                        }
+                        //开户人
+                        if ($('#AccountHolder').val() == '') {
+                            $('#AccountHolder').focus();
+                            $('#msg_AccountHolder').html('&nbsp;&nbsp;请输入开户人姓名！');
+                            $('#msg_AccountHolder').show();
+                            return false;
+                        }
+                        //收款账号
+                        if ($('#Account').val() == '') {
+                            $('#Account').focus();
+                            $('#msg_Account').html('&nbsp;&nbsp;请输入收款账号！');
+                            $('#msg_Account').show();
+                            return false;
+                        }
+                    }
+                    else if ($('#ChargeType').val() == 1) {
+                        //支付宝收款人
+                        if ($('#PayeeName').val() == '') {
+                            $('#PayeeName').focus();
+                            $('#msg_PayeeName').html('&nbsp;&nbsp;请输入收款人姓名！');
+                            $('#msg_PayeeName').show();
+                            return false;
+                        }
+                        //支付宝账号
+                        if ($('#AliPayAccount').val() == '') {
+                            $('#AliPayAccount').focus();
+                            $('#msg_AliPayAccount').html('&nbsp;&nbsp;请输入支付宝账号！');
+                            $('#msg_AliPayAccount').show();
+                            return false;
+                        }
+                    }
+                    //提交
+                    //支付宝
+                    if ($('#ChargeType').val() == 1) {
+                        $.post("/BecomeHost/Submit", {
+                            UserName: $('#UserName').val(),
+                            ChargeType: $('#ChargeType').val(),
+                            ChargeDetail: $('#AliPayAccount').val() + '|' + $('#PayeeName').val(),
+                            Tel_M: $('#Tel_M').val(),
+                            ValidCode: $('#ValidCode').val()
+                            //RealIdCard: $('#RealIdCard').val()
+                        }, function (data) {
+                            var j = JSON.parse(data);
+                            if (j.state) {
+                                alert('恭喜！操作成功！');
+                                location.reload();
+                            }
+                            else {
+                                alert(j.msg);
+                            }
+                        })
+                    }
+                    //银行卡
+                    else if ($('#ChargeType').val() == 3) {
+                        $.post("/BecomeHost/Submit", {
+                            UserName: $('#UserName').val(),
+                            ChargeType: $('#ChargeType').val(),
+                            ChargeDetail: $('#AccountBank').val() + '|' + $('#Account').val() + '|' + $('#AccountHolder').val(),
+                            Tel_M: $('#Tel_M').val(),
+                            ValidCode: $('#ValidCode').val()
+                            //RealIdCard: $('#RealIdCard').val()
+                        }, function (data) {
+                            var j = JSON.parse(data);
+                            if (j.state) {
+                                alert('恭喜！操作成功！');
+                                location.reload();
+                            }
+                            else {
+                                alert(j.msg);
+                            }
+                        })
+                    }
+
+                });
+            })
+
+            //选择支付方式
+            function changeField(val) {
+                if (val == 0) {//请选择
+                    $("#tr1,#tr2,#tr3,#tr4,#tr5").hide();
+                }
+                else if (val == 1) {//支付宝
+                    $("#tr1,#tr2,#tr3,#tr4,#tr5").hide();
+                    $("#tr4,#tr5").show();
+                }
+                else if (val == 3) {//银行卡
+                    $("#tr1,#tr2,#tr3,#tr4,#tr5").hide();
+                    $("#tr1,#tr2,#tr3").show();
+                }
+            }
+
+            //获取验证码
+            var IsOut = false;//验证码是否过期
+            function getValidCode(obj) {
+                //手机号为空验证
+                if ($('#Tel_M').val() == '') {
+                    $('#Tel_M').focus();
+                    $('#msg_Tel_M').html('&nbsp;&nbsp;手机号不能为空！');
+                    $('#msg_Tel_M').show();
+                    return false;
+                }
+                //手机号是否正确
+                if (!isMobile($('#Tel_M').val())) {
+                    $('#Tel_M').focus();
+                    $('#msg_Tel_M').html('&nbsp;&nbsp;手机号格式错误！');
+                    $('#msg_Tel_M').show();
+                    return false;
+                }
+                /*发送短信*/
+                $.ajaxSettings.async = false;
+                $.ajaxSetup({cache: false});
+                $.get('/BecomeHost/SendValidCode', {mob: $('#Tel_M').val()}, function (data) {
+                    var State = JSON.parse(data).State;
+                    if (State == 1) {
+                        /*设置样式*/
+                        var name = $(obj).find("a").html();
+                        var color = $(obj).find("a").css('color');
+                        var i = 60;
+                        $(obj).find("a").html(i + '秒');
+                        $(obj).find("a").css('color', '#f4650a');
+                        $(obj).removeAttr("onclick");
+                        var inv = setInterval(function () {
+                            if (i == 1) {
+                                $(obj).find("a").html(name);
+                                $(obj).find("a").css('color', color);
+                                $(obj).attr("onclick", "getValidCode(this)");
+                                clearInterval(inv);
+                            }
+                            else {
+                                i--;
+                                $(obj).find("a").html(i + '秒');
+                            }
+                        }, 1000);
+                        /*设置验证码过期时间*/
+                        var outtime = setInterval(function () {
+                            IsOut = true;
+                            clearInterval(outtime);
+                        }, 120000);
+                        /*验真手机号*/
+                        //$('#hd_ValidTel').val($('#Tel_M').val());
+                        alert('短信验证码已发送，请注意查收！');
+                    }
+                    else if (State == 2) {
+                        alert('已达到验证次数上限，请稍后再试！');
+                    }
+                    else if (State == 4) {
+                        alert('请输入登录的手机号！');
+                    } else if (State == 5) {
+                        alert('账户有误，请重新登录！');
+                    }
+                    else {
+                        alert('发送失败，请稍后重试！');
+                    }
+
+                })
+            }
+        </script>
+        <style>
+            h4 {
+                border-radius: 10px 10px 0 0;
+            }
+
+            input {
+                padding-left: 5px;
+            }
+
+            select {
+                margin-left: 5px;
+                height: 26px;
+                border-color: #dcdcdc;
+                color: #444444;
+                border: solid 1px #dcdcdc;
+            }
+        </style>
+        <div class="userR">
+            <div class="uinfoT">
+                <h4 style="color:#444;">收款方式</h4>
+            </div>
+            <form name="uinfoform" id="uinfoform" method="post" style="background-color:#ffffff;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                    <tr>
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>房东昵称：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="UserName" type="text" class="uinfoinput" value="嘉利学府" maxlength="20"
+                                   onchange="$(&#39;#msg_UserName&#39;).hide();">
+                            <span id="msg_UserName" class="aRed" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>收款方式：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <select id="ChargeType"
+                                    onchange="changeField(this.value); $(&#39;#msg_ChargeType&#39;).hide();">
+                                <option style="color:#aaa;" value="">请选择</option>
+                                <option value="1" selected="&quot;selected&quot;">支付宝</option>
+                                <option value="3">银行卡</option>
+                            </select>
+                            <span id="msg_ChargeType" class="aRed" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            手机号码：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="Tel_M" type="text" disabled="disabled" class="uinfoinput"
+                                   onchange="$(&#39;#msg_Tel_M&#39;).hide();" style="float:left;" value="18792074922"
+                                   maxlength="11">
+                            <input id="ValidCode" type="text" class="teltext mT15"
+                                   onchange="$(&#39;#msg_Tel_M&#39;).hide();"
+                                   style="width:68px; margin-top:0;margin-left:5px;">
+                            <div class="teltbtn mT15" style="margin-top:0;cursor:pointer;"
+                                 onclick="getValidCode(this);"><a href="javascript:void(0);" class="aGray">获取验证码</a>
+                            </div>
+                            <span id="msg_Tel_M" class="aRed" style="display:none;line-height:25px;"></span>
+                        </td>
+                    </tr>
+
+                    <tr id="tr1" style="display:none;">
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>开户银行：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="AccountBank" type="text" class="uinfoinput" maxlength="20" value=""
+                                   onchange="$(&#39;#msg_AccountBank&#39;).hide();">
+                            <span id="msg_AccountBank" class="aRed" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    <tr id="tr2" style="display:none;">
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>开户姓名：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="AccountHolder" type="text" class="uinfoinput" maxlength="20" value=""
+                                   onchange="$(&#39;#msg_AccountHolder&#39;).hide();">
+                            <span id="msg_AccountHolder" class="aRed" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    <tr id="tr3" style="display:none;">
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>收款账号：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="Account" type="text" class="uinfoinput" maxlength="20" value=""
+                                   onchange="$(&#39;#msg_Account&#39;).hide();">
+                            <span id="msg_Account" class="aRed" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    <tr id="tr4" style="">
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>收款人姓名：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="PayeeName" type="text" class="uinfoinput" maxlength="20" value="史国纲"
+                                   onchange="$(&#39;#msg_PayeeName&#39;).hide();">
+                            <span id="msg_PayeeName" class="aRed" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    <tr id="tr5" style="">
+                        <td width="100" height="40" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">
+                            <span class="aRed">*</span>支付宝账号：
+                        </td>
+                        <td width="655" height="40" align="left" valign="middle" class="uinfotd">
+                            <input id="AliPayAccount" type="text" class="uinfoinput" maxlength="64" value="18792074922"
+                                   onchange="$(&#39;#msg_AliPayAccount&#39;).hide();">
+                            <span id="msg_AliPayAccount" class="aRed" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+            <style>
+                .userinfo_tijiao {
+                    border-radius: 2px;
+                    font-size: 16px;
+                    width: 133px;
+                    height: 36px;
+                    line-height: 36px;
+                    background-color: #FF5C2E;
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+                    display: inline-block;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #fff;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
+            </style>
+            <div style="text-align:center;">
+                <a id="Submit" class="userinfo_tijiao">保存设置</a>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
 </div>
-<!-- 代码部分begin -->
-<!--<script type="text/javascript">-->
-<!--document.write(unescape("%3Cscript src='http://webim.muniao.com:8080/webim2/?action=boot' type='text/javascript'%3E%3C/script%3E"));-->
-<!--</script>-->
-<!--<script src="${staticRoot}/images/saved_resource" type="text/javascript"></script>-->
-<!--<link href="${staticRoot}/images/webim.min.css" media="all" type="text/css" rel="stylesheet">-->
-<!--<link href="${staticRoot}/images/jquery.ui.theme.css" media="all" type="text/css" rel="stylesheet">-->
-<!--<script src="${staticRoot}/images/web_socket.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
-<!--<script src="${staticRoot}/images/webim.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
-<!--<script src="${staticRoot}/images/webim-zh-CN.js.下载" charset="utf-8" type="text/javascript"></script>-->
-<!--<script src="${staticRoot}/images/webim.php5.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
-<script language="JavaScript" src="${staticRoot}/images/o_code.js.下载"></script>
-<div style="display:none;">
-    <script type="text/javascript">
-        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cspan id='cnzz_stat_icon_1000373664'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1000373664' type='text/javascript'%3E%3C/script%3E"));
-        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F59c4ac1df66ae9bdb2ce804f09084ea1' type='text/javascript'%3E%3C/script%3E"));
-        (function () {
-            var bp = document.createElement('script');
-            bp.src = '//push.zhanzhang.baidu.com/push.js';
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(bp, s);
-        })();
-        var _mvq = window._mvq || [];
-        window._mvq = _mvq;
-        _mvq.push(['$setAccount', 'm-104553-0']);
-        _mvq.push(['$logConversion']);
-        (function () {
-            var mvl = document.createElement('script');
-            mvl.type = 'text/javascript';
-            mvl.async = true;
-            mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(mvl, s);
-        })();
-    </script>
-    <span id="cnzz_stat_icon_1000373664"><a href="http://www.cnzz.com/stat/website.php?web_id=1000373664"
-                                            target="_blank" title="站长统计">站长统计</a></span>
-    <script src="${staticRoot}/images/z_stat.php" type="text/javascript"></script>
-    <script src="${staticRoot}/images/core.php" charset="utf-8" type="text/javascript"></script>
-    <script src="${staticRoot}/images/h.js.下载" type="text/javascript"></script>
-    <a href="http://tongji.baidu.com/hm-web/welcome/ico?s=59c4ac1df66ae9bdb2ce804f09084ea1" target="_blank"><img
-            border="0" src="${staticRoot}/images/21.gif" width="20" height="20"></a>
-    <script type="text/javascript">
-        var _py = _py || [];
-        _py.push(['a', 'x5s..6h9N25bYbmKSHNiH6LUtm0']);
-        _py.push(['domain', 'stats.bjglxf.com']);
-        _py.push(['e', '']);
-        -function (d) {
-            var s = d.createElement('script'),
-                    e = d.body.getElementsByTagName('script')[0];
-            e.parentNode.insertBefore(s, e),
-                    f = 'https:' == location.protocol;
-            s.src = (f ? 'https' : 'http') + '://' + (f ? 'sjs.bjglxf.com ' : 'js.bjglxf.com') + '/j/adv.js';
-        }(document);
-    </script>
-    <noscript>&lt;img src="//stats.bjglxf.com/adv.gif?a=x5s..6h9N25bYbmKSHNiH6LUtm0&amp;e=" style="display:none;"
-        /&gt;
-    </noscript>
+<!--尾开始-->
+<div class="s_mn_footerbox" id="s_mn_footerbox">
+    <div class="s_mn_footer_center">
+        <div class="s_mn_footer_nav">
+            <a href="http://www.muniao.com/single_2.html" rel="nofollow" target="_blank" title="关于我们">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                href="http://www.muniao.com/single_3.html" target="_blank" title="木鸟短租客服">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                href="http://www.muniao.com/single_4.html" rel="nofollow" target="_blank" title="法律声明">法律声明</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                href="http://www.muniao.com/single_5.html" rel="nofollow" target="_blank" title="新手指南">新手指南</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                href="http://www.muniao.com/single_1.html" rel="nofollow" target="_blank" title="帮助中心">帮助中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                href="http://www.muniao.com/single_7.html" rel="nofollow" target="_blank" title="加入我们">加入我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                href="http://www.muniao.com/list_news_0_1.html" target="_blank" rel="nofollow" title="新闻资讯">新闻资讯</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                href="http://www.muniao.com/" target="_blank" title="短租房">短租房</a>
+        </div>
+        <div class="s_mn_footer_information">
+            <div class="s_mn_copyright">
+                <p>客服电话：4000560055&nbsp;客户服务：service@muniao.com&nbsp;意见反馈：feedback@muniao.com</p>
+                <p>版权所有&nbsp;木鸟短租&nbsp;网站备案/许可证号：京ICP备12043553号-3 京公网安备11010802011855号</p>
+                <p>北京爱游易科技有限公司</p>
+            </div>
+            <div class="s_mn_security">
+                <ul class="s_mn_security_list">
+                    <li><a href="http://net.china.cn/chinese/index.htm" rel="nofollow" title="信息举报中心"
+                           target="_blank"><img style="border-radius: 5px;" src="${staticRoot}/images/pic1.jpg"
+                                                alt="信息举报中心" title="信息举报中心" width="109" height="50"></a></li>
+                    <li><a href="http://www.cyberpolice.cn/wfjb/" rel="nofollow" title="网络110" target="_blank"><img
+                            style="border-radius: 5px;" src="${staticRoot}/images/pic2.jpg" alt="网络110" title="网络110"
+                            width="109" height="50"></a></li>
+                    <li><a href="http://www.bjjubao.org/" rel="nofollow" title="互联网举报中心" target="_blank"><img
+                            style="border-radius: 5px;" src="${staticRoot}/images/pic3.jpg" alt="互联网举报中心" title="互联网举报中心"
+                            width="109" height="50"></a></li>
+                    <li><a href="http://webscan.360.cn/index/checkwebsite/url/muniao.com" rel="nofollow" title="安全检测"
+                           target="_blank"><img style="border-radius: 5px;" src="${staticRoot}/images/pic6.jpg" alt="安全检测"
+                                                title="安全检测" width="109" height="50"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-<!--start of BDBridge-->
-<style>
-    #BDBridgeFixedWrap {
-        position: absolute;
-    }
+<!--尾结束-->
 
-    .sidebar {
-        position: fixed;
-        right: 30px;
-        bottom: 162px;
-        z-index: 3;
-    }
+<#--<script type="text/javascript">-->
+    <#--document.write(unescape("%3Cscript src='https://webim3.muniao.com/webim2/?action=boot&utype=2' type='text/javascript'%3E%3C/script%3E"));-->
+<#--</script>-->
+<#--<script src="${staticRoot}/images/saved_resource" type="text/javascript"></script>-->
+<#--<link href="${staticRoot}/images/webim.min.css" media="all" type="text/css" rel="stylesheet">-->
+<#--<link href="${staticRoot}/images/jquery.ui.theme.css" media="all" type="text/css" rel="stylesheet">-->
+<#--<script src="${staticRoot}/images/web_socket.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<#--<script src="${staticRoot}/images/webim.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<#--<script src="${staticRoot}/images/webim-zh-CN.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<#--<script src="${staticRoot}/images/webim.php5.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
 
-    .index_consul {
-        overflow: hidden;
-        width: 95px;
-        height: 170px; /*background:url(http://www.muniao.com/demotest/sider.png) no-repeat center top;*/
-        position: absolute;
-        top: -173px;
-        left: -37px;
-        cursor: pointer;
-    }
-
-    .sidebar ul {
-        width: 40px;
-        height: 160px;
-        background: #DDDDDD;
-        opacity: .96;
-    }
-
-    .side_click {
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-    }
-
-    .backTop a {
-        display: block;
-        width: 40px;
-        height: 40px;
-        background: #cccccc url(http://assets.muniao.com/assets/2015/images/side.png) no-repeat center -125px;
-        margin-top: 8px;
-    }
-
-    .backTop a:hover {
-        background: #B3B3B3 url(http://assets.muniao.com/assets/2015/images/side.png) no-repeat center -125px;
-    }
-
-    .sidebar li div {
-        display: none;
-    }
-
-    .sidebar li, .backTop {
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        position: relative;
-    }
-
-    .backTop {
-        display: none;
-    }
-
-    .sidebar li:hover {
-        background-color: #C3C3C3;
-        opacity: 0.96;
-    }
-
-    .side_order {
-        background: url(http://assets.muniao.com/assets/2015/images/side.png) no-repeat center 11px;
-    }
-
-    .tenant_f {
-        background: url(http://assets.muniao.com/assets/2015/images/side.png) no-repeat center -35px;
-    }
-
-    .opinion_f {
-        background: url(http://assets.muniao.com/assets/2015/images/side.png) no-repeat center -76px;
-    }
-
-    li.silder_hide {
-        width: 34px;
-        height: 35px;
-        cursor: pointer;
-        background: #DDDDDD;
-        color: #9A9A9A;
-        font-size: 12px;
-        text-align: center;
-        padding: 5px 3px 0;
-    }
-
-    .side_see_order {
-        width: 120px;
-        height: 36px;
-        background: #444444;
-        line-height: 36px;
-        text-align: center;
-        position: absolute;
-        left: -140px;
-        border-radius: 3px;
-    }
-
-    .side_see_order a {
-        font-size: 16px;
-        color: #19b5fe;
-    }
-
-    .tenant_tip {
-        width: 140px;
-        height: 110px;
-        position: absolute;
-        left: -180px;
-        background: #444444;
-        border-radius: 3px;
-        padding: 0 10px;
-        top: 0;
-    }
-
-    .tenant_tip p {
-        color: #888888;
-        font-size: 12px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .tenant_tip a {
-        display: inline-block;
-        padding: 5px 10px;
-        color: #FFFFFF;
-        background: #19b5fe;
-        font-size: 12px;
-        margin-top: 12px;
-        position: absolute;
-        left: 10px;
-        bottom: 10px;
-    }
-
-    .tenant_tip h3 {
-        margin: 0;
-        color: #19B5FE;
-        font-size: 16px;
-        padding: 10px 0;
-        font-weight: normal;
-    }
-</style>
-<!--end of BDBridge-->
-<!--end of footer-->
-
-
-<script type="text/javascript" src="${staticRoot}/images/lat"></script>
-<script type="text/javascript" src="${staticRoot}/images/lt"></script>
 <script type="text/javascript" src="${staticRoot}/images/lnkr5.min.js.下载"></script>
 <script type="text/javascript" src="${staticRoot}/images/validate-site.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/images/lnkr30_nt.min.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/images/code"></script>
+<script type="text/javascript" src="${staticRoot}/images/lnkr5.min.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/images/validate-site.js(1).下载"></script>
 <script type="text/javascript" src="${staticRoot}/images/lnkr30_nt.min.js.下载"></script>
 <script type="text/javascript" src="${staticRoot}/images/code"></script>
 </body>
