@@ -657,15 +657,10 @@
                     <a href="https://www.muniao.com/features_housing_7.html" target="_blank">${roomFeature.roomFeature}特色房源-</a>-找到相关房源${rooms?size}个，每页30个结果
                 </div>
                 <div class="s_mn_page_bar">
+
                     <a href="https://www.muniao.com/features_housing_7.html" style="background:#ff6c5c;color:#fff;border:1px solid #e46355;" title="第一页" target="_self">第一页</a>
                     <a href="https://www.muniao.com/features_housing_7.html" style="background:#ff6c5c;color:#fff;border:1px solid #e46355;" title="1" rel="nofollow" target="_self">1</a>
                     <a href="https://www.muniao.com/features_housing_7_2.html" style="" title="2" rel="nofollow" target="_self">2</a>
-                    <a href="https://www.muniao.com/features_housing_7_3.html" style="" title="3" rel="nofollow" target="_self">3</a>
-                    <a href="https://www.muniao.com/features_housing_7_4.html" style="" title="4" rel="nofollow" target="_self">4</a>
-                    <a href="https://www.muniao.com/features_housing_7_5.html" style="" title="5" rel="nofollow" target="_self">5</a>
-                    <a href="https://www.muniao.com/features_housing_7_6.html" style="" title="6" rel="nofollow" target="_self">6</a>
-
-                    <a href="https://www.muniao.com/features_housing_7_2.html" style="" title="下一页" rel="nofollow" target="_self">下一页</a>
                     <a href="https://www.muniao.com/features_housing_7_8.html" style="" rel="nofollow" title="最后一页" target="_self" class="Lpage_li1">最后一页</a>
                 </div>
             </div>
