@@ -1,6 +1,7 @@
 package com.muniao.dao;
 
 import com.muniao.entity.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -21,4 +22,6 @@ public interface UserMapper {
     List<String> queryRolesByEmail(String email);
 
     void insertSelective(User user);
+
+    void updatePassword(@Param("password") String password,@Param("telephone")String telephone);
 }

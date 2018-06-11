@@ -5,11 +5,8 @@ import com.muniao.service.UserTestService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
 
 /**
  * 夏冰 2018-06-06 14:30
@@ -53,14 +50,19 @@ public class UserTestController {
         return "/orderdetail";
     }
 
-    @RequestMapping(value = "/room")
-    public String room(){
-        return "/room";
-    }
+//    @RequestMapping(value = "/room")
+//    public String room(){
+//        return "/room";
+//    }
 
     @RequestMapping(value = "/roommanagement")
     public String roommanagement(){
         return "/roommanagement";
+    }
+
+    @RequestMapping(value = "/city")
+    public String roomcity(){
+        return "/city";
     }
 
 
@@ -103,16 +105,29 @@ public class UserTestController {
         return "/step2";
     }
 
-    @RequestMapping(value = "/city")
-    public String city(){
-        return "/city";
+    @RequestMapping(value = "/landlordinfo")
+    public String landlordinfo(){
+        return "/landlordinfo";
     }
 
-    @RequestMapping(value = "/testbooking")
-    @ResponseBody
-    public Object testUrl(HttpServletRequest request){
-        String s=request.getParameter("RoomId");
-        System.out.println(s);
-        return "/booking";
+    @RequestMapping(value = "/paymentinfo")
+    public String paymentinfo(){
+        return "/paymentinfo";
     }
+
+    @RequestMapping(value = "/step3")
+    public String step3(){
+        return "/step3";
+    }
+
+    @RequestMapping(value = "/step4")
+    public String step4(){
+        return "/step4";
+    }
+
+    @RequestMapping(value = "/step5")
+    public String step5(){
+        return "/step5";
+    }
+
 }

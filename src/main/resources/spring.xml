@@ -97,6 +97,7 @@
         <property name="filterChainDefinitions">
             <value>
                 <!--anon不需要登录-->
+                /oo/pic=anon
                 /**/**=anon
                 /login/**=anon
               <!--  /login/checkLogin=anon -->
@@ -118,7 +119,7 @@
     <bean name="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
         <property name="realms">
             <list>
-                <ref bean="UserRealmByEmail"/>
+                <!--<ref bean="UserRealmByEmail"/>-->
                 <ref bean="UserRealmByPhone"/>
             </list>
         </property>

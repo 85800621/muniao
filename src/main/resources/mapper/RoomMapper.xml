@@ -35,7 +35,7 @@
     select
     <include refid="Base_Column_List" />
     FROM tb_room
-    WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER}
+    WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER} limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
   </select>
 
   <select id="findByFeatureCity" resultMap="BaseResultMap">
@@ -43,6 +43,7 @@
     <include refid="Base_Column_List" />
     FROM tb_room
     WHERE room_feature_id=#{featureId,jdbcType=INTEGER} AND room_location=#{roomLocation,javaType=String}
+    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
   </select>
 
   <select id="findByCityList" resultMap="BaseResultMap">
@@ -53,9 +54,85 @@
     SELECT  COUNT(room_feature_id) FROM tb_room WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER};
   </select>
 
+  <select id="countFeatureRoom" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    SELECT COUNT(room_id) FROM tb_room WHERE room_feature_id=#{featureId,jdbcType=INTEGER};
+  </select>
 
-  <!--<select id="selectCountRoom" parameterType="java.lang.Integer" resultMap="BaseResultMap">-->
-    <!--SELECT COUNT (1) FROM tb_room WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER};-->
-  <!--</select>-->
+  <select id="selectByCity" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_room
+    WHERE room_location=#{roomLocation,javaType=String}
+    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
+  </select>
+
+  <select id="selectByCityTitle" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_room
+    WHERE room_location=#{roomLocation,javaType=String}
+    <if test="typeId != 0">
+      AND room_type_id =#{typeId,jdbcType=INTEGER}
+    </if>
+    <if test="priceId != 0">
+      AND price_interval_id =#{priceId,jdbcType=INTEGER}
+    </if>
+    <if test="methodId != 0">
+      AND room_method_id =#{methodId,jdbcType=INTEGER}
+    </if>
+    <if test="structureId != 0">
+      AND room_structure_id =#{structureId,jdbcType=INTEGER}
+    </if>
+    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
+  </select>
+
+  <!-- 查找所在地方所有的房间类型 -->
+  <select id="selectRoomType" resultMap="BaseResultMap">
+    select
+    DISTINCT
+    room_type_id
+    FROM tb_room
+    WHERE room_location=#{roomLocation,javaType=String}
+    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
+  </select>
+
+
+  <select id="selectRoomInterval" resultMap="BaseResultMap">
+    select
+    DISTINCT
+    price_interval_id
+    FROM tb_room
+    WHERE room_location=#{roomLocation,javaType=String}
+    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
+  </select>
+
+  <select id="selectRoomMethod" resultMap="BaseResultMap">
+    select
+    DISTINCT
+    room_method_id
+    FROM tb_room
+    WHERE room_location=#{roomLocation,javaType=String}
+    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
+  </select>
+
+
+  <select id="selectRoomStructure" resultMap="BaseResultMap">
+    select
+    DISTINCT
+    room_structure_id
+    FROM tb_room
+    WHERE room_location=#{roomLocation,javaType=String}
+    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
+  </select>
+
+
+  <!-- 查询具体房间信息 -->
+  <select id="selectRoomById" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_room
+    WHERE
+    room_id=#{roomId,jdbcType=INTEGER}
+  </select>
 
 </mapper>

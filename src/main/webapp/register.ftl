@@ -605,7 +605,7 @@
                 return false;
             }
             //登录
-            $.post("login/CheckLoginFast", {
+            $.post("CheckLoginFast", {
                 Tel_M: $('#login_Tel_M').val().trim(),
                 ValidCode: $('#login_ValidCode').val().trim(),
                 MsgCode: $('#login_MsgCode').val().trim()
@@ -661,7 +661,7 @@
                 return false;
             }
             //普通登录
-            $.post("login/checkLogin", {
+            $.post("checkLogin", {
                 tel: $('#Login_Email_Tel_M').val().trim(),
                 password: $('#Login_Pwd').val().trim(),
                 rememberMe: $('#newa_auto_l').val().trim()
@@ -669,9 +669,10 @@
                // var j = JSON.parse(data);
                 alert("1111111111111111")
                 if (data.code == 1) {
-                    location.href = 'http://www.muniao.com';
+                    location.href = 'lodgerinfo';
                 }
                 else if (data.code == -1) {
+                    alert("您还不是木鸟用户，请先注册")
                     $('#Login_Email_Tel_M').focus();
                     $('.newa_tips_text').html('您还不是木鸟用户，请注册!');
                     $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
@@ -684,6 +685,7 @@
                     return false;
                 }
                 else if (data.code == -3) {
+                    alert("密码错误")
                     $('#Login_Pwd').focus();
                     $('.newa_tips_text').html('登录密码错误');
                     $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
@@ -723,7 +725,7 @@
         /*发送短信*/
         $.ajaxSettings.async = false;
         $.ajaxSetup({ cache: false });
-        $.get('login/getCode', { tel: $('#login_Tel_M').val(), ValidCode: $('#login_ValidCode').val().trim() }, function (data) {
+        $.get('getCode', { tel: $('#login_Tel_M').val(), ValidCode: $('#login_ValidCode').val().trim() }, function (data) {
             var State = JSON.parse(data).State;
             if (State == 1) {
                 //$('#hd_MsgCode').val(JSON.parse(data).UtilsCode);
@@ -771,9 +773,8 @@
         })
     }
     //获取图片验证码
-    function getImageCode()
-    {
-        document.getElementById("ValidImg").src = "login/pic?random=" + Math.random();
+    function getImageCode() {
+        document.getElementById("ValidImg").src = "pic?random=" + Math.random();
     }
 </script>
 <style>
@@ -803,7 +804,7 @@
                 <input type="text" id="login_ValidCode" name="newa_piccode" placeholder="图形验证码">
                 <input type="hidden" id="hd_ValidCode">
 
-                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="login/pic" onclick="getImageCode();"></a>
+                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="pic" onclick="getImageCode();"></a>
             </li>
             <li>
                 <i class="newa_code_icon"></i>
@@ -813,7 +814,7 @@
             </li>
         </ul>
         <div class="newa_foget">
-            <a class="newa_foget_m" href="http://user2.muniao.com/forgetpass">忘记密码？</a>
+            <a class="newa_foget_m" href="forgetPassword">忘记密码？</a>
         </div>
         <a class="newa_login_btn newa_quick" href="javascript:;" onclick="toLogin(0)"></a>
         <p class="newa_zc">还没有木鸟账号？<a href="http://user2.muniao.com/regist">立即注册</a> </p>
@@ -827,7 +828,7 @@
         <ul class="newa_login_input">
             <li>
                 <i class="newa_email_tel_icon"></i>
-                <input type="text" id="Login_Email_Tel_M" placeholder="邮箱/手机号">
+                <input type="text" id="Login_Email_Tel_M" placeholder="手机号">
             </li>
             <li>
                 <i class="newa_l_password_icon"></i>
@@ -835,7 +836,7 @@
             </li>
         </ul>
         <div class="newa_foget">
-            <a class="newa_foget_m" href="http://user2.muniao.com/forgetpass">忘记密码？</a>
+            <a class="newa_foget_m" href="forgetPassword">忘记密码？</a>
             <input id="newa_auto_l" name="newa_auto_l"  type="checkbox">
             <label for="newa_auto_l">下次自动登录</label>
 
