@@ -105,11 +105,6 @@ public class UserTestController {
         return "/step2";
     }
 
-    @RequestMapping(value = "/city")
-    public String city(){
-        return "/city";
-    }
-
     @RequestMapping(value = "/password")
     public String password(){
         return "/password";

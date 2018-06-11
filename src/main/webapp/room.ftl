@@ -3518,7 +3518,7 @@
                     <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;">
                         <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div>
                         <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;">
-                            <span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute;
+                            <span class="BMap_Marker BMap_noprint" unselectable="on" style="position: absolute;
                             padding: 0px; margin: 0px; border: 0px; cursor: pointer; background: url(&quot;https://api.map.baidu.com/images/blank.gif&quot;);
                             width: 40px; height: 50px; left: 292px; top: 175px; z-index: 19000000;" title=""></span>
                         </div>
