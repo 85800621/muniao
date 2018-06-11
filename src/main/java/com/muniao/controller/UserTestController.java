@@ -105,19 +105,9 @@ public class UserTestController {
         return "/step2";
     }
 
-    @RequestMapping(value = "/password")
-    public String password(){
-        return "/password";
-    }
-
     @RequestMapping(value = "/landlordinfo")
     public String landlordinfo(){
         return "/landlordinfo";
-    }
-
-    @RequestMapping(value = "/lodgerinfo")
-    public String lodgerinfo(){
-        return "/lodgerinfo";
     }
 
     @RequestMapping(value = "/paymentinfo")
