@@ -3392,44 +3392,38 @@
             <ul id="fjxx" class="room_detailist f14 clearfix" style="height:150px; overflow:hidden;">
                 <li>
                     <span class="room_icon room_fylx"></span><span class="fcolor8 w_mL10">房源类型：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="民居">民居</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="${room.roomType.roomType}">${room.roomType.roomType}</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_hx"></span><span class="fcolor8 w_mL10">户型：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="2室1厅">2室1厅</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="${room.roomStructure.bedroomNum}室${room.roomStructure.livingroomNum}厅">${room.roomStructure.bedroomNum}室${room.roomStructure.livingroomNum}厅</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_czlx"></span><span class="fcolor8 w_mL10">出租类型：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="整租">整租</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="${room.rentalMethod.method}">${room.rentalMethod.method}</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_cx"></span><span class="fcolor8 w_mL10">床型：</span>
                     <div class="nrboxq">
-                            <span class="fcolor7" title="双人床
-双人床
-">双人床
-双人床
-</span>
-
-
+                            <span class="fcolor7" title="${room.roomBedInfo.benType}">${room.roomBedInfo.benType}</span>
                     </div>
                 </li>
                 <li>
                     <span class="room_icon room_cws"></span><span class="fcolor8 w_mL10">总床数：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="2张">2张</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="${room.roomBedInfo.bedNumber}张">${room.roomBedInfo.bedNumber}张</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_kzrs"></span><span class="fcolor8 w_mL10">可住人数：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="4人">4人</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="${room.avaliableArea.standPop}人">${room.avaliableArea.standPop}人</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_wsj"></span><span class="fcolor8 w_mL10">独立卫生间：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="">1</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="${room.roomStructure.bathroomNum}">${room.roomStructure.bathroomNum}</span></div>
                 </li>
 
                 <li>
                     <span class="room_icon room_area"></span><span class="fcolor8 w_mL10">面积：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="60平米">60平米</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="${room.avaliableArea.roomArea}平米">${room.avaliableArea.roomArea}平米</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_fp"></span><span class="fcolor8 w_mL10">发票：</span>
@@ -3458,7 +3452,6 @@
                 <li>
                     <span class="room_icon room_yj"></span>
                     <span class="fcolor8 w_mL10">押金：</span>
-
                     <div class="nrboxq"><span class="fcolor7" title="收取 (300.00)元"
                                               style="display: inline-block; width: 130px; height: 50px; overflow: hidden;">线下收取 (300.00)元</span><a
                             class="more" href="javascript:;">详情</a></div>
