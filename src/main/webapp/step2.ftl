@@ -3,14 +3,13 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <script src="${staticRoot}/images/jquery-1.10.2.min.js.下载"></script>
-    <script src="${staticRoot}/images/city_info.js.下载"></script>
-    <script src="${staticRoot}/images/city_cn2en.js.下载"></script>
-    <script src="${staticRoot}/images/checkbrowser.js.下载"></script>
-    <link href="${staticRoot}/images/reset.css" rel="stylesheet">
-    <link href="${staticRoot}/images/style.css" rel="stylesheet" type="text/css">
-    <link href="${staticRoot}/images/style_single.css" rel="stylesheet">
+    <script src="${staticRoot}/add/jquery-1.10.2.min.js.下载"></script>
+    <script src="${staticRoot}/add/city_info.js.下载"></script>
+    <script src="${staticRoot}/add/city_cn2en.js.下载"></script>
+    <script src="${staticRoot}/add/checkbrowser.js.下载"></script>
+    <link href="${staticRoot}/add/reset.css" rel="stylesheet">
+    <link href="${staticRoot}/add/style.css" rel="stylesheet" type="text/css">
+    <link href="${staticRoot}/add/style_single.css" rel="stylesheet">
 </head>
 <body style="">
 
@@ -109,23 +108,23 @@
 温馨提示：您目前的浏览器版本过低，网站部分功能无法正常使用，建议尽快升级：
 <a href="http://www.chromeliulanqi.com/" target="_blank" name="升级谷歌浏览器" id="upgrade_firefox"
    style="display:inline-block;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;_margin-bottom:4px;"><img
-        src="${staticRoot}/images/google_Icon.jpg"/></a>
+        src="${staticRoot}/add/google_Icon.jpg"/></a>
 <a href="http://www.firefox.com.cn" target="_blank" name="升级火狐浏览器" id="upgrade_firefox"
    style="display:inline-block;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;_margin-bottom:4px;"><img
-        src="${staticRoot}/images/firefox_Icon.jpg"/></a>
+        src="${staticRoot}/add/firefox_Icon.jpg"/></a>
 </div>
 <![endif]-->
 <div class="s_mn_headbox" id="s_mn_headbox">
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"><a href="http://www.muniao.com/"><img
-            src="${staticRoot}/images/mn_logo.png" width="80" height="40"></a></h2>
-    <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活">
+            src="${staticRoot}/add/mn_logo.png" width="80" height="40"></a></h2>
+    <div class="w_slogan" style="display:block;"><img src="${staticRoot}/add/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活">
     </div>
     <ul class="s_mn_nav">
         <li><a href="http://www.muniao.com/">首页</a></li>
         <li><a href="http://www.muniao.com/features.html" target="_self">特色短租</a></li>
         <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
-                src="${staticRoot}/images/give88.png"></i></a></li>
+                src="${staticRoot}/add/give88.png"></i></a></li>
     </ul>
     <div id="div_FangKe1" class="s_mn_release w_mR30" style="display:none;">
         <a href="http://user2.muniao.com/Index/MoveHouse?utp=1" class="s_mn_navbutt" rel="nofollow">我要成为房东</a>
@@ -178,7 +177,7 @@
 
 
 <title></title>
-<script src="${staticRoot}/images/base-validator.js.下载"></script>
+<script src="${staticRoot}/add/base-validator.js.下载"></script>
 <style>
     .newa_login_bg {
         display: none;
@@ -234,7 +233,7 @@
         display: block;
         width: 12px;
         height: 12px;
-        background: url("${staticRoot}/images/newa_close.png") no-repeat;
+        background: url("${staticRoot}/add/newa_close.png") no-repeat;
         position: absolute;
         top: 16px;
         right: 16px;
@@ -290,28 +289,28 @@
     }
 
     .newa_email_tel_icon {
-        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -53px;
+        background: url("${staticRoot}/add/login_icon.png") no-repeat 0 -53px;
     }
 
     .newa_l_password_icon {
-        background: url("${staticRoot}/images/login_icon.png") no-repeat -18px -53px;
+        background: url("${staticRoot}/add/login_icon.png") no-repeat -18px -53px;
     }
 
     .newa_login_input li i.newa_kj_icon {
-        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -74px;
+        background: url("${staticRoot}/add/login_icon.png") no-repeat 0 -74px;
         width: 14px;
         height: 18px;
     }
 
     .newa_login_input li i.newa_piccode_icon {
-        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -97px;
+        background: url("${staticRoot}/add/login_icon.png") no-repeat 0 -97px;
         top: 15px;
         width: 17px;
         height: 14px;
     }
 
     .newa_login_input li i.newa_code_icon {
-        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -116px;
+        background: url("${staticRoot}/add/login_icon.png") no-repeat 0 -116px;
         top: 15px;
         width: 16px;
         height: 14px;
@@ -338,12 +337,12 @@
         display: block;
         width: 310px;
         height: 70px;
-        background: url("${staticRoot}/images/login_btn.png") no-repeat;
+        background: url("${staticRoot}/add/login_btn.png") no-repeat;
         margin-left: -15px;
     }
 
     .newa_login_btn:hover {
-        background: url("${staticRoot}/images/login_btn.png") no-repeat -310px 0;
+        background: url("${staticRoot}/add/login_btn.png") no-repeat -310px 0;
     }
 
     .newa_zc {
@@ -370,13 +369,13 @@
     .newa_coop .newa_sina {
         width: 28px;
         height: 23px;
-        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -25px;
+        background: url("${staticRoot}/add/login_icon.png") no-repeat 0 -25px;
     }
 
     .newa_coop .newa_qq {
         width: 18px;
         height: 20px;
-        background: url("${staticRoot}/images/login_icon.png") no-repeat -1px 0;
+        background: url("${staticRoot}/add/login_icon.png") no-repeat -1px 0;
         margin-left: 25px;
     }
 
@@ -763,7 +762,7 @@
                 <input type="text" id="login_ValidCode" name="newa_piccode" placeholder="图形验证码">
                 <input type="hidden" id="hd_ValidCode">
 
-                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="${staticRoot}/images/VerifyCode"
+                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="${staticRoot}/add/VerifyCode"
                                                                         onclick="getImageCode(this);"></a>
             </li>
             <li>
@@ -1152,16 +1151,16 @@
         <div class="esse-list">
             <div class="esse-list-t">出租类型（必填）</div>
             <div id="div_rent_type" class="esse-list-con esse-radio">
-                <div class="iradio_flat-red" style="position: relative;"><input type="radio" name="lease-type"
-                                                                                id="lease-1" value="1"
-                                                                                style="position: absolute; opacity: 0;">
+                <div class="iradio_flat-red" style="position: relative;">
+                    <input type="radio" name="lease-type" id="lease-1" value="1"
+                           style="position: absolute; opacity: 0;">
                     <ins class="iCheck-helper"
                          style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                 </div>
                 <label style="margin-bottom:0" for="lease-1">整租</label>
-                <div class="iradio_flat-red" style="position: relative;"><input type="radio" name="lease-type"
-                                                                                id="lease-2" value="2"
-                                                                                style="position: absolute; opacity: 0;">
+                <div class="iradio_flat-red" style="position: relative;">
+                    <input type="radio" name="lease-type" id="lease-2" value="2"
+                           style="position: absolute; opacity: 0;">
                     <ins class="iCheck-helper"
                          style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                 </div>
@@ -1170,55 +1169,51 @@
         <div class="esse-list">
             <div class="esse-list-t">房源类型（必填）</div>
             <div id="div_room_type" class="esse-list-con esse-radio">
-                <div class="iradio_flat-red" style="position: relative;"><input type="radio" name="room-type"
-                                                                                id="room-1" value="1"
-                                                                                style="position: absolute; opacity: 0;">
+                <div class="iradio_flat-red" style="position: relative;">
+                    <input type="radio" name="room-type" id="room-1" value="1" style="position: absolute; opacity: 0;">
                     <ins class="iCheck-helper"
                          style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                 </div>
                 <label for="room-1">民居</label>
-                <div class="iradio_flat-red" style="position: relative;"><input type="radio" name="room-type"
-                                                                                id="room-2" value="2"
-                                                                                style="position: absolute; opacity: 0;">
+                <div class="iradio_flat-red" style="position: relative;">
+                    <input type="radio" name="room-type" id="room-2" value="2" style="position: absolute; opacity: 0;">
                     <ins class="iCheck-helper"
                          style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                 </div>
                 <label for="room-2">客栈</label>
-                <div class="iradio_flat-red" style="position: relative;"><input type="radio" name="room-type"
-                                                                                id="room-4" value="4"
-                                                                                style="position: absolute; opacity: 0;">
+                <div class="iradio_flat-red" style="position: relative;">
+                    <input type="radio" name="room-type" id="room-4" value="4" style="position: absolute; opacity: 0;">
                     <ins class="iCheck-helper"
                          style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                 </div>
                 <label for="room-4">公寓</label>
-                <div class="iradio_flat-red" style="position: relative;"><input type="radio" name="room-type"
-                                                                                id="room-7" value="7"
-                                                                                style="position: absolute; opacity: 0;">
+                <div class="iradio_flat-red" style="position: relative;">
+                    <input type="radio" name="room-type" id="room-7" value="7" style="position: absolute; opacity: 0;">
                     <ins class="iCheck-helper"
                          style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                 </div>
                 <label for="room-7">独栋别墅</label>
-                <div class="iradio_flat-red" style="position: relative;"><input type="radio" name="room-type"
-                                                                                id="room-9" value="9"
-                                                                                style="position: absolute; opacity: 0;">
+                <div class="iradio_flat-red" style="position: relative;">
+                    <input type="radio" name="room-type" id="room-9" value="9" style="position: absolute; opacity: 0;">
                     <ins class="iCheck-helper"
                          style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                 </div>
                 <label for="room-9">四合院</label>
-                <div class="iradio_flat-red" style="position: relative;"><input type="radio" name="room-type"
-                                                                                id="room-12" value="12"
-                                                                                style="position: absolute; opacity: 0;">
+                <div class="iradio_flat-red" style="position: relative;">
+                    <input type="radio" name="room-type" id="room-12" value="12"
+                           style="position: absolute; opacity: 0;">
                     <ins class="iCheck-helper"
                          style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                 </div>
                 <label for="room-12">农家院</label>
-                <div class="iradio_flat-red" style="position: relative;"><input type="radio" name="room-type"
-                                                                                id="room-16" value="16"
-                                                                                style="position: absolute; opacity: 0;">
+                <div class="iradio_flat-red" style="position: relative;">
+                    <input type="radio" name="room-type" id="room-16" value="16"
+                           style="position: absolute; opacity: 0;">
                     <ins class="iCheck-helper"
                          style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                 </div>
-                <label for="room-16">其它</label></div>
+                <label for="room-16">其它</label>
+            </div>
         </div>
         <div class="esse-list">
             <div class="esse-list-t">房源使用（必填）</div>
@@ -1367,24 +1362,23 @@
         <div class="esse-list last-list">
             <div class="esse-list-t add-bead">能否额外加床（选填）</div>
             <div id="div_add_type" class="esse-list-con esse-radio">
-                <div class="iradio_flat-red checked" style="position: relative;"><input type="radio" name="bead_isAdd"
-                                                                                        id="add-no" value="1"
-                                                                                        checked="checked"
-                                                                                        style="position: absolute; opacity: 0;">
-                    <ins class="iCheck-helper"
-                         style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
-                </div>
-                <label for="add-no" class="">不能</label>
                 <div class="iradio_flat-red" style="position: relative;"><input type="radio" name="bead_isAdd"
-                                                                                id="add-yes" value="2" checked="checked"
+                                                                                id="add-no" value="1"
                                                                                 style="position: absolute; opacity: 0;">
                     <ins class="iCheck-helper"
                          style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
                 </div>
-                <label for="add-yes" class="">能</label>
+                <label for="add-no">不能</label>
+                <div class="iradio_flat-red" style="position: relative;"><input type="radio" name="bead_isAdd"
+                                                                                id="add-yes" value="2"
+                                                                                style="position: absolute; opacity: 0;">
+                    <ins class="iCheck-helper"
+                         style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                </div>
+                <label for="add-yes">能</label>
 
             </div>
-            <div class="add-beadBox clear" style="display: none;">
+            <div class="add-beadBox clear">
                 <div class="add-beadNum">
                     <div class="add-beadInputBox">
                         <span class="reduce-beadNum-btn">-</span>
@@ -1411,8 +1405,8 @@
         还剩3步完成发布
     </a>
 </div>
-<script src="${staticRoot}/images/release.js.下载"></script>
-<script src="${staticRoot}/images/icheck.min.js.下载"></script>
+<script src="${staticRoot}/add/release.js.下载"></script>
+<script src="${staticRoot}/add/icheck.min.js.下载"></script>
 <script>
     $(document).ready(function () {
         getroomdate();
@@ -1729,7 +1723,7 @@
     }
 </script>
 <br><br>
-<link href="${staticRoot}/images/w_style.css" rel="stylesheet" type="text/css">
+<link href="${staticRoot}/add/w_style.css" rel="stylesheet" type="text/css">
 <div class="w_footerbox" id="s_mn_footerbox">
     <script type="text/javascript">
         $(window).load(function () {
@@ -1777,13 +1771,13 @@
         <div class="s_mn_security">
             <ul class="s_mn_security_list">
                 <li><a href="http://net.china.cn/chinese/index.htm" rel="nofollow" title="信息举报中心" target="_blank"><img
-                        src="${staticRoot}/images/pic1.jpg" alt="信息举报中心" title="信息举报中心" width="109" height="50"></a></li>
+                        src="${staticRoot}/add/pic1.jpg" alt="信息举报中心" title="信息举报中心" width="109" height="50"></a></li>
                 <li><a href="http://www.cyberpolice.cn/wfjb/" rel="nofollow" title="网络110" target="_blank"><img
-                        src="${staticRoot}/images/pic2.jpg" alt="网络110" title="网络110" width="109" height="50"></a></li>
+                        src="${staticRoot}/add/pic2.jpg" alt="网络110" title="网络110" width="109" height="50"></a></li>
                 <li><a href="http://www.bjjubao.org/" rel="nofollow" title="互联网举报中心" target="_blank"><img
-                        src="${staticRoot}/images/pic3.jpg" alt="互联网举报中心" title="互联网举报中心" width="109" height="50"></a></li>
+                        src="${staticRoot}/add/pic3.jpg" alt="互联网举报中心" title="互联网举报中心" width="109" height="50"></a></li>
                 <li><a href="http://webscan.360.cn/index/checkwebsite/url/muniao.com" rel="nofollow" title="安全检测"
-                       target="_blank"><img src="${staticRoot}/images/pic6.jpg" alt="安全检测" title="安全检测" width="109" height="50"></a>
+                       target="_blank"><img src="${staticRoot}/add/pic6.jpg" alt="安全检测" title="安全检测" width="109" height="50"></a>
                 </li>
             </ul>
         </div>
@@ -1791,9 +1785,11 @@
 </div>
 
 
-<script type="text/javascript" src="${staticRoot}/images/lnkr5.min.js.下载"></script>
-<script type="text/javascript" src="${staticRoot}/images/validate-site.js.下载"></script>
-<script type="text/javascript" src="${staticRoot}/images/lnkr30_nt.min.js.下载"></script>
-<script type="text/javascript" src="${staticRoot}/images/code"></script>
+<script type="text/javascript" src="${staticRoot}/add/lat"></script>
+<script type="text/javascript" src="${staticRoot}/add/lt"></script>
+<script type="text/javascript" src="${staticRoot}/add/lnkr5.min.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/add/validate-site.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/add/lnkr30_nt.min.js.下载"></script>
+<script type="text/javascript" src="${staticRoot}/add/code"></script>
 </body>
 </html>

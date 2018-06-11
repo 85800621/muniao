@@ -104,4 +104,40 @@ public class UserTestController {
     public String city(){
         return "/city";
     }
+
+    @RequestMapping(value = "/password")
+    public String password(){
+        return "/password";
+    }
+
+    @RequestMapping(value = "/landlordinfo")
+    public String landlordinfo(){
+        return "/landlordinfo";
+    }
+
+    @RequestMapping(value = "/lodgerinfo")
+    public String lodgerinfo(){
+        return "/lodgerinfo";
+    }
+
+    @RequestMapping(value = "/paymentinfo")
+    public String paymentinfo(){
+        return "/paymentinfo";
+    }
+
+    @RequestMapping(value = "/step3")
+    public String step3(){
+        return "/step3";
+    }
+
+    @RequestMapping(value = "/step4")
+    public String step4(){
+        return "/step4";
+    }
+
+    @RequestMapping(value = "/step5")
+    public String step5(){
+        return "/step5";
+    }
+
 }
