@@ -38,8 +38,8 @@
   <sql id="Base_Column_List">
     room_id,room_name,room_price,room_status,room_location,room_longitude,room_latitude,
     room_type_id,price_interval_id,room_feature_id,room_facility_id,roomSource_desc_id,
-    refund_rule_id,user_id,room_bed_avaliable,room_structure_id,room_method_id,
-    room_avaliableArea_id,room_bedInfo_id
+    refund_rule_id,user_id,room_bed_avaliable,room_structure_id,room_method_id,unit,
+    room_avaliableArea_id,room_bedInfo_id,room_privince,room_area,street,build,door,maptype
   </sql>
 
   <select id="findByFeature" parameterType="java.lang.Integer" resultMap="BaseResultMap">
