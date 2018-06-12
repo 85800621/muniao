@@ -11,13 +11,17 @@
     <result column="room_latitude" jdbcType="VARCHAR" property="roomLatitude" />
     <result column="room_bed_avaliable" jdbcType="VARCHAR" property="bedAvaliable" />
 
-    <result column="room_privince" jdbcType="VARCHAR" property="privince" />
+    <result column="room_province" jdbcType="VARCHAR" property="privince" />
     <result column="room_area" jdbcType="VARCHAR" property="roomArea" />
     <result column="street" jdbcType="VARCHAR" property="street" />
     <result column="build" jdbcType="VARCHAR" property="build" />
     <result column="unit" jdbcType="VARCHAR" property="unit" />
     <result column="door" jdbcType="VARCHAR" property="door" />
-    <result column="maptype" jdbcType="INTEGER" property="maptype" />
+    <result column="maptype" jdbcType="INTEGER" property="mapType" />
+    <result column="room_describe" jdbcType="INTEGER" property="roomDescribe" />
+    <result column="room_ambitus" jdbcType="INTEGER" property="roomAmbitus" />
+    <result column="room_route" jdbcType="INTEGER" property="roomRoute" />
+
 
 
 
@@ -39,7 +43,8 @@
     room_id,room_name,room_price,room_status,room_location,room_longitude,room_latitude,
     room_type_id,price_interval_id,room_feature_id,room_facility_id,roomSource_desc_id,
     refund_rule_id,user_id,room_bed_avaliable,room_structure_id,room_method_id,unit,
-    room_avaliableArea_id,room_bedInfo_id,room_privince,room_area,street,build,door,maptype
+    room_avaliableArea_id,room_bedInfo_id,room_province,room_area,street,build,door,maptype
+    ,room_describe,room_ambitus,room_route
   </sql>
 
   <select id="findByFeature" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -144,6 +149,16 @@
     FROM tb_room
     WHERE
     room_id=#{roomId,jdbcType=INTEGER}
+  </select>
+
+  <!--房东页面 -->
+  <select id="selectByUserId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM tb_room
+    WHERE
+    user_id=#{userId,jdbcType=INTEGER}
+    limit 0,6;
   </select>
 
 </mapper>
