@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0046)https://www.muniao.com/features_housing_7.html -->
+<!-- saved from url=(0056)https://www.muniao.com/fangdong/363368/?cityname=beijing -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>海景房短租,租直面大海海景房  - 木鸟短租</title>
-<#assign basePath=request.contextPath />
-    <meta name="keywords" content="海景房短租,海景房出租">
-    <meta name="description" content="木鸟短租为有海边度假旅游寻找海景房出租的朋友提供优质、可靠的海景房住宿服务.精心搜集了海景房短租房源,全心全意为您的出行住宿保驾护航.">
+    <title>逅客崇文门天安门前门店预订|价格|点评-木鸟短租</title>
+    <meta name="keywords" content="逅客崇文门天安门前门店预订|价格|点评">
+    <meta name="description" content="逅客崇文门天安门前门店提供短租房预订、价格以及房屋点评信息,以特有的经营方式,打破传统的单一性,引领旅店业发展新潮流">
     <meta name="viewport" content="width=1400, initial-scale=1">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta property="wb:webmaster" content="xfwy">
@@ -28,7 +27,6 @@
     <link href="${staticRoot}/images/s_style.css" rel="stylesheet">
     <link href="${staticRoot}/images/w_css.css" rel="stylesheet">
     <link href="${staticRoot}/images/style_single.css" rel="stylesheet">
-
 
 
     <script src="${staticRoot}/images/UserLoginCallback"></script></head>
@@ -75,7 +73,7 @@
     <ul class="s_mn_nav">
         <li><a href="https://www.muniao.com/">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="${basePath}/featureslist" target="_self" class="s_mn_nav_over">特色短租</a></li>
+        <li><a href="https://www.muniao.com/features.html" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
@@ -107,13 +105,13 @@
             backparm = backparm.replace(/\*/g, "&");
             backparm = backparm.replace(/A/g, "=");
             backurl = backurl.replace(/F/, "/");
-            backurlparm = "/" + backurl + "?" + backparm+"&t="+131728116248316688;
+            backurlparm = "/" + backurl + "?" + backparm+"&t="+131732412719856236;
         }
         else if (backurl != "") {
             backurlparm = "/" + backurl;
         }else if(ss !=null && ss !="")
         {
-            backurlparm = "https://www.muniao.com/" + ss+"?t="+131728116248316688;
+            backurlparm = "https://www.muniao.com/" + ss+"?t="+131732412719856236;
         }
 
         if (tp == 0) {
@@ -443,311 +441,439 @@
 
 
 <script>
-    $(function () {
-        //设置banner选中菜单样式
-        $('.s_mn_nav li:eq(2) a').addClass('s_mn_nav_over');
-    })
-
+    function showlist(tp, obj) {
+        $('#tabs li').removeAttr('class');
+        $(obj).attr('class', 'active');
+        $('#div_1,#div_2').hide();
+        $('#div_' + tp).show();
+    }
 </script>
-<style>
-    a {
-        background: 0 0;
-        color: #555;
-        text-decoration: none;
-    }
-    .s_mn_page_bar {
-        width: 100%;
-        height: 30px;
-        padding: 5px 0;
-        margin: 25px 0;
-        display: inline-block;
-        text-align: center;
-    }
-    .s_mn_page_bar a {
-        display: inline-block;
-        margin: 0 2px;
-        padding: 0 10px;
-        border: 1px solid #e5e5e5;
-        background: #fff;
-        font: 12px/25px "Microsoft YaHei";
-    }
-    .s_mn_page_bar a.s_mn_page_bar_over {
-        border: 1px solid #e46355;
-        background: #FF6C5C;
-        color: #fff;
-    }
-    .s_mn_page_bar a:hover {
-        border: 1px solid #e46355;
-        background: #FF6C5C;
-        color: #fff;
-    }
-    .s_mn_page_thispage{
-        background:#ff6c5c;
-        color:#fff;
-        border:1px solid #e46355;
-    }
-    .s_mn_page_thispage:hover{
-        background:#ff6c5c;color:#fff;border:1px solid #e46355;
-    }
-    .page_city {
-        display: inline-block;
-        margin: 10px 20px 0 20px;
-        color: #555555;
-        font-size: 14px;
-    }
-    .page_city a {
-        color: #19B5FE;
-    }
-</style>
-<div class="s_mn_mainbox">
-    <div class="s_mn_head_adbox" style="background:url(${staticRoot}/images/${roomFeature.featureImage}) #000 50% 50% no-repeat;">
-        <div class="s_mn_center">
-            <div class="s_mn_head_textbox">
-                <h2>${roomFeature.roomFeature}</h2>
-                <p>${rooms[1].roomName}</p>
-                <div class="s_mn_module_text">精选${rooms?size}套房间</div>
-            </div>
-        </div>
-    </div>
-    <div class="s_mn_navtagbox w_mt40">
-        <div class="s_mn_center">
-            <div class="s_mn_navtag">
-                <a href="http://www.muniao.com/" title="木鸟短租网">木鸟短租网</a> <span>&nbsp;&gt;&nbsp;</span>
-                <a href="https://www.muniao.com/features.html">主题特色房</a> <span>&nbsp;&gt;&nbsp;</span>
-                <h1 class="ts_name">
-                    <a href="https://www.muniao.com/features_housing_7.html">海景房</a>
-                </h1>
-            </div>
-        </div>
-    </div>
-    <div class="s_mn_fbody">
-        <div class="s_mn_center2">
-            <div class="s_mn_ftitle">
-                <h2><span>超值精选&nbsp;&nbsp;特别推荐</span></h2>
-                <div class="s_mn_features_citybox">
-                    <a href="" title="全部" class="s_mn_features_citybox_a">全部</a>&nbsp;|&nbsp;
-                    <a href="" title="秦皇岛">秦皇岛</a><label>&nbsp;| &nbsp;</label>
-                <#list  cityList as cityName>
-                    <a href="${basePath}/cityfeatures/${roomFeature.roomFeatureId}/${cityName.roomLocation}" title="${cityName.roomLocation}">${cityName.roomLocation}</a><label>&nbsp;| &nbsp;</label>
-                </#list>
-
-                </div>
-            </div>
-            <div class="s_mn_fbody">
-                <div class="s_mn_center2">
-                    <div class="s_mn_module6x" data-id="151672">
-                        <div class="s_mn_place6">
-                            <div class="s_mn_housingbox2">
-                                <div class="s_mn_housing_img2">
-                                    <a href="https://www.muniao.com/room/151672.html" title="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）" target="_blank">
-                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/0c9cd700c0f944058fb9ed2d0dfa938820171214154302610.jpg" width="580" height="368" alt="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）">
-                                    </a>
-                                    <span class="s_mn_housing_price">￥238</span>
-                                </div>
-                                <div class="s_mn_housing_textbox2">
-                                    <div class="s_mn_housing_title2">
-                                        <a href="https://www.muniao.com/room/151672.html" title="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）" target="_blank">促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）</a>
-                                    </div>
-                                    <div class="s_mn_housing_information2">
-                                        <span>2室</span>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <span>整租</span>
-                                        <span>|&nbsp;</span><span>宜住5人</span>
-                                        <span>&nbsp;|&nbsp;</span><span>19张图</span>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <span>近期预订0晚</span>
-                                    </div>
-                                    <div class="s_mn_landlordbox s_mn_landlordpos">
-                                        <div class="s_mn_landlordpic">
-                                            <a href="https://www.muniao.com/fangdong/1051916/" title="三亚珺海海景公寓" target="_blank">
-
-                                                <img src="${staticRoot}/images/ddf4f19d8b7f4257a67c6c0da8311af920171214161324329.jpg" alt="三亚珺海海景公寓" width="80" height="80">
-                                            </a>
-                                        </div>
-                                        <div class="s_mn_landlordname">
-                                            <a href="https://www.muniao.com/fangdong/1051916/" title="三亚珺海海景公寓" target="_blank">三亚珺海…</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="s_mn_module6x" data-id="28112">
-                        <div class="s_mn_place6">
-                            <div class="s_mn_housingbox2">
-                                <div class="s_mn_housing_img2">
-                                    <a href="https://www.muniao.com/room/28112.html" title="三亚湾碧海蓝天听涛公寓06号海景两房" target="_blank">
-                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20140714172820832.jpg" width="580" height="368" alt="三亚湾碧海蓝天听涛公寓06号海景两房">
-                                    </a>
-                                    <span class="s_mn_housing_price">￥580</span>
-                                </div>
-                                <div class="s_mn_housing_textbox2">
-                                    <div class="s_mn_housing_title2">
-                                        <a href="https://www.muniao.com/room/28112.html" title="三亚湾碧海蓝天听涛公寓06号海景两房" target="_blank">三亚湾碧海蓝天听涛公寓06号海景两房</a>
-                                    </div>
-                                    <div class="s_mn_housing_information2">
-                                        <span>2室</span>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <span>整租</span>
-                                        <span>|&nbsp;</span><span>宜住4人</span>
-                                        <span>&nbsp;|&nbsp;</span><span>10张图</span>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <span>近期预订0晚</span>
-                                    </div>
-                                    <div class="s_mn_landlordbox s_mn_landlordpos">
-                                        <div class="s_mn_landlordpic">
-                                            <a href="https://www.muniao.com/fangdong/4998/" title="三亚听涛公寓" target="_blank">
-
-                                                <img src="${staticRoot}/images/201409221055563927.jpg" alt="三亚听涛公寓" width="80" height="80">
-                                            </a>
-                                        </div>
-                                        <div class="s_mn_landlordname">
-                                            <a href="https://www.muniao.com/fangdong/4998/" title="三亚听涛公寓" target="_blank">三亚听涛…</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <#list rooms as room>
-                    <div class="s_mn_module6x" data-id="151672">
-                        <div class="s_mn_place6">
-                            <div class="s_mn_housingbox2">
-                                <div class="s_mn_housing_img2">
-                                    <a href="${basePath}/room/${room.roomId}" title="${room.roomName}" target="_blank">
-                                        <img src="${staticRoot}/images/${room.lsit[1].imgAddress}" width="580" height="368" alt="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）">
-                                    </a>
-                                    <span class="s_mn_housing_price">￥${room.roomPrice}</span>
-                                </div>
-                                <div class="s_mn_housing_textbox2">
-                                    <div class="s_mn_housing_title2">
-                                        <a href="${basePath}/room/${room.roomId}" title="${room.roomName}" target="_blank">${room.roomName}</a>
-                                    </div>
-                                    <div class="s_mn_housing_information2">
-                                        <span>${room.roomStructure.bedroomNum}室</span>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <span>${room.rentalMethod.method}</span>
-                                        <span>|&nbsp;</span><span>${room.avaliableArea.standPop}人</span>
-                                        <span>&nbsp;|&nbsp;</span><span>${room.lsit?size}张图</span>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <span>近期预订0晚</span>
-                                    </div>
-                                    <div class="s_mn_landlordbox s_mn_landlordpos">
-                                        <div class="s_mn_landlordpic">
-                                            <a href="${basePath}/room/${room.roomId}" title="${room.landlord.userName}" target="_blank">
-
-                                                <img src="${staticRoot}/images/${room.landlord.picture}" alt="${room.landlord.userName}" width="80" height="80">
-                                            </a>
-                                        </div>
-                                        <div class="s_mn_landlordname">
-                                            <a href="${basePath}/room/${room.roomId}" title="${room.landlord.userName}" target="_blank">${room.landlord.userName}</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </#list>
-                </div>
-                <div class="page_city">
-                    <a href="${basePath}/room/${room.roomId}" target="_blank">${roomFeature.roomFeature}特色房源-</a>-找到相关房源${roomNum}个，每页30个结果
-                </div>
-                <div class="s_mn_page_bar">
-                    <a href="${basePath}/features/${roomFeature.roomFeatureId}/1" style="background:#ff6c5c;color:#fff;border:1px solid #e46355;" title="第一页" target="_self">第一页</a>
-                <#list pageList as page>
-                    <a href="${basePath}/features/${roomFeature.roomFeatureId}/${page}" style="" title="2" rel="nofollow" target="_self">${page}</a>
-                </#list>
-                    <a href="${basePath}/features/${roomFeature.roomFeatureId}/${pageList?size}" style="" rel="nofollow" title="最后一页" target="_self" class="Lpage_li1">最后一页</a>
-                </div>
-            </div>
+<div class="s_mn_navtagbox w_mt40">
+    <div class="s_mn_center">
+        <div class="s_mn_navtag">
+            <a href="https://www.muniao.com/" title="木鸟短租网">木鸟短租网</a> <span>&nbsp;&gt;&nbsp;</span>
+            <a href="https://www.muniao.com/beijing/">北京短租公寓</a> <span>&nbsp;&gt;&nbsp;</span>
+            <h1 class="ts_name"><a href="javascript:void(0);">逅客崇文门天安门前门店</a></h1>
         </div>
     </div>
 </div>
-
-
-<style>
-    .sidebar li div {
-        display: none;
-    }
-
-    .sidebar li, .backTop {
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        position: relative;
-    }
-</style>
-<!--侧边栏-->
-<div class="sidebar">
-
-    <ul>
-        <li class="silder_hide">
-            <a href="https://cschat.cloud.alipay.com/pcportal.htm?tntInstId=EZKNWDCN&amp;scene=SCE00001040" target="_blank">
-                <img style="margin-top: 5px;" src="${staticRoot}/images/mumu.png" title="咨询客服">
-            </a>
-            <div class="link-tips" style="display: none;">在<br>线<br>客<br>服</div>
-        </li>
-        <li class="side_order">
-            <a class="side_click" href="https://user2.muniao.com/order/index" target="_blank"></a>
-            <div class="tenant_tip" style="display: none;">
-                <h3>我的订单</h3>
-                <p>查看您的近期订单</p>
-                <a href="https://user2.muniao.com/order/index" target="_blank">点击查看</a>
+<div class="s_mn_center2">
+    <div class="w_landlord_left">
+        <!--landlord message start-->
+        <div class="w_landlord_message">
+            <div class="w_landlord_leftitle">
+                房东介绍
             </div>
-        </li>
-        <li class="tenant_f">
-            <a class="side_click" href="http://shang.qq.com/wpa/qunwpa?idkey=0c3a7d35ed933d97739d5420d5fa31dd01ade1ed1649949a840d32fa58073edf" target="_blank"></a>
-            <div class="tenant_tip" style="display: none;">
-                <h3>意见反馈群</h3>
-                <p>官方问题反馈群，为您排忧解难，欢迎您的加入</p>
-                <a href="http://shang.qq.com/wpa/qunwpa?idkey=0c3a7d35ed933d97739d5420d5fa31dd01ade1ed1649949a840d32fa58073edf" target="_blank">点击加入</a>
+            <div class="w_landlord_leftp">
+                <div class="w_landlord_head">
+                    <img src="${staticRoot}/images/7fc93e87a9334a339509b3ff0e6ec09b20180525163701649.jpg_150_150.jpg">
+                    <style>
+                        .w_landlord_head { position: relative; }
+
+                        .w_landlordzmwz { position: absolute; top: 215px; left: 0; width: 240px; height: 35px; }
+
+                        .w_landlordzmbg { background-color: #000; opacity: .6; filter: alpha(opacity:60); }
+
+                        .w_landlordzm { font: 12px/35px "microsoft yahei"; color: #fff; width: 120px; }
+
+                        .w_landlordzmicon { width: 13px; height: 16px; background: url(${staticRoot}/images/list_icon1.png) no-repeat -19px -417px; float: left; margin: 10px 5px 0; }
+
+                        .w_landlordzm img { vertical-align: middle; margin: 0 5px 0 15px; }
+
+                        /*新加的样式*/
+                        .w_landlorddz { left: 120px; font-size: 12px; line-height: 35px; font-family: "microsoft yahei"; }
+
+                        .w_landlorddz a { color: #fff; }
+
+                        .w_landlorddz a:hover { text-decoration: underline; }
+
+                        .w_landlorddzicon { width: 22px; height: 20px; background: url(//assets.muniao.com/assets2/pc/Content/images/dizhu_icon.png) no-repeat left top; float: left; margin: 9px 5px 0; background-size: 20px; }
+                    </style>
+                    <!--芝麻信用-->
+                </div>
+                <div class="w_landlord_name">
+                    <div class="mylable2">逅客崇文门天安门前门店</div>
+                </div>
+                <div class="w_landlord_icon">
+                    <a class="w_landlord_icon1"></a>
+                    <a class="w_landlord_icon2"></a>
+                    <a class="w_landlord_icon3"></a>
+                </div>
+                <div class="w_landlord_percent">
+                    <div class="w_landlord_praise">
+                        好评度<br>
+                        <span>100.0%</span>
+                    </div>
+                    <div class="w_landlord_praise">
+                        回复率<br>
+                        <span>100.0%</span>
+                    </div>
+                    <div class="w_landlord_praise">
+                        接单率<br>
+                        <span>90.4%</span>
+                    </div>
+                </div>
+                <ul class="w_landlord_list"></ul>
             </div>
-        </li>
-        <li class="opinion_f">
-            <a class="side_click" href="http://www.muniao.com/Home/Feedback" target="_blank"></a>
-            <div class="tenant_tip" style="display: none;">
-                <h3>问题反馈</h3>
-                <p>请将您的问题告诉我们，<br>我们将更好的为您服务。</p>
-                <a href="https://www.muniao.com/Home/Feedback" target="_blank">点击反馈</a>
+        </div>
+        <!--landlord message end-->
+    </div>
+    <!--left end-->
+    <div class="w_landlord_right">
+        <div class="w_landlord_show" style="border:0;border-radius:4px;padding-left:20px;width:auto;">
+            <span style="color:orange;font-size:20px;font-weight:bolder;">Hi,</span>我是逅客崇文门天安门前门店！
+        </div>
+        <div class="w_landlord_bottom">
+            <div id="tabsbg">
+                <ul id="tabs">
+                    <li onclick="showlist(1, this);" class="active" style="border-right:1px solid #ddd; padding-left:0;">房东房源</li>
+                    <li onclick="showlist(2, this);" class="">房客评价（<span>35</span>条）</li>
+                </ul>
             </div>
-        </li>
-    </ul>
-    <div class="backTop" style="display: none;"><a href="javascript:;"></a></div>
+            <div id="panes">
+                <div id="div_1" style="">
+                    <div class="w_house" data-id="127683">
+                        <div class="w_house_img">
+                            <a href="https://www.muniao.com/room/127683.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/634d15bfb5b54dfbb191206f0fbfc4d620180521021352915.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="崇文门 天安门 北京站美式loft"></a>
+                            <span class="s_mn_housing_price w_house_price">￥567</span>
+                        </div>
+                        <div class="w_house_title"><a target="_blank" title="崇文门 天安门 北京站美式loft" href="https://www.muniao.com/room/127683.html">崇文门 天安门 北京站美式loft</a></div>
+                        <div class="s_mn_housing_information">
+                            <span>2室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住4人</span><span>&nbsp;|&nbsp;</span><span>近期预订5晚</span>
+                        </div>
+                        <div class="w_house_map">
+                            <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.432673,39.902573,&#39;崇文门 天安门 北京站美式loft&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
+                        </div>
+                        <div class="w_house_interactive">
+                            <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">4.9</div>
+                            <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">11</div>
+                            <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">29</div>
+                        </div>
+                    </div>                            <div class="w_house" data-id="132975">
+                    <div class="w_house_img">
+                        <a href="https://www.muniao.com/room/132975.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/0862825091d64582a271cc25bf368abf20180521021744380.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="崇文门 天安门 北京站北欧一居"></a>
+                        <span class="s_mn_housing_price w_house_price">￥528</span>
+                    </div>
+                    <div class="w_house_title"><a target="_blank" title="崇文门 天安门 北京站北欧一居" href="https://www.muniao.com/room/132975.html">崇文门 天安门 北京站北欧一居</a></div>
+                    <div class="s_mn_housing_information">
+                        <span>1室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住4人</span><span>&nbsp;|&nbsp;</span><span>近期预订0晚</span>
+                    </div>
+                    <div class="w_house_map">
+                        <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.430785,39.901501,&#39;崇文门 天安门 北京站北欧一居&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
+                    </div>
+                    <div class="w_house_interactive">
+                        <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">5.0</div>
+                        <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">7</div>
+                        <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">17</div>
+                    </div>
+                </div>                            <div class="w_house" data-id="132979">
+                    <div class="w_house_img">
+                        <a href="https://www.muniao.com/room/132979.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/8ce0038924d54cd1aea8166464bc731e20180521022159041.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="崇文门 天安门 北京站北欧loft（零压房）"></a>
+                        <span class="s_mn_housing_price w_house_price">￥599</span>
+                    </div>
+                    <div class="w_house_title"><a target="_blank" title="崇文门 天安门 北京站北欧loft（零压房）" href="https://www.muniao.com/room/132979.html">崇文门 天安门 北京站北欧loft（零压房）</a></div>
+                    <div class="s_mn_housing_information">
+                        <span>2室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住4人</span><span>&nbsp;|&nbsp;</span><span>近期预订4晚</span>
+                    </div>
+                    <div class="w_house_map">
+                        <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.430926,39.901161,&#39;崇文门 天安门 北京站北欧loft（零压房）&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
+                    </div>
+                    <div class="w_house_interactive">
+                        <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">5.0</div>
+                        <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">11</div>
+                        <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">12</div>
+                    </div>
+                </div>                            <div class="w_house" data-id="135157">
+                    <div class="w_house_img">
+                        <a href="https://www.muniao.com/room/135157.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2d7cc5268c6b466485f40dafa14e40a820180525180857080.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="崇文门 北京站 天安门近地铁现代简约一居室"></a>
+                        <span class="s_mn_housing_price w_house_price">￥550</span>
+                    </div>
+                    <div class="w_house_title"><a target="_blank" title="崇文门 北京站 天安门近地铁现代简约一居室" href="https://www.muniao.com/room/135157.html">崇文门 北京站 天安门近地铁现代简约一居室</a></div>
+                    <div class="s_mn_housing_information">
+                        <span>1室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住4人</span><span>&nbsp;|&nbsp;</span><span>近期预订0晚</span>
+                    </div>
+                    <div class="w_house_map">
+                        <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.430926,39.901161,&#39;崇文门 北京站 天安门近地铁现代简约一居室&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
+                    </div>
+                    <div class="w_house_interactive">
+                        <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">5.0</div>
+                        <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">12</div>
+                        <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">18</div>
+                    </div>
+                </div>                            <div class="w_house" data-id="140775">
+                    <div class="w_house_img">
+                        <a href="https://www.muniao.com/room/140775.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2c7cee8fb3bb4396945ea1a8353b0dd120180521022807237.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="北京站 天安门 近地铁 阳光温馨大床房（可长租）"></a>
+                        <span class="s_mn_housing_price w_house_price">￥300</span>
+                    </div>
+                    <div class="w_house_title"><a target="_blank" title="北京站 天安门 近地铁 阳光温馨大床房（可长租）" href="https://www.muniao.com/room/140775.html">北京站 天安门 近地铁 阳光温馨大床房（可长租）</a></div>
+                    <div class="s_mn_housing_information">
+                        <span>1室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住2人</span><span>&nbsp;|&nbsp;</span><span>近期预订0晚</span>
+                    </div>
+                    <div class="w_house_map">
+                        <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.430926,39.901161,&#39;北京站 天安门 近地铁 阳光温馨大床房（可长租）&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
+                    </div>
+                    <div class="w_house_interactive">
+                        <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">5.0</div>
+                        <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">8</div>
+                        <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">8</div>
+                    </div>
+                </div>                            <div class="w_house" data-id="146457">
+                    <div class="w_house_img">
+                        <a href="https://www.muniao.com/room/146457.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/c5d20266fe7142e8a9dc92b8f2aaab2620180521023338377.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="崇文门 天安门北京站近地铁复古一居室"></a>
+                        <span class="s_mn_housing_price w_house_price">￥538</span>
+                    </div>
+                    <div class="w_house_title"><a target="_blank" title="崇文门 天安门北京站近地铁复古一居室" href="https://www.muniao.com/room/146457.html">崇文门 天安门北京站近地铁复古一居室</a></div>
+                    <div class="s_mn_housing_information">
+                        <span>1室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住4人</span><span>&nbsp;|&nbsp;</span><span>近期预订0晚</span>
+                    </div>
+                    <div class="w_house_map">
+                        <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.430785,39.901501,&#39;崇文门 天安门北京站近地铁复古一居室&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
+                    </div>
+                    <div class="w_house_interactive">
+                        <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">5.0</div>
+                        <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">8</div>
+                        <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">3</div>
+                    </div>
+                </div>
+                </div>
+                <div id="div_2" style="display:none">
+                    <div class="w_landlord_appraisal" style="padding:0;">
+                        <div class="w_appraisal" style="padding:0;">
+                            <div class="w_appraisal_head">
+                                <div class="w_appraisal_img"><img src="${staticRoot}/images/pic13.jpg" style="height:64px;width:64px;"></div>
+                                桑科<span>***</span>
+                            </div>
+                            <div class="w_appraisal_nr">
+                                <div class="w_appraisal_ever" style="height:40px;font-size:14px;"><a href="https://www.muniao.com/Home/Detail?id=127683" target="_blank" style="color:#f30">崇文门 天安门 北京站美式loft</a></div>
+                                <div class="w_appraisal_box">
+                                    <div class="w_appraisal_box_time">点评时间：2018年06月02日</div>
+                                    <div style="border-radius:5px;color:#482300;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#fbdcbe;">
+                                        交通便利，去哪里都方便，房东人很不错！
+                                        <div style="background-color:#e3b487;padding:5px;border-radius:5px;margin-top:5px;">
+                                            卫生：4分&nbsp;&nbsp;
+                                            设施：4分&nbsp;&nbsp;
+                                            服务：5分
+                                        </div>
+                                    </div>
+                                    <div style="border-radius:5px;color:#004630;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#d0eae2;display:none">
+                                        房东回复：
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w_landlord_appraisal" style="padding:0;">
+                        <div class="w_appraisal" style="padding:0;">
+                            <div class="w_appraisal_head">
+                                <div class="w_appraisal_img"><img src="${staticRoot}/images/1f2dfdfd9a834d3eb9b5e5dd9a75286620180323182735984.jpg_150_150.jpg" style="height:64px;width:64px;"></div>
+                                Gr<span>***</span>
+                            </div>
+                            <div class="w_appraisal_nr">
+                                <div class="w_appraisal_ever" style="height:40px;font-size:14px;"><a href="https://www.muniao.com/Home/Detail?id=127683" target="_blank" style="color:#f30">崇文门 天安门 北京站美式loft</a></div>
+                                <div class="w_appraisal_box">
+                                    <div class="w_appraisal_box_time">点评时间：2018年05月08日</div>
+                                    <div style="border-radius:5px;color:#482300;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#fbdcbe;">
+                                        房东挺好的
+                                        <div style="background-color:#e3b487;padding:5px;border-radius:5px;margin-top:5px;">
+                                            卫生：5分&nbsp;&nbsp;
+                                            设施：5分&nbsp;&nbsp;
+                                            服务：5分
+                                        </div>
+                                    </div>
+                                    <div style="border-radius:5px;color:#004630;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#d0eae2;display:none">
+                                        房东回复：
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w_landlord_appraisal" style="padding:0;">
+                        <div class="w_appraisal" style="padding:0;">
+                            <div class="w_appraisal_head">
+                                <div class="w_appraisal_img"><img src="${staticRoot}/images/pic13.jpg" style="height:64px;width:64px;"></div>
+                                王亮<span>***</span>
+                            </div>
+                            <div class="w_appraisal_nr">
+                                <div class="w_appraisal_ever" style="height:40px;font-size:14px;"><a href="https://www.muniao.com/Home/Detail?id=127683" target="_blank" style="color:#f30">崇文门 天安门 北京站美式loft</a></div>
+                                <div class="w_appraisal_box">
+                                    <div class="w_appraisal_box_time">点评时间：2018年05月04日</div>
+                                    <div style="border-radius:5px;color:#482300;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#fbdcbe;">
+                                        地理位置好，步行到最近地铁站十分钟左右，楼下就有很多好吃的。房子很干净，但衛生间很臭，不关门受不了。
+                                        <div style="background-color:#e3b487;padding:5px;border-radius:5px;margin-top:5px;">
+                                            卫生：4分&nbsp;&nbsp;
+                                            设施：5分&nbsp;&nbsp;
+                                            服务：4分
+                                        </div>
+                                    </div>
+                                    <div style="border-radius:5px;color:#004630;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#d0eae2;display:none">
+                                        房东回复：
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w_landlord_appraisal" style="padding:0;">
+                        <div class="w_appraisal" style="padding:0;">
+                            <div class="w_appraisal_head">
+                                <div class="w_appraisal_img"><img src="${staticRoot}/images/pic13.jpg" style="height:64px;width:64px;"></div>
+                                苍赛<span>***</span>
+                            </div>
+                            <div class="w_appraisal_nr">
+                                <div class="w_appraisal_ever" style="height:40px;font-size:14px;"><a href="https://www.muniao.com/Home/Detail?id=132975" target="_blank" style="color:#f30">崇文门 天安门 北京站北欧一居</a></div>
+                                <div class="w_appraisal_box">
+                                    <div class="w_appraisal_box_time">点评时间：2018年05月02日</div>
+                                    <div style="border-radius:5px;color:#482300;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#fbdcbe;">
+                                        非常好，干净整洁
+                                        <div style="background-color:#e3b487;padding:5px;border-radius:5px;margin-top:5px;">
+                                            卫生：5分&nbsp;&nbsp;
+                                            设施：5分&nbsp;&nbsp;
+                                            服务：5分
+                                        </div>
+                                    </div>
+                                    <div style="border-radius:5px;color:#004630;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#d0eae2;display:none">
+                                        房东回复：
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w_landlord_appraisal" style="padding:0;">
+                        <div class="w_appraisal" style="padding:0;">
+                            <div class="w_appraisal_head">
+                                <div class="w_appraisal_img"><img src="${staticRoot}/images/6f245a86fa0d478fbf379c5a6ede0e9f20180427225740462.jpg_150_150.jpg" style="height:64px;width:64px;"></div>
+                                都伟<span>***</span>
+                            </div>
+                            <div class="w_appraisal_nr">
+                                <div class="w_appraisal_ever" style="height:40px;font-size:14px;"><a href="https://www.muniao.com/Home/Detail?id=132975" target="_blank" style="color:#f30">崇文门 天安门 北京站北欧一居</a></div>
+                                <div class="w_appraisal_box">
+                                    <div class="w_appraisal_box_time">点评时间：2018年04月25日</div>
+                                    <div style="border-radius:5px;color:#482300;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#fbdcbe;">
+                                        和父母一起，带着个孩子去北京旅游，能有这么好的房东，这么温馨的家，真是给旅途的我们带了很多惊喜和温暖！房间一室一厅，厨房用品一应俱全，自己做饭没问题，小区门口就有超市和水果店，很方便！离地铁站和公交站都很近，周边都是商业区，下雨天不方便出行，带着孩子在新世界玩一天也不错，吃的喝的都不愁！下次有机会还住这里！
+                                        <div style="background-color:#e3b487;padding:5px;border-radius:5px;margin-top:5px;">
+                                            卫生：5分&nbsp;&nbsp;
+                                            设施：5分&nbsp;&nbsp;
+                                            服务：5分
+                                        </div>
+                                    </div>
+                                    <div style="border-radius:5px;color:#004630;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#d0eae2;display:none">
+                                        房东回复：
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--分页开始-->
+                    <link href="${staticRoot}/images/jqPaginator.css" rel="stylesheet">
+                    <script src="${staticRoot}/images/jqPaginator.js.下载"></script>
+                    <style>
+                        .arrow2 { border-left: 5px dashed transparent; border-bottom: 5px dashed transparent; border-top: 5px dashed transparent; border-right: 5px solid #ccc; }
+                    </style>
+                    <script>
+                        var key=false;
+                        $(function () {
+                            $("#demo1").jqPaginator({
+                                totalPages: 7,
+                                visiblePages: 7,
+                                currentPage: 1,
+                                first: '<li class="first"><a href="javascript:void(0);">第一页<\/a><\/li>',
+                                prev: '<li class="prev"><a href="javascript:void(0);"><i class="arrow arrow2"></i>上一页<\/a><\/li>',
+                                next: '<li class="next"><a href="javascript:void(0);">下一页<i class="arrow arrow3"></i><\/a><\/li>',
+                                last: '<li class="last"><a href="javascript:void(0);">末页<\/a><\/li>',
+                                page: '<li class="page"><a href="javascript:void(0);">{{page}}<\/a><\/li>',
+                                onPageChange: function (n) {//n=当前页码
+                                    if(key){
+                                        location.href = '/Host/Index?id=363368&rows=5&page=' + n;
+                                    }
+                                    if(!key)
+                                        key=true;
+                                }
+                            });
+                        })
+                    </script>
+                    <div style="text-align:center; margin-bottom:30px;"><ul id="demo1" class="pagination"><li class="first disabled" jp-role="first" jp-data="1"><a href="javascript:void(0);">第一页</a></li><li class="prev disabled" jp-role="prev" jp-data="0"><a href="javascript:void(0);"><i class="arrow arrow2"></i>上一页</a></li><li class="page active" jp-role="page" jp-data="1"><a href="javascript:void(0);">1</a></li><li class="page" jp-role="page" jp-data="2"><a href="javascript:void(0);">2</a></li><li class="page" jp-role="page" jp-data="3"><a href="javascript:void(0);">3</a></li><li class="page" jp-role="page" jp-data="4"><a href="javascript:void(0);">4</a></li><li class="page" jp-role="page" jp-data="5"><a href="javascript:void(0);">5</a></li><li class="page" jp-role="page" jp-data="6"><a href="javascript:void(0);">6</a></li><li class="page" jp-role="page" jp-data="7"><a href="javascript:void(0);">7</a></li><li class="next" jp-role="next" jp-data="2"><a href="javascript:void(0);">下一页<i class="arrow arrow3"></i></a></li><li class="last" jp-role="last" jp-data="7"><a href="javascript:void(0);">末页</a></li></ul></div>
+                    <!--分页结束-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--引用百度地图start-->
+    <script type="text/javascript" src="${staticRoot}/images/apiroomlist"></script>
+    <script type="text/javascript" src="${staticRoot}/images/getscript"></script>
+    <script>
+        var opts = {
+            width: 70,	 // 信息窗口宽度 100
+            height: 35,	 // 信息窗口高度  50
+            title: "房屋地址：",  // 信息窗口标 提示
+            enableSendToPhone: false,
+            enableMapClick: false
+        }
+        //创建和初始化地图函数：
+        function initMap(lat, lng, title, address) {
+            createMap(lat, lng, title, address); //创建地图
+            setMapEvent(); //设置地图事件
+            addMapControl(); //向地图添加控件
+        }
+
+        //创建地图函数：
+        function createMap(lat, lng, title, address) {
+            var map = new BMap.Map("roommap", { enableSendToPhone: false, enableMapClick: false }); //在百度地图容器中创建一个地图
+            var point = new BMap.Point(lat, lng); //定义一个中心点坐标
+            map.centerAndZoom(point, 15); //设定地图的中心点和坐标并将地图显示在地图容器中
+            window.map = map; //将map变量存储在全局
+
+
+            //向地图添加标注
+            var bounds = map.getBounds();
+            var point = new BMap.Point(lat, lng);
+            var marker = new BMap.Marker(point);
+            var label = new BMap.Label(address, { "offset": new BMap.Size(9, -15), enableSendToPhone: false, enableMapClick: false });
+            marker.setLabel(label);
+            map.addOverlay(marker);
+            marker.addEventListener("click", function () { this.openInfoWindow(new BMap.InfoWindow(title, opts)); });
+
+        }
+
+        // 编写自定义函数,创建标注
+        function addMarker(point, index) {
+            var myIcon = new BMap.Icon("//api.map.baidu.com/img/markers.png", new BMap.Size(23, 25), {
+                offset: new BMap.Size(10, 25),				  // 指定定位位置
+                imageOffset: new BMap.Size(0, 0 - index * 25)   // 设置图片偏移
+            });
+            var marker = new BMap.Marker(point, { icon: myIcon });
+            map.addOverlay(marker);
+        }
+
+        //地图事件设置函数：
+        function setMapEvent() {
+            map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
+            map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
+            map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
+            map.enableKeyboard(); //启用键盘上下左右键移动地图
+        }
+        //地图控件添加函数：
+        function addMapControl() {
+            //向地图中添加缩放控件
+            var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+            map.addControl(ctrl_nav);
+            //向地图中添加缩略图控件
+            //var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
+            //map.addControl(ctrl_ove);
+            //向地图中添加比例尺控件
+            //var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+            //map.addControl(ctrl_sca);
+        }
+    </script>
+    <style>
+        #getmap { display: none; border-radius: 5px; box-shadow: 1px 2px 9px rgba(0, 0, 0, 0.55); background: #FFF; border: 1px solid #dedede; z-index: 999; text-align: right; left: 50%; top: 50%; margin-left: -350px !important; margin-top: -200px !important; position: fixed !important; position: absolute; _top: expression(eval(document.compatMode &&document.compatMode=='CSS1Compat') ?documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 : /*IE6*/ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2); }
+
+        #roommap { float: left; margin: 0 auto; width: 677px; height: 360px; overflow: hidden; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); }
+    </style>
+    <div id="getmap"><div style="cursor:pointer;" onclick="$(&#39;#getmap&#39;).hide();map.clearOverlays();">关闭</div><div id="roommap"></div></div>
+    <!--引用百度地图end-->
+
+
 </div>
-<script>
-    (function () {
-        $(window).scroll(function () {
-            if ($(window).scrollTop() >= 300) {
-                $(".backTop").show();
-            } else {
-                $(".backTop").hide();
-            };
-        });
-        var timer = null;
-        $(".backTop").click(function () {
-            $('html,body').animate({ scrollTop: 0 }, 300);
-        })
-        $(".sidebar li").each(function (a, b) {
-            $(b).on("mouseover", function () {
-                $(b).children("div").show();
-                $(b).siblings().children("div").hide();
-                clearInterval(timer);
-            })
-            $(b).on("mouseout", function () {
-                timer = setTimeout(function () {
-                    $(b).children("div").hide();
-                }, 1000)
-            })
-        });
-        $(".side_see_order,.tenant_tip").on("mouseover", function () {
-            clearInterval(timer)
-            $(this).children("div").show();
-        })
-
-        /*
-        */
-    })()
-</script>
 <style>
     .s_mn_hotdibiao {
         overflow: hidden;

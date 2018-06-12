@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>崇文门 天安门 北京站北欧loft（零压房）-北京东城区日租-木鸟短租</title>
+    <title>${room.roomName}</title>
     <meta name="keywords" content="北京东城区短租房,北京东城区日租房">
     <meta name="description" content="房间位于市中心交通便利，出差旅行首选！北欧风格LOFT，有可以俯瞰整个城市夜晚的大阳台，休息之余在阳">
     <meta name="viewport" content="width=1400, initial-scale=1">
@@ -2870,119 +2870,16 @@
 
         <div class="owl-stage-outer">
             <div class="owl-stage" style="transform: translate3d(-3660px, 0px, 0px); transition: 0s; width: 14030px;">
+            <#list images as img>
                 <div class="owl-item cloned" style="width: auto;">
                     <div class="item"><img
-                            src="${staticRoot}/images/0d7952fdd8cb441d96ffdc3b4e20529f20180521022333933.jpg_610_385.jpg"
+                            src="${staticRoot}/images/${img.imgAddress}"
                             style="display: inline-block;"><span></span></div>
                 </div>
+            </#list>
                 <div class="owl-item cloned" style="width: auto;">
                     <div class="item"><img
                             src="${staticRoot}/images/9054e39679664a2c8ecb37e150d1a5de20180521022347008.jpg_610_385.jpg"
-                            style="display: inline-block;"><span></span></div>
-                </div>
-                <div class="owl-item cloned" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/3ef268a4467441a5b683bd52ba7a84b220180521022353845.jpg_610_385.jpg"
-                            style="display: inline-block;"><span></span></div>
-                </div>
-                <div class="owl-item cloned" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/6da5c7990d5744e09e17dd3b326c61b120180521022359893.jpg_610_385.jpg"
-                            style="display: inline-block;"><span></span></div>
-                </div>
-                <div class="owl-item cloned" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/2ae7555aa01748ed8b6ad5ddb262240420180521022406059.jpg_610_385.jpg"
-                            style="display: inline-block;"><span></span></div>
-                </div>
-                <div class="owl-item cloned" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/12de3eb2211e46499d7e8d4f92a9f39420180521022412044.jpg_610_385.jpg"
-                            style="display: inline-block;"><span></span></div>
-                </div>
-                <div class="owl-item active" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/8ce0038924d54cd1aea8166464bc731e20180521022159041.jpg_610_385.jpg"
-                            style="display: inline-block; opacity: 1;"><span></span></div>
-                </div>
-                <div class="owl-item active" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/9ec0632848db4a90a874baceecf5d04a20180521022215363.jpg_610_385.jpg"
-                            style="display: inline-block; opacity: 1;"><span></span></div>
-                </div>
-                <div class="owl-item active" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/821f555bed22418a806d625f8b14fff120180521022227984.jpg_610_385.jpg"
-                            style="display: inline-block; opacity: 1;"><span></span></div>
-                </div>
-                <div class="owl-item" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/9598ffca394647f1bdda7a4ef1d4474e20180521022243762.jpg_610_385.jpg"
-                            style="display: inline-block; opacity: 1;"><span></span></div>
-                </div>
-                <div class="owl-item" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/a917d45f53974ba1a3cbf7c77fe14b5520180521022312772.jpg_610_385.jpg"
-                            style="display: inline-block; opacity: 1;"><span></span></div>
-                </div>
-                <div class="owl-item" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/0d7952fdd8cb441d96ffdc3b4e20529f20180521022333933.jpg_610_385.jpg"
-                            style="display: inline-block; opacity: 1;"><span></span></div>
-                </div>
-                <div class="owl-item" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/9054e39679664a2c8ecb37e150d1a5de20180521022347008.jpg_610_385.jpg"
-                            style="display: inline-block; opacity: 1;"><span></span></div>
-                </div>
-                <div class="owl-item" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/3ef268a4467441a5b683bd52ba7a84b220180521022353845.jpg_610_385.jpg"
-                            style="display: inline-block; opacity: 1;"><span></span></div>
-                </div>
-                <div class="owl-item" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/6da5c7990d5744e09e17dd3b326c61b120180521022359893.jpg_610_385.jpg"
-                            style="display: inline-block; opacity: 1;"><span></span></div>
-                </div>
-                <div class="owl-item" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/2ae7555aa01748ed8b6ad5ddb262240420180521022406059.jpg_610_385.jpg"
-                            style="display: inline-block; opacity: 1;"><span></span></div>
-                </div>
-                <div class="owl-item" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/12de3eb2211e46499d7e8d4f92a9f39420180521022412044.jpg_610_385.jpg"
-                            style="display: inline-block; opacity: 1;"><span></span></div>
-                </div>
-                <div class="owl-item cloned" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/8ce0038924d54cd1aea8166464bc731e20180521022159041.jpg_610_385.jpg"
-                            style="display: inline-block;"><span></span></div>
-                </div>
-                <div class="owl-item cloned" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/9ec0632848db4a90a874baceecf5d04a20180521022215363.jpg_610_385.jpg"
-                            style="display: inline-block;"><span></span></div>
-                </div>
-                <div class="owl-item cloned" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/821f555bed22418a806d625f8b14fff120180521022227984.jpg_610_385.jpg"
-                            style="display: inline-block;"><span></span></div>
-                </div>
-                <div class="owl-item cloned" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/9598ffca394647f1bdda7a4ef1d4474e20180521022243762.jpg_610_385.jpg"
-                            style="display: inline-block;"><span></span></div>
-                </div>
-                <div class="owl-item cloned" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/a917d45f53974ba1a3cbf7c77fe14b5520180521022312772.jpg_610_385.jpg"
-                            style="display: inline-block;"><span></span></div>
-                </div>
-                <div class="owl-item cloned" style="width: auto;">
-                    <div class="item"><img
-                            src="${staticRoot}/images/0d7952fdd8cb441d96ffdc3b4e20529f20180521022333933.jpg_610_385.jpg"
                             style="display: inline-block;"><span></span></div>
                 </div>
             </div>
@@ -3029,8 +2926,8 @@
             <a href="http://www.muniao.com/" title="木鸟短租网">木鸟短租</a>
             <span class="w_mL10">&gt;</span>
             <span id="jj">
-                    <a href="http://www.muniao.com/beijing/" title="北京短租房"
-                       target="_self">北京短租房</a>                <input type="hidden" name="haiwai" id="haiwai" value="1">
+                    <a href="http://www.muniao.com/beijing/" title="${room.roomLocation}短租房"
+                       target="_self">${room.roomLocation}短租房</a>                <input type="hidden" name="haiwai" id="haiwai" value="1">
             </span>
 
         </div>
@@ -3051,7 +2948,7 @@
             <div class="room_tt">
                 <h1 class="room_tth1">
                     <span class="room_title"><a href="http://www.muniao.com/room/132979.html"
-                                                title="崇文门 天安门 北京站北欧loft（零压房）">崇文门 天安门 北京站北欧loft（零压房）</a></span>
+                                                title="${room.roomName}">${room.roomName}</a></span>
                     <span style="position: relative;" class="smfy_xq"><div class="simutips" style="display: none;">四木房源为木鸟工作人员和过往的住客共同推选出来的优质房源，硬件设施跟软件服务，都将更好的让您体会到民宿的魅力和与众不同，木鸟向您推荐此房源，请您放心预订。</div></span>
                     <span class="room_pzicon"></span>
 
@@ -3072,9 +2969,9 @@
                         "bdPic": "",
                         "bdStyle": "3",
                         "bdSize": "16",
-                        "bdPopTitle": "崇文门 天安门 北京站北欧loft（零压房）-木鸟短租推荐",
-                        "bdText": "我在木鸟短租发现“崇文门 天安门 北京站北欧loft（零压房）”，真的很不错哦！",
-                        "bdDes": "我在木鸟短租发现“崇文门 天安门 北京站北欧loft（零压房）”，真的很不错哦！-推荐给您",
+                        "bdPopTitle": "${room.roomName}",
+                        "bdText": "${room.roomName}”，真的很不错哦！",
+                        "bdDes": "我在木鸟短租发现“${room.roomName}”，真的很不错哦！-推荐给您",
                         "bdPic": "",
                         "searchPic": 0
                     }, "share": {}
@@ -3083,19 +2980,19 @@
                 <!--分享-->
             </div>
             <div class="room_ttadd f12">
-                <span class="red">房源编号：</span>132979<span class="red w_mL10">地址：</span>
+                <span class="red">房源编号：</span>${room.roomId}<span class="red w_mL10">地址：</span>
                 <span id="ass">
-                    北京-东城区-西花市大街-新景家园东区
+                ${room.roomLocation}
                 </span>
-                <input type="hidden" name="name" id="address" value="北京-东城区-西花市大街-新景家园东区">
+                <input type="hidden" name="name" id="address" value="${room.roomLocation}">
             </div>
             <div class="room_ttbottom">
                 <ul class="room_ttbottomL f14">
-                    <li class="hx">2室</li>
-                    <li class="cz">整租</li>
-                    <li class="bed">2张</li>
-                    <li class="people">宜住4人</li>
-                    <li style="display:none" class="room_toparea">面积60m<sup>2</sup></li>
+                    <li class="hx">${room.roomStructure.bedroomNum}室</li>
+                    <li class="cz">${room.roomType.roomType}</li>
+                    <li class="bed">${room.roomBedInfo.bedNumber}张</li>
+                    <li class="people">宜住${room.avaliableArea.roomArea}人</li>
+                    <li style="display:none" class="room_toparea">面积${room.avaliableArea.roomArea}m<sup>2</sup></li>
                 </ul>
                 <ul class="room_ttbottomR">
                     <li>
@@ -3130,7 +3027,7 @@
                     </div>
                     <div class="room_pricebg">
                         <div class="room_price">
-                            ￥<span class="f30">599</span>
+                            ￥<span class="f30">${room.roomPrice}</span>
                             <span class="f16 w_fRight">每晚</span>
                         </div>
                     </div>
@@ -3329,13 +3226,13 @@
                 <div class="room_Rbottom">
                     <div class="room_Rfd">
                         <div class="room_Rfdimg w_fLeft">
-                            <a href="http://www.muniao.com/fangdong/363368/" title="逅客崇文门天安门前门店" target="_blank"><img
+                            <a href="http://www.muniao.com/fangdong/363368/" title="${room.roomName}" target="_blank"><img
                                     onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;"
-                                    src="${staticRoot}/images/7fc93e87a9334a339509b3ff0e6ec09b20180525163701649.jpg_150_150.jpg"></a>
+                                    src="${staticRoot}/images/${room.landlord.picture}"></a>
                         </div>
                         <div class="room_Rfdxx">
                             <h3 class="f16 w_fColor7">
-                                <a href="http://www.muniao.com/fangdong/363368/" title="逅客崇文门天安门前门店" target="_blank">逅客崇文门天安门前门店</a>
+                                <a href="http://www.muniao.com/fangdong/363368/" title="${room.roomName}" target="_blank">${room.roomName}</a>
                             </h3>
                             <input type="hidden" name="name" value="1">
                             <div class="room_Rfdzm f12 w_fColora"><span class="zmicon"></span><span
@@ -3349,7 +3246,7 @@
                     </div>
 
                     <a class="room_Ronline webim-chatbtn" href="javascript:void(0);" data-id="363368"
-                       data-title="崇文门 天安门 北京站北欧loft（零压房）"
+                       data-title="${room.roomName}"
                        data-image="//assets.muniao.com/UploadFiles/thumb/image/20180525/7fc93e87a9334a339509b3ff0e6ec09b20180525163701649.jpg_275_173.jpg"
                        title="在线联系房东" target="_self" id="webim-chatid-363368">在线聊天<i
                             class="webim-chaticon webim-chaticon-online"><em>&nbsp;</em></i></a></div>
@@ -3361,14 +3258,14 @@
     <div class="room_mainbox clear" id="room_mainbox2">
         <div class="nav_wrap">
             <ul id="roomnav" class="room_nav f14" style="position: static; padding-left: 0px;">
-                <li><a href="https://www.muniao.com/room/132979.html#room_nrbox" rel="nofollow">房间信息</a></li>
-                <li><a href="https://www.muniao.com/room/132979.html#room_maintt" rel="nofollow">配套设施</a></li>
-                <li><a href="https://www.muniao.com/room/132979.html#room_near" rel="nofollow">周边设施</a></li>
-                <li><a href="https://www.muniao.com/room/132979.html#room_map" rel="nofollow">地理位置</a></li>
-                <li><a href="https://www.muniao.com/room/132979.html#room_jygztt" rel="nofollow">交易规则</a></li>
-                <li><a href="https://www.muniao.com/room/132979.html#room_landmark" rel="nofollow">建筑地标</a></li>
-                <li><a href="https://www.muniao.com/room/132979.html#room_yqsf" rel="nofollow">要求及收费</a></li>
-                <li><a href="https://www.muniao.com/room/132979.html#room_eva" rel="nofollow">房客评价</a><span class="f12">12</span>
+                <li><a href="${basePath}/room/${room.roomId}#room_nrbox" rel="nofollow">房间信息</a></li>
+                <li><a href="${basePath}/room/${room.roomId}#room_maintt" rel="nofollow">配套设施</a></li>
+                <li><a href="${basePath}/room/${room.roomId}#room_near" rel="nofollow">周边设施</a></li>
+                <li><a href="${basePath}/room/${room.roomId}#room_map" rel="nofollow">地理位置</a></li>
+                <li><a href="${basePath}/room/${room.roomId}#room_jygztt" rel="nofollow">交易规则</a></li>
+                <li><a href="${basePath}/room/${room.roomId}#room_landmark" rel="nofollow">建筑地标</a></li>
+                <li><a href="${basePath}/room/${room.roomId}#room_yqsf" rel="nofollow">要求及收费</a></li>
+                <li><a href="${basePath}/room/${room.roomId}#room_eva" rel="nofollow">房客评价</a><span class="f12">12</span>
                 </li>
             </ul>
         </div>
@@ -3380,7 +3277,7 @@
             <div class="room_tip f14">
                 想进一步了解？
                 <a class="red webim-chatbtn" href="javascript:void(0);" data-id="363368"
-                   data-title="崇文门 天安门 北京站北欧loft（零压房）"
+                   data-title="${room.roomName}"
                    data-image="//assets.muniao.com/UploadFiles/thumb/image/20180525/7fc93e87a9334a339509b3ff0e6ec09b20180525163701649.jpg_275_173.jpg"
                    title="在线联系房东" target="_self" id="webim-chatid-363368">在线聊天<i
                         class="webim-chaticon webim-chaticon-online"><em>&nbsp;</em></i></a>
@@ -3404,7 +3301,7 @@
                 <li>
                     <span class="room_icon room_cx"></span><span class="fcolor8 w_mL10">床型：</span>
                     <div class="nrboxq">
-                            <span class="fcolor7" title="${room.roomBedInfo.benType}">${room.roomBedInfo.benType}</span>
+                        <span class="fcolor7" title="${room.roomBedInfo.benType}">${room.roomBedInfo.benType}</span>
                     </div>
                 </li>
                 <li>
@@ -3481,7 +3378,6 @@
                 <li><span class="room_icon room_20"></span><span class="fcolor8 w_mL10">餐具炊具</span></li>
                 <li><span class="room_icon room_21"></span><span class="fcolor8 w_mL10">吹风机</span></li>
                 <li><span class="room_icon room_31"></span><span class="fcolor8 w_mL10">被子</span></li>
-
             </ul>
             <div class="room_tip f14"><a id="dj2" class="red">点击查看全部</a></div>
         </div>
@@ -3509,7 +3405,7 @@
         </div>
 
         <div class="room_map">
-            <div id="roommap" name="北京-东城区-西花市大街-新景家园东区" lng="116.430926" lat="39.901161" address="北京-东城区-西花市大街-新景家园东区"
+            <div id="roommap" name="北京-东城区-西花市大街-新景家园东区" lng="${room.roomLongitude}" lat="${room.roomLatitude}" address="北京-东城区-西花市大街-新景家园东区"
                  style="overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left;">
                 <div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: url(&quot;https://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default;">
                     <div class="BMap_mask"
@@ -3517,7 +3413,7 @@
                     <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;">
                         <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div>
                         <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;">
-                            <span class="BMap_Marker BMap_noprint" unselectable="on" style="position: absolute;
+                            <span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute;
                             padding: 0px; margin: 0px; border: 0px; cursor: pointer; background: url(&quot;https://api.map.baidu.com/images/blank.gif&quot;);
                             width: 40px; height: 50px; left: 292px; top: 175px; z-index: 19000000;" title=""></span>
                         </div>
@@ -4499,7 +4395,6 @@
                     <a href="https://www.muniao.com/zhuanti/8572_search/" target="_blank">石榴庄公园附近短租公寓</a>
                     <a href="https://www.muniao.com/zhuanti/6664_search/" target="_blank">火德真君庙（南门）附近短租公寓</a>
                     <a href="https://www.muniao.com/zhuanti/5238_search/" target="_blank">北京日租房 20人</a>
-
                 </div>
             </div>
             <div class="s_mn_footercity_tit">北京热门住宿推荐：</div>
@@ -4570,23 +4465,23 @@
         <li>
             <div class="s_mn_footerhot">
                 <div class="s_mn_hotdibiao">
-                    <a href="https://www.muniao.com/features_housing_beijing_1.html" target="_blank">北京别墅 短租</a>
-                    <a href="https://www.muniao.com/features_housing_beijing_2.html" target="_blank">北京情侣房短租</a>
-                    <a href="https://www.muniao.com/features_housing_beijing_5.html" target="_blank">北京主题特色短租</a>
-                    <a href="https://www.muniao.com/features_housing_beijing_4.html" target="_blank">北京木屋短租</a>
-                    <a href="https://www.muniao.com/features_housing_beijing_6.html" target="_blank">北京四合院短租</a>
-                    <a href="https://www.muniao.com/features_housing_beijing_8.html" target="_blank">北京复式短租</a>
-                    <a href="https://www.muniao.com/beijing/null-0-0-0-1-0-0-0-1.html" target="_blank">北京民居</a>
-                    <a href="https://www.muniao.com/beijing/null-0-0-0-2-0-0-0-1.html" target="_blank">北京客栈</a>
-                    <a href="https://www.muniao.com/beijing/null-0-0-0-4-0-0-0-1.html" target="_blank">北京公寓</a>
-                    <a href="https://www.muniao.com/beijing/null-0-0-0-7-0-0-0-1.html" target="_blank">北京独栋别墅</a>
-                    <a href="https://www.muniao.com/beijing/null-0-0-0-9-0-0-0-1.html" target="_blank">北京四合院</a>
-                    <a href="https://www.muniao.com/beijing/null-0-0-0-12-0-0-0-1.html" target="_blank">北京农家院</a>
-                    <a href="https://www.muniao.com/beijing/null-0-0-0-16-0-0-0-1.html" target="_blank">北京其它</a>
+                    <a href="https://www.muniao.com/features_housing_beijing_1.html" target="_blank">${room.roomLocation}别墅 短租</a>
+                    <a href="https://www.muniao.com/features_housing_beijing_2.html" target="_blank">${room.roomLocation}情侣房短租</a>
+                    <a href="https://www.muniao.com/features_housing_beijing_5.html" target="_blank">${room.roomLocation}主题特色短租</a>
+                    <a href="https://www.muniao.com/features_housing_beijing_4.html" target="_blank">${room.roomLocation}木屋短租</a>
+                    <a href="https://www.muniao.com/features_housing_beijing_6.html" target="_blank">${room.roomLocation}四合院短租</a>
+                    <a href="https://www.muniao.com/features_housing_beijing_8.html" target="_blank">${room.roomLocation}复式短租</a>
+                    <a href="https://www.muniao.com/beijing/null-0-0-0-1-0-0-0-1.html" target="_blank">${room.roomLocation}民居</a>
+                    <a href="https://www.muniao.com/beijing/null-0-0-0-2-0-0-0-1.html" target="_blank">${room.roomLocation}客栈</a>
+                    <a href="https://www.muniao.com/beijing/null-0-0-0-4-0-0-0-1.html" target="_blank">${room.roomLocation}公寓</a>
+                    <a href="https://www.muniao.com/beijing/null-0-0-0-7-0-0-0-1.html" target="_blank">${room.roomLocation}独栋别墅</a>
+                    <a href="https://www.muniao.com/beijing/null-0-0-0-9-0-0-0-1.html" target="_blank">${room.roomLocation}四合院</a>
+                    <a href="https://www.muniao.com/beijing/null-0-0-0-12-0-0-0-1.html" target="_blank">${room.roomLocation}农家院</a>
+                    <a href="https://www.muniao.com/beijing/null-0-0-0-16-0-0-0-1.html" target="_blank">${room.roomLocation}其它</a>
 
                 </div>
             </div>
-            <div class="s_mn_footercity_tit">北京特色住宿：</div>
+            <div class="s_mn_footercity_tit">${room.roomLocation}特色住宿：</div>
             <div style="display: block;" class="s_mn_footercity_more">+展开</div>
         </li>
     </ul>

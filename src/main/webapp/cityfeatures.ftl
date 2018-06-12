@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta property="wb:webmaster" content="xfwy">
     <meta property="qc:admins" content="329429240">
-    <#assign basePath=request.contextPath />
+<#assign basePath=request.contextPath />
     <link rel="shortcut icon" href="https://assets.muniao.com/assets2/pc/favicon.ico">
     <script charset="utf-8" src="${staticRoot}/images/v.js.下载"></script><script>
         var logocode = '';
@@ -576,14 +576,14 @@
                         <div class="s_mn_place6">
                             <div class="s_mn_housingbox2">
                                 <div class="s_mn_housing_img2">
-                                    <a href="https://www.muniao.com/room/28112.html" title="三亚湾碧海蓝天听涛公寓06号海景两房" target="_blank">
+                                    <a href="${basePath}/room/${room.roomId}" title="三亚湾碧海蓝天听涛公寓06号海景两房" target="_blank">
                                         <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20140714172820832.jpg" width="580" height="368" alt="三亚湾碧海蓝天听涛公寓06号海景两房">
                                     </a>
                                     <span class="s_mn_housing_price">￥580</span>
                                 </div>
                                 <div class="s_mn_housing_textbox2">
                                     <div class="s_mn_housing_title2">
-                                        <a href="https://www.muniao.com/room/28112.html" title="三亚湾碧海蓝天听涛公寓06号海景两房" target="_blank">三亚湾碧海蓝天听涛公寓06号海景两房</a>
+                                        <a href="${basePath}/room/${room.roomId}" title="三亚湾碧海蓝天听涛公寓06号海景两房" target="_blank">三亚湾碧海蓝天听涛公寓06号海景两房</a>
                                     </div>
                                     <div class="s_mn_housing_information2">
                                         <span>2室</span>
@@ -596,13 +596,13 @@
                                     </div>
                                     <div class="s_mn_landlordbox s_mn_landlordpos">
                                         <div class="s_mn_landlordpic">
-                                            <a href="https://www.muniao.com/fangdong/4998/" title="三亚听涛公寓" target="_blank">
+                                            <a href="${basePath}/room/${room.roomId}" title="三亚听涛公寓" target="_blank">
 
                                                 <img src="${staticRoot}/images/201409221055563927.jpg" alt="三亚听涛公寓" width="80" height="80">
                                             </a>
                                         </div>
                                         <div class="s_mn_landlordname">
-                                            <a href="https://www.muniao.com/fangdong/4998/" title="三亚听涛公寓" target="_blank">三亚听涛…</a>
+                                            <a href="${basePath}/room/${room.roomId}" title="三亚听涛公寓" target="_blank">三亚听涛…</a>
                                         </div>
                                     </div>
                                 </div>
@@ -614,14 +614,14 @@
                         <div class="s_mn_place6">
                             <div class="s_mn_housingbox2">
                                 <div class="s_mn_housing_img2">
-                                    <a href="https://www.muniao.com/room/151672.html" title="${room.roomName}" target="_blank">
+                                    <a href="${basePath}/room/${room.roomId}" title="${room.roomName}" target="_blank">
                                         <img src="${staticRoot}/images/${room.lsit[1].imgAddress}" width="580" height="368" alt="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）">
                                     </a>
                                     <span class="s_mn_housing_price">￥${room.roomPrice}</span>
                                 </div>
                                 <div class="s_mn_housing_textbox2">
                                     <div class="s_mn_housing_title2">
-                                        <a href="https://www.muniao.com/room/151672.html" title="${room.roomName}" target="_blank">${room.roomName}</a>
+                                        <a href="${basePath}/room/${room.roomId}" title="${room.roomName}" target="_blank">${room.roomName}</a>
                                     </div>
                                     <div class="s_mn_housing_information2">
                                         <span>${room.roomStructure.bedroomNum}室</span>
@@ -634,7 +634,7 @@
                                     </div>
                                     <div class="s_mn_landlordbox s_mn_landlordpos">
                                         <div class="s_mn_landlordpic">
-                                            <a href="https://www.muniao.com/fangdong/1051916/" title="${room.landlord.userName}" target="_blank">
+                                            <a href="${basePath}/room/${room.roomId}" title="${room.landlord.userName}" target="_blank">
 
                                                 <img src="${staticRoot}/images/${room.landlord.picture}" alt="${room.landlord.userName}" width="80" height="80">
                                             </a>
