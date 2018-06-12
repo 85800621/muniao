@@ -3672,7 +3672,7 @@
                                         <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/0/${roomList[1].roomInterval.priceIntervalId}/${roomList[1].rentalMethod.methodId}/${roomList[1].roomStructure.structureId}"
                                            class="s_mn_screen_aover" title="不限"
                                            target="_self">不限</a>                                                                                            </span>
-                                    <#list roomTypes as type >
+                                <#list roomTypes as type >
                                     <span class="w_listspan3">
                                         <a rel="nofollow"
                                            href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/${type.roomType.typeId}/0/0/0"
@@ -3680,7 +3680,7 @@
                                         ${type.roomType.roomType}
                                         </a>
                                     </span>
-                                    </#list>
+                                </#list>
                                 </div>
                             </div>
                         </li>
@@ -3688,14 +3688,14 @@
                             <div class="s_mn_screenqy">
                                 <div class="s_mn_screen_tit">房间价格：</div>
                                 <div class="s_mn_screenlist">
-                                <div class="w_searchprice_l">
+                                    <div class="w_searchprice_l">
                                     <span class="w_listspan3">
                                             <!--/beijing/-->
                                         <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/${roomList[1].roomType.typeId}/0/${roomList[1].rentalMethod.methodId}/${roomList[1].roomStructure.structureId}"
                                            class="s_mn_screen_aover" title="不限 target=" _self"="">不限</a>
                                     </span>
                                     <#list roomIntervals as interval>
-                                    <span class="w_listspan3">
+                                        <span class="w_listspan3">
                                         <a rel="nofollow"
                                            href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/0/${interval.roomInterval.priceIntervalId}/0/0"
                                            title="${interval.roomInterval.priceInterval}">
@@ -3703,7 +3703,7 @@
                                         </a>
                                     </span>
                                     </#list>
-                                </div>
+                                    </div>
 
                                     <div class="s_mn_custom" style="display:none;">
                                         <input type="text" value="" class="s_mn_customipt">
@@ -3723,12 +3723,12 @@
                                         <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/${roomList[1].roomType.typeId}/${roomList[1].roomInterval.priceIntervalId}/0/${roomList[1].roomStructure.structureId}"
                                            class="s_mn_screen_aover" title="不限" rel="nofollow" target="_self">不限</a>
                                     </span>
-                                    <#list roomMethods as method>
-                                        <span>
+                                <#list roomMethods as method>
+                                    <span>
                                         <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/0/0/${method.rentalMethod.methodId}/0"
-                                            title="${method.rentalMethod.method}" rel="nofollow" target="_self">${method.rentalMethod.method}</a>
+                                           title="${method.rentalMethod.method}" rel="nofollow" target="_self">${method.rentalMethod.method}</a>
                                     </span>
-                                    </#list>
+                                </#list>
                                 </div>
                             </div>
                         </li>
@@ -3741,14 +3741,14 @@
                                                class="s_mn_screen_aover" title="不限" rel="nofollow"
                                                target="_self">不限</a>
                                     </span>
-                                    <#list roomStructures as structure>
+                                <#list roomStructures as structure>
                                     <span class="w_listspan3">
                                         <a rel="nofollow" href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/0/0/0/${structure.roomStructure.structureId}"
                                            title="${structure.roomStructure.bedroomNum}">
                                            ${structure.roomStructure.bedroomNum}室
                                         </a>
                                     </span>
-                                    </#list>
+                                </#list>
                                 </div>
                             </div>
                         </li>
@@ -3804,142 +3804,142 @@
                 </div>
             </div>
             <ul class="s_mn_detailslist clear" id="Lmain_con">
-                <#list roomList as room >
-                    <li class="Lcon1" data-id="75902" data-x="${room.roomLongitude}" data-y="${room.roomLatitude}"
-                        data-title="${room.roomName}" data-price="${room.roomPrice}" x4="33">
-                        <div class="s_mn_housebox">
-                            <div class="s_mn_house_details clear">
-                                <div class="house_details_l">
-                                    <div class="s_mn_house_tit">
-                                        <a href="https://www.muniao.com/room/75902.html" target="_blank"
-                                           class="s_mn_house_t1">${room.roomName}</a>
-                                    </div>
-                                    <div class="s_mn_house_introduction">
-                                        <p>
-                                            <span>${room.roomStructure.bedroomNum}室</span>|<span>${room.rentalMethod.method}</span>|<span>适合住${room.avaliableArea.standPop}人</span>
+            <#list roomList as room >
+                <li class="Lcon1" data-id="75902" data-x="${room.roomLongitude}" data-y="${room.roomLatitude}"
+                    data-title="${room.roomName}" data-price="${room.roomPrice}" x4="33">
+                    <div class="s_mn_housebox">
+                        <div class="s_mn_house_details clear">
+                            <div class="house_details_l">
+                                <div class="s_mn_house_tit">
+                                    <a href="${basePath}/room/${room.roomId}" target="_blank"
+                                       class="s_mn_house_t1">${room.roomName}</a>
+                                </div>
+                                <div class="s_mn_house_introduction">
+                                    <p>
+                                        <span>${room.roomStructure.bedroomNum}室</span>|<span>${room.rentalMethod.method}</span>|<span>适合住${room.avaliableArea.standPop}人</span>
 
-                                            <a>|</a><span>43 条评论</span></p>
-                                        <div class="list_address">
-                                            <i class="address_icon"></i>地址：${room.roomLocation}具体地址应在数据库储存护着调用地图api
-                                        </div>
-                                        <div class="s_mn_house_price2">
-                                            <span>￥${room.roomPrice}</span>/晚
-                                        </div>
-                                        <div class="near_reserve">
-                                            近期预订
-                                            <span>30 晚</span>
-                                        </div>
+                                        <a>|</a><span>43 条评论</span></p>
+                                    <div class="list_address">
+                                        <i class="address_icon"></i>地址：${room.roomLocation}具体地址应在数据库储存护着调用地图api
                                     </div>
-                                    <div class="s_mn_house_information">
-                                        <div class="hr"></div>
-                                        <dl>
-                                            <a href="https://www.muniao.com/room/75902.html" target="_blank">
-                                                <dd>
-                                                    <span class="comment_num">43</span>
-                                                    <p class="comment_icon">评论数</p>
-                                                </dd>
-                                            </a>
-                                        </dl>
-                                        <dl>
-                                            <a href="https://www.muniao.com/room/75902.html" target="_blank">
-                                                <dd>
-                                                    <span class="comment_num">43</span>
-                                                    <p class="list_recommend">推荐数</p>
-                                                </dd>
-                                            </a></dl>
-                                        <a href="https://www.muniao.com/room/75902.html" target="_blank">
-                                        </a>
-                                        <dl><a href="https://www.muniao.com/room/75902.html" target="_blank">
-                                        </a><a href="https://www.muniao.com/room/75902.html" target="_blank">
+                                    <div class="s_mn_house_price2">
+                                        <span>￥${room.roomPrice}</span>/晚
+                                    </div>
+                                    <div class="near_reserve">
+                                        近期预订
+                                        <span>30 晚</span>
+                                    </div>
+                                </div>
+                                <div class="s_mn_house_information">
+                                    <div class="hr"></div>
+                                    <dl>
+                                        <a href="${basePath}/room/${room.roomId}" target="_blank">
                                             <dd>
-                                                <span class="comment_num">${room.list?size}张</span>
-                                                <p class="list_picnum">房间图片</p>
+                                                <span class="comment_num">43</span>
+                                                <p class="comment_icon">评论数</p>
+                                            </dd>
+                                        </a>
+                                    </dl>
+                                    <dl>
+                                        <a href="${basePath}/room/${room.roomId}" target="_blank">
+                                            <dd>
+                                                <span class="comment_num">43</span>
+                                                <p class="list_recommend">推荐数</p>
                                             </dd>
                                         </a></dl>
-                                        <a href="https://www.muniao.com/room/75902.html" target="_blank">
-                                        </a>
-                                        <dl><a href="https://www.muniao.com/room/75902.html" target="_blank">
-                                        </a><a href="javascript:void(0)"
-                                               onclick="$(&#39;#getmap&#39;).show();initMap(${room.roomLatitude},${room.roomLongitude},&#39;国贸CBD 近地铁 后现代城-可做饭-唯美文艺风精装两居&#39;,&#39;北京百子湾路后现代城&#39;);"
-                                               title="地图" class="s_mn_detailslist_map map_icon">
-                                            <dd class="map_wz">
-                                                <i class="list_seemap"></i>地图位置
-                                            </dd>
-                                        </a>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-----列表详情右边---->
-                                <div class="house_details_r">
-                                    <div class="s_mn_landlord_information">
-                                        <div class="s_mn_landlordpic2">
-                                            <a href="https://www.muniao.com/fangdong/76331/?cityname=beijing" rel="nofollow"
-                                               target="_blank">
-                                                <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets/2013/image/pic13.jpg&#39;;"
-                                                     src="${staticRoot}/images/${room.landlord.picture}"
-                                                     width="24" height="24" title="${room.landlord.userName}">
-                                            </a>
-                                        </div>
-                                        <div class="s_mn_landlordname2">
-                                            <a rel="nofollow" href="https://www.muniao.com/fangdong/76331/?cityname=beijing"
-                                               target="_blank">${room.landlord.userName}</a>
-                                        </div>
-
-                                        <ul class="landlordmark">
-                                            <li style="display: none;">
-                                                <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
-                                            </li>
-                                            <li class="list_zhitip" style="position: relative;">
-                                                <i class="list_dizhuicon"></i>
-                                                <a style="color: #ff998f" target="_blank">地主</a>
-                                                <i class="true_icon" style="display: none;"></i>
-                                                <div class="list_zhimatip" style="display: none;">
-                                                    我愿为远道而来的您尽一尽地主之谊，做您在本地的向导，让您出行无忧。
-                                                </div>
-                                            </li>
-                                            <!---->
-                                        </ul>
-                                    </div>
-                                    <div class="phone-ewm"
-                                         style="display:none;text-align :center;padding:15px 0;background: #fff; width:100%; position:absolute;z-index:10;border-top:1px solid #ccc;bottom:40px;">
-                                        <img src="${staticRoot}/images/fkappewm.png">
-                                        <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">
-                                            手机端可电话联系房东还送88元优惠</p>
-                                    </div>
-
-                                    <div class="weblt">
-                                        <a class="webim-chatbtn" href="https://www.muniao.com/beijing/#chat@76331"
-                                           data-id="76331" data-title="${room.roomName}"
-                                           data-image="//assets.muniao.comUploadFiles/thumb/image/20170615/2017061542408369.jpg_414_262.jpg"
-                                           data-priceday="580" data-privacy="整租" data-propertytype="公寓"
-                                           data-accommodates="宜住5人" rel="nofollow" title="拨打电话"
-                                           target="_self">拨打电话<span></span></a>
-                                    </div>
+                                    <a href="${basePath}/room/${room.roomId}" target="_blank">
+                                    </a>
+                                    <dl><a href="${basePath}/room/${room.roomId}" target="_blank">
+                                    </a><a href="${basePath}/room/${room.roomId}" target="_blank">
+                                        <dd>
+                                            <span class="comment_num">${room.list?size}张</span>
+                                            <p class="list_picnum">房间图片</p>
+                                        </dd>
+                                    </a></dl>
+                                    <a href="${basePath}/room/${room.roomId}" target="_blank">
+                                    </a>
+                                    <dl><a href="${basePath}/room/${room.roomId}" target="_blank">
+                                    </a><a href="javascript:void(0)"
+                                           onclick="$(&#39;#getmap&#39;).show();initMap(${room.roomLatitude},${room.roomLongitude},&#39;国贸CBD 近地铁 后现代城-可做饭-唯美文艺风精装两居&#39;,&#39;北京百子湾路后现代城&#39;);"
+                                           title="地图" class="s_mn_detailslist_map map_icon">
+                                        <dd class="map_wz">
+                                            <i class="list_seemap"></i>地图位置
+                                        </dd>
+                                    </a>
+                                    </dl>
                                 </div>
                             </div>
-                            <div class="s_mn_house_images">
-                                <div class="s_mn_house_img">
-                                    <a href="https://www.muniao.com/room/75902.html" target="_blank"
-                                       title="${room.roomName}"><img
-                                            onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;"
-                                            src="${staticRoot}/images/${room.lsit[1]}"
-                                            width="414" height="262" alt="${room.roomName}"></a>
-                                    <span class="smfy_icon"></span>
-                                </div>
-                                <a href="javascript:void(0)" data-id="75902" class="s_mn_house_like like_icon2 colle_list"
-                                   id="favorite_75902">收藏</a>
-                                <div class="list_score">
-                                    <div class="score_bg"></div>
-                                    <div class="tmc">
-                                    <span>
-                                        4.9
-                                    </span> /评分
+                            <!-----列表详情右边---->
+                            <div class="house_details_r">
+                                <div class="s_mn_landlord_information">
+                                    <div class="s_mn_landlordpic2">
+                                        <a href="${basePath}/room/${room.roomId}" rel="nofollow"
+                                           target="_blank">
+                                            <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets/2013/image/pic13.jpg&#39;;"
+                                                 src="${staticRoot}/images/${room.landlord.picture}"
+                                                 width="24" height="24" title="${room.landlord.userName}">
+                                        </a>
                                     </div>
+                                    <div class="s_mn_landlordname2">
+                                        <a rel="nofollow" href="${basePath}/room/${room.roomId}"
+                                           target="_blank">${room.landlord.userName}</a>
+                                    </div>
+
+                                    <ul class="landlordmark">
+                                        <li style="display: none;">
+                                            <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                                        </li>
+                                        <li class="list_zhitip" style="position: relative;">
+                                            <i class="list_dizhuicon"></i>
+                                            <a style="color: #ff998f" target="_blank">地主</a>
+                                            <i class="true_icon" style="display: none;"></i>
+                                            <div class="list_zhimatip" style="display: none;">
+                                                我愿为远道而来的您尽一尽地主之谊，做您在本地的向导，让您出行无忧。
+                                            </div>
+                                        </li>
+                                        <!---->
+                                    </ul>
+                                </div>
+                                <div class="phone-ewm"
+                                     style="display:none;text-align :center;padding:15px 0;background: #fff; width:100%; position:absolute;z-index:10;border-top:1px solid #ccc;bottom:40px;">
+                                    <img src="${staticRoot}/images/fkappewm.png">
+                                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">
+                                        手机端可电话联系房东还送88元优惠</p>
+                                </div>
+
+                                <div class="weblt">
+                                    <a class="webim-chatbtn" href="https://www.muniao.com/beijing/#chat@76331"
+                                       data-id="76331" data-title="${room.roomName}"
+                                       data-image="//assets.muniao.comUploadFiles/thumb/image/20170615/2017061542408369.jpg_414_262.jpg"
+                                       data-priceday="580" data-privacy="整租" data-propertytype="公寓"
+                                       data-accommodates="宜住5人" rel="nofollow" title="拨打电话"
+                                       target="_self">拨打电话<span></span></a>
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </#list>
+                        <div class="s_mn_house_images">
+                            <div class="s_mn_house_img">
+                                <a href="https://www.muniao.com/room/75902.html" target="_blank"
+                                   title="${room.roomName}"><img
+                                        onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;"
+                                        src="${staticRoot}/images/${room.lsit[1]}"
+                                        width="414" height="262" alt="${room.roomName}"></a>
+                                <span class="smfy_icon"></span>
+                            </div>
+                            <a href="javascript:void(0)" data-id="75902" class="s_mn_house_like like_icon2 colle_list"
+                               id="favorite_75902">收藏</a>
+                            <div class="list_score">
+                                <div class="score_bg"></div>
+                                <div class="tmc">
+                                    <span>
+                                        4.9
+                                    </span> /评分
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </#list>
             </ul>
             <div class="page_city">
                 <a href="https://www.muniao.com/beijing/" target="_blank">北京短租房</a>-找到相关房源34720个，每页30个结果
