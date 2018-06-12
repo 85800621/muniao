@@ -1192,19 +1192,18 @@
                     <tbody>
                     <tr>
                         <td width="110" height="30" align="right" valign="middle" bgcolor="#f5f5f5">订单编号：</td>
-                        <td width="645" height="30" valign="middle">20180604160044769168</td>
+                        <td width="645" height="30" valign="middle"></td>
                     </tr>
 
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">房间：</td>
                         <td height="30" valign="middle">
-                            <a href="http://www.muniao.com/home/detail?id=132979" class="aBlue" target="_blank">崇文门 天安门
-                                北京站北欧loft（零压房）</a>
+                            <a href="http://www.muniao.com/home/detail?id=132979" class="aBlue" target="_blank">${orderDetail.room.roomName}</a>
                         </td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">预订时间：</td>
-                        <td height="30" valign="middle">2018-06-04 16:00:44</td>
+                        <td height="30" valign="middle">${orderDetail.bookingTime?date}</td>
                     </tr>
 
                     <tr>
@@ -1213,36 +1212,31 @@
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">类型：</td>
-                        <td height="30" valign="middle">
-                            短租
-                        </td>
+                        <td height="30" valign="middle">${orderDetail.room.rentalMethod}</td>
                     </tr>
 
                     <tr>
                         <td height="90" align="right" valign="middle" bgcolor="#f5f5f5"> 退款协议：</td>
                         <td valign="middle">
-                            <p><strong>严格</strong></p>
-                            <p><strong>1、入住前三天12:00之前，如申请退款，订金全额退</strong></p>
-                            <p><strong>2、入住前三天12:00之后至入住当天12:00之前，如申请退款，扣除50%订金</strong></p>
-                            <p><strong>3、入住后如提前退房，扣除已入住天数房款总额，再扣除未入住天数房款总额的50%</strong></p>
-                            <p><strong>4、中午12:00之后默认当天已经入住，申请退款和提前退房时间以木鸟短租系统记录的时间为准。</strong></p><strong>
-                        </strong></td>
+                            <p><strong>${orderDetail.refundRule.ruleType}</strong></p>
+                            <p><strong>${orderDetail.refundRule.ruleContent}</strong></p>
+                        </td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">入住时间：</td>
-                        <td height="30" valign="middle">2018-07-01</td>
+                        <td height="30" valign="middle">${orderDetail.checkInTime?date}</td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">离开时间：</td>
-                        <td height="30" valign="middle">2018-07-02</td>
+                        <td height="30" valign="middle">${orderDetail.departureTime?date}</td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">入住人数：</td>
-                        <td height="30" valign="middle">1人</td>
+                        <td height="30" valign="middle">${orderDetail.checkInPopulation}人</td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">套/间/床位数：</td>
-                        <td height="30" valign="middle">1</td>
+                        <td height="30" valign="middle">${orderDetail.room.roomBedInfo.bedNumber}</td>
                     </tr>
                     <tr>
                         <td height="60" align="right" valign="middle" bgcolor="#f5f5f5">详情房款：</td>
@@ -1276,8 +1270,8 @@
                                     <th>费用</th>
                                 </tr>
                                 <tr>
-                                    <td>王念</td>
-                                    <td>420684199308226030</td>
+                                    <td>${orderDetail.checkInCustomer.customerName}</td>
+                                    <td>${orderDetail.checkInCustomer.customerIDCard}</td>
                                     <td>
                                         验证失败
                                     </td>
@@ -1294,19 +1288,19 @@
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">总房款：</td>
-                        <td height="30" valign="middle">￥688.00</td>
+                        <td height="30" valign="middle">￥${orderDetail.totalPrice}</td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">总订金：</td>
-                        <td height="30" valign="middle">￥688.00</td>
+                        <td height="30" valign="middle">￥${orderDetail.totalDeposit}</td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">实付：</td>
-                        <td height="30" valign="middle">￥688.00</td>
+                        <td height="30" valign="middle">￥${orderDetail.actuallyPaid}</td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">需到店支付：</td>
-                        <td height="30" valign="middle">￥0.00</td>
+                        <td height="30" valign="middle">￥${orderDetail.toShopPayment}</td>
                     </tr>
                     </tbody>
                 </table>

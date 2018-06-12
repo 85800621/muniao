@@ -10,6 +10,17 @@
     <result column="room_longitude" jdbcType="VARCHAR" property="roomLongitude" />
     <result column="room_latitude" jdbcType="VARCHAR" property="roomLatitude" />
     <result column="room_bed_avaliable" jdbcType="VARCHAR" property="bedAvaliable" />
+
+    <result column="room_privince" jdbcType="VARCHAR" property="privince" />
+    <result column="room_area" jdbcType="VARCHAR" property="roomArea" />
+    <result column="street" jdbcType="VARCHAR" property="street" />
+    <result column="build" jdbcType="VARCHAR" property="build" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
+    <result column="door" jdbcType="VARCHAR" property="door" />
+    <result column="maptype" jdbcType="INTEGER" property="maptype" />
+
+
+
     <collection property="roomType" column="room_type_id" select="com.muniao.dao.RoomTypeMapper.selectByTypeId"/>
     <collection property="roomInterval" column="price_interval_id" select="com.muniao.dao.PriceIntervalMapper.selectByIntervalId"/>
     <collection property="roomFeature" column="room_feature_id" select="com.muniao.dao.RoomFeatureMapper.selectByFeatureId"/>

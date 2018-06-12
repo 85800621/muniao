@@ -1060,7 +1060,7 @@
                 </li>
             </ul>
         </div>
-        <form id="form1" action="https://www.muniao.com/Home/doBooking" method="post">
+        <form id="form1" action="testbooking" method="post">
             <!---入住人信息-->
             <div class="order_class w_mT28">
                 <h3 class="order_class_title">
