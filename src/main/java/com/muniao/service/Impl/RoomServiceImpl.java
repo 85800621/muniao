@@ -149,4 +149,9 @@ public class RoomServiceImpl implements RoomService{
         return roomDao.selectRoomById(roomId);
     }
 
+    @Override
+    public List<Room> selectByUserId(int userId) {
+        return roomDao.selectByUserId(userId);
+    }
+
 }
