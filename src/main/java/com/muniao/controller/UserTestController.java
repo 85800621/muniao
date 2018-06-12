@@ -129,5 +129,9 @@ public class UserTestController {
     public String step5(){
         return "/step5";
     }
+    @RequestMapping(value = "/room")
+    public String room(){
+        return  "/room";
+    }
 
 }

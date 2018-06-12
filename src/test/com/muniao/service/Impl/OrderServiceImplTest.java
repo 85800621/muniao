@@ -1,6 +1,7 @@
 package com.muniao.service.Impl;
 
 import com.muniao.entity.CheckInCustomer;
+import com.muniao.entity.Order;
 import com.muniao.entity.OrderDetail;
 import com.muniao.service.OrderDetailService;
 import com.muniao.service.OrderService;
@@ -10,6 +11,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -48,6 +52,35 @@ public class OrderServiceImplTest {
     public void test2(){
         OrderDetail orderDetails=orderDetailService.selectOrderDetail(1);
         System.out.println(orderDetails);
+    }
+
+    @Test
+    public void test3(){
+        Calendar c =Calendar.getInstance();
+        Date d=new Date();
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+        String s=sdf.format(d).toString();
+        System.out.println(s);
+        int a =c.get(Calendar.DAY_OF_WEEK);
+        System.out.println(a);
+        int b =c.get(Calendar.DAY_OF_MONTH);
+        System.out.println(b);
+        c.getTime();
+        System.out.println(sdf.format(c.getTime()));
+        c.set(2018,5,13);
+        int h=c.get(Calendar.DAY_OF_WEEK);
+        System.out.println(h);
+    }
+
+    @Test
+    public void test4(){
+        List <Order> orders = orderService.selectWaitCommitOrders("6", 2);
+        System.out.println(orders);
+        for (Order or:orders
+             ) {
+            or.getOrderStatus();
+            System.out.println(or.getOrderStatus());
+        }
     }
 
 }
