@@ -127,21 +127,32 @@
                     lat: $('#ipt_Lat').val(),
                     maptype: $('#ipt_MapType').val() || 1
                 };
+
+
                 var datastr = JSON.stringify(postData);
-                var url = '/Room/Submit_Step1';
-                $.getJSON(url, { postData: datastr }, function (data) {
-                    var jsonData = JSON.parse(data);
-                    var newroomid = jsonData.roomid
-                    alert(jsonData.message);
-                    if (jsonData.status == 0) {
-                        if (jsonData.roomid > 0) {
-                            location.href = '/Room/Step2/' + newroomid;
-                        } else {
-                            location.href = '/Room/Step2/' + roomid;
-                        }
-                    } else {
-                        tj = true;
-                    }
+                var url = 'Room/Submit_Step1';
+                alert(postData);
+                alert(datastr);
+                alert({postData:datastr})
+//                $.post(url,{'ppData':datastr},function (data) {
+//                    alert("222");
+//                })
+
+                $.getJSON(url,{ postData: datastr }, function (data) {
+
+                    alert("进入方法")
+//                    var jsonData = JSON.parse(data);
+//                    var newroomid = jsonData.roomid
+//                    alert(jsonData.message);
+//                    if (jsonData.status == 0) {
+//                        if (jsonData.roomid > 0) {
+//                            location.href = '/Room/Step2/' + newroomid;
+//                        } else {
+//                            location.href = '/Room/Step2/' + roomid;
+//                        }
+//                    } else {
+//                        tj = true;
+//                    }
                 })
             }
         }
