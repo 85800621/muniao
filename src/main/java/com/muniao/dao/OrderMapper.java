@@ -32,4 +32,8 @@ public interface OrderMapper {
       */
      List<Order> selectSellerOrders(int sellerId);
 
+     void changeOrderStatus(String orderStatus,int orderId);
+
+     List<Order> selectWaitCommitOrders(String type,int buyerId);
+
 }

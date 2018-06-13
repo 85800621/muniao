@@ -30,4 +30,15 @@ public interface OrderService {
      * @Date: 2018/6/8 16:40
      */
     List<Order> selectSellerOrders(int id);
+    /**
+     * @Description:
+     * @Param:  orderId
+     * @return:
+     * @return:
+     * @Author: Scot
+     * @Date: 2018/6/12 10:57
+     */
+    void changeOrderStatus(String orderStatus,int orderId);
+
+    List<Order> selectWaitCommitOrders(String type ,int buyerId);
 }

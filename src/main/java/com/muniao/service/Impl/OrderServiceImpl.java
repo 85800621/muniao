@@ -48,5 +48,23 @@ public class OrderServiceImpl implements OrderService{
         return orderDao.selectSellerOrders(id);
     }
 
+    /**
+     * @Description: 通过订单编号修改订单状态
+     * @Param:  orderId orderStatus
+     * @return:
+     * @Author: Scot
+     * @Date: 2018/6/12 11:01
+     */
+    @Override
+    public void changeOrderStatus(String orderStatus,int orderId) {
+        orderDao.changeOrderStatus(orderStatus,orderId);
+    }
+
+    @Override
+    public List <Order> selectWaitCommitOrders(String type, int buyerId) {
+        List<Order> orders=orderDao.selectWaitCommitOrders("6",2);
+        return orders;
+    }
+
 
 }

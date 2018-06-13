@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0048)http://user2.muniao.com/Order/Index?utp=2&type=8 -->
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>用户中心-木鸟短租</title>
@@ -1416,7 +1416,7 @@
                         <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=2&amp;utp=2">未付款</a></li>
                         <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=3&amp;utp=2">退款</a></li>
                         <!--<li><a href="?act=order&type=4">收取订金</a></li>-->
-                        <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=7&amp;utp=2">等待确认</a></li>
+                        <li><a href="waitcommitorder/2">等待确认</a></li>
                         <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=5&amp;utp=2">取消订单</a></li>
                         <div class="clear"></div>
                     </ul>
@@ -1464,150 +1464,44 @@
                             </td>
                             <td height="205" align="center" valign="middle"
                                 style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"><span
-                                    class="aGreen">${orders.orderStatus}<br></span></td>
+                                    class="aGreen">
+
+                                   <#switch orders.orderStatus>
+                                       <#case "1">
+                                            已完成
+                                            <#break>
+                                       <#case "4-6">
+                                            未付款<br>
+                                            未确认
+                                            <#break>
+                                       <#case "3">
+                                            待入住
+                                            <#break>
+                                       <#case "2-6">
+                                            已付款<br>
+                                            未确认
+                                            <#break>
+                                       <#case "4">
+                                            未付款<br>
+                                            已确认
+                                           <#break>
+                                       <#case "7">
+                                            已取消
+                                            <#break>
+                                   </#switch>
+                                <br></span></td>
                             <td height="205" align="center" valign="middle"
                                 style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"></td>
                             <td width="77" height="205" align="center" valign="middle"
                                 style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
                                 <a href="http://www.muniao.com/home/detail?id=108419" class="aBlue"
                                    target="_blank">再次预订</a><br><br>
+                                <a href="landlordcommit/1/4-6/2" class="aBlue">确认</a><br><br>
                                 <a onclick="orderdelete(&#39;381521&#39;)" class="aBlue">删除订单</a><br><br>
                                 <a href="orderdetail/${orders.orderDetail.orderDetailId}" class="aBlue">详情&gt;&gt;</a>
                                 <br><br>
                             </td>
                             </#list>
-                        </tr>
-                        <tr>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-                                <a href="http://www.muniao.com/home/detail?id=108419" target="_blank"><img
-                                        src="${staticRoot}/images/91b99e01a5194868be377831142e687420170519164942639.jpg_275_173.jpg"
-                                        width="175" height="128" class="myorderimgbg"></a>
-                                <p>房间编号：108419</p>
-                                <p>
-                                    <a href="http://www.muniao.com/home/detail?id=108419" target="_blank" class="aBlue">西海岸
-                                        万科浪琴湾 海边花园别墅3室2厅</a>
-                                </p>
-                            </td>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-                                20180608112357081668
-                            </td>
-                            <td width="151" height="205" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px; padding-top: 0px; padding-bottom: 0px;">
-                                <p>总房款：￥4662.00</p>
-                                <p>总订金：￥4662.00</p>
-                                <p>实付：￥4662.00</p>
-                                <p>需到店支付：￥0.00</p>
-                            </td>
-                            <td width="111" height="205" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px; padding-top: 0px; padding-bottom: 0px;">
-                                <p>入住时间：</p>
-                                <p>2018-06-08</p>
-                                <p>退房时间：</p>
-                                <p>2018-06-15</p>
-                            </td>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"><span
-                                    class="aGreen">房客取消<br></span></td>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"></td>
-                            <td width="77" height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-                                <a href="http://www.muniao.com/home/detail?id=108419" class="aBlue"
-                                   target="_blank">再次预订</a><br><br>
-                                <a onclick="orderdelete(&#39;381521&#39;)" class="aBlue">删除订单</a><br><br>
-                                <a href="http://user2.muniao.com/Order/Detail?orderid=381521&amp;utp=2" class="aBlue">详情&gt;&gt;</a>
-                                <br><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-                                <a href="http://www.muniao.com/home/detail?id=132979" target="_blank"><img
-                                        src="${staticRoot}/images/8ce0038924d54cd1aea8166464bc731e20180521022159041.jpg_275_173.jpg"
-                                        width="175" height="128" class="myorderimgbg"></a>
-                                <p>房间编号：132979</p>
-                                <p>
-                                    <a href="http://www.muniao.com/home/detail?id=132979" target="_blank" class="aBlue">崇文门
-                                        天安门 北京站北欧loft（零压房）</a>
-                                </p>
-                            </td>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-                                20180606172314381235
-                            </td>
-                            <td width="151" height="205" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px; padding-top: 0px; padding-bottom: 0px;">
-                                <p>总房款：￥688.00</p>
-                                <p>总订金：￥688.00</p>
-                                <p>实付：￥688.00</p>
-                                <p>需到店支付：￥0.00</p>
-                            </td>
-                            <td width="111" height="205" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px; padding-top: 0px; padding-bottom: 0px;">
-                                <p>入住时间：</p>
-                                <p>2018-07-01</p>
-                                <p>退房时间：</p>
-                                <p>2018-07-02</p>
-                            </td>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"><span
-                                    class="aGreen">房客取消<br></span></td>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"></td>
-                            <td width="77" height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-                                <a href="http://www.muniao.com/home/detail?id=132979" class="aBlue"
-                                   target="_blank">再次预订</a><br><br>
-                                <a onclick="orderdelete(&#39;380539&#39;)" class="aBlue">删除订单</a><br><br>
-                                <a href="http://user2.muniao.com/Order/Detail?orderid=380539&amp;utp=2" class="aBlue">详情&gt;&gt;</a>
-                                <br><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-                                <a href="http://www.muniao.com/home/detail?id=132979" target="_blank"><img
-                                        src="${staticRoot}/images/8ce0038924d54cd1aea8166464bc731e20180521022159041.jpg_275_173.jpg"
-                                        width="175" height="128" class="myorderimgbg"></a>
-                                <p>房间编号：132979</p>
-                                <p>
-                                    <a href="http://www.muniao.com/home/detail?id=132979" target="_blank" class="aBlue">崇文门
-                                        天安门 北京站北欧loft（零压房）</a>
-                                </p>
-                            </td>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-                                20180604152647112918
-                            </td>
-                            <td width="151" height="205" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px; padding-top: 0px; padding-bottom: 0px;">
-                                <p>总房款：￥2752.00</p>
-                                <p>总订金：￥2752.00</p>
-                                <p>实付：￥2752.00</p>
-                                <p>需到店支付：￥0.00</p>
-                            </td>
-                            <td width="111" height="205" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px; padding-top: 0px; padding-bottom: 0px;">
-                                <p>入住时间：</p>
-                                <p>2018-07-01</p>
-                                <p>退房时间：</p>
-                                <p>2018-07-05</p>
-                            </td>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"><span
-                                    class="aGreen">房客取消<br></span></td>
-                            <td height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"></td>
-                            <td width="77" height="205" align="center" valign="middle"
-                                style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-                                <a href="http://www.muniao.com/home/detail?id=132979" class="aBlue"
-                                   target="_blank">再次预订</a><br><br>
-                                <a onclick="orderdelete(&#39;379432&#39;)" class="aBlue">删除订单</a><br><br>
-                                <a href="http://user2.muniao.com/Order/Detail?orderid=379432&amp;utp=2" class="aBlue">详情&gt;&gt;</a>
-                                <br><br>
-                            </td>
                         </tr>
                         </tbody>
                     </table>
