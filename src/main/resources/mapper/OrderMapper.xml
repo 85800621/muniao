@@ -70,6 +70,23 @@
         and order_buyer_id=#{id};
     </select>
 
+    <update id="changeOrderStatus" >
+        UPDATE
+        tb_order
+        SET
+        order_status=#{arg0}
+        WHERE
+        order_id=#{arg1};
+    </update>
 
+    <select id="selectWaitCommitOrders" resultMap="BaseResultMap">
+
+        select
+        *
+        FROM tb_order tor inner join tb_order_detail tod on tor.order_detail_id=tod.order_detail_id
+        inner join tb_room tro on tod.room_id=tro.room_id
+        inner JOIN tb_checkIn_customer tcc on tod.order_detail_id=tcc.order_detail_id
+        and order_status LIKE '%${arg0}%' and order_buyer_id=#{arg1};
+    </select>
 
 </mapper>
