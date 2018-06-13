@@ -2,13 +2,14 @@
 <!-- saved from url=(0056)https://www.muniao.com/fangdong/363368/?cityname=beijing -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>逅客崇文门天安门前门店预订|价格|点评-木鸟短租</title>
-    <meta name="keywords" content="逅客崇文门天安门前门店预订|价格|点评">
-    <meta name="description" content="逅客崇文门天安门前门店提供短租房预订、价格以及房屋点评信息,以特有的经营方式,打破传统的单一性,引领旅店业发展新潮流">
+    <title>${user.userName}|价格|点评-木鸟短租</title>
+    <meta name="keywords" content="${user.userName}|价格|点评">
+    <meta name="description" content="${user.userName}提供短租房预订、价格以及房屋点评信息,以特有的经营方式,打破传统的单一性,引领旅店业发展新潮流">
     <meta name="viewport" content="width=1400, initial-scale=1">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta property="wb:webmaster" content="xfwy">
     <meta property="qc:admins" content="329429240">
+    <#assign basePath=request.contextPath />
     <link rel="shortcut icon" href="https://assets.muniao.com/assets2/pc/favicon.ico">
     <script charset="utf-8" src="${staticRoot}/images/v.js.下载"></script><script>
         var logocode = '';
@@ -73,7 +74,7 @@
     <ul class="s_mn_nav">
         <li><a href="https://www.muniao.com/">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="https://www.muniao.com/features.html" target="_self">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
@@ -452,8 +453,8 @@
     <div class="s_mn_center">
         <div class="s_mn_navtag">
             <a href="https://www.muniao.com/" title="木鸟短租网">木鸟短租网</a> <span>&nbsp;&gt;&nbsp;</span>
-            <a href="https://www.muniao.com/beijing/">北京短租公寓</a> <span>&nbsp;&gt;&nbsp;</span>
-            <h1 class="ts_name"><a href="javascript:void(0);">逅客崇文门天安门前门店</a></h1>
+            <a href="https://www.muniao.com/beijing/">${rooms[1].roomLocation}短租公寓</a> <span>&nbsp;&gt;&nbsp;</span>
+            <h1 class="ts_name"><a href="javascript:void(0);">${user.userName}</a></h1>
         </div>
     </div>
 </div>
@@ -466,7 +467,7 @@
             </div>
             <div class="w_landlord_leftp">
                 <div class="w_landlord_head">
-                    <img src="${staticRoot}/images/7fc93e87a9334a339509b3ff0e6ec09b20180525163701649.jpg_150_150.jpg">
+                    <img src="${staticRoot}/images/${user.picture}">
                     <style>
                         .w_landlord_head { position: relative; }
 
@@ -492,7 +493,7 @@
                     <!--芝麻信用-->
                 </div>
                 <div class="w_landlord_name">
-                    <div class="mylable2">逅客崇文门天安门前门店</div>
+                    <div class="mylable2">${user.userName}</div>
                 </div>
                 <div class="w_landlord_icon">
                     <a class="w_landlord_icon1"></a>
@@ -521,7 +522,7 @@
     <!--left end-->
     <div class="w_landlord_right">
         <div class="w_landlord_show" style="border:0;border-radius:4px;padding-left:20px;width:auto;">
-            <span style="color:orange;font-size:20px;font-weight:bolder;">Hi,</span>我是逅客崇文门天安门前门店！
+            <span style="color:orange;font-size:20px;font-weight:bolder;">Hi,</span>${user.userName}！
         </div>
         <div class="w_landlord_bottom">
             <div id="tabsbg">
@@ -531,111 +532,31 @@
                 </ul>
             </div>
             <div id="panes">
+                <!-- 房间信息 -->
                 <div id="div_1" style="">
-                    <div class="w_house" data-id="127683">
+                    <#list rooms as room>
+                    <div class="w_house" data-id="${room.roomId}">
                         <div class="w_house_img">
-                            <a href="https://www.muniao.com/room/127683.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/634d15bfb5b54dfbb191206f0fbfc4d620180521021352915.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="崇文门 天安门 北京站美式loft"></a>
-                            <span class="s_mn_housing_price w_house_price">￥567</span>
+                            <a href="${basePath}/room/${room.roomId}" target="_blank">
+                                <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/634d15bfb5b54dfbb191206f0fbfc4d620180521021352915.jpg_414_262.jpg" alt="${user.userName}" title="${room.roomName}"></a>
+                            <span class="s_mn_housing_price w_house_price">￥${room.roomPrice}</span>
                         </div>
-                        <div class="w_house_title"><a target="_blank" title="崇文门 天安门 北京站美式loft" href="https://www.muniao.com/room/127683.html">崇文门 天安门 北京站美式loft</a></div>
+                        <div class="w_house_title"><a target="_blank" title="${room.roomName}" href="${basePath}/room/${room.roomId}">${room.roomName}</a></div>
                         <div class="s_mn_housing_information">
-                            <span>2室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住4人</span><span>&nbsp;|&nbsp;</span><span>近期预订5晚</span>
+                            <span>${room.roomStructure.bedroomNum}室</span><span>&nbsp;|&nbsp;</span><span>${room.rentalMethod.method}</span><span>|&nbsp;</span><span>宜住${room.avaliableArea.standPop}人</span><span>&nbsp;|&nbsp;</span><span>近期预订5晚</span>
                         </div>
                         <div class="w_house_map">
-                            <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.432673,39.902573,&#39;崇文门 天安门 北京站美式loft&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
+                            <div class="w_house_map_wz">地址：${room.street}</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(${room.roomLongitude},${room.roomLatitude},&#39;${room.roomName}&#39;,&#39;${room.street}&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
                         </div>
                         <div class="w_house_interactive">
                             <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">4.9</div>
                             <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">11</div>
                             <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">29</div>
                         </div>
-                    </div>                            <div class="w_house" data-id="132975">
-                    <div class="w_house_img">
-                        <a href="https://www.muniao.com/room/132975.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/0862825091d64582a271cc25bf368abf20180521021744380.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="崇文门 天安门 北京站北欧一居"></a>
-                        <span class="s_mn_housing_price w_house_price">￥528</span>
                     </div>
-                    <div class="w_house_title"><a target="_blank" title="崇文门 天安门 北京站北欧一居" href="https://www.muniao.com/room/132975.html">崇文门 天安门 北京站北欧一居</a></div>
-                    <div class="s_mn_housing_information">
-                        <span>1室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住4人</span><span>&nbsp;|&nbsp;</span><span>近期预订0晚</span>
-                    </div>
-                    <div class="w_house_map">
-                        <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.430785,39.901501,&#39;崇文门 天安门 北京站北欧一居&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
-                    </div>
-                    <div class="w_house_interactive">
-                        <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">5.0</div>
-                        <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">7</div>
-                        <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">17</div>
-                    </div>
-                </div>                            <div class="w_house" data-id="132979">
-                    <div class="w_house_img">
-                        <a href="https://www.muniao.com/room/132979.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/8ce0038924d54cd1aea8166464bc731e20180521022159041.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="崇文门 天安门 北京站北欧loft（零压房）"></a>
-                        <span class="s_mn_housing_price w_house_price">￥599</span>
-                    </div>
-                    <div class="w_house_title"><a target="_blank" title="崇文门 天安门 北京站北欧loft（零压房）" href="https://www.muniao.com/room/132979.html">崇文门 天安门 北京站北欧loft（零压房）</a></div>
-                    <div class="s_mn_housing_information">
-                        <span>2室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住4人</span><span>&nbsp;|&nbsp;</span><span>近期预订4晚</span>
-                    </div>
-                    <div class="w_house_map">
-                        <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.430926,39.901161,&#39;崇文门 天安门 北京站北欧loft（零压房）&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
-                    </div>
-                    <div class="w_house_interactive">
-                        <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">5.0</div>
-                        <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">11</div>
-                        <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">12</div>
-                    </div>
-                </div>                            <div class="w_house" data-id="135157">
-                    <div class="w_house_img">
-                        <a href="https://www.muniao.com/room/135157.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2d7cc5268c6b466485f40dafa14e40a820180525180857080.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="崇文门 北京站 天安门近地铁现代简约一居室"></a>
-                        <span class="s_mn_housing_price w_house_price">￥550</span>
-                    </div>
-                    <div class="w_house_title"><a target="_blank" title="崇文门 北京站 天安门近地铁现代简约一居室" href="https://www.muniao.com/room/135157.html">崇文门 北京站 天安门近地铁现代简约一居室</a></div>
-                    <div class="s_mn_housing_information">
-                        <span>1室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住4人</span><span>&nbsp;|&nbsp;</span><span>近期预订0晚</span>
-                    </div>
-                    <div class="w_house_map">
-                        <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.430926,39.901161,&#39;崇文门 北京站 天安门近地铁现代简约一居室&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
-                    </div>
-                    <div class="w_house_interactive">
-                        <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">5.0</div>
-                        <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">12</div>
-                        <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">18</div>
-                    </div>
-                </div>                            <div class="w_house" data-id="140775">
-                    <div class="w_house_img">
-                        <a href="https://www.muniao.com/room/140775.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2c7cee8fb3bb4396945ea1a8353b0dd120180521022807237.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="北京站 天安门 近地铁 阳光温馨大床房（可长租）"></a>
-                        <span class="s_mn_housing_price w_house_price">￥300</span>
-                    </div>
-                    <div class="w_house_title"><a target="_blank" title="北京站 天安门 近地铁 阳光温馨大床房（可长租）" href="https://www.muniao.com/room/140775.html">北京站 天安门 近地铁 阳光温馨大床房（可长租）</a></div>
-                    <div class="s_mn_housing_information">
-                        <span>1室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住2人</span><span>&nbsp;|&nbsp;</span><span>近期预订0晚</span>
-                    </div>
-                    <div class="w_house_map">
-                        <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.430926,39.901161,&#39;北京站 天安门 近地铁 阳光温馨大床房（可长租）&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
-                    </div>
-                    <div class="w_house_interactive">
-                        <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">5.0</div>
-                        <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">8</div>
-                        <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">8</div>
-                    </div>
-                </div>                            <div class="w_house" data-id="146457">
-                    <div class="w_house_img">
-                        <a href="https://www.muniao.com/room/146457.html" target="_blank"><img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/c5d20266fe7142e8a9dc92b8f2aaab2620180521023338377.jpg_414_262.jpg" alt="逅客崇文门天安门前门店" title="崇文门 天安门北京站近地铁复古一居室"></a>
-                        <span class="s_mn_housing_price w_house_price">￥538</span>
-                    </div>
-                    <div class="w_house_title"><a target="_blank" title="崇文门 天安门北京站近地铁复古一居室" href="https://www.muniao.com/room/146457.html">崇文门 天安门北京站近地铁复古一居室</a></div>
-                    <div class="s_mn_housing_information">
-                        <span>1室</span><span>&nbsp;|&nbsp;</span><span>整租</span><span>|&nbsp;</span><span>宜住4人</span><span>&nbsp;|&nbsp;</span><span>近期预订0晚</span>
-                    </div>
-                    <div class="w_house_map">
-                        <div class="w_house_map_wz">地址：西花市大街</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(116.430785,39.901501,&#39;崇文门 天安门北京站近地铁复古一居室&#39;,&#39;西花市大街&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
-                    </div>
-                    <div class="w_house_interactive">
-                        <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">5.0</div>
-                        <div class="w_house_interactive_icon w_house_interactive_icon2"></div><div class="w_house_interactive_text">图片</div><div class="w_house_interactive_number">8</div>
-                        <div class="w_house_interactive_icon w_house_interactive_icon3"></div><div class="w_house_interactive_text">评论</div><div class="w_house_interactive_number">3</div>
-                    </div>
+                    </#list>
                 </div>
-                </div>
+                <!-- 评论 -->
                 <div id="div_2" style="display:none">
                     <div class="w_landlord_appraisal" style="padding:0;">
                         <div class="w_appraisal" style="padding:0;">
