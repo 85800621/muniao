@@ -88,4 +88,10 @@ public interface RoomService {
      * 按房间id查询房间具体信息
      */
     Room selectRoomById(int roomId);
+
+
+    /**
+     * 按用户id查询拥有房间
+     */
+    List<Room> selectByUserId(int userId);
 }

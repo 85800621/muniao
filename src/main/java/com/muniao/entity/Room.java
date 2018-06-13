@@ -119,6 +119,18 @@ public class Room {
      * 是否可以增加床位.
      */
     private String bedAvaliable;
+    /**
+     * 房源描述
+     */
+    private String roomDescribe;
+    /**
+     *房源周边
+     */
+    private String roomAmbitus;
+    /**
+     * 乘车路线
+     */
+    private String roomRoute;
 
     /**
      * 房间图片
@@ -347,5 +359,30 @@ public class Room {
 
     public void setMapType(int mapType) {
         this.mapType = mapType;
+    }
+
+
+    public String getRoomDescribe() {
+        return roomDescribe;
+    }
+
+    public void setRoomDescribe(String roomDescribe) {
+        this.roomDescribe = roomDescribe;
+    }
+
+    public String getRoomAmbitus() {
+        return roomAmbitus;
+    }
+
+    public void setRoomAmbitus(String roomAmbitus) {
+        this.roomAmbitus = roomAmbitus;
+    }
+
+    public String getRoomRoute() {
+        return roomRoute;
+    }
+
+    public void setRoomRoute(String roomRoute) {
+        this.roomRoute = roomRoute;
     }
 }

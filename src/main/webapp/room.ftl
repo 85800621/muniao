@@ -3226,7 +3226,7 @@
                 <div class="room_Rbottom">
                     <div class="room_Rfd">
                         <div class="room_Rfdimg w_fLeft">
-                            <a href="http://www.muniao.com/fangdong/363368/" title="${room.roomName}" target="_blank"><img
+                            <a href="" title="${room.roomName}" target="_blank"><img
                                     onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;"
                                     src="${staticRoot}/images/${room.landlord.picture}"></a>
                         </div>
@@ -3272,7 +3272,7 @@
         <div id="room_nrbox" class="room_nrbox">
             <div class="room_maintt f16">关于此房源</div>
             <div class="room_mainnr room_text f14 room_Disc_fyms" style="text-indent:2em;">
-                房间位于市中心交通便利，出差旅行首选！北欧风格LOFT，有可以俯瞰整个城市夜晚的大阳台，休息之余在阳台小酌一杯！更多温馨的家庭设施需要期待您亲自来体验喽！
+                 ${room.roomDescribe}
             </div>
             <div class="room_tip f14">
                 想进一步了解？
@@ -3384,28 +3384,26 @@
         <div id="room_near" class="room_nrbox">
             <div class="room_maintt f16">周边设施</div>
             <div class="room_mainnr room_text f14" style="text-indent:2em;">
-                周边景区：明长城遗址公园、王府井、天安门、前门、故宫、天坛、南锣鼓巷、三里屯等景均很近。 周边医院：同仁医院、北京医院、协和医院、医疗资源发达。
-                休闲娱乐：紧邻两个商场“新世界百货”“国瑞城购物中心”里面吃喝玩乐应有尽有。
+                ${room.roomAmbitus}
             </div>
         </div>
         <div id="room_near" class="room_nrbox">
             <div class="room_maintt f16">乘车路线</div>
             <div class="room_mainnr room_text f14" style="text-indent:2em;">
-                榕树公馆位于“崇文门”北京的黄金地段：二环。 步行同仁医院10分钟 步行到北京火车站15分钟 打车到北京首都国际机场35分钟 4X公馆紧邻地铁，步行到地铁5分钟
-                4X公馆地处北京2号线、5号线、7号线三条线交汇处 4X公馆楼下停车费：0.5元/小时。
+                ${room.roomRoute}
             </div>
         </div>
         <div class="room-mapPosition" id="room_map">
             <div class="room_maintt f16">房源地址</div>
             <div class="room-positionDetail">
-                <span class="room-addressT">北京-东城区-西花市大街-新景家园东区</span>
+                <span class="room-addressT">${room.roomLocation}-${room.roomArea}-${room.street}-${room.unit}</span>
                 <span class="go-roomAddress">房屋位置</span>
                 <span class="room-addInfo">确认预订后提供详细位置</span>
             </div>
         </div>
 
         <div class="room_map">
-            <div id="roommap" name="北京-东城区-西花市大街-新景家园东区" lng="${room.roomLongitude}" lat="${room.roomLatitude}" address="北京-东城区-西花市大街-新景家园东区"
+            <div id="roommap" name="${room.roomName}" lng="${room.roomLongitude}" lat="${room.roomLatitude}" address="北京-东城区-西花市大街-新景家园东区"
                  style="overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left;">
                 <div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: url(&quot;https://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default;">
                     <div class="BMap_mask"

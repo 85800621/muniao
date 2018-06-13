@@ -3,9 +3,11 @@ package com.muniao.controller;
 import com.muniao.entity.Room;
 import com.muniao.entity.RoomFeature;
 import com.muniao.entity.RoomImage;
+import com.muniao.entity.User;
 import com.muniao.service.RoomFeatureService;
 import com.muniao.service.RoomImgService;
 import com.muniao.service.RoomService;
+import com.muniao.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +26,7 @@ public class RoomController {
     @Resource private RoomFeatureService roomFeatureService;
     @Resource private RoomService roomService;
     @Resource private RoomImgService roomImgService;
+    @Resource private UserService userService;
 
     @RequestMapping(value = "features/{featureId}/{currentPage}")
     public String list(@PathVariable("featureId")int featureId,@PathVariable("currentPage")int currentPage,Model model){
@@ -107,6 +110,11 @@ public class RoomController {
                                 , @PathVariable("priceId")int priceId
                                 , @PathVariable("methodId")int methodId
                                 , @PathVariable("structureId")int structureId){
+        int typ = typeId;int pri=priceId;int met = methodId;int str = structureId;
+        model.addAttribute("typ",typ);
+        model.addAttribute("pri",pri);
+        model.addAttribute("met",met);
+        model.addAttribute("str",str);
         List<Room> roomList = roomService.selectByCityTitle(roomLocation,currentPage,typeId,priceId,methodId,structureId);
         for (Room room : roomList) {
             List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomId());
@@ -136,5 +144,14 @@ public class RoomController {
         List<RoomImage> images = roomImgService.selectAllByRoomId(roomId);
         model.addAttribute("images",images);
         return "/room";
+    }
+
+    @RequestMapping("landlordrooms/{userId}")
+    public String findRoomByUserID(@PathVariable("userId")int userId,Model model){
+        List<Room> rooms = roomService.selectByUserId(userId);
+        model.addAttribute("rooms",rooms);
+        User user = userService.selectByUserId(userId);
+        model.addAttribute("user",user);
+        return "/landlordrooms";
     }
 }
