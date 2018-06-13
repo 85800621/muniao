@@ -65,12 +65,12 @@
     <result column="srv_wei_sheng" jdbcType="INTEGER" property="srv_wei_sheng" />
 
 
-    <collection column="room_type_id" property="house_type"  select="com.muniao.dao.RoomTypeMapper.selectByTypeId"/>
-    <collection column="price_interval_id"  property="price_interval_id" select="com.muniao.dao.PriceIntervalMapper.selectByIntervalId"/>
-    <collection column="room_feature_id" property="room_feature_id" select="com.muniao.dao.RoomFeatureMapper.selectByFeatureId"/>
-    <collection column="refund_rule_id" property="refund_type"  select="com.muniao.dao.RefundRuleMapper.selectByRuleId"/>
-    <collection column="user_id" property="user_id"  select="com.muniao.dao.UserMapper.selectByUserId"/>
-    <collection column="room_method_id" property="rent_type"  select="com.muniao.dao.RentalMethodMapper.selectByMethodId"/>
+    <collection column="room_type_id" property="roomType"  select="com.muniao.dao.RoomTypeMapper.selectByTypeId"/>
+    <collection column="price_interval_id"  property="priceInterval" select="com.muniao.dao.PriceIntervalMapper.selectByIntervalId"/>
+    <collection column="room_feature_id" property="roomFeature" select="com.muniao.dao.RoomFeatureMapper.selectByFeatureId"/>
+    <collection column="refund_rule_id" property="refundRule"  select="com.muniao.dao.RefundRuleMapper.selectByRuleId"/>
+    <collection column="user_id" property="user"  select="com.muniao.dao.UserMapper.selectByUserId"/>
+    <collection column="room_method_id" property="rentalMethod"  select="com.muniao.dao.RentalMethodMapper.selectByMethodId"/>
   </resultMap>
 
   <sql id="Base_Column_List">
