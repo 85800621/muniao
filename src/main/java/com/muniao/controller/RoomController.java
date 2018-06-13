@@ -110,6 +110,11 @@ public class RoomController {
                                 , @PathVariable("priceId")int priceId
                                 , @PathVariable("methodId")int methodId
                                 , @PathVariable("structureId")int structureId){
+        int typ = typeId;int pri=priceId;int met = methodId;int str = structureId;
+        model.addAttribute("typ",typ);
+        model.addAttribute("pri",pri);
+        model.addAttribute("met",met);
+        model.addAttribute("str",str);
         List<Room> roomList = roomService.selectByCityTitle(roomLocation,currentPage,typeId,priceId,methodId,structureId);
         for (Room room : roomList) {
             List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomId());
