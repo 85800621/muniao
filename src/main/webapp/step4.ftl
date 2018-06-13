@@ -88,7 +88,7 @@
                     charge: chargeObj
                 };
                 var datastr = JSON.stringify(postData);
-                var url = '/Room/Submit_Step4';
+                var url = 'Room/Submit_Step4';
                 $.getJSON(url, { postData: datastr }, function (data) {
                     var jsonData = JSON.parse(data);
                     if (jsonData.status == 0) {

@@ -134,7 +134,7 @@
                     image: arr,
                 };
                 var datastr = JSON.stringify(postData);
-                var url = '/Room/Submit_Step5';
+                var url = 'Room/Submit_Step5';
                 $.post(url, { postData: datastr }, function (data) {
                     var jsonData = JSON.parse(data);
                     alert(jsonData.message);

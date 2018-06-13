@@ -138,21 +138,24 @@
 //                    alert("222");
 //                })
 
-                $.getJSON(url,{ postData: datastr }, function (data) {
-
-                    alert("进入方法")
+                $.getJSON(url,{postData:datastr},function (data) {
+                    alert("进入方法");
+                    alert(data);
 //                    var jsonData = JSON.parse(data);
-//                    var newroomid = jsonData.roomid
-//                    alert(jsonData.message);
-//                    if (jsonData.status == 0) {
-//                        if (jsonData.roomid > 0) {
-//                            location.href = '/Room/Step2/' + newroomid;
-//                        } else {
-//                            location.href = '/Room/Step2/' + roomid;
-//                        }
-//                    } else {
-//                        tj = true;
-//                    }
+                    var jsonData = data;
+                    alert(jsonData.status);
+                    var newroomid = jsonData.roomid
+                    alert(newroomid);
+                    alert(jsonData.message);
+                    if (jsonData.status == 0) {
+                        if (jsonData.roomid > 0) {
+                            location.href = '/Room/Step2/' + newroomid;
+                        } else {
+                            location.href = '/Room/Step2/' + roomid;
+                        }
+                    } else {
+                        tj = true;
+                    }
                 })
             }
         }
