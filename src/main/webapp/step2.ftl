@@ -1006,11 +1006,12 @@
             };
             var datastr = JSON.stringify(postData);
             //提交
-            $.post("/room/Submit_Step2", {
+            $.post("Room/Submit_Step2", {
                 postData: datastr,
                 JsonParams: getBedList(),
                 roomid: 203026
             }, function (data) {
+                alert("进入方法");
                 var jsonData = JSON.parse(data);
                 if (jsonData.status == 0) {
                     window.location.href = "/room/Step3/203026";
