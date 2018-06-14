@@ -40,5 +40,13 @@ public interface OrderService {
      */
     void changeOrderStatus(String orderStatus,int orderId);
 
+    /**
+     * 查找所有待确认的订单
+     * @param type
+     * @param buyerId
+     * @return
+     */
     List<Order> selectWaitCommitOrders(String type ,int buyerId);
+
+    List<Order> selectAllOrders(int currentUserId);
 }

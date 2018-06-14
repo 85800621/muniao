@@ -1413,10 +1413,10 @@
                         <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=8&amp;utp=2">全部订单</a></li>
                         <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=1&amp;utp=2">已付款</a></li>
                         <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=6&amp;utp=2">待入住</a></li>
-                        <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=2&amp;utp=2">未付款</a></li>
+                        <li><a href="waitcommitorder/4/2">未付款</a></li>
                         <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=3&amp;utp=2">退款</a></li>
                         <!--<li><a href="?act=order&type=4">收取订金</a></li>-->
-                        <li><a href="waitcommitorder/2">等待确认</a></li>
+                        <li><a href="waitcommitorder/6/2">等待确认</a></li>
                         <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=5&amp;utp=2">取消订单</a></li>
                         <div class="clear"></div>
                     </ul>
@@ -1438,9 +1438,9 @@
                                 <a href="http://www.muniao.com/home/detail?id=108419" target="_blank"><img
                                         src="${staticRoot}/images/91b99e01a5194868be377831142e687420170519164942639.jpg_275_173.jpg"
                                         width="175" height="128" class="myorderimgbg"></a>
-                                <p>房间编号：${orders.orderDetail.room.roomId}</p>
+                                <p>房间编号：${orders.orderDetail.room.roomid}</p>
                                 <p>
-                                    <a href="http://www.muniao.com/home/detail?id=108419" target="_blank" class="aBlue">${orders.orderDetail.room.roomName}
+                                    <a href="http://www.muniao.com/home/detail?id=108419" target="_blank" class="aBlue">${orders.orderDetail.room.title}
                                        </a>
                                 </p>
                             </td>
@@ -1494,9 +1494,19 @@
                                 style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"></td>
                             <td width="77" height="205" align="center" valign="middle"
                                 style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
+                            <#if orders.orderBuyerId == currentUserId>
+                                <#if orders.orderStatus?contains("4")>
+                                    <a href="payment/test/${orders.orderDetail.room.title}/${orders.orderId}"
+                                            class="aBlue" >付款</a><br><br>
+                                </#if>
+                            </#if>
                                 <a href="http://www.muniao.com/home/detail?id=108419" class="aBlue"
                                    target="_blank">再次预订</a><br><br>
+                            <#if orders.orderSellerId== currentUserId>
+                                <#if orders.orderStatus?contains("6")>
                                 <a href="landlordcommit/1/4-6/2" class="aBlue">确认</a><br><br>
+                                </#if>
+                            </#if>
                                 <a onclick="orderdelete(&#39;381521&#39;)" class="aBlue">删除订单</a><br><br>
                                 <a href="orderdetail/${orders.orderDetail.orderDetailId}" class="aBlue">详情&gt;&gt;</a>
                                 <br><br>

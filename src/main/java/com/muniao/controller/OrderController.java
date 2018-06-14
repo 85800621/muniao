@@ -6,6 +6,7 @@ import com.muniao.service.OrderService;
 import jdk.net.SocketFlow;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,13 +35,13 @@ public class OrderController {
      * @Author: Scot
      * @Date: 2018/6/12 15:21
      */
-    @RequestMapping(value = "lodgerorder/{buyerId}")
-    public String selectBuyerOrders(@PathVariable("buyerId")int id ,Model model){
-        List <com.muniao.entity.Order> orders=orderService.selectBuyerOrders(id);
-        model.addAttribute("orders",orders);
-
-        return "/lodgerorder";
-    }
+//    @RequestMapping(value = "lodgerorder/{buyerId}")
+//    public String selectBuyerOrders(@PathVariable("buyerId")int id ,Model model){
+//        List <com.muniao.entity.Order> orders=orderService.selectBuyerOrders(id);
+//        model.addAttribute("orders",orders);
+//
+//        return "/lodgerorder";
+//    }
     /**
      * @Description: 通过订单编号查询订单详情
      * @Param:  orderId model
@@ -57,35 +58,49 @@ public class OrderController {
 
     /**
      * 订单状态:
-     * 1 完成
+     * 1 全部
      * 2 已付款
      * 3 待入住
      * 4 未付款
      * 5 退款
      * 6 等待确认
      * 7 已取消订单
+     * 8 完成
      * */
     @RequestMapping(value = "landlordcommit/{orderId}/{orderStatus}/{buyerId}")
     public String commitOrder(@PathVariable("orderId")int orderId,
                               @PathVariable("orderStatus")String orderStatus,
                               @PathVariable("buyerId")int buyerId){
+        if(orderStatus.equals("4-6")) {
 
-        orderStatus=orderStatus.substring(0,1);
-        orderService.changeOrderStatus(orderStatus,orderId);
+            orderService.changeOrderStatus("4", orderId);
+        }else if(orderStatus.equals("2-6")){
+            orderService.changeOrderStatus("3",orderId);
+        }else if(orderStatus.equals("5-6")){
+            orderService.changeOrderStatus("7",orderId);
+        }
         return "/lodegerorder";
     }
         /**
-         * @Description: 通过买家id 查询未完成订单
+         * @Description: 通过用户id 查询未完成订单
          * @Param:  buyerId model
          * @return:  String
          * @Author: Scot
          * @Date: 2018/6/12 15:24
          */
-    @RequestMapping(value = "waitcommitorder/{buyerId}")
-    public String waitCommitOrder(@PathVariable("buyerId")int buyerId , Model model){
-        List<com.muniao.entity.Order> orders=orderService.selectWaitCommitOrders("6",buyerId);
+    @RequestMapping(value = "waitcommitorder/{type}/{buyerId}")
+    public String waitCommitOrder(@PathVariable("type")String type,@PathVariable("buyerId")int buyerId , Model model){
+        List<com.muniao.entity.Order> orders=orderService.selectWaitCommitOrders(type,buyerId);
         model.addAttribute("orders",orders);
         System.out.println(orders);
+
+        return "/lodgerorder";
+    }
+
+    @RequestMapping(value = "lodgerorder/{currentUserId}")
+    public String selectAllOrders(@PathVariable("currentUserId")int id ,Model model){
+        List <com.muniao.entity.Order> orders=orderService.selectAllOrders(id);
+        model.addAttribute("orders",orders);
 
         return "/lodgerorder";
     }
