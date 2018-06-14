@@ -1,13 +1,7 @@
 package com.muniao.controller;
 
-import com.muniao.entity.Room;
-import com.muniao.entity.RoomFeature;
-import com.muniao.entity.RoomImage;
-import com.muniao.entity.User;
-import com.muniao.service.RoomFeatureService;
-import com.muniao.service.RoomImgService;
-import com.muniao.service.RoomService;
-import com.muniao.service.UserService;
+import com.muniao.entity.*;
+import com.muniao.service.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -81,6 +75,7 @@ public class RoomController {
     @RequestMapping(value = "city/{roomLocation}/{currentPage}")
     public String findByCity(@PathVariable("roomLocation")String roomLocation,
                              @PathVariable("currentPage")int currentPage,Model model){
+        model.addAttribute("currentPage",currentPage);
         List<Room> roomList = roomService.findByCityName(roomLocation,currentPage);
         for (Room room : roomList) {
             List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
@@ -88,17 +83,20 @@ public class RoomController {
         }
         model.addAttribute("roomList",roomList);
         //房间类型
-        List<Room> roomTypes  = roomService.selectRoomType(roomLocation,currentPage);
+        List<Room> roomTypes  = roomService.selectRoomType(roomLocation);
         model.addAttribute("roomTypes",roomTypes);
         //价格区间
-        List<Room> roomIntervals = roomService.selectRoomInterval(roomLocation,currentPage);
+        List<Room> roomIntervals = roomService.selectRoomInterval(roomLocation);
         model.addAttribute("roomIntervals",roomIntervals);
         //出租类型
-        List<Room> roomMethods = roomService.selectRoomMethod(roomLocation,currentPage);
+        List<Room> roomMethods = roomService.selectRoomMethod(roomLocation);
         model.addAttribute("roomMethods",roomMethods);
         //户型
-        List<Room> roomStructuress = roomService.selectRoomStructure(roomLocation,currentPage);
+        List<Room> roomStructuress = roomService.selectRoomStructure(roomLocation);
         model.addAttribute("roomStructures",roomStructuress);
+        //房间数量
+        int number = roomService.selectCountRooms(roomLocation);
+        model.addAttribute("number",number);
         return "/city";
     }
 
@@ -109,11 +107,11 @@ public class RoomController {
                                 , @PathVariable("priceId")int priceId
                                 , @PathVariable("methodId")int methodId
                                 , @PathVariable("structureId")int structureId){
-        int typ = typeId;int pri=priceId;int met = methodId;int str = structureId;
-        model.addAttribute("typ",typ);
-        model.addAttribute("pri",pri);
-        model.addAttribute("met",met);
-        model.addAttribute("str",str);
+        model.addAttribute("typeId",typeId);
+        model.addAttribute("priceId",priceId);
+        model.addAttribute("methodId",methodId);
+        model.addAttribute("structureId",structureId);
+        model.addAttribute("roomLocation",roomLocation);
         List<Room> roomList = roomService.selectByCityTitle(roomLocation,currentPage,typeId,priceId,methodId,structureId);
         for (Room room : roomList) {
             List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
@@ -121,19 +119,30 @@ public class RoomController {
         }
         model.addAttribute("roomList",roomList);
         //房间类型
-        List<Room> roomTypes  = roomService.selectRoomType(roomLocation,currentPage);
+        List<Room> roomTypes  = roomService.selectRoomType(roomLocation);
         model.addAttribute("roomTypes",roomTypes);
         //价格区间
-        List<Room> roomIntervals = roomService.selectRoomInterval(roomLocation,currentPage);
+        List<Room> roomIntervals = roomService.selectRoomInterval(roomLocation);
         model.addAttribute("roomIntervals",roomIntervals);
         //出租类型
-        List<Room> roomMethods = roomService.selectRoomMethod(roomLocation,currentPage);
+        List<Room> roomMethods = roomService.selectRoomMethod(roomLocation);
         model.addAttribute("roomMethods",roomMethods);
         //户型
-        List<Room> roomStructures = roomService.selectRoomStructure(roomLocation,currentPage);
+        List<Room> roomStructures = roomService.selectRoomStructure(roomLocation);
         model.addAttribute("roomStructures",roomStructures);
+        //房间数量
+        int number = roomService.selectCountRooms(roomLocation);
+        model.addAttribute("number",number);
         return "/cityTitle";
     }
+
+
+
+
+
+
+
+
 
 
     @RequestMapping("room/{roomId}")

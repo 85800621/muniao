@@ -43,6 +43,12 @@ public interface RoomMapper {
     Integer CountFeatureList(int featureId);
    // Integer selectCountRoom(int featureId);
 
+
+    /**
+     *按城市查出所有的房间
+     */
+    Integer selectCountRooms(@Param("roomLocation")String roomLocation);
+
     /**
      * 查询相同特色所有房间数
      * @param featureId
@@ -60,21 +66,21 @@ public interface RoomMapper {
     /**
      * 查出房间地方类型
      */
-     List<Room> selectRoomType(@Param("roomLocation")String roomLocation,@Param("startPage")int startPage,@Param("endPage")int endPage);
+     List<Room> selectRoomType(@Param("roomLocation")String roomLocation);
     /**
      * 查出房间地方价格区间
      */
-    List<Room> selectRoomInterval(@Param("roomLocation")String roomLocation,@Param("startPage")int startPage,@Param("endPage")int endPage);
+    List<Room> selectRoomInterval(@Param("roomLocation")String roomLocation);
 
     /**
      * 查出所有房间出租方式
      */
-    List<Room> selectRoomMethod(@Param("roomLocation")String roomLocation,@Param("startPage")int startPage,@Param("endPage")int endPage);
+    List<Room> selectRoomMethod(@Param("roomLocation")String roomLocation);
 
     /**
      * 查出所有查出房间户型
      */
-    List<Room> selectRoomStructure(@Param("roomLocation")String roomLocation,@Param("startPage")int startPage,@Param("endPage")int endPage);
+    List<Room> selectRoomStructure(@Param("roomLocation")String roomLocation);
 
 
     /**

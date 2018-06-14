@@ -453,7 +453,7 @@
     <div class="s_mn_center">
         <div class="s_mn_navtag">
             <a href="https://www.muniao.com/" title="木鸟短租网">木鸟短租网</a> <span>&nbsp;&gt;&nbsp;</span>
-            <a href="https://www.muniao.com/beijing/">${rooms[1].roomLocation}短租公寓</a> <span>&nbsp;&gt;&nbsp;</span>
+            <a href="https://www.muniao.com/beijing/">${rooms[1].city}短租公寓</a> <span>&nbsp;&gt;&nbsp;</span>
             <h1 class="ts_name"><a href="javascript:void(0);">${user.userName}</a></h1>
         </div>
     </div>
@@ -535,18 +535,18 @@
                 <!-- 房间信息 -->
                 <div id="div_1" style="">
                     <#list rooms as room>
-                    <div class="w_house" data-id="${room.roomId}">
+                    <div class="w_house" data-id="${room.roomid}">
                         <div class="w_house_img">
-                            <a href="${basePath}/room/${room.roomId}" target="_blank">
+                            <a href="${basePath}/room/${room.roomid}" target="_blank">
                                 <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/634d15bfb5b54dfbb191206f0fbfc4d620180521021352915.jpg_414_262.jpg" alt="${user.userName}" title="${room.roomName}"></a>
-                            <span class="s_mn_housing_price w_house_price">￥${room.roomPrice}</span>
+                            <span class="s_mn_housing_price w_house_price">￥${room.price}</span>
                         </div>
-                        <div class="w_house_title"><a target="_blank" title="${room.roomName}" href="${basePath}/room/${room.roomId}">${room.roomName}</a></div>
+                        <div class="w_house_title"><a target="_blank" title="${room.title}" href="${basePath}/room/${room.roomid}">${room.title}</a></div>
                         <div class="s_mn_housing_information">
-                            <span>${room.roomStructure.bedroomNum}室</span><span>&nbsp;|&nbsp;</span><span>${room.rentalMethod.method}</span><span>|&nbsp;</span><span>宜住${room.avaliableArea.standPop}人</span><span>&nbsp;|&nbsp;</span><span>近期预订5晚</span>
+                            <span>${room.bedroom}室</span><span>&nbsp;|&nbsp;</span><span>${room.rentalMethod.method}</span><span>|&nbsp;</span><span>宜住${room.max_num}人</span><span>&nbsp;|&nbsp;</span><span>近期预订5晚</span>
                         </div>
                         <div class="w_house_map">
-                            <div class="w_house_map_wz">地址：${room.street}</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(${room.roomLongitude},${room.roomLatitude},&#39;${room.roomName}&#39;,&#39;${room.street}&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
+                            <div class="w_house_map_wz">地址：${room.street}</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(${room.lng},${room.lat},&#39;${room.title}&#39;,&#39;${room.street}&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
                         </div>
                         <div class="w_house_interactive">
                             <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">4.9</div>
@@ -565,7 +565,7 @@
                                 桑科<span>***</span>
                             </div>
                             <div class="w_appraisal_nr">
-                                <div class="w_appraisal_ever" style="height:40px;font-size:14px;"><a href="https://www.muniao.com/Home/Detail?id=127683" target="_blank" style="color:#f30">崇文门 天安门 北京站美式loft</a></div>
+                                <div class="w_appraisal_ever" style="height:40px;font-size:14px;"><a href="https://www.muniao.com/Home/Detail?id=127683" target="_blank" style="color:#f30">崇文门 天安门 </a></div>
                                 <div class="w_appraisal_box">
                                     <div class="w_appraisal_box_time">点评时间：2018年06月02日</div>
                                     <div style="border-radius:5px;color:#482300;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#fbdcbe;">

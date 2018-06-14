@@ -249,10 +249,10 @@
     }</style>
     <link rel="stylesheet" type="text/css" href="${staticRoot}/images/style1503546983737.css">
 
-    <title>【${roomList[1].roomLocation}短租房|${roomList[1].roomLocation}日租房|${roomList[1].roomLocation}短租公寓】-${roomList[1].roomLocation}木鸟短租网</title>
-    <meta name="keywords" content="${roomList[1].roomLocation}短租房,${roomList[1].roomLocation}日租房,${roomList[1].roomLocation}短租公寓">
+    <title>【${roomList[1].city}短租房|${roomList[1].city}日租房|${roomList[1].city}短租公寓】-${roomList[1].city}木鸟短租网</title>
+    <meta name="keywords" content="${roomList[1].city}短租房,${roomList[1].city}日租房,${roomList[1].city}短租公寓">
     <meta name="description"
-          content="木鸟短租网${roomList[1].roomLocation}站,提供性价比高的最新${roomList[1].roomLocation}短租房、${roomList[1].roomLocation}日租房、${roomList[1].roomLocation}短租公/寓/信息,平台有近300000套严格审核的可靠房源,50000多真实房东,查找预订北京短租房、日租房到木鸟短租.">
+          content="木鸟短租网${roomList[1].city}站,提供性价比高的最新${roomList[1].city}短租房、${roomList[1].city}日租房、${roomList[1].city}短租公/寓/信息,平台有近300000套严格审核的可靠房源,50000多真实房东,查找预订北京短租房、日租房到木鸟短租.">
     <meta name="viewport" content="width=1400, initial-scale=1">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta property="wb:webmaster" content="xfwy">
@@ -2993,7 +2993,7 @@
             <div style="display:none;">
                 <input id="numtext2" type="hidden" value="1" name="guestnum">
                 <input name="pinyinText" id="pinyintext" type="hidden" value="beijing" autocomplete="off">
-                <input name="cityText" id="citytext" type="hidden" value="${roomList[1].roomLocation}" autocomplete="off">
+                <input name="cityText" id="citytext" type="hidden" value="${roomList[1].city}" autocomplete="off">
                 <input name="city_longitude" id="city_longitude" type="hidden" value="116.413554" autocomplete="off">
                 <input name="city_latitude" id="city_latitude" type="hidden" value="39.911013" autocomplete="off">
                 <input name="areaText" id="areatext" type="hidden" value="" autocomplete="off">
@@ -3668,13 +3668,13 @@
                                 <div class="s_mn_screenlist">
                                     <span class="w_listspan3 type">
                                            <!--/beijing/-->
-                                        <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/0/${pri}/${met}/${str}"
+                                        <a href="${basePath}/cityTitle/${roomLocation}/1/0/${typeId}/${priceId}/${methodId}"
                                            class="s_mn_screen_aover" title="0"
                                            target="_self">不限</a>                                                                                            </span>
                                 <#list roomTypes as type >
                                     <span class="w_listspan3 type">
                                         <a rel="nofollow"
-                                           href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/${type.roomType.typeId}/${pri}/${met}/${str}"
+                                           href="${basePath}/cityTitle/${roomLocation}/1/${type.roomType.typeId}/${typeId}/${priceId}/${methodId}"
                                            title="${type.roomType.typeId}" class="type">
                                         ${type.roomType.roomType}
                                         </a>
@@ -3688,22 +3688,21 @@
                                 <div class="s_mn_screen_tit">房间价格：</div>
                                 <div class="s_mn_screenlist">
                                     <div class="w_searchprice_l">
-                                    <span class="w_listspan3 interval">
+                                    <span class="w_listspan3">
                                             <!--/beijing/-->
-                                        <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/${typ}/0/${met}/${str}"
+                                        <a href="${basePath}/cityTitle/${roomLocation}/1/${typeId}/0/${methodId}/${structureId}"
                                            class="s_mn_screen_aover" title="0" target=" _self">不限</a>
                                     </span>
                                     <#list roomIntervals as interval>
-                                        <span class="w_listspan3 interval">
+                                        <span class="w_listspan3">
                                         <a rel="nofollow"
-                                           href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/${typ}/${interval.roomInterval.priceIntervalId}/${met}/${str}"
-                                           title="${interval.roomInterval.priceIntervalId}" class="interval">
-                                        ${interval.roomInterval.priceInterval}
+                                           href="${basePath}/cityTitle/${roomLocation}/1/${typeId}/${interval.priceInterval.priceIntervalId}/${methodId}/${structureId}"
+                                           title="${interval.priceInterval.priceIntervalId}">
+                                        ${interval.priceInterval.priceInterval}
                                         </a>
-                                    </span>
+                                        </span>
                                     </#list>
                                     </div>
-
                                     <div class="s_mn_custom" style="display:none;">
                                         <input type="text" value="" class="s_mn_customipt">
                                         &nbsp;-&nbsp;
@@ -3719,12 +3718,12 @@
                                 <div class="s_mn_screenlist">
                                     <span class="w_listspan3 method">
                                             <!--/beijing/-->
-                                        <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/${typ}/${pri}/0/${str}"
+                                        <a href="${basePath}/cityTitle/${roomLocation}/1/${typeId}/${priceId}/0/${structureId}"
                                            class="s_mn_screen_aover" title="不限" rel="nofollow" target="_self">不限</a>
                                     </span>
                                 <#list roomMethods as method>
                                     <span class="w_listspan3 method">
-                                        <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/${typ}/${pri}/${method.rentalMethod.methodId}/${str}"
+                                        <a href="${basePath}/cityTitle/${roomLocation}/1/${typeId}/${priceId}/${method.rentalMethod.methodId}/${structureId}"
                                            title="${method.rentalMethod.methodId}" rel="nofollow" target="_self">
                                         ${method.rentalMethod.method}
                                         </a>
@@ -3738,17 +3737,16 @@
                                 <div class="s_mn_screen_tit">房间户型：</div>
                                 <div class="s_mn_screenlist" data-family="0">
                                     <span class="w_listspan3 structure">
-                                            <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/${typ}/${pri}/${met}/0"
+                                            <a href="${basePath}/cityTitle/${roomLocation}/1/${typeId}/${priceId}/${methodId}/0"
                                                class="s_mn_screen_aover" title="0" rel="nofollow"
                                                target="_self">不限</a>
                                     </span>
                                 <#list roomStructures as structure>
                                     <span class="w_listspan3 structure">
-
                                         <a rel="nofollow"
-                                           href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/${typ}/${pri}/${met}/${structure.roomStructure.structureId}"
-                                           title="${structure.roomStructure.bedroomNum}">
-                                           ${structure.roomStructure.bedroomNum}室
+                                           href="${basePath}/cityTitle/${roomLocation}/1/${typeId}/${priceId}/${methodId}/${structure.bedroom}"
+                                           title="${structure.bedroom}">
+                                           ${structure.bedroom}室
                                         </a>
                                     </span>
                                 </#list>
@@ -3807,10 +3805,10 @@
                 <div class="s_mn_search_navtag">
                     <a href="http://www.muniao.com/" title="木鸟短租网" target="_self">木鸟短租网</a>
                     <span>&gt;</span>&nbsp;<a href="https://www.muniao.com/beijing/" title="北京短租房"
-                                              target="_self">${roomList[1].roomLocation}短租房</a>
+                                              target="_self">${roomList[1].city}短租房</a>
 
-                    &nbsp;-&nbsp;为您找到${roomList[1].roomLocation}短租房
-                    <span class="s_red">${roomList?size}套</span></div>
+                    &nbsp;-&nbsp;为您找到${roomLocation}短租房
+                    <span class="s_red">${number}套</span></div>
 
                 <div class="s_mn_switchmodel">
                     <!--<a href="#" class="listpic_icon" title="图片模式">图片模式</a>-->
@@ -3818,25 +3816,25 @@
             </div>
             <ul class="s_mn_detailslist clear" id="Lmain_con">
             <#list roomList as room >
-                <li class="Lcon1" data-id="75902" data-x="${room.roomLongitude}" data-y="${room.roomLatitude}"
-                    data-title="${room.roomName}" data-price="${room.roomPrice}" x4="33">
+                <li class="Lcon1" data-id="75902" data-x="${room.lng}" data-y="${room.lat}"
+                    data-title="${room.title}" data-price="${room.price}" x4="33">
                     <div class="s_mn_housebox">
                         <div class="s_mn_house_details clear">
                             <div class="house_details_l">
                                 <div class="s_mn_house_tit">
-                                    <a href="${basePath}/room/${room.roomId}" target="_blank"
-                                       class="s_mn_house_t1">${room.roomName}</a>
+                                    <a href="${basePath}/room/${room.roomid}" target="_blank"
+                                       class="s_mn_house_t1">${room.title}</a>
                                 </div>
                                 <div class="s_mn_house_introduction">
                                     <p>
-                                        <span>${room.roomStructure.bedroomNum}室</span>|<span>${room.rentalMethod.method}</span>|<span>适合住${room.avaliableArea.standPop}人</span>
+                                        <span>${room.bedroom}室</span>|<span>${room.rentalMethod.method}</span>|<span>适合住${room.max_num}人</span>
 
                                         <a>|</a><span>43 条评论</span></p>
                                     <div class="list_address">
-                                        <i class="address_icon"></i>地址：${room.roomLocation}具体地址应在数据库储存护着调用地图api
+                                        <i class="address_icon"></i>地址：${room.city}具体地址应在数据库储存护着调用地图api
                                     </div>
                                     <div class="s_mn_house_price2">
-                                        <span>￥${room.roomPrice}</span>/晚
+                                        <span>￥${room.price}</span>/晚
                                     </div>
                                     <div class="near_reserve">
                                         近期预订
@@ -3846,7 +3844,7 @@
                                 <div class="s_mn_house_information">
                                     <div class="hr"></div>
                                     <dl>
-                                        <a href="${basePath}/room/${room.roomId}" target="_blank">
+                                        <a href="${basePath}/room/${room.roomid}" target="_blank">
                                             <dd>
                                                 <span class="comment_num">43</span>
                                                 <p class="comment_icon">评论数</p>
@@ -3854,26 +3852,26 @@
                                         </a>
                                     </dl>
                                     <dl>
-                                        <a href="${basePath}/room/${room.roomId}" target="_blank">
+                                        <a href="${basePath}/room/${room.roomid}" target="_blank">
                                             <dd>
                                                 <span class="comment_num">43</span>
                                                 <p class="list_recommend">推荐数</p>
                                             </dd>
                                         </a></dl>
-                                    <a href="${basePath}/room/${room.roomId}" target="_blank">
+                                    <a href="${basePath}/room/${room.roomid}" target="_blank">
                                     </a>
-                                    <dl><a href="${basePath}/room/${room.roomId}" target="_blank">
-                                    </a><a href="${basePath}/room/${room.roomId}" target="_blank">
+                                    <dl><a href="${basePath}/room/${room.roomid}" target="_blank">
+                                    </a><a href="${basePath}/room/${room.roomid}" target="_blank">
                                         <dd>
-                                            <span class="comment_num">${room.list?size}张</span>
+                                            <span class="comment_num">${room.lsit?size}张</span>
                                             <p class="list_picnum">房间图片</p>
                                         </dd>
                                     </a></dl>
-                                    <a href="${basePath}/room/${room.roomId}" target="_blank">
+                                    <a href="${basePath}/room/${room.roomid}" target="_blank">
                                     </a>
-                                    <dl><a href="${basePath}/room/${room.roomId}" target="_blank">
+                                    <dl><a href="${basePath}/room/${room.roomid}" target="_blank">
                                     </a><a href="javascript:void(0)"
-                                           onclick="$(&#39;#getmap&#39;).show();initMap(${room.roomLatitude},${room.roomLongitude},&#39;国贸CBD 近地铁 后现代城-可做饭-唯美文艺风精装两居&#39;,&#39;北京百子湾路后现代城&#39;);"
+                                           onclick="$(&#39;#getmap&#39;).show();initMap(${room.lng},${room.lat},&#39;${room.title}-&#39;,&#39;${room.subtitle}&#39;);"
                                            title="地图" class="s_mn_detailslist_map map_icon">
                                         <dd class="map_wz">
                                             <i class="list_seemap"></i>地图位置
@@ -3886,16 +3884,16 @@
                             <div class="house_details_r">
                                 <div class="s_mn_landlord_information">
                                     <div class="s_mn_landlordpic2">
-                                        <a href="${basePath}/room/${room.roomId}" rel="nofollow"
+                                        <a href="${basePath}/room/${room.roomid}" rel="nofollow"
                                            target="_blank">
                                             <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets/2013/image/pic13.jpg&#39;;"
-                                                 src="${staticRoot}/images/${room.landlord.picture}"
-                                                 width="24" height="24" title="${room.landlord.userName}">
+                                                 src="${staticRoot}/images/${room.user.picture}"
+                                                 width="24" height="24" title="${room.user.userName}">
                                         </a>
                                     </div>
                                     <div class="s_mn_landlordname2">
-                                        <a rel="nofollow" href="${basePath}/room/${room.roomId}"
-                                           target="_blank">${room.landlord.userName}</a>
+                                        <a rel="nofollow" href="${basePath}/room/${room.roomid}"
+                                           target="_blank">${room.user.userName}</a>
                                     </div>
 
                                     <ul class="landlordmark">
@@ -3922,7 +3920,7 @@
 
                                 <div class="weblt">
                                     <a class="webim-chatbtn" href="https://www.muniao.com/beijing/#chat@76331"
-                                       data-id="76331" data-title="${room.roomName}"
+                                       data-id="76331" data-title="${room.title}"
                                        data-image="//assets.muniao.comUploadFiles/thumb/image/20170615/2017061542408369.jpg_414_262.jpg"
                                        data-priceday="580" data-privacy="整租" data-propertytype="公寓"
                                        data-accommodates="宜住5人" rel="nofollow" title="拨打电话"
@@ -3935,8 +3933,8 @@
                                 <a href="https://www.muniao.com/room/75902.html" target="_blank"
                                    title="${room.roomName}"><img
                                         onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;"
-                                        src="${staticRoot}/images/${room.lsit[1]}"
-                                        width="414" height="262" alt="${room.roomName}"></a>
+                                        src="${staticRoot}/images/${room.lsit[1].imgAddress}"
+                                        width="414" height="262" alt="${room.title}"></a>
                                 <span class="smfy_icon"></span>
                             </div>
                             <a href="javascript:void(0)" data-id="75902" class="s_mn_house_like like_icon2 colle_list"
@@ -3955,24 +3953,21 @@
             </#list>
             </ul>
             <div class="page_city">
-                <a href="https://www.muniao.com/beijing/" target="_blank">北京短租房</a>-找到相关房源34720个，每页30个结果
+                <a href="https://www.muniao.com/beijing/" target="_blank">${roomLocation}短租房</a>-找到相关房源${number}个，每页30个结果
             </div>
             <div class="s_mn_page_bar">
-
-                <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/0/0/0/0" title="第一页" target="_self">第一页</a>
-
-
-                <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/1/0/0/0/0"
+                <a href="${basePath}/cityTitle/${roomLocation}/1/${typeId}/${priceId}/${methodId}/${structureId}" title="第一页" target="_self">第一页</a>
+                <a href="${basePath}/cityTitle/${roomLocation}/1/${typeId}/${priceId}/${methodId}/${structureId}"
                    style="background:#ff6c5c;color:#fff;border:1px solid #e46355;" title="1" target="_self">1</a>
-                <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/2/0/0/0/0" title="2" rel="nofollow"
+                <a href="${basePath}/cityTitle/${roomLocation}/2/${typeId}/${priceId}/${methodId}/${structureId}" title="2" rel="nofollow"
                    target="_self">2</a>
-                <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/3/0/0/0/0" title="3" rel="nofollow"
+                <a href="${basePath}/cityTitle/${roomLocation}/3/${typeId}/${priceId}/${methodId}/${structureId}" title="3" rel="nofollow"
                    target="_self">3</a>
-                <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/4/0/0/0/0" title="4" rel="nofollow"
+                <a href="${basePath}/cityTitle/${roomLocation}/4/${typeId}/${priceId}/${methodId}/${structureId}" title="4" rel="nofollow"
                    target="_self">4</a>
-                <a href="https://www.muniao.com/beijing/null-0-0-0-0-0-0-0-2.html" title="2" rel="nofollow"
+                <a href="${basePath}/cityTitle/${roomLocation}/${currentPage+1}/${typeId}/${priceId}/${methodId}/${structureId}" title="2" rel="nofollow"
                    target="_self"> 下一页 </a>
-                <a href="${basePath}/cityTitle/${roomList[1].roomLocation}/${roomList?size}/0/0/0/0" rel="nofollow" title="10"
+                <a href="${basePath}/cityTitle/${roomLocation}/${roomList?size/30}/0/0/0/0" rel="nofollow" title="10"
                    target="_self" class="Lpage_li1">最后一页</a>
             </div>
             <hr>
@@ -3980,9 +3975,9 @@
         <div class="s_mn_sidebar">
             <div class="w_listbz"
                  style="width: 234px;  height: 288px;  background-color: #fff;  border-bottom: 1px solid #ddd;">
-                <div class="w_listbzicon"><a rel="nofollow" href="http://www.muniao.com/supportplan.html"
-                                             target="_blank"><img
-                        src="${staticRoot}/images/bz_bigicon.jpg"></a></div>
+                <div class="w_listbzicon">
+                    <a rel="nofollow" href="http://www.muniao.com/supportplan.html" target="_blank">
+                    <img src="${staticRoot}/images/bz_bigicon.jpg"></a></div>
                 <ul id="w_listbzul" class="w_listbzul f14">
                     <li>
                         <span>房源100%实地验证</span>
@@ -4845,8 +4840,8 @@
     <ul class="s_mn_footercitylist cleafix" id="s_mn_footercitylist">
         <!--短租房信息-->
         <div style="color:#555;clear:both;">
-            <span style="float:left;width:141px;display:block;">${roomList[1].roomLocation}短租房信息：</span>
-            <span style="float:left;width:1000px;display:block;">找${roomList[1].roomLocation}短租房，木鸟短租为您提供了北京短租房预订、实时短租房价格、便宜短租房预定以及北京住宿推荐，精选了${roomList?size}套${roomList[1].roomLocation}短租房、短租公寓、家庭旅馆、普通民宅、旅馆/宾馆、别墅等供您选择，网上预定北京短租房还可享受一定优惠，且比酒店便宜将近50%。不管您是资深驴友还是出差人士建议您提前选择预定心仪的性价比高的短租房。北京短租房预定，选择木鸟短租。</span>
+            <span style="float:left;width:141px;display:block;">${roomList[1].city}短租房信息：</span>
+            <span style="float:left;width:1000px;display:block;">找${roomList[1].city}短租房，木鸟短租为您提供了北京短租房预订、实时短租房价格、便宜短租房预定以及北京住宿推荐，精选了${roomList?size}套${roomList[1].city}短租房、短租公寓、家庭旅馆、普通民宅、旅馆/宾馆、别墅等供您选择，网上预定北京短租房还可享受一定优惠，且比酒店便宜将近50%。不管您是资深驴友还是出差人士建议您提前选择预定心仪的性价比高的短租房。北京短租房预定，选择木鸟短租。</span>
             <br style="clear:both;">
         </div>
         <!-- **按位置找短租房-->
@@ -4857,39 +4852,39 @@
                 <div class="s_mn_hotdibiao">
                                         <span class="w_listspan3 w_listspan3_foot">
                                                     <a href="https://www.muniao.com/beijing/null-0-0-0-1-0-0-0-1.html"
-                                                       title="${roomList[1].roomLocation}民居">
-                                                        ${roomList[1].roomLocation}民居
+                                                       title="${roomList[1].city}民居">
+                                                        ${roomList[1].city}民居
                                                     </a>
                                         </span> <span class="w_listspan3 w_listspan3_foot">
                                                     <a href="https://www.muniao.com/beijing/null-0-0-0-2-0-0-0-1.html"
-                                                       title="${roomList[1].roomLocation}客栈">
-                                                        ${roomList[1].roomLocation}客栈
+                                                       title="${roomList[1].city}客栈">
+                                                        ${roomList[1].city}客栈
                                                     </a>
                                         </span> <span class="w_listspan3 w_listspan3_foot">
                                                     <a href="https://www.muniao.com/beijing/null-0-0-0-4-0-0-0-1.html"
-                                                       title="${roomList[1].roomLocation}公寓">
-                                                        ${roomList[1].roomLocation}公寓
+                                                       title="${roomList[1].city}公寓">
+                                                        ${roomList[1].city}公寓
                                                     </a>
                                         </span> <span class="w_listspan3 w_listspan3_foot">
                                                     <a href="https://www.muniao.com/beijing/null-0-0-0-7-0-0-0-1.html"
-                                                       title="${roomList[1].roomLocation}独栋别墅">
-                                                        ${roomList[1].roomLocation}独栋别墅
+                                                       title="${roomList[1].city}独栋别墅">
+                                                        ${roomList[1].city}独栋别墅
                                                     </a>
                                         </span> <span class="w_listspan3 w_listspan3_foot">
                                                     <a href="https://www.muniao.com/beijing/null-0-0-0-9-0-0-0-1.html"
-                                                       title="${roomList[1].roomLocation}四合院">
-                                                        ${roomList[1].roomLocation}四合院
+                                                       title="${roomList[1].city}四合院">
+                                                        ${roomList[1].city}四合院
                                                     </a>
                                         </span> <span class="w_listspan3 w_listspan3_foot">
                                                     <a href="https://www.muniao.com/beijing/null-0-0-0-12-0-0-0-1.html"
-                                                       title="${roomList[1].roomLocation}农家院">
-                                                        ${roomList[1].roomLocation}农家院
+                                                       title="${roomList[1].city}农家院">
+                                                        ${roomList[1].city}农家院
                                                     </a>
                                         </span>
 
                 </div>
             </div>
-            <div class="s_mn_footercity_tit" title="${roomList[1].roomLocation}热门房源类型：">${roomList[1].roomLocation}热门房源类型：</div>
+            <div class="s_mn_footercity_tit" title="${roomList[1].city}热门房源类型：">${roomList[1].city}热门房源类型：</div>
             <div style="display: block;" class="s_mn_footercity_more"></div>
         </li>
         <!-- **主题特色短租房-->
@@ -4897,21 +4892,21 @@
             <div class="s_mn_footerhot">
                 <div class="s_mn_hotdibiao">
                     <a href="https://www.muniao.com/features_housing_beijing_1.html" target="_blank"
-                       title="${roomList[1].roomLocation}别墅 ">${roomList[1].roomLocation}别墅 </a>
+                       title="${roomList[1].city}别墅 ">${roomList[1].city}别墅 </a>
                     <a href="https://www.muniao.com/features_housing_beijing_2.html" target="_blank"
-                       title="${roomList[1].roomLocation}情侣房">${roomList[1].roomLocation}情侣房</a>
+                       title="${roomList[1].city}情侣房">${roomList[1].city}情侣房</a>
                     <a href="https://www.muniao.com/features_housing_beijing_4.html" target="_blank"
-                       title="${roomList[1].roomLocation}木屋">${roomList[1].roomLocation}木屋</a>
+                       title="${roomList[1].city}木屋">${roomList[1].city}木屋</a>
                     <a href="https://www.muniao.com/features_housing_beijing_5.html" target="_blank" title="北京主题特色">北京主题特色</a>
                     <a href="https://www.muniao.com/features_housing_beijing_6.html" target="_blank"
-                       title="${roomList[1].roomLocation}四合院">${roomList[1].roomLocation}四合院</a>
+                       title="${roomList[1].city}四合院">${roomList[1].city}四合院</a>
                     <a href="https://www.muniao.com/features_housing_beijing_8.html" target="_blank"
-                       title="${roomList[1].roomLocation}复式">${roomList[1].roomLocation}复式</a>
+                       title="${roomList[1].city}复式">${roomList[1].city}复式</a>
                     <a href="https://www.muniao.com/features_housing_beijing_12.html" target="_blank" title="北京家庭公寓">北京家庭公寓</a>
 
                 </div>
             </div>
-            <div class="s_mn_footercity_tit" title="${roomList[1].roomLocation}主题特色短租房：">${roomList[1].roomLocation}主题特色短租房：</div>
+            <div class="s_mn_footercity_tit" title="${roomList[1].city}主题特色短租房：">${roomList[1].city}主题特色短租房：</div>
             <div style="display: block;" class="s_mn_footercity_more"></div>
             <!--热门短租-->
         </li>

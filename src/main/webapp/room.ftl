@@ -2926,8 +2926,9 @@
             <a href="http://www.muniao.com/" title="木鸟短租网">木鸟短租</a>
             <span class="w_mL10">&gt;</span>
             <span id="jj">
-                    <a href="http://www.muniao.com/beijing/" title="${room.roomLocation}短租房"
-                       target="_self">${room.roomLocation}短租房</a>                <input type="hidden" name="haiwai" id="haiwai" value="1">
+                    <a href="http://www.muniao.com/beijing/" title="${room.city}短租房"
+                       target="_self">${room.city}短租房</a>
+                <input type="hidden" name="haiwai" id="haiwai" value="1">
             </span>
 
         </div>
@@ -2947,8 +2948,9 @@
         <div id="room_mainbox" class="room_mainbox clear">
             <div class="room_tt">
                 <h1 class="room_tth1">
-                    <span class="room_title"><a href="http://www.muniao.com/room/132979.html"
-                                                title="${room.roomName}">${room.roomName}</a></span>
+                    <span class="room_title">
+                        <a href="http://www.muniao.com/room/132979.html"
+                           title="${room.title}">${room.title}</a></span>
                     <span style="position: relative;" class="smfy_xq"><div class="simutips" style="display: none;">四木房源为木鸟工作人员和过往的住客共同推选出来的优质房源，硬件设施跟软件服务，都将更好的让您体会到民宿的魅力和与众不同，木鸟向您推荐此房源，请您放心预订。</div></span>
                     <span class="room_pzicon"></span>
 
@@ -2980,19 +2982,19 @@
                 <!--分享-->
             </div>
             <div class="room_ttadd f12">
-                <span class="red">房源编号：</span>${room.roomId}<span class="red w_mL10">地址：</span>
+                <span class="red">房源编号：</span>${room.roomid}<span class="red w_mL10">地址：</span>
                 <span id="ass">
-                ${room.roomLocation}
+                ${room.city}
                 </span>
-                <input type="hidden" name="name" id="address" value="${room.roomLocation}">
+                <input type="hidden" name="name" id="address" value="${room.city}">
             </div>
             <div class="room_ttbottom">
                 <ul class="room_ttbottomL f14">
-                    <li class="hx">${room.roomStructure.bedroomNum}室</li>
+                    <li class="hx">${room.bedroom}室</li>
                     <li class="cz">${room.roomType.roomType}</li>
-                    <li class="bed">${room.roomBedInfo.bedNumber}张</li>
-                    <li class="people">宜住${room.avaliableArea.roomArea}人</li>
-                    <li style="display:none" class="room_toparea">面积${room.avaliableArea.roomArea}m<sup>2</sup></li>
+                    <li class="bed">2张</li>
+                    <li class="people">宜住${room.max_num}人</li>
+                    <li style="display:none" class="room_toparea">面积${room.size}m<sup>2</sup></li>
                 </ul>
                 <ul class="room_ttbottomR">
                     <li>
@@ -3027,7 +3029,7 @@
                     </div>
                     <div class="room_pricebg">
                         <div class="room_price">
-                            ￥<span class="f30">${room.roomPrice}</span>
+                            ￥<span class="f30">${room.price}</span>
                             <span class="f16 w_fRight">每晚</span>
                         </div>
                     </div>
@@ -3226,13 +3228,13 @@
                 <div class="room_Rbottom">
                     <div class="room_Rfd">
                         <div class="room_Rfdimg w_fLeft">
-                            <a href="" title="${room.roomName}" target="_blank"><img
+                            <a href="" title="${room.title}" target="_blank"><img
                                     onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;"
-                                    src="${staticRoot}/images/${room.landlord.picture}"></a>
+                                    src="${staticRoot}/images/${room.user.picture}"></a>
                         </div>
                         <div class="room_Rfdxx">
                             <h3 class="f16 w_fColor7">
-                                <a href="http://www.muniao.com/fangdong/363368/" title="${room.roomName}" target="_blank">${room.roomName}</a>
+                                <a href="http://www.muniao.com/fangdong/363368/" title="${room.title}" target="_blank">${room.title}</a>
                             </h3>
                             <input type="hidden" name="name" value="1">
                             <div class="room_Rfdzm f12 w_fColora"><span class="zmicon"></span><span
@@ -3246,7 +3248,7 @@
                     </div>
 
                     <a class="room_Ronline webim-chatbtn" href="javascript:void(0);" data-id="363368"
-                       data-title="${room.roomName}"
+                       data-title="${room.title}"
                        data-image="//assets.muniao.com/UploadFiles/thumb/image/20180525/7fc93e87a9334a339509b3ff0e6ec09b20180525163701649.jpg_275_173.jpg"
                        title="在线联系房东" target="_self" id="webim-chatid-363368">在线聊天<i
                             class="webim-chaticon webim-chaticon-online"><em>&nbsp;</em></i></a></div>
@@ -3258,14 +3260,14 @@
     <div class="room_mainbox clear" id="room_mainbox2">
         <div class="nav_wrap">
             <ul id="roomnav" class="room_nav f14" style="position: static; padding-left: 0px;">
-                <li><a href="${basePath}/room/${room.roomId}#room_nrbox" rel="nofollow">房间信息</a></li>
-                <li><a href="${basePath}/room/${room.roomId}#room_maintt" rel="nofollow">配套设施</a></li>
-                <li><a href="${basePath}/room/${room.roomId}#room_near" rel="nofollow">周边设施</a></li>
-                <li><a href="${basePath}/room/${room.roomId}#room_map" rel="nofollow">地理位置</a></li>
-                <li><a href="${basePath}/room/${room.roomId}#room_jygztt" rel="nofollow">交易规则</a></li>
-                <li><a href="${basePath}/room/${room.roomId}#room_landmark" rel="nofollow">建筑地标</a></li>
-                <li><a href="${basePath}/room/${room.roomId}#room_yqsf" rel="nofollow">要求及收费</a></li>
-                <li><a href="${basePath}/room/${room.roomId}#room_eva" rel="nofollow">房客评价</a><span class="f12">12</span>
+                <li><a href="${basePath}/room/${room.roomid}#room_nrbox" rel="nofollow">房间信息</a></li>
+                <li><a href="${basePath}/room/${room.roomid}#room_maintt" rel="nofollow">配套设施</a></li>
+                <li><a href="${basePath}/room/${room.roomid}#room_near" rel="nofollow">周边设施</a></li>
+                <li><a href="${basePath}/room/${room.roomid}#room_map" rel="nofollow">地理位置</a></li>
+                <li><a href="${basePath}/room/${room.roomid}#room_jygztt" rel="nofollow">交易规则</a></li>
+                <li><a href="${basePath}/room/${room.roomid}#room_landmark" rel="nofollow">建筑地标</a></li>
+                <li><a href="${basePath}/room/${room.roomid}#room_yqsf" rel="nofollow">要求及收费</a></li>
+                <li><a href="${basePath}/room/${room.roomid}#room_eva" rel="nofollow">房客评价</a><span class="f12">12</span>
                 </li>
             </ul>
         </div>
@@ -3292,7 +3294,7 @@
                 </li>
                 <li>
                     <span class="room_icon room_hx"></span><span class="fcolor8 w_mL10">户型：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="${room.roomStructure.bedroomNum}室${room.roomStructure.livingroomNum}厅">${room.roomStructure.bedroomNum}室${room.roomStructure.livingroomNum}厅</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="${room.bedroom}室${room.livingroom}厅">${room.bedroom}室${room.livingroom}厅</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_czlx"></span><span class="fcolor8 w_mL10">出租类型：</span>
@@ -3301,37 +3303,37 @@
                 <li>
                     <span class="room_icon room_cx"></span><span class="fcolor8 w_mL10">床型：</span>
                     <div class="nrboxq">
-                        <span class="fcolor7" title="${room.roomBedInfo.benType}">${room.roomBedInfo.benType}</span>
+                        <span class="fcolor7" title="双人床">双人床</span>
                     </div>
                 </li>
                 <li>
                     <span class="room_icon room_cws"></span><span class="fcolor8 w_mL10">总床数：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="${room.roomBedInfo.bedNumber}张">${room.roomBedInfo.bedNumber}张</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="2张">2张</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_kzrs"></span><span class="fcolor8 w_mL10">可住人数：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="${room.avaliableArea.standPop}人">${room.avaliableArea.standPop}人</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="${room.max_num}人">${room.max_num}人</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_wsj"></span><span class="fcolor8 w_mL10">独立卫生间：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="${room.roomStructure.bathroomNum}">${room.roomStructure.bathroomNum}</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="1">1</span></div>
                 </li>
 
                 <li>
                     <span class="room_icon room_area"></span><span class="fcolor8 w_mL10">面积：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="${room.avaliableArea.roomArea}平米">${room.avaliableArea.roomArea}平米</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="${room.size}平米">${room.size}平米</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_fp"></span><span class="fcolor8 w_mL10">发票：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="不提供">不提供</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="不提供"><#if room.is_invoice==1>开发票</#if><#if room.is_invoice==2>不开票</#if></span></div>
                 </li>
                 <li>
                     <span class="room_icon room_zsts"></span><span class="fcolor8 w_mL10">最少天数：</span>
-                    <div class="nrboxq"><span class="fcolor7">1天</span></div>
+                    <div class="nrboxq"><span class="fcolor7">${room.min_day}天</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_zdts"></span><span class="fcolor8 w_mL10">最多天数：</span>
-                    <div class="nrboxq"><span class="fcolor7">不限</span></div>
+                    <div class="nrboxq"><span class="fcolor7"><#if room.max_day==0>不限</#if></span></div>
                 </li>
                 <li>
                     <span class="room_icon room_sfz"></span><span class="fcolor8 w_mL10">身份证：</span>
@@ -3339,17 +3341,17 @@
                 </li>
                 <li>
                     <span class="room_icon room_zzrz"></span><span class="fcolor8 w_mL10">最早入住时间：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="当天14点">当天14点</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="当天${room.in_time}点">当天${room.in_time}点</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_zwtf"></span><span class="fcolor8 w_mL10">最晚退房时间：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="当天12点">当天12点</span></div>
+                    <div class="nrboxq"><span class="fcolor7" title="当天${room.out_time}点">当天${room.out_time}点</span></div>
                 </li>
                 <li>
                     <span class="room_icon room_yj"></span>
                     <span class="fcolor8 w_mL10">押金：</span>
-                    <div class="nrboxq"><span class="fcolor7" title="收取 (300.00)元"
-                                              style="display: inline-block; width: 130px; height: 50px; overflow: hidden;">线下收取 (300.00)元</span><a
+                    <div class="nrboxq"><span class="fcolor7" title="收取 (${room.deposit_money})元"
+                                              style="display: inline-block; width: 130px; height: 50px; overflow: hidden;"><#if room.is_deposit == 1>线下收取 (${room.deposit_money})元</#if></span><a
                             class="more" href="javascript:;">详情</a></div>
                 </li>
             </ul>
@@ -3384,26 +3386,26 @@
         <div id="room_near" class="room_nrbox">
             <div class="room_maintt f16">周边设施</div>
             <div class="room_mainnr room_text f14" style="text-indent:2em;">
-                ${room.roomAmbitus}
+                ${room.zbss}
             </div>
         </div>
         <div id="room_near" class="room_nrbox">
             <div class="room_maintt f16">乘车路线</div>
             <div class="room_mainnr room_text f14" style="text-indent:2em;">
-                ${room.roomRoute}
+                ${room.cclx}
             </div>
         </div>
         <div class="room-mapPosition" id="room_map">
             <div class="room_maintt f16">房源地址</div>
             <div class="room-positionDetail">
-                <span class="room-addressT">${room.roomLocation}-${room.roomArea}-${room.street}-${room.unit}</span>
+                <span class="room-addressT">${room.city}-${room.area}-${room.street}-${room.xiaoqu}</span>
                 <span class="go-roomAddress">房屋位置</span>
                 <span class="room-addInfo">确认预订后提供详细位置</span>
             </div>
         </div>
 
         <div class="room_map">
-            <div id="roommap" name="${room.roomName}" lng="${room.roomLongitude}" lat="${room.roomLatitude}" address="北京-东城区-西花市大街-新景家园东区"
+            <div id="roommap" name="${room.title}" lng="${room.lng}" lat="${room.lat}" address="${room.city}-${room.area}-${room.street}-${room.xiaoqu}"
                  style="overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left;">
                 <div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: url(&quot;https://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default;">
                     <div class="BMap_mask"
@@ -3411,7 +3413,7 @@
                     <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;">
                         <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div>
                         <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;">
-                            <span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute;
+                            <span class="BMap_Marker BMap_noprint" unselectable="on" style="position: absolute;
                             padding: 0px; margin: 0px; border: 0px; cursor: pointer; background: url(&quot;https://api.map.baidu.com/images/blank.gif&quot;);
                             width: 40px; height: 50px; left: 292px; top: 175px; z-index: 19000000;" title=""></span>
                         </div>
@@ -3612,12 +3614,12 @@
         </div>
         <div class="room_nrbox">
             <div id="room_landmark" class="room_maintt f16">建筑地标</div>
-            <div class="room_mainnr f14">位于磁器口地铁站旁</div>
+            <div class="room_mainnr f14">${room.jzdb}</div>
         </div>
         <div class="room_nrbox">
             <div id="room_yqsf" class="room_maintt f16">要求及收费</div>
             <div class="room_mainnr f14" data-deposit="2" data-deposit_money="500">
-                线下收取押金300.00元
+                线下收取押金${room.deposit_money}元
             </div>
 
         </div>

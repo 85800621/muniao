@@ -93,34 +93,33 @@ public class RoomServiceImpl implements RoomService{
     /**
      * 查出所在城市的所有房间类型
      * @param roomLocation
-     * @param currentPage
      * @return
      */
     @Override
-    public List<Room> selectRoomType(String roomLocation, int currentPage) {
-        return roomDao.selectRoomType(roomLocation,pageBean.getPageSize()*(currentPage-1),pageBean.getPageSize());
+    public List<Room> selectRoomType(String roomLocation) {
+        return roomDao.selectRoomType(roomLocation);
     }
 
     /**
      * 查出所有房间价格区间
      * @param roomLocation
-     * @param currentPage
+     * @param
      * @return
      */
     @Override
-    public List<Room> selectRoomInterval(String roomLocation, int currentPage) {
-        return roomDao.selectRoomInterval(roomLocation,pageBean.getPageSize()*(currentPage-1),pageBean.getPageSize());
+    public List<Room> selectRoomInterval(String roomLocation) {
+        return roomDao.selectRoomInterval(roomLocation);
     }
 
     /**
      * 查出所有房间的出租类型
      * @param roomLocation
-     * @param currentPage
+     * @param
      * @return
      */
     @Override
-    public List<Room> selectRoomMethod(String roomLocation, int currentPage) {
-        return roomDao.selectRoomMethod(roomLocation,pageBean.getPageSize()*(currentPage-1),pageBean.getPageSize());
+    public List<Room> selectRoomMethod(String roomLocation) {
+        return roomDao.selectRoomMethod(roomLocation);
 
     }
 
@@ -131,8 +130,8 @@ public class RoomServiceImpl implements RoomService{
      * @return
      */
     @Override
-    public List<Room> selectRoomStructure(String roomLocation, int currentPage) {
-        return roomDao.selectRoomStructure(roomLocation,pageBean.getPageSize()*(currentPage-1),pageBean.getPageSize());
+    public List<Room> selectRoomStructure(String roomLocation) {
+        return roomDao.selectRoomStructure(roomLocation);
 
     }
 
@@ -152,6 +151,11 @@ public class RoomServiceImpl implements RoomService{
     @Override
     public List<Room> selectByUserId(int userId) {
         return roomDao.selectByUserId(userId);
+    }
+
+    @Override
+    public Integer selectCountRooms(String roomLocation) {
+        return roomDao.selectCountRooms(roomLocation);
     }
 
 }

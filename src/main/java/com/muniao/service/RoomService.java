@@ -1,6 +1,7 @@
 package com.muniao.service;
 
 import com.muniao.entity.Room;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -61,22 +62,22 @@ public interface RoomService {
     /**
      * 查出房间地方类型
      */
-    List<Room> selectRoomType(String roomLocation,int currentPage);
+    List<Room> selectRoomType(String roomLocation);
 
     /**
      * 查出房间地方类型
      */
-    List<Room> selectRoomInterval(String roomLocation,int currentPage);
+    List<Room> selectRoomInterval(String roomLocation);
 
     /**
      * 查出房间地方类型
      */
-    List<Room> selectRoomMethod(String roomLocation,int currentPage);
+    List<Room> selectRoomMethod(String roomLocation);
 
     /**
      * 查出房间户型
      */
-    List<Room> selectRoomStructure(String roomLocation,int currentPage);
+    List<Room> selectRoomStructure(String roomLocation);
 
     /**
      * 按条件进行查询
@@ -94,4 +95,10 @@ public interface RoomService {
      * 按用户id查询拥有房间
      */
     List<Room> selectByUserId(int userId);
+
+
+    /**
+     *按城市查出所有的房间
+     */
+    Integer selectCountRooms(@Param("roomLocation")String roomLocation);
 }
