@@ -176,7 +176,7 @@
     *
     FROM tb_room
     WHERE
-    roomid=#{roomId,jdbcType=INTEGER}
+    roomid=#{roomId,jdbcType=INTEGER};
   </select>
 
   <!--房东页面 -->
@@ -193,7 +193,14 @@
     select
     COUNT(roomid)
     FROM tb_room
-    WHERE city={roomLocation}
+    WHERE city=#{roomLocation};
+  </select>
+
+  <select id="selectCountCity" resultType="java.lang.String">
+    select
+    DISTINCT
+    city
+    FROM tb_room;
   </select>
 
 </mapper>

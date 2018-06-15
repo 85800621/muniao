@@ -158,4 +158,9 @@ public class RoomServiceImpl implements RoomService{
         return roomDao.selectCountRooms(roomLocation);
     }
 
+    @Override
+    public List<String> selectCountCity() {
+        return roomDao.selectCountCity();
+    }
+
 }

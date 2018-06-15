@@ -97,6 +97,8 @@ public class RoomController {
         //房间数量
         int number = roomService.selectCountRooms(roomLocation);
         model.addAttribute("number",number);
+        List<String> citys = roomService.selectCountCity();
+        model.addAttribute("citys",citys);
         return "/city";
     }
 
@@ -135,12 +137,6 @@ public class RoomController {
         model.addAttribute("number",number);
         return "/cityTitle";
     }
-
-
-
-
-
-
 
 
 

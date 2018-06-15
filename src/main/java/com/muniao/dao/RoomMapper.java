@@ -103,5 +103,11 @@ public interface RoomMapper {
      * 按用户id查询拥有房间
      */
     List<Room> selectByUserId(int userId);
+
+    /**
+     * 查询出所有的城市
+     * @return
+     */
+    List<String> selectCountCity();
 }
 

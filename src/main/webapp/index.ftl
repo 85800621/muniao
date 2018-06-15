@@ -889,8 +889,9 @@
                                         <li><a href="javascript:void(0)">XYZ</a></li>
                                     </ul>
                                     <ul class="s_citywindow_main" style="display: block;">
-                                        <li data-path="beijing" data-url="bj" data-city="北京"><a
-                                                href="javascript:void(0)">北京</a></li>
+                                        <li data-path="beijing" data-url="bj" data-city="北京">
+                                            <a href="javascript:void(0)">北京</a>
+                                        </li>
                                         <li data-path="shanghai" data-url="sh" data-city="上海"><a
                                                 href="javascript:void(0)">上海</a></li>
                                         <li data-path="chongqing" data-url="cq" data-city="重庆"><a

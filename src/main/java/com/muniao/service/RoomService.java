@@ -101,4 +101,10 @@ public interface RoomService {
      *按城市查出所有的房间
      */
     Integer selectCountRooms(@Param("roomLocation")String roomLocation);
+
+    /**
+     * 查询出所有的城市
+     * @return
+     */
+    List<String> selectCountCity();
 }
