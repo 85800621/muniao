@@ -91,7 +91,8 @@
         <result column="to_shop_payment" property="toShopPayment" javaType="double"/>
         <association property="room" resultMap="RoomResultMap"/>
         <association property="refundRule" resultMap="RefundRuleResultMap"/>
-        <association property="checkInCustomers" resultMap="CheckInCustomerResultMap"/>
+        <collection property="checkInCustomers" column="order_detail_id" javaType="ArrayList"
+                    ofType="com.muniao.entity.CheckInCustomer" select="selectCheckInCustomersByOrderDetailId"/>
     </resultMap>
 
     <resultMap id="CheckInCustomerResultMap" type="com.muniao.entity.CheckInCustomer">
@@ -126,13 +127,11 @@
     </update>
 
     <select id="selectWaitCommitOrders" resultMap="BaseResultMap">
-
         select
         *
         FROM tb_order tor inner join tb_order_detail tod on tor.order_detail_id=tod.order_detail_id
         inner join tb_room tro on tod.room_id=tro.roomid
-        inner JOIN tb_checkIn_customer tcc on tod.order_detail_id=tcc.order_detail_id
-        and order_status LIKE '%${arg0}%' and order_buyer_id=#{arg1};
+        and order_status LIKE '%${arg0}%' and order_buyer_id = #{arg1};
     </select>
 
     <select id="selectAllOrders" resultMap="BaseResultMap">
@@ -141,6 +140,23 @@
         FROM tb_order tor inner join tb_order_detail tod on tor.order_detail_id=tod.order_detail_id
         inner join tb_room tro on tod.room_id=tro.roomid
         inner JOIN tb_checkIn_customer tcc on tod.order_detail_id=tcc.order_detail_id
-        and tor.order_buyer_id= #{arg0} or tor.order_seller_id= #{arg0};
+        and tor.order_buyer_id= #{arg0} or tor.order_buyer_id= #{arg0};
+    </select>
+
+    <select id="selectOneOrder" parameterType="Integer" resultMap="BaseResultMap">
+        SELECT
+        *
+        FROM tb_order tor inner join tb_order_detail tod on tor.order_detail_id=tod.order_detail_id
+        inner join tb_room tro on tod.room_id=tro.roomid
+        inner JOIN tb_checkIn_customer tcc on tod.order_detail_id=tcc.order_detail_id
+        and tor.order_id=#{arg0};
+    </select>
+
+    <select id="selectCheckInCustomersByOrderDetailId" parameterType="Integer" resultMap="CheckInCustomerResultMap">
+        SELECT
+        *
+        from tb_checkIn_customer
+        where order_detail_id=#{orderDetailId};
+
     </select>
 </mapper>

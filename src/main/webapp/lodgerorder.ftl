@@ -2,6 +2,7 @@
 <!-- saved from url=(0048)http://user2.muniao.com/Order/Index?utp=2&type=8 -->
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" lang="en">
 <head>
+    <#assign base=request.contextPath />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>用户中心-木鸟短租</title>
 
@@ -1137,7 +1138,7 @@
             <div class="userhead_pic"><img id="ContPic"
                                            src="${staticRoot}/images/d590d8e4b87c4c65922d653c3812d4a620180604093556672.jpg_150_150(1).jpg"
                                            style="border:0;" width="219" height="219"></div>
-            <span>嘉利学府</span>
+            <span>这个世界是不会变的</span>
             <div class="userheadtxt"><a href="http://user2.muniao.com/Order/Index?utp=2" style="color:#f4650a;">订单管理</a><a
                     class="w_border" style="color:#f4650a;" href="http://user2.muniao.com/UserInfo/Index">个人信息</a></div>
         </div>
@@ -1410,14 +1411,14 @@
             <div class="userR">
                 <div class="myordercon">
                     <ul>
-                        <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=8&amp;utp=2">全部订单</a></li>
-                        <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=1&amp;utp=2">已付款</a></li>
-                        <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=6&amp;utp=2">待入住</a></li>
-                        <li><a href="waitcommitorder/4/2">未付款</a></li>
-                        <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=3&amp;utp=2">退款</a></li>
+                        <li><a href="${base}/lodgerorder/2">全部订单</a></li>
+                        <li><a href="${base}/waitcommitorder/2/2">已付款</a></li>
+                        <li><a href="${base}/waitcommitorder/3/2">待入住</a></li>
+                        <li><a href="${base}/waitcommitorder/4/2">未付款</a></li>
+                        <li><a href="${base}/waitcommitorder/5/2">退款</a></li>
                         <!--<li><a href="?act=order&type=4">收取订金</a></li>-->
-                        <li><a href="waitcommitorder/6/2">等待确认</a></li>
-                        <li><a href="http://user2.muniao.com/Order/Index?act=order&amp;type=5&amp;utp=2">取消订单</a></li>
+                        <li><a href="${base}/waitcommitorder/6/2">等待确认</a></li>
+                        <li><a href="${base}/waitcommitorder/7/2">取消订单</a></li>
                         <div class="clear"></div>
                     </ul>
                     <table width="756" border="0" cellspacing="0" cellpadding="0" style="border-left: 1px solid #ddd;">
@@ -1431,8 +1432,8 @@
                             <td width="84" height="30" align="center" valign="middle" class="myordertd1">房东/房客电话</td>
                             <td width="77" height="30" align="center" valign="middle" class="myordertd2">操作</td>
                         </tr>
+                        <#list orders as orders>
                         <tr>
-                            <#list orders as orders>
                             <td height="205" align="center" valign="middle"
                                 style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
                                 <a href="http://www.muniao.com/home/detail?id=108419" target="_blank"><img
@@ -1496,23 +1497,31 @@
                                 style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
                             <#if orders.orderBuyerId == currentUserId>
                                 <#if orders.orderStatus?contains("4")>
-                                    <a href="payment/test/${orders.orderDetail.room.title}/${orders.orderId}"
+                                    <a href="${base}/payment/test/${orders.orderDetail.room.title}/${orders.orderId}"
                                             class="aBlue" >付款</a><br><br>
                                 </#if>
                             </#if>
+                            <#if orders.orderSellerId==currentUserId>
+                                <#if orders.orderStatus?contains("5")>
+                                    <a href="${base}/refundCommit/" class="aBlue">退款审核</a><br><br>
+                                </#if>
+                            </#if>
+                            <#if orders.orderBuyerId == currentUserId>
                                 <a href="http://www.muniao.com/home/detail?id=108419" class="aBlue"
                                    target="_blank">再次预订</a><br><br>
+                            </#if>
                             <#if orders.orderSellerId== currentUserId>
                                 <#if orders.orderStatus?contains("6")>
-                                <a href="landlordcommit/1/4-6/2" class="aBlue">确认</a><br><br>
+                                <a href="${base}/landlordcommit/${orders.orderId}/${orders.orderStatus}/${orders.orderSellerId}" class="aBlue">确认</a><br><br>
                                 </#if>
                             </#if>
                                 <a onclick="orderdelete(&#39;381521&#39;)" class="aBlue">删除订单</a><br><br>
-                                <a href="orderdetail/${orders.orderDetail.orderDetailId}" class="aBlue">详情&gt;&gt;</a>
+                                <a href="${base}/orderdetail/${orders.orderDetail.orderDetailId}" class="aBlue">详情&gt;&gt;</a>
                                 <br><br>
                             </td>
-                            </#list>
+
                         </tr>
+                        </#list>
                         </tbody>
                     </table>
                 </div>

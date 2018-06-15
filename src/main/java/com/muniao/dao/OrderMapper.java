@@ -51,10 +51,10 @@ public interface OrderMapper {
    * 7 已取消订单
    * 8 完成
    * @param type
-   * @param buyerId
+   * @param id
    * @return
    */
-  List<Order> selectWaitCommitOrders(String type,int buyerId);
+  List<Order> selectWaitCommitOrders(String type,int id);
 
   /**
    * 查找当前用户下所有订单
@@ -63,4 +63,10 @@ public interface OrderMapper {
    */
   List<Order> selectAllOrders(int currentUserId);
 
+  /**
+   * 通过orderId查找订单
+   * @param orderId
+   * @return
+   */
+  Order selectOneOrder(int orderId);
 }

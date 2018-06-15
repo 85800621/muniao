@@ -1192,51 +1192,51 @@
                     <tbody>
                     <tr>
                         <td width="110" height="30" align="right" valign="middle" bgcolor="#f5f5f5">订单编号：</td>
-                        <td width="645" height="30" valign="middle"></td>
+                        <td width="645" height="30" valign="middle">#{order.orderId}</td>
                     </tr>
 
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">房间：</td>
                         <td height="30" valign="middle">
-                            <a href="http://www.muniao.com/home/detail?id=132979" class="aBlue" target="_blank">${orderDetail.room.roomName}</a>
+                            <a href="http://www.muniao.com/home/detail?id=132979" class="aBlue" target="_blank">${order.orderDetail.room.title}</a>
                         </td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">预订时间：</td>
-                        <td height="30" valign="middle">${orderDetail.bookingTime?date}</td>
+                        <td height="30" valign="middle">${order.orderDetail.bookingTime?date}</td>
                     </tr>
 
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">状态：</td>
-                        <td height="30" valign="middle" id="st">房客取消</td>
+                        <td height="30" valign="middle" id="st">${order.orderStatus}</td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">类型：</td>
-                        <td height="30" valign="middle">${orderDetail.room.rentalMethod}</td>
+                        <td height="30" valign="middle">${order.orderDetail.room.rentalMethod}</td>
                     </tr>
 
                     <tr>
                         <td height="90" align="right" valign="middle" bgcolor="#f5f5f5"> 退款协议：</td>
                         <td valign="middle">
-                            <p><strong>${orderDetail.refundRule.ruleType}</strong></p>
-                            <p><strong>${orderDetail.refundRule.ruleContent}</strong></p>
+                            <p><strong>${order.orderDetail.refundRule.ruleType}</strong></p>
+                            <p><strong>${order.orderDetail.refundRule.ruleContent}</strong></p>
                         </td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">入住时间：</td>
-                        <td height="30" valign="middle">${orderDetail.checkInTime?date}</td>
+                        <td height="30" valign="middle">${order.orderDetail.checkInTime?date}</td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">离开时间：</td>
-                        <td height="30" valign="middle">${orderDetail.departureTime?date}</td>
+                        <td height="30" valign="middle">${order.orderDetail.departureTime?date}</td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">入住人数：</td>
-                        <td height="30" valign="middle">${orderDetail.checkInPopulation}人</td>
+                        <td height="30" valign="middle">${order.orderDetail.checkInPopulation}人</td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5">套/间/床位数：</td>
-                        <td height="30" valign="middle">${orderDetail.room.roomBedInfo.bedNumber}</td>
+                        <td height="30" valign="middle">${order.orderDetail.room.roomBedInfo.bedNumber}</td>
                     </tr>
                     <tr>
                         <td height="60" align="right" valign="middle" bgcolor="#f5f5f5">详情房款：</td>
@@ -1270,8 +1270,8 @@
                                     <th>费用</th>
                                 </tr>
                                 <tr>
-                                    <td>${orderDetail.checkInCustomer.customerName}</td>
-                                    <td>${orderDetail.checkInCustomer.customerIDCard}</td>
+                                    <td>${order.orderDetail.checkInCustomer.customerName}</td>
+                                    <td>${order.orderDetail.checkInCustomer.customerIDCard}</td>
                                     <td>
                                         验证失败
                                     </td>

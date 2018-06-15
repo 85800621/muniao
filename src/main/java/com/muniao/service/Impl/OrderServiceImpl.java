@@ -73,5 +73,16 @@ public class OrderServiceImpl implements OrderService{
         return orderDao.selectAllOrders(currentUserId);
     }
 
+    /**
+     * 根据订单Id查找订单
+     *
+     * @param orderId
+     * @return
+     */
+    @Override
+    public Order selectOneOrder(int orderId) {
+        return orderDao.selectOneOrder(orderId);
+    }
+
 
 }
