@@ -3,6 +3,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>海景房短租,租直面大海海景房  - 木鸟短租</title>
+    <#assign basePath=request.contextPath />
     <meta name="keywords" content="海景房短租,海景房出租">
     <meta name="description" content="木鸟短租为有海边度假旅游寻找海景房出租的朋友提供优质、可靠的海景房住宿服务.精心搜集了海景房短租房源,全心全意为您的出行住宿保驾护航.">
     <meta name="viewport" content="width=1400, initial-scale=1">
@@ -73,9 +74,9 @@
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="https://www.muniao.com/"><img src="${staticRoot}/images/mn_logo.png" width="80" height="40"></a> </h2>
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="https://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="https://www.muniao.com/features.html" target="_self" class="s_mn_nav_over">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
@@ -439,9 +440,6 @@
     });
 </script>
 
-
-
-
 <script>
     $(function () {
         //设置banner选中菜单样式
@@ -504,7 +502,7 @@
         <div class="s_mn_center">
             <div class="s_mn_head_textbox">
                 <h2>${roomFeature.roomFeature}</h2>
-                <p>${rooms[1].roomName}</p>
+                <p>${rooms[1].title}</p>
                 <div class="s_mn_module_text">精选${rooms?size}套房间</div>
             </div>
         </div>
@@ -525,122 +523,47 @@
             <div class="s_mn_ftitle">
                 <h2><span>超值精选&nbsp;&nbsp;特别推荐</span></h2>
                 <div class="s_mn_features_citybox">
-                    <a href="${basePath}/features/${roomFeature.roomFeatureId}" title="全部" >全部</a>&nbsp;|&nbsp;
-                    <a href="" title="秦皇岛">秦皇岛</a><label>&nbsp;| &nbsp;</label>
+                    <a href="${basePath}/features/${roomFeature.roomFeatureId}/1" title="全部" >全部</a>&nbsp;|&nbsp;
                 <#list  cityList as cityName>
-                    <a class="s_mn_features_citybox_a" href="${basePath}/cityfeatures/${roomFeature.roomFeatureId}/${cityName.roomLocation}" title="${cityName.roomLocation}">${cityName.roomLocation}</a><label>&nbsp;| &nbsp;</label>
+                    <a class="s_mn_features_citybox_a" href="${basePath}/cityfeatures/${roomFeature.roomFeatureId}/${cityName.city}/1" title="${cityName.city}">${cityName.city}</a><label>&nbsp;| &nbsp;</label>
                 </#list>
 
                 </div>
             </div>
             <div class="s_mn_fbody">
                 <div class="s_mn_center2">
-                    <div class="s_mn_module6x" data-id="151672">
-                        <div class="s_mn_place6">
-                            <div class="s_mn_housingbox2">
-                                <div class="s_mn_housing_img2">
-                                    <a href="https://www.muniao.com/room/151672.html" title="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）" target="_blank">
-                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/0c9cd700c0f944058fb9ed2d0dfa938820171214154302610.jpg" width="580" height="368" alt="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）">
-                                    </a>
-                                    <span class="s_mn_housing_price">￥238</span>
-                                </div>
-                                <div class="s_mn_housing_textbox2">
-                                    <div class="s_mn_housing_title2">
-                                        <a href="https://www.muniao.com/room/151672.html" title="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）" target="_blank">促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）</a>
-                                    </div>
-                                    <div class="s_mn_housing_information2">
-                                        <span>2室</span>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <span>整租</span>
-                                        <span>|&nbsp;</span><span>宜住5人</span>
-                                        <span>&nbsp;|&nbsp;</span><span>19张图</span>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <span>近期预订0晚</span>
-                                    </div>
-                                    <div class="s_mn_landlordbox s_mn_landlordpos">
-                                        <div class="s_mn_landlordpic">
-                                            <a href="https://www.muniao.com/fangdong/1051916/" title="三亚珺海海景公寓" target="_blank">
-
-                                                <img src="${staticRoot}/images/ddf4f19d8b7f4257a67c6c0da8311af920171214161324329.jpg" alt="三亚珺海海景公寓" width="80" height="80">
-                                            </a>
-                                        </div>
-                                        <div class="s_mn_landlordname">
-                                            <a href="https://www.muniao.com/fangdong/1051916/" title="三亚珺海海景公寓" target="_blank">三亚珺海…</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="s_mn_module6x" data-id="28112">
-                        <div class="s_mn_place6">
-                            <div class="s_mn_housingbox2">
-                                <div class="s_mn_housing_img2">
-                                    <a href="${basePath}/room/${room.roomId}" title="三亚湾碧海蓝天听涛公寓06号海景两房" target="_blank">
-                                        <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/20140714172820832.jpg" width="580" height="368" alt="三亚湾碧海蓝天听涛公寓06号海景两房">
-                                    </a>
-                                    <span class="s_mn_housing_price">￥580</span>
-                                </div>
-                                <div class="s_mn_housing_textbox2">
-                                    <div class="s_mn_housing_title2">
-                                        <a href="${basePath}/room/${room.roomId}" title="三亚湾碧海蓝天听涛公寓06号海景两房" target="_blank">三亚湾碧海蓝天听涛公寓06号海景两房</a>
-                                    </div>
-                                    <div class="s_mn_housing_information2">
-                                        <span>2室</span>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <span>整租</span>
-                                        <span>|&nbsp;</span><span>宜住4人</span>
-                                        <span>&nbsp;|&nbsp;</span><span>10张图</span>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <span>近期预订0晚</span>
-                                    </div>
-                                    <div class="s_mn_landlordbox s_mn_landlordpos">
-                                        <div class="s_mn_landlordpic">
-                                            <a href="${basePath}/room/${room.roomId}" title="三亚听涛公寓" target="_blank">
-
-                                                <img src="${staticRoot}/images/201409221055563927.jpg" alt="三亚听涛公寓" width="80" height="80">
-                                            </a>
-                                        </div>
-                                        <div class="s_mn_landlordname">
-                                            <a href="${basePath}/room/${room.roomId}" title="三亚听涛公寓" target="_blank">三亚听涛…</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 <#list rooms as room>
                     <div class="s_mn_module6x" data-id="151672">
                         <div class="s_mn_place6">
                             <div class="s_mn_housingbox2">
                                 <div class="s_mn_housing_img2">
-                                    <a href="${basePath}/room/${room.roomId}" title="${room.roomName}" target="_blank">
-                                        <img src="${staticRoot}/images/${room.lsit[1].imgAddress}" width="580" height="368" alt="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）">
+                                    <a href="${basePath}/room/${room.roomid}" title="${room.title}" target="_blank">
+                                        <img src="${staticRoot}/images/${room.lsit[1].img_url}" width="580" height="368" alt="${room.title}）">
                                     </a>
-                                    <span class="s_mn_housing_price">￥${room.roomPrice}</span>
+                                    <span class="s_mn_housing_price">￥${room.price}</span>
                                 </div>
                                 <div class="s_mn_housing_textbox2">
                                     <div class="s_mn_housing_title2">
-                                        <a href="${basePath}/room/${room.roomId}" title="${room.roomName}" target="_blank">${room.roomName}</a>
+                                        <a href="${basePath}/room/${room.roomid}" title="${room.title}" target="_blank">${room.title}</a>
                                     </div>
                                     <div class="s_mn_housing_information2">
-                                        <span>${room.roomStructure.bedroomNum}室</span>
+                                        <span>${room.bedroom}室</span>
                                         <span>&nbsp;|&nbsp;</span>
                                         <span>${room.rentalMethod.method}</span>
-                                        <span>|&nbsp;</span><span>${room.avaliableArea.standPop}人</span>
+                                        <span>|&nbsp;</span><span>${room.max_num}人</span>
                                         <span>&nbsp;|&nbsp;</span><span>${room.lsit?size}张图</span>
                                         <span>&nbsp;|&nbsp;</span>
                                         <span>近期预订0晚</span>
                                     </div>
                                     <div class="s_mn_landlordbox s_mn_landlordpos">
                                         <div class="s_mn_landlordpic">
-                                            <a href="${basePath}/room/${room.roomId}" title="${room.landlord.userName}" target="_blank">
+                                            <a href="${basePath}/room/${room.roomid}" title="${room.user.userName}" target="_blank">
 
-                                                <img src="${staticRoot}/images/${room.landlord.picture}" alt="${room.landlord.userName}" width="80" height="80">
+                                                <img src="${staticRoot}/images/${room.user.picture}" alt="${room.user.userName}" width="80" height="80">
                                             </a>
                                         </div>
                                         <div class="s_mn_landlordname">
-                                            <a href="https://www.muniao.com/fangdong/1051916/" title="${room.landlord.userName}" target="_blank">${room.landlord.userName}</a>
+                                            <a href="https://www.muniao.com/fangdong/1051916/" title="${room.user.userName}" target="_blank">${room.user.userName}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -648,16 +571,11 @@
                         </div>
                     </div>
                 </#list>
-
                 </div>
-
-
-
                 <div class="page_city">
                     <a href="https://www.muniao.com/features_housing_7.html" target="_blank">${roomFeature.roomFeature}特色房源-</a>-找到相关房源${rooms?size}个，每页30个结果
                 </div>
                 <div class="s_mn_page_bar">
-
                     <a href="https://www.muniao.com/features_housing_7.html" style="background:#ff6c5c;color:#fff;border:1px solid #e46355;" title="第一页" target="_self">第一页</a>
                     <a href="https://www.muniao.com/features_housing_7.html" style="background:#ff6c5c;color:#fff;border:1px solid #e46355;" title="1" rel="nofollow" target="_self">1</a>
                     <a href="https://www.muniao.com/features_housing_7_2.html" style="" title="2" rel="nofollow" target="_self">2</a>
@@ -667,8 +585,6 @@
         </div>
     </div>
 </div>
-
-
 <style>
     .sidebar li div {
         display: none;
@@ -800,23 +716,11 @@
             <div class="s_mn_footercity_tit">热门短租：</div>
             <div style="display: block;" class="s_mn_footercity_more">+展开</div>
         </li>
-
-
         <!-- **周边短租推荐-->
-
         <!-- **周边短租推荐-->
         <!-- **热门住宿推荐-->
-
         <!-- **热门住宿推荐-->
         <!-- **友情链接-->
-
-
-
-
-
-
-
-
     </ul>
     <script>
         $(function () {
@@ -894,7 +798,9 @@
                     var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?3afa9ab1a72e0e6917de9c2bab2b8089" : "https://jspassport.ssl.qhimg.com/11.0.1.js?3afa9ab1a72e0e6917de9c2bab2b8089";
                     document.write('<script src="' + src + '" id="sozz"><\/script>');
                 })();
-            </script><span id="cnzz_stat_icon_1000373664"><a href="http://www.cnzz.com/stat/website.php?web_id=1000373664" target="_blank" title="站长统计">站长统计</a></span><script src="${staticRoot}/images/z_stat.php" type="text/javascript"></script><script src="${staticRoot}/images/core.php" charset="utf-8" type="text/javascript"></script><script src="${staticRoot}/images/h.js.下载" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=59c4ac1df66ae9bdb2ce804f09084ea1" target="_blank"><img border="0" src="${staticRoot}/images/21.gif" width="20" height="20"></a><script src="${staticRoot}/images/11.0.1.js.下载" id="sozz"></script><script charset="utf-8" src="${staticRoot}/images/ab77b6ea7f3fbf79.js.下载"></script>
+            </script>
+            <span id="cnzz_stat_icon_1000373664"><a href="http://www.cnzz.com/stat/website.php?web_id=1000373664" target="_blank" title="站长统计">站长统计</a></span><script src="${staticRoot}/images/z_stat.php" type="text/javascript"></script><script src="${staticRoot}/images/core.php" charset="utf-8" type="text/javascript"></script><script src="${staticRoot}/images/h.js.下载" type="text/javascript"></script>
+            <a href="http://tongji.baidu.com/hm-web/welcome/ico?s=59c4ac1df66ae9bdb2ce804f09084ea1" target="_blank"><img border="0" src="${staticRoot}/images/21.gif" width="20" height="20"></a><script src="${staticRoot}/images/11.0.1.js.下载" id="sozz"></script><script charset="utf-8" src="${staticRoot}/images/ab77b6ea7f3fbf79.js.下载"></script>
             <!-- cnzz统计代码：-->
 
         </div>

@@ -3,6 +3,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <#assign basePath=request.contextPath />
+    <#assign basePath=request.contextPath />
     <link rel="stylesheet" type="text/css" href="${staticRoot}/images/style1503546983737.css">
     <style type="text/css">.amap-indoor-map .label-canvas {
         position: absolute;
@@ -367,9 +369,9 @@
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活">
     </div>
     <ul class="s_mn_nav">
-        <li><a href="https://www.muniao.com/" class="s_mn_nav_over">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="https://www.muniao.com/features.html" target="_self">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>
@@ -859,7 +861,7 @@
     <div class="s_mn_banner_index">
         <div class="s_mn_banner_center">
             <div class="s_mn_search_index">
-                <form action="https://www.muniao.com/Home/Lists" class="s_mn_search_box" id="search_form" method="post"
+                <form action="${basePath}/city/index/1" class="s_mn_search_box" id="search_form" method="post"
                       target="_self" data-x="xxx">
                     <div style="display: none">
                         <input name="pinyinText" id="pinyintext" type="hidden" value="beijing" autocomplete="off">
@@ -875,6 +877,7 @@
                             <div class="s_mn_search_ipt">
                                 <div class="s_mn_ipt_index">
                                     <input type="text"
+                                           name="indexRoomLocation"
                                            class="s_mn_city_ipt s_orange s_f20 s_yh w_index_position city_ipt_w"
                                            id="cityvalue" value="" placeholder="请选择目的地" autocomplete="off">
                                 </div>
@@ -1028,7 +1031,7 @@
             <li style="display: none;"><a title="六一活动" href="javascript:getonclick();"
                                           style="background: url(${staticRoot}/images/pc_bannar.jpg) 50% 50% no-repeat; display: block;">&nbsp;</a>
             </li>
-            <li style="display: block;"><a title="发现" href="https://www.muniao.com/list_story_0_1.html"
+            <li style="display: block;"><a title="发现" href="#"
                                            style="background: url(${staticRoot}/images/bannar_20180412.jpg) 50% 50% no-repeat; display: block;">&nbsp;</a>
             </li>
 
@@ -1062,7 +1065,7 @@
             <div class="s_mn_hotcity_main">
                 <div class="s_mn_module">
                     <div class="s_mn_module2x">
-                        <a href="https://www.muniao.com/beijing/" target="_blank" class="s_mn_place2"
+                        <a href="${basePath}/city/北京/1" target="_blank" class="s_mn_place2"
                            data-nameen="beijing">
                             <img src="${staticRoot}/images/2015110240755481.jpg" width="780" height="280" alt="北京">
                             <div class="s_mn_module_textbox">
@@ -1072,7 +1075,7 @@
                         </a>
                     </div>
                     <div class="s_mn_module1x">
-                        <a href="https://www.muniao.com/shanghai/" target="_blank" class="s_mn_place1"
+                        <a href="${basePath}/city/上海/1" target="_blank" class="s_mn_place1"
                            data-nameen="shanghai">
                             <img src="${staticRoot}/images/2015110248950057.jpg" width="380" height="280" alt="上海">
                             <div class="s_mn_module_textbox">
@@ -1082,7 +1085,7 @@
                         </a>
                     </div>
                     <div class="s_mn_module1x">
-                        <a href="https://www.muniao.com/qingdao/" target="_blank" class="s_mn_place1"
+                        <a href="${basePath}/city/青岛/1" target="_blank" class="s_mn_place1"
                            data-nameen="qingdao">
                             <img src="${staticRoot}/images/2015110240670077.jpg" width="380" height="280" alt="青岛">
                             <div class="s_mn_module_textbox">
@@ -1092,7 +1095,7 @@
                         </a>
                     </div>
                     <div class="s_mn_module2x">
-                        <a href="https://www.muniao.com/qinhuangdao/" target="_blank" class="s_mn_place2"
+                        <a href="${basePath}/city/秦皇岛/1" target="_blank" class="s_mn_place2"
                            data-nameen="qinhuangdao">
                             <img src="${staticRoot}/images/2015110240834921.jpg" width="780" height="280" alt="北戴河">
                             <div class="s_mn_module_textbox">
@@ -1102,7 +1105,7 @@
                         </a>
                     </div>
                     <div class="s_mn_module1x">
-                        <a href="https://www.muniao.com/dalian/" target="_blank" class="s_mn_place1"
+                        <a href="${basePath}/city/大连/1" target="_blank" class="s_mn_place1"
                            data-nameen="dalian">
                             <img src="${staticRoot}/images/2015110240895237.jpg" width="380" height="280" alt="大连">
                             <div class="s_mn_module_textbox">
@@ -1112,7 +1115,7 @@
                         </a>
                     </div>
                     <div class="s_mn_module1x">
-                        <a href="https://www.muniao.com/chengdu/" target="_blank" class="s_mn_place1"
+                        <a href="${basePath}/city/成都/1" target="_blank" class="s_mn_place1"
                            data-nameen="chengdu">
                             <img src="${staticRoot}/images/2015102234339797.jpg" width="380" height="280" alt="成都">
                             <div class="s_mn_module_textbox">
@@ -1124,7 +1127,7 @@
                         </a>
                     </div>
                     <div class="s_mn_module1x">
-                        <a href="https://www.muniao.com/hangzhou/" target="_blank" class="s_mn_place1"
+                        <a href="${basePath}/city/杭州/1" target="_blank" class="s_mn_place1"
                            data-nameen="hangzhou">
                             <img src="${staticRoot}/images/2015102234254437.jpg" width="380" height="280" alt="杭州">
                             <div class="s_mn_module_textbox">
@@ -1275,7 +1278,7 @@
             </div>
             <div class="s_mn_features_main">
                 <div class="s_mn_features_place">
-                    <a href="https://www.muniao.com/features_housing_1.html" target="_blank" class="s_mn_feautres_img">
+                    <a href="${basePath}/features/1/1" target="_blank" class="s_mn_feautres_img">
                         <img src="${staticRoot}/images/2016112849012901.jpg" width="380" height="280" alt="别墅  ">
                         <div class="s_mn_features_textbox">
                             <div class="s_mn_feautres_label">别墅</div>
@@ -1284,7 +1287,7 @@
                     </a>
                 </div>
                 <div class="s_mn_features_place">
-                    <a href="https://www.muniao.com/features_housing_2.html" target="_blank" class="s_mn_feautres_img">
+                    <a href="${basePath}/features/2/1" target="_blank" class="s_mn_feautres_img">
                         <img src="${staticRoot}/images/2016112850790009.jpg" width="380" height="280" alt="情侣房 ">
                         <div class="s_mn_features_textbox">
                             <div class="s_mn_feautres_label">情侣房</div>
@@ -1293,7 +1296,7 @@
                     </a>
                 </div>
                 <div class="s_mn_features_place">
-                    <a href="https://www.muniao.com/features_housing_5.html" target="_blank" class="s_mn_feautres_img">
+                    <a href="${basePath}/features/3/1" target="_blank" class="s_mn_feautres_img">
                         <img src="${staticRoot}/images/2016112850841837.jpg" width="380" height="280" alt="主题特色 ">
                         <div class="s_mn_features_textbox">
                             <div class="s_mn_feautres_label">主题特色</div>
@@ -1302,7 +1305,7 @@
                     </a>
                 </div>
                 <div class="s_mn_features_place">
-                    <a href="https://www.muniao.com/features_housing_7.html" target="_blank" class="s_mn_feautres_img">
+                    <a href="${basePath}/features/4/1" target="_blank" class="s_mn_feautres_img">
                         <img src="${staticRoot}/images/2016112850904385.jpg" width="380" height="280" alt="海景房 ">
                         <div class="s_mn_features_textbox">
                             <div class="s_mn_feautres_label">海景房</div>
@@ -1311,7 +1314,7 @@
                     </a>
                 </div>
                 <div class="s_mn_features_place">
-                    <a href="https://www.muniao.com/features_housing_9.html" target="_blank" class="s_mn_feautres_img">
+                    <a href="${basePath}/features/5/1" target="_blank" class="s_mn_feautres_img">
                         <img src="${staticRoot}/images/2016112850969601.jpg" width="380" height="280" alt="古镇客栈 ">
                         <div class="s_mn_features_textbox">
                             <div class="s_mn_feautres_label">古镇客栈</div>
@@ -1320,7 +1323,7 @@
                     </a>
                 </div>
                 <div class="s_mn_features_place">
-                    <a href="https://www.muniao.com/features_housing_4.html" target="_blank" class="s_mn_feautres_img">
+                    <a href="${basePath}/features/6/1" target="_blank" class="s_mn_feautres_img">
                         <img src="${staticRoot}/images/2016112851022489.jpg" width="380" height="280" alt="木屋 ">
                         <div class="s_mn_features_textbox">
                             <div class="s_mn_feautres_label">木屋</div>
@@ -1329,7 +1332,7 @@
                     </a>
                 </div>
                 <div class="s_mn_features_place">
-                    <a href="https://www.muniao.com/features_housing_6.html" target="_blank" class="s_mn_feautres_img">
+                    <a href="${basePath}/features/7/1" target="_blank" class="s_mn_feautres_img">
                         <img src="${staticRoot}/images/2016112852049429.jpg" width="380" height="280" alt="四合院 ">
                         <div class="s_mn_features_textbox">
                             <div class="s_mn_feautres_label">四合院</div>
@@ -1338,7 +1341,7 @@
                     </a>
                 </div>
                 <div class="s_mn_features_place">
-                    <a href="https://www.muniao.com/features_housing_8.html" target="_blank" class="s_mn_feautres_img">
+                    <a href="${basePath}/features/8/1" target="_blank" class="s_mn_feautres_img">
                         <img src="${staticRoot}/images/2016112852099413.jpg" width="380" height="280" alt="复式 ">
                         <div class="s_mn_features_textbox">
                             <div class="s_mn_feautres_label">复式</div>
@@ -1347,7 +1350,7 @@
                     </a>
                 </div>
                 <div class="s_mn_features_place">
-                    <a href="https://www.muniao.com/features_housing_10.html" target="_blank" class="s_mn_feautres_img">
+                    <a href="${basePath}/features/9/1" target="_blank" class="s_mn_feautres_img">
                         <img src="${staticRoot}/images/2016112852149213.jpg" width="380" height="280" alt="窑洞 ">
                         <div class="s_mn_features_textbox">
                             <div class="s_mn_feautres_label">窑洞</div>

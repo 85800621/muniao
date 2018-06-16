@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <#assign basePath=request.contextPath />
     <title>金沙滩海丰海景公寓四居室 -预订房间-木鸟短租</title>
     <meta name="keywords" content="短租房">
     <meta name="description" content="">
@@ -342,9 +342,9 @@
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活">
     </div>
     <ul class="s_mn_nav">
-        <li><a href="https://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="https://www.muniao.com/features.html" target="_self">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>

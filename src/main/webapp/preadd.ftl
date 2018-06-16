@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <#assign basePath=request.contextPath />
     <script charset="utf-8" src="${staticRoot}/images/v.js.下载"></script>
     <script type="text/javascript" async="" src="${staticRoot}/images/mv.js.下载"></script>
     <script type="text/javascript" async="" src="${staticRoot}/images/mba.js.下载"></script>
@@ -560,9 +561,9 @@
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活">
     </div>
     <ul class="s_mn_nav">
-        <li><a href="http://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="http://www.muniao.com/features.html" target="_self">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>
@@ -1332,7 +1333,7 @@
             <div class="publish-formGroupContent publish-formDesc">
                 <p>如果您的房源未在其它民宿平台发布，您可以直接开始创建新房源。</p>
             </div>
-            <a href="http://user2.muniao.com/Room/step1?utp=1" class="publish-btn">创建房源</a>
+            <a href="${basePath}/Room/step1" class="publish-btn">创建房源</a>
         </div>
     </div>
 </div>

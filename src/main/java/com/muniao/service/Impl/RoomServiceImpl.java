@@ -97,8 +97,8 @@ public class RoomServiceImpl implements RoomService{
      * @return
      */
     @Override
-    public List<Room> selectRoomType(String roomLocation, int currentPage) {
-        return roomDao.selectRoomType(roomLocation,pageBean.getPageSize()*(currentPage-1),pageBean.getPageSize());
+    public List<Room> selectRoomType(String roomLocation) {
+        return roomDao.selectRoomType(roomLocation);
     }
 
     /**
@@ -108,8 +108,8 @@ public class RoomServiceImpl implements RoomService{
      * @return
      */
     @Override
-    public List<Room> selectRoomInterval(String roomLocation, int currentPage) {
-        return roomDao.selectRoomInterval(roomLocation,pageBean.getPageSize()*(currentPage-1),pageBean.getPageSize());
+    public List<Room> selectRoomInterval(String roomLocation) {
+        return roomDao.selectRoomInterval(roomLocation);
     }
 
     /**
@@ -119,8 +119,8 @@ public class RoomServiceImpl implements RoomService{
      * @return
      */
     @Override
-    public List<Room> selectRoomMethod(String roomLocation, int currentPage) {
-        return roomDao.selectRoomMethod(roomLocation,pageBean.getPageSize()*(currentPage-1),pageBean.getPageSize());
+    public List<Room> selectRoomMethod(String roomLocation) {
+        return roomDao.selectRoomMethod(roomLocation);
 
     }
 
@@ -131,8 +131,8 @@ public class RoomServiceImpl implements RoomService{
      * @return
      */
     @Override
-    public List<Room> selectRoomStructure(String roomLocation, int currentPage) {
-        return roomDao.selectRoomStructure(roomLocation,pageBean.getPageSize()*(currentPage-1),pageBean.getPageSize());
+    public List<Room> selectRoomStructure(String roomLocation) {
+        return roomDao.selectRoomStructure(roomLocation);
 
     }
 

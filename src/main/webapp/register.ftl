@@ -3,6 +3,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>日租房,短租房,特色房,订房网,木鸟短租-注册</title>
+    <#assign basePath=request.contextPath />
     <meta name="keywords" content="日租、日租房、短租、家庭公寓、自助公寓、家庭旅馆、北京日租房、青岛日租房、秦皇岛日租房、大连日租房、石家庄日租房、重庆日租房、天津日租房、广州日租房">
     <meta name="description" content="日租、日租房、短租、家庭公寓、自助公寓、家庭旅馆、北京日租房、青岛日租房、秦皇岛日租房、大连日租房、石家庄日租房、重庆日租房、天津日租房、广州日租房">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -208,9 +209,9 @@
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="http://www.muniao.com/"><img src="http://39.105.123.156/images/mn_logo.png" width="80" height="40"></a> </h2>
     <div class="w_slogan" style="display:block;"><img src="http://39.105.123.156/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="http://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="http://www.muniao.com/features.html" target="_self">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="http://39.105.123.156/images/give88.png"></i></a></li>
     </ul>

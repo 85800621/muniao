@@ -139,7 +139,6 @@
     house_type
     FROM tb_room
     WHERE city=#{roomLocation,javaType=String}
-    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
   </select>
 
   <!-- 查询具体房间价格区间 -->
@@ -149,7 +148,6 @@
     price_interval_id
     FROM tb_room
     WHERE city=#{roomLocation,javaType=String}
-    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
   </select>
 
   <!-- 查询具体房间出租方式 -->
@@ -159,7 +157,6 @@
     rent_type
     FROM tb_room
     WHERE city=#{roomLocation,javaType=String}
-    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
   </select>
 
   <!-- 查询具体房间的户型 -->
@@ -169,7 +166,6 @@
     bedroom
     FROM tb_room
     WHERE city=#{roomLocation,javaType=String}
-    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
   </select>
 
 

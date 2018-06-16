@@ -61,22 +61,22 @@ public interface RoomService {
     /**
      * 查出房间地方类型
      */
-    List<Room> selectRoomType(String roomLocation,int currentPage);
+    List<Room> selectRoomType(String roomLocation);
 
     /**
      * 查出房间地方类型
      */
-    List<Room> selectRoomInterval(String roomLocation,int currentPage);
+    List<Room> selectRoomInterval(String roomLocation);
 
     /**
      * 查出房间地方类型
      */
-    List<Room> selectRoomMethod(String roomLocation,int currentPage);
+    List<Room> selectRoomMethod(String roomLocation);
 
     /**
      * 查出房间户型
      */
-    List<Room> selectRoomStructure(String roomLocation,int currentPage);
+    List<Room> selectRoomStructure(String roomLocation);
 
     /**
      * 按条件进行查询

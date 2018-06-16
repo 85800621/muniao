@@ -3,7 +3,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>海景房短租,租直面大海海景房  - 木鸟短租</title>
-<#assign basePath=request.contextPath />
+    <#assign basePath=request.contextPath />
     <meta name="keywords" content="海景房短租,海景房出租">
     <meta name="description" content="木鸟短租为有海边度假旅游寻找海景房出租的朋友提供优质、可靠的海景房住宿服务.精心搜集了海景房短租房源,全心全意为您的出行住宿保驾护航.">
     <meta name="viewport" content="width=1400, initial-scale=1">
@@ -73,9 +73,9 @@
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="https://www.muniao.com/"><img src="${staticRoot}/images/mn_logo.png" width="80" height="40"></a> </h2>
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="https://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="${basePath}/featureslist" target="_self" class="s_mn_nav_over">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
@@ -93,7 +93,6 @@
     </div>
 </div>
 <!--登录弹出框-->
-
 <script src="${staticRoot}/images/base-validator.js.下载"></script>
 <link href="${staticRoot}/images/LoginDiv.css" rel="stylesheet">
 
@@ -328,8 +327,6 @@
         document.getElementById("ValidImg").src = '/Login/VerifyCode?' + Math.random();
     }
 </script>
-
-
 <style>
     input::-ms-reveal{display:none;}/*隐藏密码框小眼睛*/
 </style>
@@ -438,10 +435,6 @@
         newa_tips.removeClass("newa_tips_show");
     });
 </script>
-
-
-
-
 <script>
     $(function () {
         //设置banner选中菜单样式
@@ -504,7 +497,7 @@
         <div class="s_mn_center">
             <div class="s_mn_head_textbox">
                 <h2>${roomFeature.roomFeature}</h2>
-                <p>${rooms[1].roomName}</p>
+                <p>${rooms[1].title}</p>
                 <div class="s_mn_module_text">精选${rooms?size}套房间</div>
             </div>
         </div>
@@ -528,7 +521,7 @@
                     <a href="" title="全部" class="s_mn_features_citybox_a">全部</a>&nbsp;|&nbsp;
                     <a href="" title="秦皇岛">秦皇岛</a><label>&nbsp;| &nbsp;</label>
                 <#list  cityList as cityName>
-                    <a href="${basePath}/cityfeatures/${roomFeature.roomFeatureId}/${cityName.roomLocation}" title="${cityName.roomLocation}">${cityName.roomLocation}</a><label>&nbsp;| &nbsp;</label>
+                    <a href="${basePath}/cityfeatures/${roomFeature.roomFeatureId}/${cityName.city}/1" title="${cityName.city}">${cityName.city}</a><label>&nbsp;| &nbsp;</label>
                 </#list>
 
                 </div>
@@ -614,33 +607,33 @@
                         <div class="s_mn_place6">
                             <div class="s_mn_housingbox2">
                                 <div class="s_mn_housing_img2">
-                                    <a href="${basePath}/room/${room.roomId}" title="${room.roomName}" target="_blank">
-                                        <img src="${staticRoot}/images/${room.lsit[1].imgAddress}" width="580" height="368" alt="促销价 一家人归宿 观海景园景 珺海诗意栖居（两室一厅海景房）">
+                                    <a href="${basePath}/room/${room.roomid}" title="${room.title}" target="_blank">
+                                        <img src="${staticRoot}/images/${room.lsit[1].img_url}" width="580" height="368" alt="${room.title}">
                                     </a>
-                                    <span class="s_mn_housing_price">￥${room.roomPrice}</span>
+                                    <span class="s_mn_housing_price">￥${room.price}</span>
                                 </div>
                                 <div class="s_mn_housing_textbox2">
                                     <div class="s_mn_housing_title2">
-                                        <a href="${basePath}/room/${room.roomId}" title="${room.roomName}" target="_blank">${room.roomName}</a>
+                                        <a href="${basePath}/room/${room.roomid}" title="${room.title}" target="_blank">${room.title}</a>
                                     </div>
                                     <div class="s_mn_housing_information2">
-                                        <span>${room.roomStructure.bedroomNum}室</span>
+                                        <span>${room.bedroom}室</span>
                                         <span>&nbsp;|&nbsp;</span>
                                         <span>${room.rentalMethod.method}</span>
-                                        <span>|&nbsp;</span><span>${room.avaliableArea.standPop}人</span>
+                                        <span>|&nbsp;</span><span>${room.max_num}人</span>
                                         <span>&nbsp;|&nbsp;</span><span>${room.lsit?size}张图</span>
                                         <span>&nbsp;|&nbsp;</span>
                                         <span>近期预订0晚</span>
                                     </div>
                                     <div class="s_mn_landlordbox s_mn_landlordpos">
                                         <div class="s_mn_landlordpic">
-                                            <a href="${basePath}/room/${room.roomId}" title="${room.landlord.userName}" target="_blank">
+                                            <a href="${basePath}/room/${room.roomid}" title="${room.user.userName}" target="_blank">
 
-                                                <img src="${staticRoot}/images/${room.landlord.picture}" alt="${room.landlord.userName}" width="80" height="80">
+                                                <img src="${staticRoot}/images/${room.user.picture}" alt="${room.user.userName}" width="80" height="80">
                                             </a>
                                         </div>
                                         <div class="s_mn_landlordname">
-                                            <a href="${basePath}/room/${room.roomId}" title="${room.landlord.userName}" target="_blank">${room.landlord.userName}</a>
+                                            <a href="${basePath}/room/${room.roomid}" title="${room.user.userName}" target="_blank">${room.user.userName}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -650,14 +643,14 @@
                 </#list>
                 </div>
                 <div class="page_city">
-                    <a href="${basePath}/room/${room.roomId}" target="_blank">${roomFeature.roomFeature}特色房源-</a>-找到相关房源${roomNum}个，每页30个结果
+                    <a href="${basePath}/room/${rooms[1].roomFeature.roomFeature}" target="_blank">${roomFeature.roomFeature}特色房源-</a>-找到相关房源${roomNum}个，每页30个结果
                 </div>
                 <div class="s_mn_page_bar">
                     <a href="${basePath}/features/${roomFeature.roomFeatureId}/1" style="background:#ff6c5c;color:#fff;border:1px solid #e46355;" title="第一页" target="_self">第一页</a>
                 <#list pageList as page>
                     <a href="${basePath}/features/${roomFeature.roomFeatureId}/${page}" style="" title="2" rel="nofollow" target="_self">${page}</a>
                 </#list>
-                    <a href="${basePath}/features/${roomFeature.roomFeatureId}/${pageList?size}" style="" rel="nofollow" title="最后一页" target="_self" class="Lpage_li1">最后一页</a>
+                    <a href="${basePath}/features/${roomFeature.roomFeatureId}/${roomNum%30+1}" style="" rel="nofollow" title="最后一页" target="_self" class="Lpage_li1">最后一页</a>
                 </div>
             </div>
         </div>
@@ -779,13 +772,9 @@
     <!--底部热门链接begin-->
     <ul class="s_mn_footercitylist cleafix" id="s_mn_footercitylist">
         <!--短租房信息-->
-
         <!-- **按位置找短租房-->
-
         <!-- **热门房源类型-->
-
         <!-- **主题特色短租房-->
-
         <!--热门短租-->
         <li>
             <div class="s_mn_footerhot">
@@ -796,23 +785,11 @@
             <div class="s_mn_footercity_tit">热门短租：</div>
             <div style="display: block;" class="s_mn_footercity_more">+展开</div>
         </li>
-
-
         <!-- **周边短租推荐-->
-
         <!-- **周边短租推荐-->
         <!-- **热门住宿推荐-->
-
         <!-- **热门住宿推荐-->
         <!-- **友情链接-->
-
-
-
-
-
-
-
-
     </ul>
     <script>
         $(function () {
