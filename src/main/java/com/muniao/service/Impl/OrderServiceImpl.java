@@ -62,8 +62,26 @@ public class OrderServiceImpl implements OrderService{
 
     @Override
     public List <Order> selectWaitCommitOrders(String type, int buyerId) {
-        List<Order> orders=orderDao.selectWaitCommitOrders("6",2);
+        List<Order> orders=orderDao.selectWaitCommitOrders(type,buyerId);
         return orders;
+    }
+
+    @Override
+    public List <Order> selectAllOrders(int currentUserId) {
+
+
+        return orderDao.selectAllOrders(currentUserId);
+    }
+
+    /**
+     * 根据订单Id查找订单
+     *
+     * @param orderId
+     * @return
+     */
+    @Override
+    public Order selectOneOrder(int orderId) {
+        return orderDao.selectOneOrder(orderId);
     }
 
 
