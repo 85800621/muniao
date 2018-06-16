@@ -1,6 +1,6 @@
 package com.muniao.dao;
 
-import com.muniao.entity.RoomImage;
+import com.muniao.entity.Image;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,5 +11,7 @@ import java.util.List;
  */
 @Repository
 public interface RoomImgMapper {
-    List<RoomImage> selectAllByRoomId(int imgId);
+    List<Image> selectAllByRoomId(int imgId);
+
+    void insertImage(Image image);
 }

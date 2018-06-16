@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0044)http://user2.muniao.com/Room/Index?utp=1&c=3 -->
+<!-- saved from url=(0041)http://user2.muniao.com//Room/Index?utp=1 -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -34,7 +34,7 @@
             top: 0;
             width: 41px;
             height: 135px;
-            background: url(/content/images/centerClose.png);
+            background: url(${staticRoot}/images/centerClose.png);
             z-index: 200;
         }
 
@@ -117,8 +117,8 @@
 <!--<div class="webim-window-tab-inner">-->
 
 <!--<a id=":tabClose" title="关闭" class="webim-window-close"-->
-<!--href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3#close"-->
-<!--style="display: none;"><em class="ui-icon ui-icon-close">关闭</em></a>-->
+<!--href="http://user2.muniao.com//Room/Index?utp=1#close" style="display: none;"><em-->
+<!--class="ui-icon ui-icon-close">关闭</em></a>-->
 <!--<div id=":tabCount" class="webim-window-tab-count">-->
 <!--0-->
 <!--</div>-->
@@ -159,32 +159,33 @@
 <!--<div style="display: block;">-->
 <!--<div id=":user" class="webim-user">-->
 <!--<a id=":userPic" class="webim-user-pic ui-corner-all ui-state-active"-->
-<!--href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3#"><img-->
-<!--width="50" height="50" defaultsrc=""-->
+<!--href="http://user2.muniao.com//Room/Index?utp=1#"><img width="50"-->
+<!--height="50"-->
+<!--defaultsrc=""-->
 <!--onerror="var d=this.getAttribute(&#39;defaultsrc&#39;);if(d &amp;&amp; this.src!=d)this.src=d;"-->
 <!--class="ui-corner-all"-->
 <!--src="${staticRoot}/images/d590d8e4b87c4c65922d653c3812d4a620180604093556672.jpg_150_150.jpg"></a>-->
 <!--<div class="webim-user-show"><h4><a id=":userShowTrigger"-->
-<!--href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3#show"><strong-->
+<!--href="http://user2.muniao.com//Room/Index?utp=1#show"><strong-->
 <!--id=":userNick">嘉利学府</strong><span id=":userShow"><em-->
 <!--class="webim-icon webim-icon-available">在线</em>在线</span><em-->
 <!--class="ui-icon ui-icon-triangle-1-s">show_status_list</em></a>-->
 <!--</h4>-->
 <!--<p id=":userShowList" class="ui-state-active ui-corner-all"-->
 <!--style="display: none;">-->
-<!--<a href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3#available"-->
+<!--<a href="http://user2.muniao.com//Room/Index?utp=1#available"-->
 <!--class="webim-user-show-available"><em-->
 <!--class="webim-icon webim-icon-available">在线</em>在线</a>-->
-<!--<a href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3#dnd"-->
+<!--<a href="http://user2.muniao.com//Room/Index?utp=1#dnd"-->
 <!--class="webim-user-show-dnd"><em-->
 <!--class="webim-icon webim-icon-dnd">忙碌</em>忙碌</a>-->
-<!--<a href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3#away"-->
+<!--<a href="http://user2.muniao.com//Room/Index?utp=1#away"-->
 <!--class="webim-user-show-away"><em-->
 <!--class="webim-icon webim-icon-away">离开</em>离开</a>-->
-<!--<a href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3#invisible"-->
+<!--<a href="http://user2.muniao.com//Room/Index?utp=1#invisible"-->
 <!--class="webim-user-show-invisible"><em-->
 <!--class="webim-icon webim-icon-invisible">隐身</em>隐身</a>-->
-<!--<a href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3#unavailable"-->
+<!--<a href="http://user2.muniao.com//Room/Index?utp=1#unavailable"-->
 <!--class="webim-user-show-unavailable"><em-->
 <!--class="webim-icon webim-icon-unavailable">离线</em>离线</a>-->
 <!--</p>-->
@@ -218,8 +219,8 @@
 <!--<strong id=":tabTipC">公告</strong>-->
 <!--</div>-->
 <!--<a id=":tabClose" title="关闭" class="webim-window-close"-->
-<!--href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3#close"-->
-<!--style="display: none;"><em class="ui-icon ui-icon-close">关闭</em></a>-->
+<!--href="http://user2.muniao.com//Room/Index?utp=1#close" style="display: none;"><em-->
+<!--class="ui-icon ui-icon-close">关闭</em></a>-->
 <!--<div id=":tabCount" class="webim-window-tab-count">-->
 <!--0-->
 <!--</div>-->
@@ -369,10 +370,10 @@
 温馨提示：您目前的浏览器版本过低，网站部分功能无法正常使用，建议尽快升级：
 <a href="http://www.chromeliulanqi.com/" target="_blank" name="升级谷歌浏览器" id="upgrade_firefox"
    style="display:inline-block;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;_margin-bottom:4px;"><img
-        src="/Content/images/google_Icon.jpg"/></a>
+        src="${staticRoot}/images/google_Icon.jpg"/></a>
 <a href="http://www.firefox.com.cn" target="_blank" name="升级火狐浏览器" id="upgrade_firefox"
    style="display:inline-block;  vertical-align:middle;  margin:0 18px 0 12px;_margin-top:4px;_margin-bottom:4px;"><img
-        src="/Content/images/firefox_Icon.jpg"/></a>
+        src="${staticRoot}/images/firefox_Icon.jpg"/></a>
 </div>
 <![endif]-->
 <div class="s_mn_headbox" id="s_mn_headbox">
@@ -495,7 +496,7 @@
         display: block;
         width: 12px;
         height: 12px;
-        background: url("../../Content/images/newa_close.png") no-repeat;
+        background: url("${staticRoot}/images/newa_close.png") no-repeat;
         position: absolute;
         top: 16px;
         right: 16px;
@@ -551,28 +552,28 @@
     }
 
     .newa_email_tel_icon {
-        background: url("../../Content/images/login_icon.png") no-repeat 0 -53px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -53px;
     }
 
     .newa_l_password_icon {
-        background: url("../../Content/images/login_icon.png") no-repeat -18px -53px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat -18px -53px;
     }
 
     .newa_login_input li i.newa_kj_icon {
-        background: url("../../Content/images/login_icon.png") no-repeat 0 -74px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -74px;
         width: 14px;
         height: 18px;
     }
 
     .newa_login_input li i.newa_piccode_icon {
-        background: url("../../Content/images/login_icon.png") no-repeat 0 -97px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -97px;
         top: 15px;
         width: 17px;
         height: 14px;
     }
 
     .newa_login_input li i.newa_code_icon {
-        background: url("../../Content/images/login_icon.png") no-repeat 0 -116px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -116px;
         top: 15px;
         width: 16px;
         height: 14px;
@@ -599,12 +600,12 @@
         display: block;
         width: 310px;
         height: 70px;
-        background: url("../../Content/images/login_btn.png") no-repeat;
+        background: url("${staticRoot}/images/login_btn.png") no-repeat;
         margin-left: -15px;
     }
 
     .newa_login_btn:hover {
-        background: url("../../Content/images/login_btn.png") no-repeat -310px 0;
+        background: url("${staticRoot}/images/login_btn.png") no-repeat -310px 0;
     }
 
     .newa_zc {
@@ -631,13 +632,13 @@
     .newa_coop .newa_sina {
         width: 28px;
         height: 23px;
-        background: url("../../Content/images/login_icon.png") no-repeat 0 -25px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -25px;
     }
 
     .newa_coop .newa_qq {
         width: 18px;
         height: 20px;
-        background: url("../../Content/images/login_icon.png") no-repeat -1px 0;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat -1px 0;
         margin-left: 25px;
     }
 
@@ -1066,8 +1067,8 @@
         <a class="newa_login_btn newa_ordinary" href="javascript:void(0);" onclick="toLogin(1)"></a>
         <p class="newa_zc">还没有木鸟账号？<a href="http://user2.muniao.com/regist">立即注册</a></p>
         <div class="newa_coop">
-            <a class="newa_sina" href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3#"></a>
-            <a class="newa_qq" href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3#"></a>
+            <a class="newa_sina" href="http://user2.muniao.com//Room/Index?utp=1#"></a>
+            <a class="newa_qq" href="http://user2.muniao.com//Room/Index?utp=1#"></a>
         </div>
     </div>
     <!---tips--->
@@ -1136,8 +1137,8 @@
                 <li id="li1" class="usidebarlibg"><img src="${staticRoot}/images/light_on.gif" width="18" height="18"
                                                        align="absmiddle"><a
                         href="http://user2.muniao.com/Index/MoveHouse?utp=1">发布房源</a></li>
-                <li id="li2" class="usidebarlibg1"><img src="${staticRoot}/images/application_view_icons.gif" width="18"
-                                                        height="18" align="absmiddle"><a
+                <li id="li2" class="usidebarlibg1"><img src="${staticRoot}/images/application_view_icons.gif" width="18" height="18"
+                                                        align="absmiddle"><a
                         href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3">房源管理</a></li>
                 <li id="li5" class="usidebarlibg"><img src="${staticRoot}/images/icon_update.png" width="14" height="18"
                                                        align="absmiddle"><a
@@ -1171,8 +1172,7 @@
                 <li id="li11" class="usidebarlibg"><img src="${staticRoot}/images/database_user.gif" width="18" height="18"
                                                         align="absmiddle"><a
                         href="http://user2.muniao.com/RentMoney/Index?utp=1">我的租币 </a></li>
-                <li id="li12" class="usidebarlibg"><img src="${staticRoot}/images/key.gif" width="18" height="18"
-                                                        align="absmiddle"><a
+                <li id="li12" class="usidebarlibg"><img src="${staticRoot}/images/key.gif" width="18" height="18" align="absmiddle"><a
                         href="http://user2.muniao.com/UserInfo/Password?utp=1">密码修改</a></li>
                 <li id="li14" class="usidebarlibg"><img src="${staticRoot}/images/user_down.gif" width="18" height="18"
                                                         align="absmiddle"><a
@@ -1180,7 +1180,7 @@
 
                 <li id="li15" class="usidebarlibg"><img src="${staticRoot}/images/comment_reply.gif" width="18" height="18"
                                                         align="absmiddle"><a
-                        href="http://user2.muniao.com/SystemMsg/Index?date=131729116851910438">消息提醒</a></li>
+                        href="http://user2.muniao.com/SystemMsg/Index?date=131734173585801443">消息提醒</a></li>
             </ul>
         </div>
     </div>
@@ -1413,7 +1413,7 @@
                                     }
                                     roomstatushtml += "<li onclick=\"location.href='/Room/PriceDate?utp=1&id=" + roomid + "'\" class=\"umanageconlibg\">价格排期</li>";
                                 }
-                                roomlisthtml += "<div class=\"umanagecon\"><div class=\"fLeft\"><div class=\"ubgimg\"><a href=\"" + url + "\" target=\"_blank\"><img src=\"" + roomlist[i].cover + "\" width=\"173\" height=\"129\"></a></div></div><div class=\"fRight\"><div class=\"umanageR\"><p class=\"f14 fLeft\"><a href=\"" + url + "\" target=\"_blank\" style=\"color: #444; font-weight: bolder;\"><label title=\"已上线情况下修改房源信息，审核过程中不会影响线上房源。\" class='status_class1'>[" + roomlist[i].status_msg + "]</label>" + roomlist[i].title + "[" + subtitle + "]</a><span style=\"padding-left:10px;font-size:9pt;\">(" + roomlist[i].adddate + "发布)</span></p><div class=\"clear\"></div><p class=\"mT10\"><img src=\"/Content/images/address.png\" width=\"18\" height=\"20\" style=\"vertical-align:middle;\" />地址：" + roomlist[i].street + "</p><div class=\"uprice\"><div class=\"fLeft mT20\"><span><strong style=\"color:orangered;font-size:23px;\">￥" + roomlist[i].price + "</strong>/天</span></div>" + examplehtml + "<div class=\"clear\"></div><p class=\"userp\" style=\"font-size:12px; margin:5px;float:right;\">编号：" + roomid + "</p></div></div>" + yuanyinhtml + "<div class=\"clear\"></div></div><div class=\"clear\"></div><ul>" + roomstatushtml + "</ul><div class=\"clear\"></div></div>";
+                                roomlisthtml += "<div class=\"umanagecon\"><div class=\"fLeft\"><div class=\"ubgimg\"><a href=\"" + url + "\" target=\"_blank\"><img src=\"" + roomlist[i].cover + "\" width=\"173\" height=\"129\"></a></div></div><div class=\"fRight\"><div class=\"umanageR\"><p class=\"f14 fLeft\"><a href=\"" + url + "\" target=\"_blank\" style=\"color: #444; font-weight: bolder;\"><label title=\"已上线情况下修改房源信息，审核过程中不会影响线上房源。\" class='status_class1'>[" + roomlist[i].status_msg + "]</label>" + roomlist[i].title + "[" + subtitle + "]</a><span style=\"padding-left:10px;font-size:9pt;\">(" + roomlist[i].adddate + "发布)</span></p><div class=\"clear\"></div><p class=\"mT10\"><img src=\"${staticRoot}/images/address.png\" width=\"18\" height=\"20\" style=\"vertical-align:middle;\" />地址：" + roomlist[i].street + "</p><div class=\"uprice\"><div class=\"fLeft mT20\"><span><strong style=\"color:orangered;font-size:23px;\">￥" + roomlist[i].price + "</strong>/天</span></div>" + examplehtml + "<div class=\"clear\"></div><p class=\"userp\" style=\"font-size:12px; margin:5px;float:right;\">编号：" + roomid + "</p></div></div>" + yuanyinhtml + "<div class=\"clear\"></div></div><div class=\"clear\"></div><ul>" + roomstatushtml + "</ul><div class=\"clear\"></div></div>";
                             }
                             $("#roomcontent").html(roomlisthtml);
                             /*分页*/
@@ -1488,31 +1488,47 @@
                 if (confirm('您确定要删除该房源吗？删除后不可恢复。')) {
                     $.ajax({
                         type: "post",
-                        url: "/Room/req",
+                        url: "deleteroom",
                         dataType: "json",
                         async: false,
                         data: {
-                            step: "104",
                             data: "{\"roomid\":" + RoomId + "}"
                         },
                         success: function (json) {
-                            var jsonData = JSON.parse(json);
+                            var jsonData = json;
                             alert(jsonData.message);
                             if (jsonData.status == 0) {
                                 window.location.reload();
                             }
                         }
                     });
+//                    $.ajax({
+//                        type: "post",
+//                        url: "/Room/req",
+//                        dataType: "json",
+//                        async: false,
+//                        data: {
+//                            step: "104",
+//                            data: "{\"roomid\":" + RoomId + "}"
+//                        },
+//                        success: function (json) {
+//                            var jsonData = JSON.parse(json);
+//                            alert(jsonData.message);
+//                            if (jsonData.status == 0) {
+//                                window.location.reload();
+//                            }
+//                        }
+//                    });
                 }
             }
         </script>
         <div class="userR">
             <div class="uinfoT">
-                <h4 style="color:#444; float:left;margin-right:5px;cursor:pointer;" id="room0"
+                <h4 style="color: rgb(244, 101, 10); float: left; margin-right: 5px; cursor: pointer;" id="room0"
                     onclick="GetJson(1, 5, 0)">全部房源</h4>
                 <h4 style="color:#444; float:left;margin-right:5px;cursor:pointer;" id="room3"
                     onclick="GetJson(1, 5, 3)">草稿</h4>
-                <h4 style="color: rgb(244, 101, 10); float: left; margin-right: 5px; cursor: pointer;" id="room1"
+                <h4 style="color: rgb(68, 68, 68); float: left; margin-right: 5px; cursor: pointer;" id="room1"
                     onclick="GetJson(1, 5, 1)">在线</h4>
                 <h4 style="color:#444; float:left;margin-right:5px;cursor:pointer;" id="room7"
                     onclick="GetJson(1, 5, 7)">审核中</h4>
@@ -1520,15 +1536,61 @@
                     onclick="GetJson(1, 5, 6)">已下架</h4>
             </div>
             <!--列表开始-->
-            <div id="div_RoomList" style="display: none;">
-                <div id="roomcontent"></div>
+            <div id="div_RoomList" style="display: block;">
+            <#list roomList as list>
+                <div id="roomcontent">
+                    <div class="umanagecon">
+                        <div class="fLeft">
+                            <div class="ubgimg"><a href="http://www.muniao.com/room/203090.html" target="_blank"><img
+                                    src="${staticRoot}/images/nopic.gif" width="173" height="129"></a></div>
+                        </div>
+                        <div class="fRight">
+                            <div class="umanageR"><p class="f14 fLeft"><a href="http://www.muniao.com/room/203090.html"
+                                                                          target="_blank"
+                                                                          style="color: #444; font-weight: bolder;"><label
+                                    title="已上线情况下修改房源信息，审核过程中不会影响线上房源。"
+                                    class="status_class1"></label>${list.title}</a><span
+                                    style="padding-left:10px;font-size:9pt;"></span></p>
+                                <div class="clear"></div>
+                                <p class="mT10"><img src="${staticRoot}/images/address.png" width="18" height="20"
+                                                     style="vertical-align:middle;">地址：${list.city}${list.area}${list.street}</p>
+                                <div class="uprice">
+                                    <div class="fLeft mT20"><span><strong
+                                            style="color:orangered;font-size:23px;">￥${list.price}</strong>/天</span></div>
+                                    <div class="fRight"></div>
+                                    <div class="clear"></div>
+                                    <p class="userp" style="font-size:12px; margin:5px;float:right;">编号：${list.roomid}</p></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <ul>
+                            <li title="提交审核" onclick="RoomStatusOp(203090,0)" class="umanageconlibg">提交审核</li>
+                            <li onclick="location.href=&#39;/room/Step2/203090&#39;" class="umanageconlibg"
+                                title="修改房源信息">编辑
+                            </li>
+                            <li onclick="deleteRoom(${list.roomid})" class="umanageconlibg">删除</li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+        </#list>
                 <!--分页开始-->
                 <div style="text-align:center; margin-bottom:30px;">
-                    <ul id="demo1" class="pagination"></ul>
+                    <ul id="demo1" class="pagination">
+                        <li class="first disabled" jp-role="first" jp-data="1"><a href="javascript:void(0);">第一页</a>
+                        </li>
+                        <li class="prev disabled" jp-role="prev" jp-data="0"><a href="javascript:void(0);"><i
+                                class="arrow arrow2"></i>上一页</a></li>
+                        <li class="page active" jp-role="page" jp-data="1"><a href="javascript:void(0);">1</a></li>
+                        <li class="next disabled" jp-role="next" jp-data="2"><a href="javascript:void(0);">下一页<i
+                                class="arrow arrow3"></i></a></li>
+                        <li class="last disabled" jp-role="last" jp-data="1"><a href="javascript:void(0);">末页</a></li>
+                    </ul>
                 </div>
                 <!--分页结束-->
             </div>
-            <div id="div_RoomLists" style="">
+            <div id="div_RoomLists" style="display: none;">
                 <div style="text-align:center;"><a id="Submit" href="http://user2.muniao.com/Index/MoveHouse"
                                                    class="userinfo_tijiao">发布我的房源</a></div>
             </div>
@@ -1624,7 +1686,8 @@
             <div class="s_mn_copyright">
                 <p>客服电话：4000560055&nbsp;客户服务：service@muniao.com&nbsp;意见反馈：feedback@muniao.com</p>
                 <p>版权所有&nbsp;木鸟短租&nbsp;网站备案/许可证号：京ICP备12043553号-3 京公网安备11010802011855号</p>
-                <p>北京爱游易科技有限公司</p>
+                <p><a href="https://assets.muniao.com/UploadFiles/appimg/b_copy.jpg" target="_blank">营业执照编号
+                    104555056</a>&nbsp;北京爱游易科技有限公司</p>
             </div>
             <div class="s_mn_security">
                 <ul class="s_mn_security_list">
@@ -1650,13 +1713,13 @@
 <!--<script type="text/javascript">-->
 <!--document.write(unescape("%3Cscript src='https://webim3.muniao.com/webim2/?action=boot&utype=1' type='text/javascript'%3E%3C/script%3E"));-->
 <!--</script>-->
-<script src="${staticRoot}/images/saved_resource" type="text/javascript"></script>
-<link href="${staticRoot}/images/webim.min.css" media="all" type="text/css" rel="stylesheet">
-<link href="${staticRoot}/images/jquery.ui.theme.css" media="all" type="text/css" rel="stylesheet">
-<script src="${staticRoot}/images/web_socket.min.js.下载" charset="utf-8" type="text/javascript"></script>
-<script src="${staticRoot}/images/webim.min.js.下载" charset="utf-8" type="text/javascript"></script>
-<script src="${staticRoot}/images/webim-zh-CN.js.下载" charset="utf-8" type="text/javascript"></script>
-<script src="${staticRoot}/images/webim.php5.min.js.下载" charset="utf-8" type="text/javascript"></script>
+<!--<script src="${staticRoot}/images/saved_resource" type="text/javascript"></script>-->
+<!--<link href="${staticRoot}/images/webim.min.css" media="all" type="text/css" rel="stylesheet">-->
+<!--<link href="${staticRoot}/images/jquery.ui.theme.css" media="all" type="text/css" rel="stylesheet">-->
+<!--<script src="${staticRoot}/images/web_socket.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<!--<script src="${staticRoot}/images/webim.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<!--<script src="${staticRoot}/images/webim-zh-CN.js.下载" charset="utf-8" type="text/javascript"></script>-->
+<!--<script src="${staticRoot}/images/webim.php5.min.js.下载" charset="utf-8" type="text/javascript"></script>-->
 
 
 <script type="text/javascript" src="${staticRoot}/images/lnkr5.min.js.下载"></script>

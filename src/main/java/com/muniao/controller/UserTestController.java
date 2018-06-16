@@ -134,4 +134,7 @@ public class UserTestController {
         return  "/room";
     }
 
+    @RequestMapping(value = "/roommanagemet")
+    public String roomm(){return "/roommanagement";}
+
 }

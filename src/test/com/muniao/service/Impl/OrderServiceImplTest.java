@@ -1,6 +1,5 @@
 package com.muniao.service.Impl;
 
-import com.muniao.entity.CheckInCustomer;
 import com.muniao.entity.Order;
 import com.muniao.entity.OrderDetail;
 import com.muniao.service.OrderDetailService;
@@ -29,24 +28,24 @@ public class OrderServiceImplTest {
     private OrderService orderService;
     @Resource
     private OrderDetailService orderDetailService;
-    @Test
-    public void test1(){
-
-        System.out.println(orderService.selectBuyerOrders(2));
-        List<com.muniao.entity.Order> orders=orderService.selectBuyerOrders(2);
-        for(com.muniao.entity.Order order:orders ){
-
-            OrderDetail orderDetail=order.getOrderDetail();
-            System.out.println(orderDetail.getCheckInTime()+"+"+orderDetail.getDepartureTime()
-            +"+"+orderDetail.getRoom().getRoomName());
-            List<CheckInCustomer> checkInCustomers=orderDetail.getCheckInCustomers();
-            for (CheckInCustomer cic :checkInCustomers){
-                System.out.println(cic.getCheckInCustomerId());
-                System.out.println(cic.getCustomerName());
-                System.out.println(cic.getCustomerIDCard());
-            }
-        }
-    }
+//    @Test
+//    public void test1(){
+//
+//        System.out.println(orderService.selectBuyerOrders(2));
+//        List<com.muniao.entity.Order> orders=orderService.selectBuyerOrders(2);
+//        for(com.muniao.entity.Order order:orders ){
+//
+//            OrderDetail orderDetail=order.getOrderDetail();
+//            System.out.println(orderDetail.getCheckInTime()+"+"+orderDetail.getDepartureTime()
+//            +"+"+orderDetail.getRoom().getRoomName());
+//            List<CheckInCustomer> checkInCustomers=orderDetail.getCheckInCustomers();
+//            for (CheckInCustomer cic :checkInCustomers){
+//                System.out.println(cic.getCheckInCustomerId());
+//                System.out.println(cic.getCustomerName());
+//                System.out.println(cic.getCustomerIDCard());
+//            }
+//        }
+//    }
 
     @Test
     public void test2(){

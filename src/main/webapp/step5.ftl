@@ -67,6 +67,7 @@
 //                    console.log($(this));
                     var _img_url = $(this).find('img').attr("srv_url");
                     var _type = $(this).find('input').attr('data_id');
+                    // 存数据库时把前缀裁掉
                     arr.push({ type: _type, remark: '', img_url: _img_url });
                 });
                 if (arr.length > 97)//最多上传60张图片

@@ -999,7 +999,7 @@
                 "size": $("#useSize").val(),//面积
                 "sameroom": $("#sameroom").val(),//房源套数
                 "subtitle": $("#subtitle").val().trim(),
-                "isaddbead": $("#div_add_type input:checked").val(),
+                "isaddbed": $("#div_add_type input:checked").val(),
                 "add_bed_num": beadNum,
                 "add_bed_price": beadprice,
                 "kitchenroom": $("#chufang").val(),//厨房数
@@ -1011,10 +1011,10 @@
                 JsonParams: getBedList(),
                 roomid: 203026
             }, function (data) {
-                alert("进入方法");
-                var jsonData = JSON.parse(data);
+//                var jsonData = JSON.parse(data);
+                var jsonData = data;
                 if (jsonData.status == 0) {
-                    window.location.href = "/room/Step3/203026";
+                    window.location.href = "step3";
                 } else {
                     alert(jsonData.message);
                     tj = true;

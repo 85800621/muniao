@@ -1999,10 +1999,11 @@
                 var datastr = JSON.stringify(postData);
                 var url = 'Room/Submit_Step3';
                 $.post(url, { postData: datastr }, function (data) {
-                    alert("进入第三步")
-                    var jsonData = JSON.parse(data);
+//                    var jsonData = JSON.parse(data);
+                    var jsonData = data;
                     if (jsonData.status == 0) {
-                        window.location.href = "/room/Step4/203026";
+//                        window.location.href = "/room/Step4/203026";
+                        window.location.href = "step4";
                     } else {
                         tj = true;
                         alert(jsonData.message);

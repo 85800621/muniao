@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.muniao.dao.RoomImgMapper">
-  <resultMap id="BaseResultMap" type="com.muniao.entity.RoomImage">
-    <id column="img_id" jdbcType="INTEGER" property="imgId" />
-    <result column="room_id" jdbcType="INTEGER" property="roomId"/>
-    <result column="img_address" jdbcType="VARCHAR" property="imgAddress" />
+  <resultMap id="BaseResultMap" type="com.muniao.entity.Image">
+    <id column="img_id" jdbcType="INTEGER" property="img_id" />
+    <result column="room_id" jdbcType="INTEGER" property="room_id"/>
+    <result column="img_url" jdbcType="VARCHAR" property="img_url"/>
   </resultMap>
 
   <sql id="Base_Column_List">
-      img_id,room_id,img_address
+      img_id,room_id,img_url
   </sql>
 
   <select id="selectAllByRoomId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     FROM tb_room_img
-    WHERE room_id=#{roomId,jdbcType=INTEGER}
+    WHERE room_id=#{room_id,jdbcType=INTEGER}
   </select>
+
+  <insert id="insertImage" parameterType="com.muniao.entity.Image">
+    INSERT INTO tb_room_img(room_id, img_url) VALUES (#{room_id},#{img_url})
+  </insert>
 
 </mapper>

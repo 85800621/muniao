@@ -18,7 +18,7 @@ import java.util.UUID;
 
 @Controller
 @RequestMapping("/Room")
-public class AddRoomTestController {
+public class UploadController {
 
     @Resource
     private UploadConfig uploadConfig;

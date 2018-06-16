@@ -42,12 +42,12 @@
     <result column="in_time" jdbcType="INTEGER" property="in_time" />
     <result column="out_time" jdbcType="INTEGER" property="out_time" />
     <result column="rzyq" jdbcType="INTEGER" property="rzyq" />
-    <result column="specialprice_istru" jdbcType="INTEGER" property="specialprice_istru" />
+    <result column="specialprice_istrue" jdbcType="INTEGER" property="specialprice_istrue" />
     <result column="week_start_date" jdbcType="DATE" property="week_start_date" />
     <result column="week_end_date" jdbcType="DATE" property="week_end_date" />
     <result column="weeks" jdbcType="INTEGER" property="weeks" />
     <result column="week_price" jdbcType="DOUBLE" property="week_price" />
-    <result column="weekmonth_disco" jdbcType="INTEGER" property="weekmonth_disco" />
+    <result column="weekmonth_discount" jdbcType="INTEGER" property="weekmonth_discount" />
     <result column="discount_week" jdbcType="DOUBLE" property="discount_week" />
     <result column="discount_month" jdbcType="DOUBLE" property="discount_month" />
     <result column="discount_start_date" jdbcType="DATE" property="discount_start_date" />
@@ -190,6 +190,7 @@
     FROM tb_room
     WHERE
     user_id=#{userId,jdbcType=INTEGER}
+    ORDER BY roomid DESC
     limit 0,6;
   </select>
 
