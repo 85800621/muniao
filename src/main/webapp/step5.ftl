@@ -64,7 +64,7 @@
             if (tj) {
                 tj = false;
                 $("#fileList li.file-item").each(function () {
-                    //console.log($(this));
+//                    console.log($(this));
                     var _img_url = $(this).find('img').attr("srv_url");
                     var _type = $(this).find('input').attr('data_id');
                     arr.push({ type: _type, remark: '', img_url: _img_url });
@@ -136,10 +136,12 @@
                 var datastr = JSON.stringify(postData);
                 var url = 'Room/Submit_Step5';
                 $.post(url, { postData: datastr }, function (data) {
-                    var jsonData = JSON.parse(data);
+//                    var jsonData = JSON.parse(data);
+                    var jsonData = data;
                     alert(jsonData.message);
                     if (jsonData.status == 0) {
-                        location.href = '/Room/Index?utp=1';
+//                        location.href = '/Room/Index?utp=1';
+                        location.href = 'Room/index';
                     } else { tj = true; }
                 })
             }
@@ -993,7 +995,13 @@
                 <!--用来存放item-->
                 <p class="pic-tips">图片尺寸要求大于610*385像素</p>
                 <ul id="fileList" class="uploader-list clear">
-                    <li id="filePicker" title="点击上传" class="webuploader-container"><div class="webuploader-pick webuploader-pick-hover"></div><div id="rt_rt_1cfhq4rqc1nbm9gn13n6je67kv1" style="position: absolute; top: 38px; left: 0px; width: 158px; height: 150px; overflow: hidden; bottom: auto; right: auto;"><input type="file" name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label></div></li>
+                    <li id="filePicker" title="点击上传" class="webuploader-container">
+                        <div class="webuploader-pick webuploader-pick-hover"></div>
+                        <div id="rt_rt_1cfhq4rqc1nbm9gn13n6je67kv1" style="position: absolute; top: 38px; left: 0px; width: 158px; height: 150px; overflow: hidden; bottom: auto; right: auto;">
+                            <input type="file" name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*">
+                            <label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="step4-title">

@@ -34,7 +34,7 @@ public class RoomController {
         List<Room> rooms = roomService.findAllByFeature(featureId,currentPage);
         //房间图片
         for (Room room : rooms) {
-            List<RoomImage> list = roomImgService.selectAllByRoomId(room.getRoomId());
+            List<RoomImage> list = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(list);
         }
         //城市查询
@@ -55,7 +55,7 @@ public class RoomController {
     public String FeatureCity(@PathVariable("featureId")int featureId,@PathVariable("roomLocation")String roomLocation,@PathVariable("currentPage")int currentPage, Model model){
         List<Room> rooms = roomService.findByFeatureCity(featureId,roomLocation,currentPage);
         for (Room room : rooms) {
-            List<RoomImage> list = roomImgService.selectAllByRoomId(room.getRoomId());
+            List<RoomImage> list = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(list);
         }
         model.addAttribute("rooms",rooms);
@@ -63,7 +63,6 @@ public class RoomController {
         model.addAttribute("cityList",cityList);
         RoomFeature roomFeature = roomFeatureService.selectFeature(featureId);
         model.addAttribute("roomFeature",roomFeature);
-
 
         return "/cityfeatures";
     }
@@ -84,7 +83,7 @@ public class RoomController {
                              @PathVariable("currentPage")int currentPage,Model model){
         List<Room> roomList = roomService.findByCityName(roomLocation,currentPage);
         for (Room room : roomList) {
-            List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomId());
+            List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(imgList);
         }
         model.addAttribute("roomList",roomList);
@@ -117,7 +116,7 @@ public class RoomController {
         model.addAttribute("str",str);
         List<Room> roomList = roomService.selectByCityTitle(roomLocation,currentPage,typeId,priceId,methodId,structureId);
         for (Room room : roomList) {
-            List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomId());
+            List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(imgList);
         }
         model.addAttribute("roomList",roomList);
