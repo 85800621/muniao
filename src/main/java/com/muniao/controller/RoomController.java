@@ -1,7 +1,13 @@
 package com.muniao.controller;
 
-import com.muniao.entity.*;
-import com.muniao.service.*;
+import com.muniao.entity.Room;
+import com.muniao.entity.RoomFeature;
+import com.muniao.entity.RoomImage;
+import com.muniao.entity.User;
+import com.muniao.service.RoomFeatureService;
+import com.muniao.service.RoomImgService;
+import com.muniao.service.RoomService;
+import com.muniao.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -158,4 +164,44 @@ public class RoomController {
         model.addAttribute("user",user);
         return "/landlordrooms";
     }
+
+    /**
+     * solr全文检索
+     * @param keywords 关键词
+     * @param model
+     * @return
+     */
+//    @RequestMapping("solrCity/{keywords}")
+//    public String solrFindRooms(@PathVariable("keywords")String keywords,Model model){
+//        HttpSolrClient client = new HttpSolrClient.Builder()
+//                .withBaseSolrUrl("http://39.105.123.156:8080/solr7/muniao").build();
+//        SolrQuery find = new SolrQuery();
+//        find.setQuery("keywords:"+keywords);
+//        QueryResponse response = null;
+//        try {
+//           response = client.query(find);
+//        } catch (SolrServerException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        SolrDocumentList list = response.getResults();
+//        List<Room> rooms = new ArrayList<>();
+//        for (SolrDocument document : list) {
+//            Room room = new Room();
+//            room.setTitle(document.get("title").toString());
+//            room.setBedroom((Integer) document.get("bedroom"));
+//            room.setRent_type((Integer) document.get("rent_type"));
+//            room.setUser_id((Integer)document.get("user_id"));
+//            room.setMax_num((Integer)document.get("max_num"));
+//            room.setStreet(document.get("street").toString());
+//            room.setPrice((Double) document.get("price"));
+//            room.setRoomid((Integer) document.get("roomid"));
+////            List<RoomImage> imgs = roomImgService.selectAllByRoomId(room.getRoomid());
+////            room.setLsit(imgs);
+//            rooms.add(room);
+//        }
+//        model.addAttribute("rooms",rooms);
+//        return "/solrCity";
+//    }
 }

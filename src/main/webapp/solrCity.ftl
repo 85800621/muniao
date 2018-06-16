@@ -3117,18 +3117,6 @@
                         <input type="button" value="搜 索 房 间" class="w_list_button" id="s_mn_button3">
                     </div>
                 </div>
-
-
-               <script >
-                   function () {
-                       var keywords = $("#landmark_input").value();
-                       $("s_mn_button3").click(function(){
-                           window.location.href="${basePath}/solrCity/"+keywords;
-                       });
-                   }
-               </script>
-
-
                 <div class="s_mn_screen_ipt w_searchlist cleafix">
                     <ul class="s_mn_screen_list1 cleafix" id="s_mn_screen_list1">
                         <li class="clearfix">
@@ -3657,10 +3645,10 @@
                                         <a href="javascript:void(0);" class="s_mn_screen_aover" title="不限"
                                             target="_self">不限</a>
                                     </span>
-                                    <#list roomTypes as type >
+                                    <#list rooms as type >
                                     <span class="w_listspan3">
                                         <a rel="nofollow"
-                                           href="${basePath}/cityTitle/${roomList[1].city}/1/${type.roomType.typeId}/0/0/0"
+                                           href="${basePath}/cityTitle/${rooms[1].city}/1/${type.roomType.typeId}/0/0/0"
                                            title="${type.roomType.roomType}">
                                         ${type.roomType.roomType}
                                         </a>
@@ -3677,9 +3665,9 @@
                                     <span class="w_listspan3">
                                         <a href="javascript:void(0);" class="s_mn_screen_aover" title="不限 target=" _self"="">不限</a>
                                     </span>
-                                    <#list roomIntervals as interval>
+                                    <#list rooms as interval>
                                     <span class="w_listspan3">
-                                        <a rel="nofollow" href="${basePath}/cityTitle/${roomList[1].city}/1/0/${interval.priceInterval.priceIntervalId}/0/0" title="${interval.priceInterval.priceInterval}">
+                                        <a rel="nofollow" href="${basePath}/cityTitle/${rooms[1].city}/1/0/${interval.priceInterval.priceIntervalId}/0/0" title="${interval.priceInterval.priceInterval}">
                                         ${interval.priceInterval.priceInterval}
                                         </a>
                                     </span>
@@ -3703,9 +3691,9 @@
                                             <!--/beijing/-->
                                         <a href="javascript:void(0);" class="s_mn_screen_aover" title="不限" rel="nofollow" target="_self">不限</a>
                                     </span>
-                                <#list roomMethods as method>
+                                <#list rooms as method>
                                     <span>
-                                        <a href="${basePath}/cityTitle/${roomList[1].city}/1/0/0/${method.rentalMethod.methodId}/0" title="${method.rentalMethod.method}" rel="nofollow" target="_self">${method.rentalMethod.method}</a>
+                                        <a href="${basePath}/cityTitle/${rooms[1].city}/1/0/0/${method.rentalMethod.methodId}/0" title="${method.rentalMethod.method}" rel="nofollow" target="_self">${method.rentalMethod.method}</a>
                                     </span>
                                 </#list>
                                 </div>
@@ -3719,9 +3707,9 @@
                                             <a href="javascript:void(0);" class="s_mn_screen_aover" title="不限" rel="nofollow"
                                                target="_self">不限</a>
                                     </span>
-                                <#list roomStructures as structure>
+                                <#list rooms as structure>
                                     <span class="w_listspan3">
-                                        <a rel="nofollow" href="${basePath}/cityTitle/${roomList[1].city}/1/0/0/0/${structure.bedroom}" title="${structure.bedroom}">
+                                        <a rel="nofollow" href="${basePath}/cityTitle/${rooms[1].city}/1/0/0/0/${structure.bedroom}" title="${structure.bedroom}">
                                            ${structure.bedroom}室
                                         </a>
                                     </span>
@@ -3779,7 +3767,7 @@
                 </div>
             </div>
             <ul class="s_mn_detailslist clear" id="Lmain_con">
-            <#list roomList as room >
+            <#list rooms as room >
                 <li class="Lcon1" data-id="75902" data-x="${room.lng}" data-y="${room.lat}"
                     data-title="${room.title}" data-price="${room.price}" x4="33">
                     <div class="s_mn_housebox">

@@ -168,8 +168,6 @@
     WHERE city=#{roomLocation,javaType=String}
   </select>
 
-
-
   <!-- 查询具体房间信息 -->
   <select id="selectRoomById" resultMap="BaseResultMap">
     select
