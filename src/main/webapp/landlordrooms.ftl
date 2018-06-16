@@ -454,7 +454,7 @@
     <div class="s_mn_center">
         <div class="s_mn_navtag">
             <a href="https://www.muniao.com/" title="木鸟短租网">木鸟短租网</a> <span>&nbsp;&gt;&nbsp;</span>
-            <a href="https://www.muniao.com/beijing/">${rooms[1].roomLocation}短租公寓</a> <span>&nbsp;&gt;&nbsp;</span>
+            <a href="https://www.muniao.com/beijing/">${rooms[1].city}短租公寓</a> <span>&nbsp;&gt;&nbsp;</span>
             <h1 class="ts_name"><a href="javascript:void(0);">${user.userName}</a></h1>
         </div>
     </div>
@@ -566,7 +566,7 @@
                                 桑科<span>***</span>
                             </div>
                             <div class="w_appraisal_nr">
-                                <div class="w_appraisal_ever" style="height:40px;font-size:14px;"><a href="https://www.muniao.com/Home/Detail?id=127683" target="_blank" style="color:#f30">崇文门 天安门 北京站美式loft</a></div>
+                                <div class="w_appraisal_ever" style="height:40px;font-size:14px;"><a href="https://www.muniao.com/Home/Detail?id=127683" target="_blank" style="color:#f30">崇文门 天安门 </a></div>
                                 <div class="w_appraisal_box">
                                     <div class="w_appraisal_box_time">点评时间：2018年06月02日</div>
                                     <div style="border-radius:5px;color:#482300;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#fbdcbe;">

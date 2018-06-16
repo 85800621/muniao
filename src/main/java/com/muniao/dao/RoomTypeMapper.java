@@ -16,5 +16,5 @@ public interface RoomTypeMapper {
      * 查出所有地方类型
      * @return
      */
-    List<RoomType > selectType();
+    List<RoomType> selectType();
 }

@@ -93,7 +93,6 @@ public class RoomServiceImpl implements RoomService{
     /**
      * 查出所在城市的所有房间类型
      * @param roomLocation
-     * @param currentPage
      * @return
      */
     @Override
@@ -104,7 +103,7 @@ public class RoomServiceImpl implements RoomService{
     /**
      * 查出所有房间价格区间
      * @param roomLocation
-     * @param currentPage
+     * @param
      * @return
      */
     @Override
@@ -115,7 +114,7 @@ public class RoomServiceImpl implements RoomService{
     /**
      * 查出所有房间的出租类型
      * @param roomLocation
-     * @param currentPage
+     * @param
      * @return
      */
     @Override
@@ -152,6 +151,16 @@ public class RoomServiceImpl implements RoomService{
     @Override
     public List<Room> selectByUserId(int userId) {
         return roomDao.selectByUserId(userId);
+    }
+
+    @Override
+    public Integer selectCountRooms(String roomLocation) {
+        return roomDao.selectCountRooms(roomLocation);
+    }
+
+    @Override
+    public List<String> selectCountCity() {
+        return roomDao.selectCountCity();
     }
 
 }

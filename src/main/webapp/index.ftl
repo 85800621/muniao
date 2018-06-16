@@ -711,8 +711,7 @@
                 <i class="newa_piccode_icon"></i>
                 <input type="text" id="login_ValidCode" name="newa_piccode" placeholder="图形验证码">
                 <input type="hidden" id="hd_ValidCode">
-                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="${staticRoot}/images/VerifyCode"
-                                                                        onclick="getImageCode(this)"></a>
+                <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImg" src="${staticRoot}/images/VerifyCode" onclick="getImageCode(this)"></a>
             </li>
             <li>
                 <i class="newa_code_icon"></i>
@@ -731,8 +730,6 @@
                href="https://api.weibo.com/oauth2/authorize?state=http%3A%2F%2Fwww.muniao.com%2Fuser%2Fcenter&amp;client_id=3437054643&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Fwww.muniao.com%2FHome%2FCallBack%3Fchannel%3Dweibo"></a>
             <a class="newa_qq"
                href="https://graph.qq.com/oauth2.0/authorize?state=Login&amp;client_id=101214959&amp;response_type=code&amp;redirect_uri=http://www.muniao.com/home/callback?channel=qq&amp;fromurl=http%3A%2F%2Fwww.muniao.com%2Fuser%2Fcenter&amp;scope=get_user_info,get_fanslist,get_idollist,add_idol"></a>
-
-
         </div>
     </div>
     <!---普通登录---->
@@ -799,15 +796,12 @@
         newa_tips.removeClass("newa_tips_show");
     });
 </script>
-
-
 <script>
     $(function () {
         //设置banner选中菜单样式
         $('.s_mn_nav li:eq(0) a').addClass('s_mn_nav_over');
     })
 </script>
-
 <script>
     //登录验证
     $(function () {
@@ -892,8 +886,9 @@
                                         <li><a href="javascript:void(0)">XYZ</a></li>
                                     </ul>
                                     <ul class="s_citywindow_main" style="display: block;">
-                                        <li data-path="beijing" data-url="bj" data-city="北京"><a
-                                                href="javascript:void(0)">北京</a></li>
+                                        <li data-path="beijing" data-url="bj" data-city="北京">
+                                            <a href="javascript:void(0)">北京</a>
+                                        </li>
                                         <li data-path="shanghai" data-url="sh" data-city="上海"><a
                                                 href="javascript:void(0)">上海</a></li>
                                         <li data-path="chongqing" data-url="cq" data-city="重庆"><a

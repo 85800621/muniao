@@ -43,6 +43,12 @@ public interface RoomMapper {
     Integer CountFeatureList(int featureId);
    // Integer selectCountRoom(int featureId);
 
+
+    /**
+     *按城市查出所有的房间
+     */
+    Integer selectCountRooms(@Param("roomLocation")String roomLocation);
+
     /**
      * 查询相同特色所有房间数
      * @param featureId
@@ -97,5 +103,11 @@ public interface RoomMapper {
      * 按用户id查询拥有房间
      */
     List<Room> selectByUserId(int userId);
+
+    /**
+     * 查询出所有的城市
+     * @return
+     */
+    List<String> selectCountCity();
 }
 
