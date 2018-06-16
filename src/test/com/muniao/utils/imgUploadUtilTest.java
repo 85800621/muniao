@@ -8,9 +8,9 @@ import org.junit.Test;
  */
 public class imgUploadUtilTest {
     @Test
-    public void upload() throws Exception {
+    public void uploadLocal() throws Exception {
 
-        boolean upload = imgUploadUtil.upload("C:\\imagesServer\\images\\timg.jpg", "","33.jpg");
+        boolean upload = imgUploadUtil.uploadLocal("C:\\imagesServer\\images\\timg.jpg", "","33.jpg");
         System.out.println(upload);
     }
 

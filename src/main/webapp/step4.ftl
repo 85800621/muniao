@@ -90,9 +90,11 @@
                 var datastr = JSON.stringify(postData);
                 var url = 'Room/Submit_Step4';
                 $.getJSON(url, { postData: datastr }, function (data) {
-                    var jsonData = JSON.parse(data);
+//                    var jsonData = JSON.parse(data);
+                    var jsonData = data;
                     if (jsonData.status == 0) {
-                        location.href = '/Room/Step5/' + roomid;
+//                        location.href = '/Room/Step5/' + roomid;
+                        location.href = 'step5';
                     } else {
                         alert(jsonData.message);
                         tj = true;

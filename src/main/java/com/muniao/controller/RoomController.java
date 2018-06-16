@@ -1,9 +1,6 @@
 package com.muniao.controller;
 
-import com.muniao.entity.Room;
-import com.muniao.entity.RoomFeature;
-import com.muniao.entity.RoomImage;
-import com.muniao.entity.User;
+import com.muniao.entity.*;
 import com.muniao.service.RoomFeatureService;
 import com.muniao.service.RoomImgService;
 import com.muniao.service.RoomService;
@@ -34,7 +31,7 @@ public class RoomController {
         List<Room> rooms = roomService.findAllByFeature(featureId,currentPage);
         //房间图片
         for (Room room : rooms) {
-            List<RoomImage> list = roomImgService.selectAllByRoomId(room.getRoomid());
+            List<Image> list = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(list);
         }
         //城市查询
@@ -55,7 +52,7 @@ public class RoomController {
     public String FeatureCity(@PathVariable("featureId")int featureId,@PathVariable("roomLocation")String roomLocation,@PathVariable("currentPage")int currentPage, Model model){
         List<Room> rooms = roomService.findByFeatureCity(featureId,roomLocation,currentPage);
         for (Room room : rooms) {
-            List<RoomImage> list = roomImgService.selectAllByRoomId(room.getRoomid());
+            List<Image> list = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(list);
         }
         model.addAttribute("rooms",rooms);
@@ -84,7 +81,7 @@ public class RoomController {
         model.addAttribute("currentPage",currentPage);
         List<Room> roomList = roomService.findByCityName(roomLocation,currentPage);
         for (Room room : roomList) {
-            List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
+            List<Image> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(imgList);
         }
         model.addAttribute("roomList",roomList);
@@ -122,7 +119,7 @@ public class RoomController {
         model.addAttribute("roomLocation",roomLocation);
         List<Room> roomList = roomService.selectByCityTitle(roomLocation,currentPage,typeId,priceId,methodId,structureId);
         for (Room room : roomList) {
-            List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
+            List<Image> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(imgList);
         }
         model.addAttribute("roomList",roomList);
@@ -151,7 +148,7 @@ public class RoomController {
     public String findByRoomId(@PathVariable("roomId")int roomId,Model model){
         Room room = roomService.selectRoomById(roomId);
         model.addAttribute("room",room);
-        List<RoomImage> images = roomImgService.selectAllByRoomId(roomId);
+        List<Image> images = roomImgService.selectAllByRoomId(roomId);
         model.addAttribute("images",images);
         return "/room";
     }

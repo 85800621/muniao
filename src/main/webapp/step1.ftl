@@ -131,27 +131,17 @@
 
                 var datastr = JSON.stringify(postData);
                 var url = 'Room/Submit_Step1';
-                alert(postData);
-                alert(datastr);
-                alert({postData:datastr})
-//                $.post(url,{'ppData':datastr},function (data) {
-//                    alert("222");
-//                })
-
                 $.getJSON(url,{postData:datastr},function (data) {
-                    alert("进入方法");
-                    alert(data);
 //                    var jsonData = JSON.parse(data);
                     var jsonData = data;
-                    alert(jsonData.status);
-                    var newroomid = jsonData.roomid
-                    alert(newroomid);
-                    alert(jsonData.message);
+                    var newroomid = jsonData.roomid;
                     if (jsonData.status == 0) {
                         if (jsonData.roomid > 0) {
-                            location.href = '/Room/Step2/' + newroomid;
+//                            location.href = '/Room/Step2/' + newroomid;
+                            location.href = 'step2';
                         } else {
-                            location.href = '/Room/Step2/' + roomid;
+//                            location.href = '/Room/Step2/' + roomid;
+                            location.href = 'step2';
                         }
                     } else {
                         tj = true;

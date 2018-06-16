@@ -38,7 +38,7 @@ public class OrderServiceImplTest {
 
             OrderDetail orderDetail=order.getOrderDetail();
             System.out.println(orderDetail.getCheckInTime()+"+"+orderDetail.getDepartureTime()
-            +"+"+orderDetail.getRoom().getRoomName());
+            +"+"+orderDetail.getRoom().getTitle());
             List<CheckInCustomer> checkInCustomers=orderDetail.getCheckInCustomers();
             for (CheckInCustomer cic :checkInCustomers){
                 System.out.println(cic.getCheckInCustomerId());
@@ -74,13 +74,36 @@ public class OrderServiceImplTest {
 
     @Test
     public void test4(){
-        List <Order> orders = orderService.selectWaitCommitOrders("6", 2);
+        List <Order> orders = orderService.selectWaitCommitOrders("3", 2);
         System.out.println(orders);
         for (Order or:orders
              ) {
             or.getOrderStatus();
+            List <CheckInCustomer> checkInCustomers = or.getOrderDetail().getCheckInCustomers();
+            for (CheckInCustomer check: checkInCustomers
+                 ) {
+                String customerName = check.getCustomerName();
+                System.out.println(customerName);
+            }
             System.out.println(or.getOrderStatus());
         }
     }
+    @Test
+    public void test5(){
+        List<Order> orders=orderService.selectAllOrders(2);
+        System.out.println(orders);
+        for (Order or:
+             orders) {
 
+            System.out.println(or.getOrderDetail()
+                    .getRoom().getTitle());
+        }
+    }
+    @Test
+    public void test6(){
+        Order order=orderService.selectOneOrder(1);
+        System.out.println(order);
+        String title = order.getOrderDetail().getRoom().getTitle();
+        System.out.println(title);
+    }
 }

@@ -38,6 +38,24 @@
     <script src="${staticRoot}/images/UserLoginCallback"></script>
 </head>
 <body>
+<span>${oid}</span>
+<img src="http://47.106.168.123:8080/muniao/payment/image">
+<script>
+    $(function(){
+        var id = ${oid};
+        setInterval(function(){check()} , 1000);
+        function check(){
+            alert("123213")
+            $.post(
+                    "http://47.106.168.123:8080/muniao/payment/ifSuccess",{"id":id},function (data) {
+                        if(data==true){
+                            window.location.href = 'http://47.106.168.123:8080/muniao/payment/gotosuccess';
+                        }
+                    }
+            );
+        }
+    })
+</script>
 <!--<div id="webim" class="webim webim-state-active">-->
 <!--<div class="webim-preload ui-helper-hidden-accessible">-->
 <!--<div id="webim-flashlib-c">-->
@@ -1219,6 +1237,7 @@
 
 
 <div id="order_content" class="order_main">
+
     <input type="hidden" name="zubijilu" value="0.00" id="zubihid">
     <input type="hidden" name="yhjjl" value="0.00" id="yhjhid">
     <!---订单详情弹出层---->
@@ -1230,6 +1249,8 @@
         <div class="order_infor" style="height: 281px; margin-top: -140.5px;">
             <div class="infor_content">
                 <h2>金沙滩海丰海景公寓四居室</h2>
+
+
                 <p class="order_id">订单编号：20180608202507394168</p>
                 <div class="order_p_infor">
                     <p>

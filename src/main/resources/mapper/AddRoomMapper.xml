@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.muniao.dao.RoomMapper">
+<mapper namespace="com.muniao.dao.AddRoomMapper">
   <resultMap id="BaseResultMap" type="com.muniao.entity.Room">
     <id column="roomid" jdbcType="INTEGER" property="roomid" />
     <result column="title" jdbcType="VARCHAR" property="title" />
@@ -65,141 +65,99 @@
     <result column="srv_wei_sheng" jdbcType="INTEGER" property="srv_wei_sheng" />
 
 
-    <collection column="house_type" property="roomType"  select="com.muniao.dao.RoomTypeMapper.selectByTypeId"/>
+    <collection column="room_type_id" property="roomType"  select="com.muniao.dao.RoomTypeMapper.selectByTypeId"/>
     <collection column="price_interval_id"  property="priceInterval" select="com.muniao.dao.PriceIntervalMapper.selectByIntervalId"/>
     <collection column="room_feature_id" property="roomFeature" select="com.muniao.dao.RoomFeatureMapper.selectByFeatureId"/>
     <collection column="refund_rule_id" property="refundRule"  select="com.muniao.dao.RefundRuleMapper.selectByRuleId"/>
     <collection column="user_id" property="user"  select="com.muniao.dao.UserMapper.selectByUserId"/>
-    <collection column="rent_type" property="rentalMethod"  select="com.muniao.dao.RentalMethodMapper.selectByMethodId"/>
+    <collection column="room_method_id" property="rentalMethod"  select="com.muniao.dao.RentalMethodMapper.selectByMethodId"/>
   </resultMap>
 
   <sql id="Base_Column_List">
 
   </sql>
 
-  <select id="findByFeature" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select
-    *
-    FROM tb_room
-    WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER} limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
-  </select>
+  <insert id="addRoomStep1" parameterType="com.muniao.entity.Room" useGeneratedKeys="true" keyProperty="roomid">
+    INSERT INTO tb_room(province,city,area,street,xiaoqu,build,unit,door,lng,lat,maptype,user_id,room_feature_id)
+    VALUES (#{province},#{city},#{area},#{street},#{xiaoqu},#{build},#{unit},#{door},#{lng},#{lat},#{maptype},#{user_id},#{room_feature_id})
+  </insert>
 
-  <select id="findByFeatureCity" resultMap="BaseResultMap">
-    select
-    *
-    FROM tb_room
-    WHERE room_feature_id=#{featureId,jdbcType=INTEGER} AND city=#{roomLocation,javaType=String}
-    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
-  </select>
+  <update id="updateRoomStep2" parameterType="com.muniao.entity.Room">
+    UPDATE tb_room SET
+    title = #{title},
+    bedroom = #{bedroom},
+    livingroom = #{livingroom},
+    bathroom_self = #{bathroom_self},
+    bathroom_public = #{bathroom_public},
+    rent_type = #{rent_type},
+    house_type = #{house_type},
+    max_num = #{max_num},
+    size = #{size},
+    sameroom = #{sameroom},
+    subtitle = #{subtitle},
+    isaddbed = #{isaddbed},
+    add_bed_num = #{add_bed_num},
+    add_bed_price = #{add_bed_price},
+    kitchenroom = #{kitchenroom}
+    WHERE roomid = #{roomid}
+  </update>
 
-  <select id="findByCityList" resultMap="BaseResultMap">
-    SELECT DISTINCT city FROM tb_room WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER};
-  </select>
+  <update id="updateRoomStep3" parameterType="com.muniao.entity.Room">
+    UPDATE tb_room SET
+    price = #{price},
+    is_deposit = #{is_deposit},
+    deposit_money = #{deposit_money},
+    refund_type = #{refund_type},
+    is_invoice = #{is_invoice},
+    min_day = #{min_day},
+    max_day = #{max_day},
+    in_time = #{in_time},
+    out_time = #{out_time},
+    rzyq = #{rzyq},
+    is_zhima = #{is_zhima},
+    is_xiaobai = #{is_xiaobai},
+    specialprice_istrue = #{specialprice_istrue},
+    week_start_date = #{week_start_date},
+    week_end_date = #{week_end_date},
+    weeks = #{weeks},
+    week_price = #{week_price},
+    weekmonth_discount = #{weekmonth_discount},
+    discount_week = #{discount_week},
+    discount_month = #{discount_month},
+    discount_start_date = #{discount_start_date},
+    discount_end_date = #{discount_end_date},
+    longrent_begin_time = #{longrent_begin_time},
+    longrent_end_time = #{longrent_end_time},
+    is_longrent = #{is_longrent},
+    longrent_price = #{longrent_price},
+    long_deposit_money = #{long_deposit_money},
+    is_over_weekprice = #{is_over_weekprice},
+    price_interval_id = #{price_interval_id}
+    WHERE roomid = #{roomid}
+  </update>
 
-  <select id="CountFeatureList" parameterType="java.lang.Integer" resultType="java.lang.Integer">
-    SELECT  COUNT(room_feature_id) FROM tb_room WHERE room_feature_id=#{roomFeatureId,jdbcType=INTEGER};
-  </select>
+  <update id="updateRoomStep4" parameterType="com.muniao.entity.Room">
+    UPDATE tb_room SET
+    support = #{support},
+    srv_bei_dan = #{srv_bei_dan},
+    srv_wei_sheng	 = #{srv_wei_sheng}
+    WHERE roomid = #{roomid}
+  </update>
 
-  <select id="countFeatureRoom" parameterType="java.lang.Integer" resultType="java.lang.Integer">
-    SELECT COUNT(roomid) FROM tb_room WHERE room_feature_id=#{featureId,jdbcType=INTEGER};
-  </select>
+  <update id="updateRoomStep5" parameterType="com.muniao.entity.Room">
+    UPDATE tb_room SET
+    fyms = #{fyms},
+    cclx = #{cclx},
+    zbss = #{zbss},
+    jzdb = #{jzdb},
+    sqms = #{sqms}
+    WHERE roomid = #{roomid}
+  </update>
 
-  <select id="selectByCity" resultMap="BaseResultMap">
-    select
-    *
-    FROM tb_room
-    WHERE city=#{roomLocation,javaType=String}
-    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
-  </select>
-
-  <select id="selectByCityTitle" resultMap="BaseResultMap">
-    select
-    *
-    FROM tb_room
-    WHERE city=#{roomLocation,javaType=String}
-    <if test="typeId != 0">
-      AND house_type =#{typeId,jdbcType=INTEGER}
-    </if>
-    <if test="priceId != 0">
-      AND price_interval_id =#{priceId,jdbcType=INTEGER}
-    </if>
-    <if test="methodId != 0">
-      AND rent_type =#{methodId,jdbcType=INTEGER}
-    </if>
-    <if test="structureId != 0">
-      AND bedroom =#{structureId,jdbcType=INTEGER}
-    </if>
-    limit #{startPage,jdbcType=INTEGER},#{endPage,jdbcType=INTEGER};
-  </select>
-
-  <!-- 查找所在地方所有的房间类型 -->
-  <select id="selectRoomType" resultMap="BaseResultMap">
-    select
-    DISTINCT
-    house_type
-    FROM tb_room
-    WHERE city=#{roomLocation,javaType=String}
-  </select>
-
-  <!-- 查询具体房间价格区间 -->
-  <select id="selectRoomInterval" resultMap="BaseResultMap">
-    select
-    DISTINCT
-    price_interval_id
-    FROM tb_room
-    WHERE city=#{roomLocation,javaType=String}
-  </select>
-
-  <!-- 查询具体房间出租方式 -->
-  <select id="selectRoomMethod" resultMap="BaseResultMap">
-    select
-    DISTINCT
-    rent_type
-    FROM tb_room
-    WHERE city=#{roomLocation,javaType=String}
-  </select>
-
-  <!-- 查询具体房间的户型 -->
-  <select id="selectRoomStructure" resultMap="BaseResultMap">
-    select
-    DISTINCT
-    bedroom
-    FROM tb_room
-    WHERE city=#{roomLocation,javaType=String}
-  </select>
-
-  <!-- 查询具体房间信息 -->
-  <select id="selectRoomById" resultMap="BaseResultMap">
-    select
-    *
-    FROM tb_room
-    WHERE
-    roomid=#{roomId,jdbcType=INTEGER};
-  </select>
-
-  <!--房东页面 -->
-  <select id="selectByUserId" resultMap="BaseResultMap">
-    select
-    *
-    FROM tb_room
-    WHERE
-    user_id=#{userId,jdbcType=INTEGER}
-    ORDER BY roomid DESC
-    limit 0,6;
-  </select>
-
-  <select id="selectCountRooms" resultType="java.lang.Integer">
-    select
-    COUNT(roomid)
-    FROM tb_room
-    WHERE city=#{roomLocation};
-  </select>
-
-  <select id="selectCountCity" resultType="java.lang.String">
-    select
-    DISTINCT
-    city
-    FROM tb_room;
-  </select>
-
+  <delete id="deleteRoomByRoomid" parameterType="java.lang.Integer">
+    DELETE FROM tb_room WHERE roomid = #{roomid}
+  </delete>
 </mapper>
+
+
+
