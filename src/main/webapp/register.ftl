@@ -4,7 +4,6 @@
 
     <title>日租房,短租房,特色房,订房网,木鸟短租-注册</title>
     <#assign basePath=request.contextPath />
-    <#assign 
     <meta name="keywords" content="日租、日租房、短租、家庭公寓、自助公寓、家庭旅馆、北京日租房、青岛日租房、秦皇岛日租房、大连日租房、石家庄日租房、重庆日租房、天津日租房、广州日租房">
     <meta name="description" content="日租、日租房、短租、家庭公寓、自助公寓、家庭旅馆、北京日租房、青岛日租房、秦皇岛日租房、大连日租房、石家庄日租房、重庆日租房、天津日租房、广州日租房">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
