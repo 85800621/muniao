@@ -61,4 +61,6 @@ public interface OrderService {
      * @return
      */
     Order selectOneOrder(int orderId);
+
+    void insertOneOrder(Order order);
 }

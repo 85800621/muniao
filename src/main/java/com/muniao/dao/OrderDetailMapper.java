@@ -21,4 +21,9 @@ public interface OrderDetailMapper {
      * @Date: 2018/6/8 20:31
      */
     OrderDetail selectOrderDetail(int orderId);
+
+    /**
+     *
+     */
+    void insertOneOrderDetail(OrderDetail orderDetail);
 }

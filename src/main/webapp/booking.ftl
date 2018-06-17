@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <#assign base=request.contextPath />
     <title>金沙滩海丰海景公寓四居室 -预订房间-木鸟短租</title>
     <meta name="keywords" content="短租房">
     <meta name="description" content="">
@@ -1060,7 +1060,7 @@
                 </li>
             </ul>
         </div>
-        <form id="form1" action="testbooking" method="post">
+        <form id="form1" action="${base}/prebooking" method="post">
             <!---入住人信息-->
             <div class="order_class w_mT28">
                 <h3 class="order_class_title">

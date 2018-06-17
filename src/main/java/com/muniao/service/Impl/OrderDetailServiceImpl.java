@@ -4,6 +4,8 @@ import com.muniao.dao.OrderDetailMapper;
 import com.muniao.entity.OrderDetail;
 import com.muniao.service.OrderDetailService;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -14,12 +16,18 @@ import java.util.List;
  * @Name com.muniao.service.Impl
  * @Description:
  **/
-@Repository
+@Service
+@Transactional
 public class OrderDetailServiceImpl implements OrderDetailService {
     @Resource
     private OrderDetailMapper orderDetailDao;
     @Override
     public OrderDetail selectOrderDetail(int orderId) {
         return orderDetailDao.selectOrderDetail(orderId);
+    }
+
+    @Override
+    public void insertOneOrderDetail(OrderDetail orderDetail) {
+        orderDetailDao.insertOneOrderDetail(orderDetail);
     }
 }

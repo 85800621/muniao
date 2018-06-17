@@ -84,5 +84,12 @@ public class OrderServiceImpl implements OrderService{
         return orderDao.selectOneOrder(orderId);
     }
 
+    @Override
+    public void insertOneOrder(Order order) {
+
+            orderDao.insertOneOrder(order);
+        }
+
+
 
 }

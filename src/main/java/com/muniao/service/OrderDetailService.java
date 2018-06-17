@@ -12,4 +12,6 @@ import java.util.List;
  **/
 public interface OrderDetailService {
     OrderDetail selectOrderDetail(int orderId);
+
+    void insertOneOrderDetail(OrderDetail orderDetail);
 }

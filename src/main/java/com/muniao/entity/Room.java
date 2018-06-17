@@ -667,4 +667,83 @@ public class Room {
     public void setRoomFeature(RoomFeature roomFeature) {
         this.roomFeature = roomFeature;
     }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "roomid=" + roomid +
+                ", house_type=" + house_type +
+                ", title='" + title + '\'' +
+                ", price_interval_id=" + price_interval_id +
+                ", room_feature_id=" + room_feature_id +
+                ", user_id=" + user_id +
+                ", city='" + city + '\'' +
+                ", lng='" + lng + '\'' +
+                ", lat='" + lat + '\'' +
+                ", province='" + province + '\'' +
+                ", price=" + price +
+                ", rent_type=" + rent_type +
+                ", isaddbed=" + isaddbed +
+                ", refund_type=" + refund_type +
+                ", area='" + area + '\'' +
+                ", street='" + street + '\'' +
+                ", xiaoqu='" + xiaoqu + '\'' +
+                ", build='" + build + '\'' +
+                ", unit='" + unit + '\'' +
+                ", door='" + door + '\'' +
+                ", maptype=" + maptype +
+                ", fyms='" + fyms + '\'' +
+                ", zbss='" + zbss + '\'' +
+                ", cclx='" + cclx + '\'' +
+                ", jzdb='" + jzdb + '\'' +
+                ", sqms='" + sqms + '\'' +
+                ", bedroom=" + bedroom +
+                ", livingroom=" + livingroom +
+                ", bathroom_self=" + bathroom_self +
+                ", bathroom_public=" + bathroom_public +
+                ", max_num=" + max_num +
+                ", size=" + size +
+                ", sameroom=" + sameroom +
+                ", subtitle='" + subtitle + '\'' +
+                ", add_bed_num=" + add_bed_num +
+                ", add_bed_price=" + add_bed_price +
+                ", kitchenroom=" + kitchenroom +
+                ", is_deposit=" + is_deposit +
+                ", deposit_money=" + deposit_money +
+                ", is_invoice=" + is_invoice +
+                ", min_day=" + min_day +
+                ", max_day=" + max_day +
+                ", in_time=" + in_time +
+                ", out_time=" + out_time +
+                ", rzyq='" + rzyq + '\'' +
+                ", specialprice_istru=" + specialprice_istru +
+                ", week_start_date=" + week_start_date +
+                ", week_end_date=" + week_end_date +
+                ", weeks='" + weeks + '\'' +
+                ", week_price=" + week_price +
+                ", weekmonth_disco=" + weekmonth_disco +
+                ", discount_week=" + discount_week +
+                ", discount_month=" + discount_month +
+                ", discount_start_date=" + discount_start_date +
+                ", discount_end_date=" + discount_end_date +
+                ", is_zhima=" + is_zhima +
+                ", is_xiaobai=" + is_xiaobai +
+                ", longrent_begin_time=" + longrent_begin_time +
+                ", longrent_end_time=" + longrent_end_time +
+                ", is_longrent=" + is_longrent +
+                ", longrent_price=" + longrent_price +
+                ", long_deposit_money=" + long_deposit_money +
+                ", is_over_weekprice=" + is_over_weekprice +
+                ", support='" + support + '\'' +
+                ", srv_bei_dan=" + srv_bei_dan +
+                ", srv_wei_sheng=" + srv_wei_sheng +
+                ", lsit=" + lsit +
+                ", roomType=" + roomType +
+                ", priceInterval=" + priceInterval +
+                ", rentalMethod=" + rentalMethod +
+                ", refundRule=" + refundRule +
+                ", user=" + user +
+                ", roomFeature=" + roomFeature +
+                '}';
+    }
 }

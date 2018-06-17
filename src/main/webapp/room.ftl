@@ -2861,7 +2861,7 @@
     })
 </script>
 
-
+<h1 onclick="load_calendar()">dianwoceshi</h1>
 <div style="height:385px;width:100%;overflow:hidden;">
     <input type="hidden" id="minNights" value="1">
     <input type="hidden" id="maxNights" value="0">
@@ -3011,6 +3011,71 @@
 
             </div>
         </div>
+
+        <#--撤销记录-->
+        <script>
+            function load_calendar() {
+                alert(1111);
+                month_list_loading = 1;
+                //改为POST模式，禁用缓存
+//                $.post("http://www.muniao.com/Home/PaiQiApi?id=132980",function (data) {
+//                    alert(123);
+//                    alert(data);
+//                })
+
+                $.ajax({
+                    url: "http://www.muniao.com/Home/PaiQiApi",
+                    //	url:"new/testbooking",
+                    type: 'POST',
+                    dataType: 'json',
+                    data:{
+                       id:132980
+                    },
+                    success: function (json) {
+                        alert(123);
+                        alert(json);
+                        month_list_loading = 2;
+                        $(".BMap_noprint").eq(-1).hide();
+                        if (0 == 0) {
+                            month_list = json.month_list;
+                            load_ave_price(0, $("#sameroomid").val(), $("#" + s_id).val(), $("#" + e_id).val());
+                            month_pi = 0;
+                            load_month(0, abcd_num);
+                            load_monthx(0);
+                            var a = month_list[0], list = [], html = "";
+                            a.list.forEach(function (a, i) {
+                                if (list.length > 4) return false;
+                                if (!a.before) {
+                                    if (a.sameroom) {
+                                        list.push('<li><p>' + a.date + '</p><p>￥' + a.priceday + '</p></li>');
+                                    }
+                                    else {
+                                        list.push('<li><p>' + a.date + '</p><p>已租</p></li>');
+                                    }
+                                }
+                                return false;
+                            });
+                            for (var i = 0; i < list.length - 6; i++) {
+                                html += "<li></li>";
+                            }
+                            html += list.join("");
+                            html += '<li class="border_R"><a href="javascript:void(0);"><p>全部</p><p>日历</p></a></li>';
+                            $(".room_Rpq").html(html);
+                            $(".room_Rpq").show();
+                            $(".border_R").click(function () {
+                                $("#shedulebg").show();
+                            })
+                        }
+                        else {
+
+                        }
+                    },
+                    error: function (e) {
+                    }
+                });
+            }
+        </script>
+
         <div id="right_w" class="clearfix"
              style="position:relative; float:left; top: -86px; width:300px; margin-left:20px; display:inline;">
             <div id="right_person" class="room_right" style="position: absolute;">

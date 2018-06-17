@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muniao.dao.CheckInCustomerMapper">
+    <resultMap id="BaseResultMap" type="com.muniao.entity.CheckInCustomer">
+        <id column="check_in_people_id" property="checkInCustomerId" javaType="INTEGER"/>
+        <result column="customer_name" property="customerName" javaType="String"/>
+        <result column="customer_IDcard" property="customerIDCard" javaType="String"/>
+        <result column="customer_phone_number" property="customerPhoneNum" javaType="String"/>
+    </resultMap>
+    <insert id="insertOneCheckInCustomer" useGeneratedKeys="true" keyProperty="checkInCustomerId"
+        parameterType="com.muniao.entity.CheckInCustomer">
+        INSERT into
+        tb_checkIn_customer (customer_name, customer_IDcard ,order_detail_id)
+        VALUES (#{customerName},#{customerIDCard},#{orderDetailId})
+
+    </insert>
+</mapper>
