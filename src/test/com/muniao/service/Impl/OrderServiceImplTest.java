@@ -3,14 +3,17 @@ package com.muniao.service.Impl;
 import com.muniao.entity.CheckInCustomer;
 import com.muniao.entity.Order;
 import com.muniao.entity.OrderDetail;
+import com.muniao.entity.Room;
 import com.muniao.service.OrderDetailService;
 import com.muniao.service.OrderService;
+import com.muniao.service.RoomService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -29,6 +32,8 @@ public class OrderServiceImplTest {
     private OrderService orderService;
     @Resource
     private OrderDetailService orderDetailService;
+    @Resource
+    private RoomService roomService;
     @Test
     public void test1(){
 
@@ -74,7 +79,7 @@ public class OrderServiceImplTest {
 
     @Test
     public void test4(){
-        List <Order> orders = orderService.selectWaitCommitOrders("3", 2);
+        List <Order> orders = orderService.selectWaitCommitOrders("5", 2);
         System.out.println(orders);
         for (Order or:orders
              ) {
@@ -105,5 +110,34 @@ public class OrderServiceImplTest {
         System.out.println(order);
         String title = order.getOrderDetail().getRoom().getTitle();
         System.out.println(title);
+    }
+    @Test
+    public void test7(){
+        int[] names={1,2,3,4,5,6,7};
+        for (int i=0;i<=names.length-1;i++){
+            System.out.println(names[i]);
+        }
+    }
+
+    @Test
+    public void test8() {
+        Date date = new Date();
+
+        System.out.println(date);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:MM:ss");
+        String s=sdf.format(date);
+        System.out.println(s);
+        try {
+            Date date1=sdf.parse(s);
+            System.out.println(date1);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+    }
+    @Test
+    public void test9(){
+        Room room = roomService.selectRoomById(2);
+        System.out.println(room.getUser().getUserId());
     }
 }

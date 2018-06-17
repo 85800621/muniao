@@ -78,7 +78,8 @@ public class BookingController {
 
     }
     @RequestMapping(value = "/prebooking")
-    public String probooking(HttpServletRequest request,Model model){
+    public String probooking(HttpServletRequest request,Model model,HttpSession httpSession){
+        User user= (User) httpSession.getAttribute("user");
         String roomId = request.getParameter("RoomId");
         String startDate=request.getParameter("StartDate");
         String endDate=request.getParameter("EndDate");
@@ -102,7 +103,7 @@ public class BookingController {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-       Room room = roomService.selectRoomById(1);
+       Room room = roomService.selectRoomById(Integer.parseInt(roomId));
         orderDetail.setRoom(room);
         int differdays=0;
         double eachDayPrice=room.getPrice();
@@ -124,9 +125,9 @@ public class BookingController {
         Order order=new Order();
         order.setOrderStatus("4-6");
         order.setOrderSellerId(room.getUser().getUserId());
-        User user= (User) request.getSession().getAttribute("user");
+
         order.setOrderDetail(orderDetail);
-        order.setOrderBuyerId(2);
+        order.setOrderBuyerId(user.getUserId());
         orderService.insertOneOrder(order);
         model.addAttribute(order);
         return "/pay";

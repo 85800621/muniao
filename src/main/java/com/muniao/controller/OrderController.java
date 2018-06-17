@@ -150,7 +150,7 @@ public class OrderController {
                     System.out.println("入住后退款");
                     int days1 = (int )(formatDate1.getTime() - formatDate2.getTime()) / (1000 * 24 * 60 * 60);
                     Double actullyPay=order.getOrderDetail().getRoom().getPrice()*days1;
-                     refundMoney = order.getOrderDetail().getTotalPrice()-actullyPay;
+                    refundMoney = order.getOrderDetail().getTotalPrice()-actullyPay;
                     System.out.println("应退金额:"+refundMoney);
                     orderService.changeOrderStatus("5", orderId);
             }else if (formatDate2.after(formatDate1)){
