@@ -41,13 +41,14 @@ public class AddRoomController {
 
     @ResponseBody
     @RequestMapping("/Submit_Step1")
-    public JsonData addRoomStep1(String postData,Model model){
+    public JsonData addRoomStep1(String postData, Model model, HttpSession session){
 
         Room room = JSON.parseObject(postData, Room.class);
-
-        // 测试用user 之后从session中取
-        User user = new User();
-        user.setUserId(1);
+        User user = (User) session.getAttribute("user");
+//        // 测试用user 之后从session中取
+//        User user = new User();
+//        user.setUserId(1);
+        System.out.println("用户id：" + user.getUserId());
 
         addRoomService.AddRoomServiceStep1(user,room);
         model.addAttribute("room",room);
@@ -127,11 +128,12 @@ public class AddRoomController {
     }
 
     @RequestMapping("index")
-    public String listRooms(Model model){
+    public String listRooms(Model model, HttpSession session){
 
-        // 测试用user 之后从session中取
-        User user = new User();
-        user.setUserId(2);
+        User user = (User) session.getAttribute("user");
+//        // 测试用user 之后从session中取
+//        User user = new User();
+//        user.setUserId(2);
 
         int userId = user.getUserId();
         List<Room> roomList = roomService.selectByUserId(userId);

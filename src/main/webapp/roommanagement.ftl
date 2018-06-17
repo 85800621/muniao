@@ -1118,9 +1118,9 @@
             <div class="userhead_pic"><img id="ContPic"
                                            src="${staticRoot}/images/d590d8e4b87c4c65922d653c3812d4a620180604093556672.jpg_150_150(1).jpg"
                                            style="border:0;" width="219" height="219"></div>
-            <span>嘉利学府</span>
+            <span>${user.userName}</span>
             <div class="userheadtxt"><a href="http://user2.muniao.com/Order/Index?utp=1" style="color:#f4650a;">订单管理</a><a
-                    class="w_border" style="color:#f4650a;" href="http://user2.muniao.com/UserInfo/Index">个人信息</a></div>
+                    class="w_border" style="color:#f4650a;" href="${basePath}/user/lodgerinfo">个人信息</a></div>
         </div>
         <style>
             .usidebar ul li img {
@@ -1136,10 +1136,10 @@
             <ul>
                 <li id="li1" class="usidebarlibg"><img src="${staticRoot}/images/light_on.gif" width="18" height="18"
                                                        align="absmiddle"><a
-                        href="http://user2.muniao.com/Index/MoveHouse?utp=1">发布房源</a></li>
+                        href="${basePath}/preadd">发布房源</a></li>
                 <li id="li2" class="usidebarlibg1"><img src="${staticRoot}/images/application_view_icons.gif" width="18" height="18"
                                                         align="absmiddle"><a
-                        href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3">房源管理</a></li>
+                        href="${basePath}/roommanagement">房源管理</a></li>
                 <li id="li5" class="usidebarlibg"><img src="${staticRoot}/images/icon_update.png" width="14" height="18"
                                                        align="absmiddle"><a
                         href="http://user2.muniao.com/Index/MoveHouse?utp=1" target="_blank">搬家房源</a><img
@@ -1173,10 +1173,10 @@
                                                         align="absmiddle"><a
                         href="http://user2.muniao.com/RentMoney/Index?utp=1">我的租币 </a></li>
                 <li id="li12" class="usidebarlibg"><img src="${staticRoot}/images/key.gif" width="18" height="18" align="absmiddle"><a
-                        href="http://user2.muniao.com/UserInfo/Password?utp=1">密码修改</a></li>
+                        href="${basePath}/user/password">密码修改</a></li>
                 <li id="li14" class="usidebarlibg"><img src="${staticRoot}/images/user_down.gif" width="18" height="18"
                                                         align="absmiddle"><a
-                        href="http://user2.muniao.com/BecomeHost/Index?utp=1">收款方式</a></li>
+                        href="${basePath}/paymentinfo">收款方式</a></li>
 
                 <li id="li15" class="usidebarlibg"><img src="${staticRoot}/images/comment_reply.gif" width="18" height="18"
                                                         align="absmiddle"><a

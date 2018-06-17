@@ -270,15 +270,16 @@ public class UserController {
             }finally {
                 System.out.println("程序结束");
             }
-
-
-
         }
 
 
         return  null;
     }
 
+    @RequestMapping(value = "/paymentinfo")
+    public String paymentinfo(){
+        return "/paymentinfo";
+    }
 
     @ResponseBody
     @RequestMapping("/payment")
@@ -294,8 +295,4 @@ public class UserController {
         }
       return jsonResult;
     }
-
-
-
-
 }

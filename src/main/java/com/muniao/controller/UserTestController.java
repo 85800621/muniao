@@ -110,10 +110,7 @@ public class UserTestController {
         return "/landlordinfo";
     }
 
-    @RequestMapping(value = "/paymentinfo")
-    public String paymentinfo(){
-        return "/paymentinfo";
-    }
+
 
     @RequestMapping(value = "/step3")
     public String step3(){
