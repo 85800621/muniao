@@ -20,10 +20,10 @@ public class UserTestController {
     @Resource
     private UserTestService userTestService;
 
-    @RequestMapping(value = "/index")
-    public String index(){
-        return "/index";
-    }
+//    @RequestMapping(value = "/index")
+//    public String index(){
+//        return "/index";
+//    }
 
     @RequestMapping(value = "/register")
     public String register(){

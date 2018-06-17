@@ -519,7 +519,6 @@
                 <h2><span>超值精选&nbsp;&nbsp;特别推荐</span></h2>
                 <div class="s_mn_features_citybox">
                     <a href="" title="全部" class="s_mn_features_citybox_a">全部</a>&nbsp;|&nbsp;
-                    <a href="" title="秦皇岛">秦皇岛</a><label>&nbsp;| &nbsp;</label>
                 <#list  cityList as cityName>
                     <a href="${basePath}/cityfeatures/${roomFeature.roomFeatureId}/${cityName.city}/1" title="${cityName.city}">${cityName.city}</a><label>&nbsp;| &nbsp;</label>
                 </#list>
