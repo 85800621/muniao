@@ -101,7 +101,6 @@
         <property name="filterChainDefinitions">
             <value>
                 <!--anon不需要登录-->
-                /oo/pic=anon
                 /**/**=anon
                 /login/**=anon
               <!--  /login/checkLogin=anon -->

@@ -68,7 +68,7 @@ public class UserRealmByPhone extends AuthorizingRealm {
         //是用户输入的用户名
         String userInput = usernamePasswordToken.getUsername();
 
-        System.out.println("111111111111111111111111111"+userInput);
+        System.out.println("userInput==========="+userInput);
 
             User tbUser = null;
             if(!userInput.endsWith(".com")){
@@ -97,7 +97,7 @@ public class UserRealmByPhone extends AuthorizingRealm {
                 return authenticationInfo;
 
             }else {
-                System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+userInput);
+                System.out.println("userInput================"+userInput);
                 try {
                     tbUser = userDAO.checkEmail(userInput);
                 } catch (Exception e) {

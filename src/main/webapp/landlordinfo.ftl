@@ -3,8 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>用户中心-木鸟短租</title>
     <#assign basePath=request.contextPath />
+    <title>用户中心-木鸟短租</title>
+
     <meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, IE=10">
     <link rel="shortcut icon" href="http://user2.muniao.com/favicon.ico">
     <link href="${staticRoot}/images/userpublic.css" rel="stylesheet">

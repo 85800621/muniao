@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import javax.servlet.http.HttpSession;
-
 
 /**
  * 注册使用controller
@@ -58,7 +56,7 @@ public class RegisterController {
             }else {
                 registerService.insertRoleUser(1,integer);
             }
-            jsonResult = UtilsTools.returnJsonResult(1,user1.getUserName(),Integer.parseInt(userType));
+            jsonResult = UtilsTools.returnJsonResult(1,user1.getUserName(),userType);
             return jsonResult;
         }
 

@@ -87,7 +87,7 @@
                 userName: $('#UserName').val(),
                 pwd: $('#Pwd').val()
             }, function (data) {
-                alert('注册成功！aaaaaaaaaaaaaa');
+                alert('注册成功!');
                // var j = JSON.parse(data);
                 if (data.code == 1) {
                     alert('注册成功！');
@@ -661,16 +661,16 @@
                 $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 126 }).addClass("newa_tips_show");
                 return false;
             }
-            //普通登录
+            //普通登录 ---$('#newa_auto_l').val().trim()
             $.post("checkLogin", {
                 tel: $('#Login_Email_Tel_M').val().trim(),
                 password: $('#Login_Pwd').val().trim(),
-                rememberMe: $('#newa_auto_l').val().trim()
+                rememberMe: "false"
             }, function (data) {
                // var j = JSON.parse(data);
-                alert("1111111111111111")
+                alert(data.code)
                 if (data.code == 1) {
-                    location.href = 'lodgerinfo';
+                    location.href = 'user/lodgerinfo';
                 }
                 else if (data.code == -1) {
                     alert("您还不是木鸟用户，请先注册")
@@ -838,7 +838,7 @@
         </ul>
         <div class="newa_foget">
             <a class="newa_foget_m" href="forgetPassword">忘记密码？</a>
-            <input id="newa_auto_l" name="newa_auto_l"  type="checkbox">
+            <input id="newa_auto_l" name="newa_auto_l" value="true"  type="checkbox">
             <label for="newa_auto_l">下次自动登录</label>
 
         </div>

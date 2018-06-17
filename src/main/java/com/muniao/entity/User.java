@@ -1,5 +1,7 @@
 package com.muniao.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -8,98 +10,65 @@ import java.util.Date;
  * 史国纲
  */
 public class User {
-    /**
-     * 用户ID
-     */
-    private int userId;
-    /**
-     * 用户姓名
-     */
+    private Integer userId;
+
     private String userName;
-    /**
-     * 用户账号
-     */
+
     private String userNumber;
-    /**
-     * 用户电话
-     */
+
     private String telephone;
-    /**
-     * 用户email
-     */
+
     private String email;
-    /**
-     * 房间名称
-     */
+
     private String roomName;
-    /**
-     * 用户密码
-     */
+
     private String password;
-    /**
-     * 性别
-     */
+
+    private String passwordSalt;
+
     private String sex;
-    /**
-     * 生日
-     */
+
     private Date birth;
-    /**
-     * 所在城市
-     */
+
     private String city;
-    /**
-     * 家乡
-     */
+
     private String hometown;
-    /**
-     * 血型
-     */
+
     private String blood;
-    /**
-     * 职业
-     */
+
     private String work;
-    /**
-     * 教育水平
-     */
+
     private String edu;
-    /**
-     * 其他电话
-     */
-    private String otherTEL;
-    /**
-     * 爱好
-     */
+
+    private String otherTel;
+
     private String hobby;
-    /**
-     * 个人介绍
-     */
+
     private String introduce;
-    /**
-     * 用户头像
-     */
+
     private String picture;
 
-    /**
-     * 盐
-     *
-     */
-    private  String passwordSalt;
+    private String userType;
 
-    public String getPasswordSalt() {
-        return passwordSalt;
-    }
+    private String qq;
 
-    public void setPasswordSalt(String passwordSalt) {
-        this.passwordSalt = passwordSalt;
-    }
+    private String school;
 
-    public int getUserId() {
+    private String otherHobby;
+
+    private String paymentMethod;
+
+    private String paymentName;
+
+    private String paymentAccount;
+
+    private String paymentBank;
+
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -108,7 +77,7 @@ public class User {
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.userName = userName == null ? null : userName.trim();
     }
 
     public String getUserNumber() {
@@ -116,7 +85,7 @@ public class User {
     }
 
     public void setUserNumber(String userNumber) {
-        this.userNumber = userNumber;
+        this.userNumber = userNumber == null ? null : userNumber.trim();
     }
 
     public String getTelephone() {
@@ -124,7 +93,7 @@ public class User {
     }
 
     public void setTelephone(String telephone) {
-        this.telephone = telephone;
+        this.telephone = telephone == null ? null : telephone.trim();
     }
 
     public String getEmail() {
@@ -132,7 +101,7 @@ public class User {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email = email == null ? null : email.trim();
     }
 
     public String getRoomName() {
@@ -140,7 +109,7 @@ public class User {
     }
 
     public void setRoomName(String roomName) {
-        this.roomName = roomName;
+        this.roomName = roomName == null ? null : roomName.trim();
     }
 
     public String getPassword() {
@@ -148,7 +117,15 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
+    }
+
+    public String getPasswordSalt() {
+        return passwordSalt;
+    }
+
+    public void setPasswordSalt(String passwordSalt) {
+        this.passwordSalt = passwordSalt == null ? null : passwordSalt.trim();
     }
 
     public String getSex() {
@@ -156,7 +133,7 @@ public class User {
     }
 
     public void setSex(String sex) {
-        this.sex = sex;
+        this.sex = sex == null ? null : sex.trim();
     }
 
     public Date getBirth() {
@@ -172,7 +149,7 @@ public class User {
     }
 
     public void setCity(String city) {
-        this.city = city;
+        this.city = city == null ? null : city.trim();
     }
 
     public String getHometown() {
@@ -180,7 +157,7 @@ public class User {
     }
 
     public void setHometown(String hometown) {
-        this.hometown = hometown;
+        this.hometown = hometown == null ? null : hometown.trim();
     }
 
     public String getBlood() {
@@ -188,7 +165,7 @@ public class User {
     }
 
     public void setBlood(String blood) {
-        this.blood = blood;
+        this.blood = blood == null ? null : blood.trim();
     }
 
     public String getWork() {
@@ -196,7 +173,7 @@ public class User {
     }
 
     public void setWork(String work) {
-        this.work = work;
+        this.work = work == null ? null : work.trim();
     }
 
     public String getEdu() {
@@ -204,15 +181,15 @@ public class User {
     }
 
     public void setEdu(String edu) {
-        this.edu = edu;
+        this.edu = edu == null ? null : edu.trim();
     }
 
-    public String getOtherTEL() {
-        return otherTEL;
+    public String getOtherTel() {
+        return otherTel;
     }
 
-    public void setOtherTEL(String otherTEL) {
-        this.otherTEL = otherTEL;
+    public void setOtherTel(String otherTel) {
+        this.otherTel = otherTel == null ? null : otherTel.trim();
     }
 
     public String getHobby() {
@@ -220,7 +197,7 @@ public class User {
     }
 
     public void setHobby(String hobby) {
-        this.hobby = hobby;
+        this.hobby = hobby == null ? null : hobby.trim();
     }
 
     public String getIntroduce() {
@@ -228,7 +205,7 @@ public class User {
     }
 
     public void setIntroduce(String introduce) {
-        this.introduce = introduce;
+        this.introduce = introduce == null ? null : introduce.trim();
     }
 
     public String getPicture() {
@@ -236,6 +213,70 @@ public class User {
     }
 
     public void setPicture(String picture) {
-        this.picture = picture;
+        this.picture = picture == null ? null : picture.trim();
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType == null ? null : userType.trim();
+    }
+
+    public String getQq() {
+        return qq;
+    }
+
+    public void setQq(String qq) {
+        this.qq = qq == null ? null : qq.trim();
+    }
+
+    public String getSchool() {
+        return school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school == null ? null : school.trim();
+    }
+
+    public String getOtherHobby() {
+        return otherHobby;
+    }
+
+    public void setOtherHobby(String otherHobby) {
+        this.otherHobby = otherHobby == null ? null : otherHobby.trim();
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod == null ? null : paymentMethod.trim();
+    }
+
+    public String getPaymentName() {
+        return paymentName;
+    }
+
+    public void setPaymentName(String paymentName) {
+        this.paymentName = paymentName == null ? null : paymentName.trim();
+    }
+
+    public String getPaymentAccount() {
+        return paymentAccount;
+    }
+
+    public void setPaymentAccount(String paymentAccount) {
+        this.paymentAccount = paymentAccount == null ? null : paymentAccount.trim();
+    }
+
+    public String getPaymentBank() {
+        return paymentBank;
+    }
+
+    public void setPaymentBank(String paymentBank) {
+        this.paymentBank = paymentBank == null ? null : paymentBank.trim();
     }
 }

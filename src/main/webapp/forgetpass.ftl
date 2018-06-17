@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <#assign basePath=request.contextPath />
     <script charset="utf-8" src="${staticRoot}/images/v.js.下载"></script>
+    <#assign basePath=request.contextPath />
     <script type="text/javascript" async="" src="${staticRoot}/images/mv.js.下载"></script>
     <script type="text/javascript" async="" src="${staticRoot}/images/mba.js.下载"></script>
     <script type="text/javascript" async="" src="${staticRoot}/images/mvl.js.下载"></script>

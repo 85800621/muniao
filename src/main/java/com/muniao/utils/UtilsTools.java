@@ -1,7 +1,9 @@
 package com.muniao.utils;
 
 
+
 import com.muniao.entity.JsonResult;
+
 
 /**
  * 林浩 20180606
@@ -58,11 +60,12 @@ public class UtilsTools {
      * @param
      * @return
      */
-    public static JsonResult returnJsonResult(Integer code , String username , Integer usertype ){
+    public static JsonResult returnJsonResult(Integer code , String username , String usertype ){
         JsonResult jsonResult = new JsonResult();
         jsonResult.setCode(code);
         jsonResult.setUsername(username);
         jsonResult.setUsertype(usertype);
         return jsonResult;
     }
+
 }
