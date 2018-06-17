@@ -2873,7 +2873,7 @@
             <#list images as img>
                 <div class="owl-item cloned" style="width: auto;">
                     <div class="item"><img
-                            src="${staticRoot}/images/${img.imgAddress}"
+                            src="${staticRoot}/images/${img.img_url}"
                             style="display: inline-block;"><span></span></div>
                 </div>
             </#list>

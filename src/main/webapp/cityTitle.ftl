@@ -3931,9 +3931,9 @@
                         <div class="s_mn_house_images">
                             <div class="s_mn_house_img">
                                 <a href="https://www.muniao.com/room/75902.html" target="_blank"
-                                   title="${room.roomName}"><img
+                                   title="${room.title}"><img
                                         onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;"
-                                        src="${staticRoot}/images/${room.lsit[1].imgAddress}"
+                                        src="${staticRoot}/images/${room.lsit[1].img_url}"
                                         width="414" height="262" alt="${room.title}"></a>
                                 <span class="smfy_icon"></span>
                             </div>

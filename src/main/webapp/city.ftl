@@ -3897,7 +3897,7 @@
                                 <a href="${basePath}/room/${room.roomid}" target="_blank"
                                    title="${room.title}"><img
                                         onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;"
-                                        src="${staticRoot}/images/${room.lsit[1]}"
+                                        src="${staticRoot}/images/${room.lsit[1].img_url}"
                                         width="414" height="262" alt="${room.title}"></a>
                                 <span class="smfy_icon"></span>
                             </div>

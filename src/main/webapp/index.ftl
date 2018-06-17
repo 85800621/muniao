@@ -853,7 +853,7 @@
     <div class="s_mn_banner_index">
         <div class="s_mn_banner_center">
             <div class="s_mn_search_index">
-                <form action="https://www.muniao.com/Home/Lists" class="s_mn_search_box" id="search_form" method="post"
+                <form action="${basePath}/city/" class="s_mn_search_box" id="search_form" method="post"
                       target="_self" data-x="xxx">
                     <div style="display: none">
                         <input name="pinyinText" id="pinyintext" type="hidden" value="beijing" autocomplete="off">
@@ -876,68 +876,13 @@
                                 <div class="s_mn_citywindow noeve" id="citywindow" style="display: none;">
                                     <ul class="s_mn_citywindow_title">
                                         <li><a href="javascript:void(0)" class="s_cw_a_over">热门城市</a></li>
-                                        <li><a href="javascript:void(0)">ABCD</a></li>
-                                        <li><a href="javascript:void(0)">EFGHJ</a></li>
-                                        <li><a href="javascript:void(0)">KLMN</a></li>
-                                        <li><a href="javascript:void(0)">PQRSTW</a></li>
-                                        <li><a href="javascript:void(0)">XYZ</a></li>
                                     </ul>
                                     <ul class="s_citywindow_main" style="display: block;">
+                                        <#list citys as city>
                                         <li data-path="beijing" data-url="bj" data-city="北京">
-                                            <a href="javascript:void(0)">北京</a>
+                                            <a href="javascript:void(0)">${city}</a>
                                         </li>
-                                        <li data-path="shanghai" data-url="sh" data-city="上海"><a
-                                                href="javascript:void(0)">上海</a></li>
-                                        <li data-path="chongqing" data-url="cq" data-city="重庆"><a
-                                                href="javascript:void(0)">重庆</a></li>
-                                        <li data-path="tianjin" data-url="tj" data-city="天津"><a
-                                                href="javascript:void(0)">天津</a></li>
-                                        <li data-path="qingdao" data-url="qingdao" data-city="青岛"><a
-                                                href="javascript:void(0)">青岛</a></li>
-                                        <li data-path="qinhuangdao" data-url="qhd" data-city="秦皇岛"><a
-                                                href="javascript:void(0)">秦皇岛</a></li>
-                                        <li data-path="sanya" data-url="sy" data-city="三亚"><a href="javascript:void(0)">三亚</a>
-                                        </li>
-                                        <li data-path="dalian" data-url="dalian" data-city="大连"><a
-                                                href="javascript:void(0)">大连</a></li>
-                                        <li data-path="weihai" data-url="zz" data-city="威海"><a
-                                                href="javascript:void(0)">威海</a></li>
-                                        <li data-path="rizhao" data-url="zz" data-city="日照"><a
-                                                href="javascript:void(0)">日照</a></li>
-                                        <li data-path="yantai" data-url="zz" data-city="烟台"><a
-                                                href="javascript:void(0)">烟台</a></li>
-                                        <li data-path="xiamen" data-url="xm" data-city="厦门"><a
-                                                href="javascript:void(0)">厦门</a></li>
-                                        <li data-path="chengde" data-url="c" data-city="承德"><a
-                                                href="javascript:void(0)">承德</a></li>
-                                        <li data-path="dali" data-url="c" data-city="大理"><a
-                                                href="javascript:void(0)">大理</a></li>
-                                        <li data-path="beihai" data-url="c" data-city="北海"><a href="javascript:void(0)">北海</a>
-                                        </li>
-                                        <li data-path="shenzhen" data-url="shenzhen" data-city="深圳"><a
-                                                href="javascript:void(0)">深圳</a></li>
-                                        <li data-path="shenyang" data-url="shenyang" data-city="沈阳"><a
-                                                href="javascript:void(0)">沈阳</a></li>
-                                        <li data-path="chengdu" data-url="chengdu" data-city="成都"><a
-                                                href="javascript:void(0)">成都</a></li>
-                                        <li data-path="suzhou" data-url="sz" data-city="苏州"><a
-                                                href="javascript:void(0)">苏州</a></li>
-                                        <li data-path="hangzhou" data-url="hz" data-city="杭州"><a
-                                                href="javascript:void(0)">杭州</a></li>
-                                        <li data-path="xian" data-url="xa" data-city="西安"><a href="javascript:void(0)">西安</a>
-                                        </li>
-                                        <li data-path="guangzhou" data-url="gz" data-city="广州"><a
-                                                href="javascript:void(0)">广州</a></li>
-                                        <li data-path="changsha" data-url="cs" data-city="长沙"><a
-                                                href="javascript:void(0)">长沙</a></li>
-                                        <li data-path="kunming" data-url="km" data-city="昆明"><a
-                                                href="javascript:void(0)">昆明</a></li>
-                                        <li data-path="nanjing" data-url="nj" data-city="南京"><a
-                                                href="javascript:void(0)">南京</a></li>
-                                        <li data-path="wuhan" data-url="wh" data-city="武汉"><a href="javascript:void(0)">武汉</a>
-                                        </li>
-                                        <li data-path="zhengzhou" data-url="zz" data-city="郑州"><a
-                                                href="javascript:void(0)">郑州</a></li>
+                                        </#list>
                                     </ul>
                                     <ul class="s_citywindow_main2" style="display: none;"></ul>
                                     <div class="s_city_window_prompt">

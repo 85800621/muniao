@@ -25,6 +25,17 @@ public class RoomController {
     @Resource private RoomImgService roomImgService;
     @Resource private UserService userService;
 
+
+
+
+    @RequestMapping(value = "/index")
+    public String roomcity(Model model){
+        List<String> citys = roomService.selectCountCity();
+        model.addAttribute("citys",citys);
+        return "/index";
+    }
+
+
     @RequestMapping(value = "features/{featureId}/{currentPage}")
     public String list(@PathVariable("featureId")int featureId,@PathVariable("currentPage")int currentPage,Model model){
         //分页

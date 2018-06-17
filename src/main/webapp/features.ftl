@@ -519,9 +519,8 @@
                 <h2><span>超值精选&nbsp;&nbsp;特别推荐</span></h2>
                 <div class="s_mn_features_citybox">
                     <a href="" title="全部" class="s_mn_features_citybox_a">全部</a>&nbsp;|&nbsp;
-                    <a href="" title="秦皇岛">秦皇岛</a><label>&nbsp;| &nbsp;</label>
                 <#list  cityList as cityName>
-                    <a href="${basePath}/cityfeatures/${roomFeature.roomFeature}/${cityName.city}" title="${cityName.city}">${cityName.city}</a><label>&nbsp;| &nbsp;</label>
+                    <a href="${basePath}/cityfeatures/${roomFeature.roomFeatureId}/${cityName.city}/1" title="${cityName.city}">${cityName.city}</a><label>&nbsp;| &nbsp;</label>
                 </#list>
 
                 </div>
@@ -608,7 +607,7 @@
                             <div class="s_mn_housingbox2">
                                 <div class="s_mn_housing_img2">
                                     <a href="${basePath}/room/${room.roomid}" title="${room.title}" target="_blank">
-                                        <img src="${staticRoot}/images/${room.lsit[1].imgAddress}" width="580" height="368" alt="${room.title}">
+                                        <img src="${staticRoot}/images/${room.lsit[1].img_url}" width="580" height="368" alt="${room.title}">
                                     </a>
                                     <span class="s_mn_housing_price">￥${room.price}</span>
                                 </div>
