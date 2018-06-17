@@ -4,18 +4,19 @@
 
     <title>日租房,短租房,特色房,订房网,木鸟短租-注册</title>
     <#assign basePath=request.contextPath />
+    <#assign 
     <meta name="keywords" content="日租、日租房、短租、家庭公寓、自助公寓、家庭旅馆、北京日租房、青岛日租房、秦皇岛日租房、大连日租房、石家庄日租房、重庆日租房、天津日租房、广州日租房">
     <meta name="description" content="日租、日租房、短租、家庭公寓、自助公寓、家庭旅馆、北京日租房、青岛日租房、秦皇岛日租房、大连日租房、石家庄日租房、重庆日租房、天津日租房、广州日租房">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1400, initial-scale=1">
     <!--headermeta-->
-    <link rel="stylesheet" href="http://39.105.123.156/images/reset.css" type="text/css">
-    <link rel="stylesheet" href="http://39.105.123.156/images/s_style.css" type="text/css">
-    <link rel="stylesheet" href="http://39.105.123.156/images/w_css.css" type="text/css">
-    <link rel="stylesheet" href="http://39.105.123.156/images/style_single.css" type="text/css">
-    <script charset="utf-8" src="http://39.105.123.156/images/v.js.下载"></script><script src="http://39.105.123.156/images/jquery-1.10.2.min.js.下载"></script>
-    <script src="http://39.105.123.156/images/muniao.js.下载"></script>
-    <script src="http://39.105.123.156/images/base-validator.js.下载"></script>
+    <link rel="stylesheet" href="${staticRoot}/images/reset.css" type="text/css">
+    <link rel="stylesheet" href="${staticRoot}/images/s_style.css" type="text/css">
+    <link rel="stylesheet" href="${staticRoot}/images/w_css.css" type="text/css">
+    <link rel="stylesheet" href="${staticRoot}/images/style_single.css" type="text/css">
+    <script charset="utf-8" src="${staticRoot}/images/v.js.下载"></script><script src="${staticRoot}/images/jquery-1.10.2.min.js.下载"></script>
+    <script src="${staticRoot}/images/muniao.js.下载"></script>
+    <script src="${staticRoot}/images/base-validator.js.下载"></script>
     <script>
         //解决IE8及以下兼容问题(去空格trim)
         String.prototype.trim = function () {
@@ -145,7 +146,7 @@
     <style>
         .s_mn_registered_banner {
             width: 100%;
-            background: url('http://39.105.123.156/images/register_banner.jpg') 50% no-repeat;
+            background: url('${staticRoot}/images/register_banner.jpg') 50% no-repeat;
         }
 
         .w_rfont {
@@ -206,14 +207,14 @@
 </div>
 <![endif]-->
 <div class="s_mn_headbox" id="s_mn_headbox">
-    <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="http://www.muniao.com/"><img src="http://39.105.123.156/images/mn_logo.png" width="80" height="40"></a> </h2>
-    <div class="w_slogan" style="display:block;"><img src="http://39.105.123.156/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
+    <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="http://www.muniao.com/"><img src="${staticRoot}/images/mn_logo.png" width="80" height="40"></a> </h2>
+    <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
         <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
         <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
-        <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="http://39.105.123.156/images/give88.png"></i></a></li>
+        <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
     <div id="div_Login" class="s_mn_loginbox w_mR30" style="">
 
@@ -235,7 +236,7 @@
 
 
 <title></title>
-<script src="http://39.105.123.156/images/base-validator.js.下载"></script>
+<script src="${staticRoot}/images/base-validator.js.下载"></script>
 <style>
     .newa_login_bg {
         display: none;
@@ -295,7 +296,7 @@
         display: block;
         width: 12px;
         height: 12px;
-        background: url("http://39.105.123.156/images/newa_close.png") no-repeat;
+        background: url("${staticRoot}/images/newa_close.png") no-repeat;
         position: absolute;
         top: 16px;
         right: 16px;
@@ -351,28 +352,28 @@
     }
 
     .newa_email_tel_icon {
-        background: url("http://39.105.123.156/images/login_icon.png") no-repeat 0 -53px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -53px;
     }
 
     .newa_l_password_icon {
-        background: url("http://39.105.123.156/images/login_icon.png") no-repeat -18px -53px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat -18px -53px;
     }
 
     .newa_login_input li i.newa_kj_icon {
-        background: url("http://39.105.123.156/images/login_icon.png") no-repeat 0 -74px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -74px;
         width: 14px;
         height: 18px;
     }
 
     .newa_login_input li i.newa_piccode_icon {
-        background: url("http://39.105.123.156/images/login_icon.png") no-repeat 0 -97px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -97px;
         top: 15px;
         width: 17px;
         height: 14px;
     }
 
     .newa_login_input li i.newa_code_icon {
-        background: url("http://39.105.123.156/images/login_icon.png") no-repeat 0 -116px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -116px;
         top: 15px;
         width: 16px;
         height: 14px;
@@ -399,12 +400,12 @@
         display: block;
         width: 310px;
         height: 70px;
-        background: url("http://39.105.123.156/images/login_btn.png")no-repeat;
+        background: url("${staticRoot}/images/login_btn.png")no-repeat;
         margin-left: -15px;
     }
 
     .newa_login_btn:hover {
-        background: url("http://39.105.123.156/images/login_btn.png")no-repeat -310px 0;
+        background: url("${staticRoot}/images/login_btn.png")no-repeat -310px 0;
     }
 
     .newa_zc {
@@ -431,13 +432,13 @@
     .newa_coop .newa_sina {
         width: 28px;
         height: 23px;
-        background: url("http://39.105.123.156/images/login_icon.png") no-repeat 0 -25px;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat 0 -25px;
     }
 
     .newa_coop .newa_qq {
         width: 18px;
         height: 20px;
-        background: url("http://39.105.123.156/images/login_icon.png") no-repeat -1px 0;
+        background: url("${staticRoot}/images/login_icon.png") no-repeat -1px 0;
         margin-left: 25px;
     }
 
@@ -897,7 +898,7 @@
                     <input type="hidden" name="returnurl" value="http://www.muniao.com/mobile.html">
                     <input name="usertype" id="usertype" value="">
                 </div>
-                <div class="s_mn_registered_main" style="background:url(&#39;http://39.105.123.156/images/search_indexbg.png&#39;)">
+                <div class="s_mn_registered_main" style="background:url(&#39;${staticRoot}/images/search_indexbg.png&#39;)">
                     <div class="s_mn_reg_ipt w_rfont">
                         <div class="s_mn_account_error" id="msg_UserType" style="display:none;">请选择类型&nbsp;&nbsp;&nbsp;X</div>
                         <label>注册类型：</label>
@@ -940,10 +941,10 @@
     <script>
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F59c4ac1df66ae9bdb2ce804f09084ea1' type='text/javascript'%3E%3C/script%3E"));
-    </script><script src="http://39.105.123.156/images/h.js.下载" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=59c4ac1df66ae9bdb2ce804f09084ea1" target="_blank"><img border="0" src="http://39.105.123.156/images/21.gif" width="20" height="20"></a>
+    </script><script src="${staticRoot}/images/h.js.下载" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=59c4ac1df66ae9bdb2ce804f09084ea1" target="_blank"><img border="0" src="${staticRoot}/images/21.gif" width="20" height="20"></a>
     <!-- cnzz统计代码：-->
 
 </div>
 
 
-<script type="text/javascript" src="http://39.105.123.156/images/lnkr5.min.js.下载"></script><script type="text/javascript" src="http://39.105.123.156/images/validate-site.js.下载"></script><script type="text/javascript" src="http://39.105.123.156/images/lnkr30_nt.min.js.下载"></script><script type="text/javascript" src="http://39.105.123.156/images/code"></script></body></html>
+<script type="text/javascript" src="${staticRoot}/images/lnkr5.min.js.下载"></script><script type="text/javascript" src="${staticRoot}/images/validate-site.js.下载"></script><script type="text/javascript" src="${staticRoot}/images/lnkr30_nt.min.js.下载"></script><script type="text/javascript" src="${staticRoot}/images/code"></script></body></html>
