@@ -799,22 +799,33 @@
 <script language="JavaScript">
     $(function () {
         var a = ${user.userType};
-
-        if (a == '2'){
+        alert("aaaa")
+        if (a == '1'){
+            alert("进入1111111");
             $("#div_User1").show();
-            $("#div_User").hide();
-            $("#div_FangDong").hide();
+            $("#div_FangKe2").show();
+            $("#div_Loginaaa").hide();
+            $("#div_User22222").hide();
 
-
-        }else {
-            $("#div_FangKe").hide();
-            $("#div_User").show();
+        }else if(a == '2'){
+            alert("进入22222");
+            // $("#div_User22222").show();
             $("#div_User1").hide();
             $("#div_FangKe2").hide();
+            $("#div_Loginaaa").hide();
 
+        }else {
+            alert("无人登陆");
+            $("#div_User1").hide();
+            $("#div_FangKe2").hide();
+            $("#div_Loginaaa").show();
+            $("#div_FangDongaa").hide();
+            $("#div_User22222").hide();
         }
-    })
+    });
 </script>
+
+
 
 
 <script>

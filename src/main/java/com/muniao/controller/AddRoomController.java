@@ -130,13 +130,17 @@ public class AddRoomController {
     @RequestMapping("index")
     public String listRooms(Model model, HttpSession session){
 
-        User user = (User) session.getAttribute("user");
 //        // 测试用user 之后从session中取
 //        User user = new User();
 //        user.setUserId(2);
-
+        User user = (User) session.getAttribute("user");
         int userId = user.getUserId();
         List<Room> roomList = roomService.selectByUserId(userId);
+        for (Room room : roomList) {
+            System.out.println("------------" + room.getRoomid());
+            List<Image> images = roomImgService.selectAllByRoomId(room.getRoomid());
+            room.setLsit(images);
+        }
         model.addAttribute("roomList",roomList);
 
         return "roommanagement";

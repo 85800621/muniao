@@ -1542,7 +1542,7 @@
                     <div class="umanagecon">
                         <div class="fLeft">
                             <div class="ubgimg"><a href="http://www.muniao.com/room/203090.html" target="_blank"><img
-                                    src="${staticRoot}/images/nopic.gif" width="173" height="129"></a></div>
+                                    src="${staticRoot}${list.lsit[0].img_url}" width="173" height="129"></a></div>
                         </div>
                         <div class="fRight">
                             <div class="umanageR"><p class="f14 fLeft"><a href="http://www.muniao.com/room/203090.html"
