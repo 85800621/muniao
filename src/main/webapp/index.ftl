@@ -376,6 +376,7 @@
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
+
     <div id="div_FangKe1" class="s_mn_release w_mR30" style="display:none;">
         <a href="https://user2.muniao.com/Index/MoveHouse?utp=1" class="s_mn_navbutt" rel="nofollow">我要成为房东</a>
     </div>
@@ -416,6 +417,7 @@
             </div>
         </div>
     </div>
+
     <div id="div_Login" class="s_mn_loginbox w_mR30" style="display:none;">
 
         <a href="javascript:void(0);" id="Login1" class="free-publishBtn">免费发布房源</a>
@@ -424,6 +426,7 @@
             <a href="http://user2.muniao.com/Regist/Index" class="s_mn_loginbutt" rel="nofollow">注册</a>
         </div>
     </div>
+
 </div>
 <!--登录弹出框-->
 
@@ -681,7 +684,6 @@
         document.getElementById("ValidImg").src = '/Login/VerifyCode?' + Math.random();
     }
 </script>
-
 
 <style>
     input::-ms-reveal {
