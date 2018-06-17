@@ -1,14 +1,28 @@
 package com.muniao.controller;
 
-import com.muniao.entity.Date_list;
-import com.muniao.entity.JsonRootBean;
-import com.muniao.entity.Month_list;
+
+
+import com.muniao.entity.*;
+import com.muniao.service.CheckInCustomerService;
+import com.muniao.service.Impl.CheckInCustomerServiceImpl;
+import com.muniao.service.Impl.OrderDetailServiceImpl;
+import com.muniao.service.Impl.OrderServiceImpl;
+import com.muniao.service.Impl.RoomServiceImpl;
+import com.muniao.service.OrderDetailService;
+import com.muniao.service.OrderService;
+import com.muniao.service.RoomService;
 import org.apache.ibatis.scripting.xmltags.ForEachSqlNode;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.xml.bind.annotation.XmlElementRef;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -23,7 +37,14 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "/")
 public class BookingController {
-
+    @Resource
+    private CheckInCustomerService mycheckInCustomerService;
+    @Resource
+    private OrderService orderService;
+    @Resource
+    private OrderDetailService orderDetailService;
+    @Resource
+    private RoomService roomService;
 
 
 
@@ -56,4 +77,59 @@ public class BookingController {
 
 
     }
+    @RequestMapping(value = "/prebooking")
+    public String probooking(HttpServletRequest request,Model model){
+        String roomId = request.getParameter("RoomId");
+        String startDate=request.getParameter("StartDate");
+        String endDate=request.getParameter("EndDate");
+        String[] fullNames = request.getParameterValues("fullname");
+        String[] idCards=request.getParameterValues("idcard");
+        List<CheckInCustomer> checkInCustomers=new ArrayList <>();
+        CheckInCustomer checkInCustomer=new CheckInCustomer();
+        for(int i=0;i<=fullNames.length-1;i++){
+            checkInCustomer.setCustomerName(fullNames[i]);
+            checkInCustomer.setCustomerIDCard(idCards[i]);
+            checkInCustomers.add(checkInCustomer);
+        }
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+        int count = fullNames.length-1;
+        OrderDetail orderDetail=new OrderDetail();
+        orderDetail.setBookingTime(new Date());
+        orderDetail.setCheckInPopulation(count);
+        try {
+            orderDetail.setCheckInTime(sdf.parse(startDate));
+            orderDetail.setDepartureTime(sdf.parse(endDate));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+       Room room = roomService.selectRoomById(1);
+        orderDetail.setRoom(room);
+        int differdays=0;
+        double eachDayPrice=room.getPrice();
+        try {
+            differdays = Math.abs((int) (sdf.parse(startDate).getTime()-sdf.parse(endDate).getTime())/86400000);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        double totalPrice = room.getPrice()*differdays;
+        orderDetail.setTotalPrice(totalPrice);
+        orderDetail.setToShopPayment(0);
+        orderDetailService.insertOneOrderDetail(orderDetail);
+        for (CheckInCustomer check:checkInCustomers
+             ) {
+            check.setOrderDetailId(orderDetail.getOrderDetailId());
+            mycheckInCustomerService.insertOneCheckInCustomer(check);
+        }
+        Order order=new Order();
+        order.setOrderStatus("4-6");
+        order.setOrderSellerId(room.getUser().getUserId());
+        User user= (User) request.getSession().getAttribute("user");
+        order.setOrderDetail(orderDetail);
+        order.setOrderBuyerId(2);
+        orderService.insertOneOrder(order);
+        model.addAttribute(order);
+        return "/pay";
+    }
+
 }

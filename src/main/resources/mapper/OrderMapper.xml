@@ -129,9 +129,10 @@
     <select id="selectWaitCommitOrders" resultMap="BaseResultMap">
         select
         *
-        FROM tb_order tor inner join tb_order_detail tod on tor.order_detail_id=tod.order_detail_id
-        inner join tb_room tro on tod.room_id=tro.roomid
-        and order_status LIKE '%${arg0}%' and order_buyer_id = #{arg1};
+        FROM tb_order tor
+        inner join tb_order_detail tod on tod.order_detail_id = tor.order_detail_id
+        inner JOIN tb_room tro on tro.roomid=tod.room_id
+        where order_status LIKE '%${arg0}%' and (order_buyer_id = #{arg1} or order_seller_id=#{arg1});
     </select>
 
     <select id="selectAllOrders" resultMap="BaseResultMap">
@@ -139,8 +140,7 @@
         *
         FROM tb_order tor inner join tb_order_detail tod on tor.order_detail_id=tod.order_detail_id
         inner join tb_room tro on tod.room_id=tro.roomid
-        inner JOIN tb_checkIn_customer tcc on tod.order_detail_id=tcc.order_detail_id
-        and tor.order_buyer_id= #{arg0} or tor.order_buyer_id= #{arg0};
+        and tor.order_buyer_id= #{arg0} or tor.order_seller_id= #{arg0};
     </select>
 
     <select id="selectOneOrder" parameterType="Integer" resultMap="BaseResultMap">
@@ -159,4 +159,9 @@
         where order_detail_id=#{orderDetailId};
 
     </select>
+
+    <insert id="insertOneOrder" useGeneratedKeys="true" keyProperty="orderId" parameterType="com.muniao.entity.Order">
+        insert into tb_order (order_seller_id,order_buyer_id,order_status,order_detail_id)
+        VALUES (#{orderSellerId},#{orderBuyerId},#{orderStatus},#{orderDetail.orderDetailId})
+    </insert>
 </mapper>

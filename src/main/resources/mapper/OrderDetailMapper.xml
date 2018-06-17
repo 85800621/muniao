@@ -110,4 +110,15 @@
         tor.order_detail_id=#{orderId};
 
     </select>
+
+    <insert id="insertOneOrderDetail" parameterType="com.muniao.entity.OrderDetail" keyProperty="orderDetailId"
+            useGeneratedKeys="true">
+        INSERT into
+        tb_order_detail (booking_time,room_id,check_in_time,departure_time,check_in_population
+        ,price_detail,total_price,total_deposit,actually_paid,to_shop_payment)
+        VALUES (#{bookingTime},#{room.roomid},#{checkInTime}
+    ,#{departureTime},#{checkInPopulation},#{priceDetail}
+    ,#{totalPrice},#{totalDeposit},
+    #{actuallyPaid},#{toShopPayment})
+</insert>
 </mapper>

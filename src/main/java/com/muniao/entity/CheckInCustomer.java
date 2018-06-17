@@ -18,13 +18,14 @@ public class CheckInCustomer {
 
     private String customerPhoneNum;
 
-    private String orderDetailId;
+    private Integer orderDetailId;
 
-    public String getOrderDetailId() {
+
+    public Integer getOrderDetailId() {
         return orderDetailId;
     }
 
-    public void setOrderDetailId(String orderDetailId) {
+    public void setOrderDetailId(Integer orderDetailId) {
         this.orderDetailId = orderDetailId;
     }
 
