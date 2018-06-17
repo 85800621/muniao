@@ -4,9 +4,9 @@ import com.muniao.entity.JsonResult;
 import com.muniao.entity.User;
 import com.muniao.service.Impl.LoginService;
 import com.muniao.service.Impl.RegisterService;
+import com.muniao.service.UserService;
 import com.muniao.utils.UtilsCode;
 import com.muniao.utils.UtilsPicCode;
-import com.muniao.utils.UtilsTools;
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -14,14 +14,20 @@ import org.apache.shiro.authc.UnknownAccountException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Random;
 
 /**
@@ -38,6 +44,9 @@ public class UserController {
     @Autowired
     private RegisterService registerService;
 
+    @Autowired
+    private UserService userService;
+
     String codeStr = null ;
 
     /**
@@ -50,13 +59,16 @@ public class UserController {
     @ResponseBody
     public Object login(String tel,String password,Boolean rememberMe,HttpSession session){
       //  rememberMe = true ;
-        System.out.println(tel+"--------Controller--------"+password+"------------"+rememberMe);
+        System.out.println(tel+"--------Controller--------"+password+"--------rememberMe----"+rememberMe);
         JsonResult jsonResult = new JsonResult() ;
         try{
             loginService.login(tel,password,rememberMe);
             jsonResult.setCode(1);
             User user = loginService.checkTelePhone(tel);
             session.setAttribute("user",user);
+            String userType = user.getUserType();
+            session.setAttribute("userType",userType);
+            jsonResult.setUsertype(userType);
             return jsonResult;
         }catch (UnknownAccountException e){
             e.printStackTrace();
@@ -224,16 +236,63 @@ public class UserController {
         }
     }
 
-    @RequestMapping("/setPersonInfo")
+    /**
+     * @RequestParam("picture") MultipartFile picture
+     * @param user
+     * @return  , produces = "application/json; charset=UTF-8"
+     */
+    @RequestMapping(value = "/setPersonInfo",method = RequestMethod.POST,produces = "application/json; charset=UTF-8")
     @ResponseBody
-    public Object setPersonInfo(User user,HttpServletRequest request){
+    public Object setPersonInfo(@RequestParam(value = "file",required = false)MultipartFile file,User user,HttpServletRequest request,HttpServletResponse response){
 
+        String name = file.getName();
+
+
+
+        if (!file.isEmpty()) {
+            System.out.println("进入程序");
+            String path = "D:\\";//写你的路径 这里不写了
+            try {
+                InputStream inputStream = file.getInputStream();
+                File file1 = new File("D:\\", name);
+                FileOutputStream stream = new FileOutputStream(file1);
+                FileOutputStream aaaaaa = new FileOutputStream("aaaaaa");
+
+              //  File targetFile1 = new File(path, "aaa");
+                int hasread = 0 ;
+                byte[] bytes = new byte[32];
+                while ((hasread = inputStream.read(bytes))>0){
+                    stream.write(bytes,0,hasread);
+                }
+                System.out.println("结束");
+            }catch (IOException e){
+                e.printStackTrace();
+            }finally {
+                System.out.println("程序结束");
+            }
+        }
 
 
         return  null;
     }
 
+    @RequestMapping(value = "/paymentinfo")
+    public String paymentinfo(){
+        return "/paymentinfo";
+    }
 
+    @ResponseBody
+    @RequestMapping("/payment")
+    public Object payment(String method,String name,String Tel_M,String ValidCode,String account,String RealIdCard){
+        JsonResult jsonResult = new JsonResult();
 
-
+        if (codeStr.equals(ValidCode)){
+            userService.payment(method,name,account,RealIdCard,Tel_M);
+            jsonResult.setCode(1);
+            return jsonResult;
+        }else {
+            jsonResult.setCode(-1);
+        }
+      return jsonResult;
+    }
 }

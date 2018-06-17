@@ -20,6 +20,14 @@
   </properties>
 
   <dependencies>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.solr/solr-solrj -->
+    <dependency>
+      <groupId>org.apache.solr</groupId>
+      <artifactId>solr-solrj</artifactId>
+      <version>7.3.1</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -225,6 +233,12 @@
       <groupId>com.google.zxing</groupId>
       <artifactId>javase</artifactId>
       <version>3.3.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.3.2</version>
     </dependency>
 
   </dependencies>

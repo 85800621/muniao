@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0040)http://user2.muniao.com/Room/step1?utp=1 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<#assign basePath=request.contextPath />
     <script type="text/javascript" src="${staticRoot}/add/api1"></script>
     <script type="text/javascript" src="${staticRoot}/add/getscript"></script>
     <script src="${staticRoot}/add/jquery-1.10.2.min.js.下载"></script>
@@ -131,27 +132,17 @@
 
                 var datastr = JSON.stringify(postData);
                 var url = 'Room/Submit_Step1';
-                alert(postData);
-                alert(datastr);
-                alert({postData:datastr})
-//                $.post(url,{'ppData':datastr},function (data) {
-//                    alert("222");
-//                })
-
                 $.getJSON(url,{postData:datastr},function (data) {
-                    alert("进入方法");
-                    alert(data);
 //                    var jsonData = JSON.parse(data);
                     var jsonData = data;
-                    alert(jsonData.status);
-                    var newroomid = jsonData.roomid
-                    alert(newroomid);
-                    alert(jsonData.message);
+                    var newroomid = jsonData.roomid;
                     if (jsonData.status == 0) {
                         if (jsonData.roomid > 0) {
-                            location.href = '/Room/Step2/' + newroomid;
+//                            location.href = '/Room/Step2/' + newroomid;
+                            location.href = 'step2';
                         } else {
-                            location.href = '/Room/Step2/' + roomid;
+//                            location.href = '/Room/Step2/' + roomid;
+                            location.href = 'step2';
                         }
                     } else {
                         tj = true;
@@ -458,9 +449,9 @@
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="http://www.muniao.com/"><img src="${staticRoot}/add/mn_logo.png" width="80" height="40"></a> </h2>
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/add/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="http://www.muniao.com/">首页</a></li>
-        <li><a href="http://www.muniao.com/features.html" target="_self">特色短租</a></li>
-        <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
+        <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/add/give88.png"></i></a></li>
     </ul>
     <div id="div_FangKe1" class="s_mn_release w_mR30" style="display:none;">

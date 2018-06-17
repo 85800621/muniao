@@ -45,4 +45,8 @@ public class LoginService {
             userDao.updatePassword(newPassword.toString(),phone);
         }
     }
+
+    public void setPersonInfo(User user){
+        userDao.insertSelective(user);
+    }
 }

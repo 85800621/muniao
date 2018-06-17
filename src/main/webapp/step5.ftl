@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0041)http://user2.muniao.com/Room/Step5/203026 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<#assign basePath=request.contextPath />
     <script src="${staticRoot}/add/jquery-1.10.2.min.js.下载"></script>
     <script src="${staticRoot}/add/city_info.js.下载"></script>
     <script src="${staticRoot}/add/city_cn2en.js.下载"></script>
@@ -64,9 +64,10 @@
             if (tj) {
                 tj = false;
                 $("#fileList li.file-item").each(function () {
-                    //console.log($(this));
+//                    console.log($(this));
                     var _img_url = $(this).find('img').attr("srv_url");
                     var _type = $(this).find('input').attr('data_id');
+                    // 存数据库时把前缀裁掉
                     arr.push({ type: _type, remark: '', img_url: _img_url });
                 });
                 if (arr.length > 97)//最多上传60张图片
@@ -136,10 +137,12 @@
                 var datastr = JSON.stringify(postData);
                 var url = 'Room/Submit_Step5';
                 $.post(url, { postData: datastr }, function (data) {
-                    var jsonData = JSON.parse(data);
+//                    var jsonData = JSON.parse(data);
+                    var jsonData = data;
                     alert(jsonData.message);
                     if (jsonData.status == 0) {
-                        location.href = '/Room/Index?utp=1';
+//                        location.href = '/Room/Index?utp=1';
+                        location.href = 'Room/index';
                     } else { tj = true; }
                 })
             }
@@ -274,9 +277,9 @@
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="http://www.muniao.com/"><img src="${staticRoot}/add/mn_logo.png" width="80" height="40"></a> </h2>
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/add/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="http://www.muniao.com/">首页</a></li>
-        <li><a href="http://www.muniao.com/features.html" target="_self">特色短租</a></li>
-        <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
+        <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/add/give88.png"></i></a></li>
     </ul>
     <div id="div_FangKe1" class="s_mn_release w_mR30" style="display:none;">
@@ -993,7 +996,13 @@
                 <!--用来存放item-->
                 <p class="pic-tips">图片尺寸要求大于610*385像素</p>
                 <ul id="fileList" class="uploader-list clear">
-                    <li id="filePicker" title="点击上传" class="webuploader-container"><div class="webuploader-pick webuploader-pick-hover"></div><div id="rt_rt_1cfhq4rqc1nbm9gn13n6je67kv1" style="position: absolute; top: 38px; left: 0px; width: 158px; height: 150px; overflow: hidden; bottom: auto; right: auto;"><input type="file" name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label></div></li>
+                    <li id="filePicker" title="点击上传" class="webuploader-container">
+                        <div class="webuploader-pick webuploader-pick-hover"></div>
+                        <div id="rt_rt_1cfhq4rqc1nbm9gn13n6je67kv1" style="position: absolute; top: 38px; left: 0px; width: 158px; height: 150px; overflow: hidden; bottom: auto; right: auto;">
+                            <input type="file" name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*">
+                            <label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="step4-title">

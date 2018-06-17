@@ -10,7 +10,7 @@ public class JsonResult {
 
     private String username;
 
-    private Integer usertype;
+    private String  usertype;
 
     public Integer getCode() {
         return code;
@@ -28,15 +28,15 @@ public class JsonResult {
         this.username = username;
     }
 
-    public Integer getUsertype() {
+    public String getUsertype() {
         return usertype;
     }
 
-    public void setUsertype(Integer usertype) {
+    public void setUsertype(String usertype) {
         this.usertype = usertype;
     }
 
-    public JsonResult(Integer code, String username, Integer usertype) {
+    public JsonResult(Integer code, String username, String usertype) {
         this.code = code;
         this.username = username;
         this.usertype = usertype;

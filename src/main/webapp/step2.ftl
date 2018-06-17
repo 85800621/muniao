@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<#assign basePath=request.contextPath />
     <script src="${staticRoot}/add/jquery-1.10.2.min.js.下载"></script>
     <script src="${staticRoot}/add/city_info.js.下载"></script>
     <script src="${staticRoot}/add/city_cn2en.js.下载"></script>
@@ -120,9 +121,9 @@
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/add/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活">
     </div>
     <ul class="s_mn_nav">
-        <li><a href="http://www.muniao.com/">首页</a></li>
-        <li><a href="http://www.muniao.com/features.html" target="_self">特色短租</a></li>
-        <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
+        <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/add/give88.png"></i></a></li>
     </ul>
@@ -999,7 +1000,7 @@
                 "size": $("#useSize").val(),//面积
                 "sameroom": $("#sameroom").val(),//房源套数
                 "subtitle": $("#subtitle").val().trim(),
-                "isaddbead": $("#div_add_type input:checked").val(),
+                "isaddbed": $("#div_add_type input:checked").val(),
                 "add_bed_num": beadNum,
                 "add_bed_price": beadprice,
                 "kitchenroom": $("#chufang").val(),//厨房数
@@ -1011,10 +1012,10 @@
                 JsonParams: getBedList(),
                 roomid: 203026
             }, function (data) {
-                alert("进入方法");
-                var jsonData = JSON.parse(data);
+//                var jsonData = JSON.parse(data);
+                var jsonData = data;
                 if (jsonData.status == 0) {
-                    window.location.href = "/room/Step3/203026";
+                    window.location.href = "step3";
                 } else {
                     alert(jsonData.message);
                     tj = true;

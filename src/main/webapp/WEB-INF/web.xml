@@ -7,7 +7,7 @@
 
   <!-- 当启动项目后，直接访问项目默认启动的页面 -->
   <welcome-file-list>
-    <welcome-file>register.ftl</welcome-file>
+    <welcome-file>index.ftl</welcome-file>
   </welcome-file-list>
 
 

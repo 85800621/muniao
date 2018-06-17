@@ -20,10 +20,10 @@ public class UserTestController {
     @Resource
     private UserTestService userTestService;
 
-    @RequestMapping(value = "/index")
-    public String index(){
-        return "/index";
-    }
+//    @RequestMapping(value = "/index")
+//    public String index(){
+//        return "/index";
+//    }
 
     @RequestMapping(value = "/register")
     public String register(){
@@ -110,10 +110,7 @@ public class UserTestController {
         return "/landlordinfo";
     }
 
-    @RequestMapping(value = "/paymentinfo")
-    public String paymentinfo(){
-        return "/paymentinfo";
-    }
+
 
     @RequestMapping(value = "/step3")
     public String step3(){
@@ -133,5 +130,8 @@ public class UserTestController {
     public String room(){
         return  "/room";
     }
+
+    @RequestMapping(value = "/roommanagemet")
+    public String roomm(){return "/roommanagement";}
 
 }

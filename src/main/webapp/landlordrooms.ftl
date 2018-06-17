@@ -3,6 +3,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>${user.userName}|价格|点评-木鸟短租</title>
+    <#assign basePath=request.contextPath />
     <meta name="keywords" content="${user.userName}|价格|点评">
     <meta name="description" content="${user.userName}提供短租房预订、价格以及房屋点评信息,以特有的经营方式,打破传统的单一性,引领旅店业发展新潮流">
     <meta name="viewport" content="width=1400, initial-scale=1">
@@ -72,7 +73,7 @@
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="https://www.muniao.com/"><img src="${staticRoot}/images/mn_logo.png" width="80" height="40"></a> </h2>
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="https://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
         <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
@@ -453,7 +454,7 @@
     <div class="s_mn_center">
         <div class="s_mn_navtag">
             <a href="https://www.muniao.com/" title="木鸟短租网">木鸟短租网</a> <span>&nbsp;&gt;&nbsp;</span>
-            <a href="https://www.muniao.com/beijing/">${rooms[1].roomLocation}短租公寓</a> <span>&nbsp;&gt;&nbsp;</span>
+            <a href="https://www.muniao.com/beijing/">${rooms[1].city}短租公寓</a> <span>&nbsp;&gt;&nbsp;</span>
             <h1 class="ts_name"><a href="javascript:void(0);">${user.userName}</a></h1>
         </div>
     </div>
@@ -535,18 +536,18 @@
                 <!-- 房间信息 -->
                 <div id="div_1" style="">
                     <#list rooms as room>
-                    <div class="w_house" data-id="${room.roomId}">
+                    <div class="w_house" data-id="${room.roomid}">
                         <div class="w_house_img">
-                            <a href="${basePath}/room/${room.roomId}" target="_blank">
+                            <a href="${basePath}/room/${room.roomid}" target="_blank">
                                 <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/634d15bfb5b54dfbb191206f0fbfc4d620180521021352915.jpg_414_262.jpg" alt="${user.userName}" title="${room.roomName}"></a>
-                            <span class="s_mn_housing_price w_house_price">￥${room.roomPrice}</span>
+                            <span class="s_mn_housing_price w_house_price">￥${room.price}</span>
                         </div>
-                        <div class="w_house_title"><a target="_blank" title="${room.roomName}" href="${basePath}/room/${room.roomId}">${room.roomName}</a></div>
+                        <div class="w_house_title"><a target="_blank" title="${room.title}" href="${basePath}/room/${room.roomid}">${room.title}</a></div>
                         <div class="s_mn_housing_information">
-                            <span>${room.roomStructure.bedroomNum}室</span><span>&nbsp;|&nbsp;</span><span>${room.rentalMethod.method}</span><span>|&nbsp;</span><span>宜住${room.avaliableArea.standPop}人</span><span>&nbsp;|&nbsp;</span><span>近期预订5晚</span>
+                            <span>${room.bedroom}室</span><span>&nbsp;|&nbsp;</span><span>${room.rentalMethod.method}</span><span>|&nbsp;</span><span>宜住${room.max_num}人</span><span>&nbsp;|&nbsp;</span><span>近期预订5晚</span>
                         </div>
                         <div class="w_house_map">
-                            <div class="w_house_map_wz">地址：${room.street}</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(${room.roomLongitude},${room.roomLatitude},&#39;${room.roomName}&#39;,&#39;${room.street}&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
+                            <div class="w_house_map_wz">地址：${room.street}</div><a href="javascript:void(0);" onclick="$(&#39;#getmap&#39;).show();initMap(${room.lng},${room.lat},&#39;${room.title}&#39;,&#39;${room.street}&#39;);" class="map_icon_t" data-id="50299" target="_self"><img src="${staticRoot}/images/w_lanlord_map.jpg">地图</a>
                         </div>
                         <div class="w_house_interactive">
                             <div class="w_house_interactive_icon"></div><div class="w_house_interactive_text">评分</div><div class="w_house_interactive_number">4.9</div>
@@ -565,7 +566,7 @@
                                 桑科<span>***</span>
                             </div>
                             <div class="w_appraisal_nr">
-                                <div class="w_appraisal_ever" style="height:40px;font-size:14px;"><a href="https://www.muniao.com/Home/Detail?id=127683" target="_blank" style="color:#f30">崇文门 天安门 北京站美式loft</a></div>
+                                <div class="w_appraisal_ever" style="height:40px;font-size:14px;"><a href="https://www.muniao.com/Home/Detail?id=127683" target="_blank" style="color:#f30">崇文门 天安门 </a></div>
                                 <div class="w_appraisal_box">
                                     <div class="w_appraisal_box_time">点评时间：2018年06月02日</div>
                                     <div style="border-radius:5px;color:#482300;margin:10px;padding:10px;margin-top:0;font-size:12px;background-color:#fbdcbe;">

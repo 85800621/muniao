@@ -54,12 +54,12 @@ public class Room {
     private Integer in_time;              // 最早入住时间
     private Integer out_time;             // 最晚退房时间
     private String rzyq;                  // 房东要求
-    private Integer specialprice_istru;   // 是否开启星期特殊价格
+    private Integer specialprice_istrue;   // 是否开启星期特殊价格
     private Date week_start_date;         // 星期开始日期
     private Date week_end_date;           // 星期结束日期
     private String weeks;                 // 特殊星期记录（格式 5,6,0）
     private Double week_price;            // 星期特殊价格
-    private Integer weekmonth_disco;      // 是否开启周月折扣
+    private Integer weekmonth_discount;      // 是否开启周月折扣
     private Double discount_week;         // 周折扣
     private Double discount_month;        // 月折扣
     private Date discount_start_date;     // 折扣开始日期
@@ -76,7 +76,7 @@ public class Room {
     private Integer srv_bei_dan;          // 被单多久一换
     private Integer srv_wei_sheng;        // 卫生多久一做
 
-    private List<RoomImage> lsit;         // 图片集合
+    private List<Image> lsit;         // 图片集合
     private RoomType roomType;
     private RoomPriceInterval priceInterval;
     private RentalMethod rentalMethod;
@@ -444,12 +444,12 @@ public class Room {
         this.rzyq = rzyq;
     }
 
-    public Integer getSpecialprice_istru() {
-        return specialprice_istru;
+    public Integer getSpecialprice_istrue() {
+        return specialprice_istrue;
     }
 
-    public void setSpecialprice_istru(Integer specialprice_istru) {
-        this.specialprice_istru = specialprice_istru;
+    public void setSpecialprice_istrue(Integer specialprice_istrue) {
+        this.specialprice_istrue = specialprice_istrue;
     }
 
     public Date getWeek_start_date() {
@@ -484,12 +484,12 @@ public class Room {
         this.week_price = week_price;
     }
 
-    public Integer getWeekmonth_disco() {
-        return weekmonth_disco;
+    public Integer getWeekmonth_discount() {
+        return weekmonth_discount;
     }
 
-    public void setWeekmonth_disco(Integer weekmonth_disco) {
-        this.weekmonth_disco = weekmonth_disco;
+    public void setWeekmonth_discount(Integer weekmonth_discount) {
+        this.weekmonth_discount = weekmonth_discount;
     }
 
     public Double getDiscount_week() {
@@ -612,11 +612,11 @@ public class Room {
         this.srv_wei_sheng = srv_wei_sheng;
     }
 
-    public List<RoomImage> getLsit() {
+    public List<Image> getLsit() {
         return lsit;
     }
 
-    public void setLsit(List<RoomImage> lsit) {
+    public void setLsit(List<Image> lsit) {
         this.lsit = lsit;
     }
 

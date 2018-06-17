@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <#assign basePath=request.contextPath />
     <title>用户中心-木鸟短租</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, IE=10">
@@ -382,9 +383,9 @@
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活"
                                                       title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="http://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="http://www.muniao.com/features.html" target="_self">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>

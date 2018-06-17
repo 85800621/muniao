@@ -1,7 +1,7 @@
 package com.muniao.service.Impl;
 
 import com.muniao.dao.RoomImgMapper;
-import com.muniao.entity.RoomImage;
+import com.muniao.entity.Image;
 import com.muniao.service.RoomImgService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,11 +14,18 @@ import java.util.List;
  */
 @Service
 @Transactional
-public class RoomImgServiceImpl implements RoomImgService{
-    @Resource private RoomImgMapper roomImgDao;
+public class RoomImgServiceImpl implements RoomImgService {
+
+    @Resource
+    private RoomImgMapper roomImgDao;
 
     @Override
-    public List<RoomImage> selectAllByRoomId(int imgId) {
+    public List<Image> selectAllByRoomId(int imgId) {
         return roomImgDao.selectAllByRoomId(imgId);
+    }
+
+    @Override
+    public void insertImage(Image image) {
+        roomImgDao.insertImage(image);
     }
 }

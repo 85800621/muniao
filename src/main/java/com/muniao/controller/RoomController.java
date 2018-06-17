@@ -1,8 +1,8 @@
 package com.muniao.controller;
 
+import com.muniao.entity.Image;
 import com.muniao.entity.Room;
 import com.muniao.entity.RoomFeature;
-import com.muniao.entity.RoomImage;
 import com.muniao.entity.User;
 import com.muniao.service.RoomFeatureService;
 import com.muniao.service.RoomImgService;
@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,13 +29,25 @@ public class RoomController {
     @Resource private RoomImgService roomImgService;
     @Resource private UserService userService;
 
+
+
+
+    @RequestMapping(value = "/index")
+    public String roomcity(Model model){
+        List<String> citys = roomService.selectCountCity();
+        model.addAttribute("citys",citys);
+        return "/index";
+    }
+
+
     @RequestMapping(value = "features/{featureId}/{currentPage}")
-    public String list(@PathVariable("featureId")int featureId,@PathVariable("currentPage")int currentPage,Model model){
+    public String list(@PathVariable("featureId")int featureId, @PathVariable("currentPage")int currentPage, Model model, HttpSession session){
+        User user = (User)session.getAttribute("user");
         //分页
         List<Room> rooms = roomService.findAllByFeature(featureId,currentPage);
         //房间图片
         for (Room room : rooms) {
-            List<RoomImage> list = roomImgService.selectAllByRoomId(room.getRoomid());
+            List<Image> list = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(list);
         }
         //城市查询
@@ -55,7 +68,7 @@ public class RoomController {
     public String FeatureCity(@PathVariable("featureId")int featureId,@PathVariable("roomLocation")String roomLocation,@PathVariable("currentPage")int currentPage, Model model){
         List<Room> rooms = roomService.findByFeatureCity(featureId,roomLocation,currentPage);
         for (Room room : rooms) {
-            List<RoomImage> list = roomImgService.selectAllByRoomId(room.getRoomid());
+            List<Image> list = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(list);
         }
         model.addAttribute("rooms",rooms);
@@ -63,7 +76,6 @@ public class RoomController {
         model.addAttribute("cityList",cityList);
         RoomFeature roomFeature = roomFeatureService.selectFeature(featureId);
         model.addAttribute("roomFeature",roomFeature);
-
         return "/cityfeatures";
     }
 
@@ -80,25 +92,32 @@ public class RoomController {
 
     @RequestMapping(value = "city/{roomLocation}/{currentPage}")
     public String findByCity(@PathVariable("roomLocation")String roomLocation,
-                             @PathVariable("currentPage")int currentPage,Model model){
+                             @PathVariable("currentPage")int currentPage,String indexRoomLocation,Model model){
+
+        System.out.println(indexRoomLocation);
+        if (roomLocation.equals("index")){
+            roomLocation = indexRoomLocation;
+        }
         List<Room> roomList = roomService.findByCityName(roomLocation,currentPage);
         for (Room room : roomList) {
-            List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
+            List<Image> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(imgList);
         }
         model.addAttribute("roomList",roomList);
         //房间类型
-        List<Room> roomTypes  = roomService.selectRoomType(roomLocation,currentPage);
+        List<Room> roomTypes  = roomService.selectRoomType(roomLocation);
         model.addAttribute("roomTypes",roomTypes);
         //价格区间
-        List<Room> roomIntervals = roomService.selectRoomInterval(roomLocation,currentPage);
+        List<Room> roomIntervals = roomService.selectRoomInterval(roomLocation);
         model.addAttribute("roomIntervals",roomIntervals);
         //出租类型
-        List<Room> roomMethods = roomService.selectRoomMethod(roomLocation,currentPage);
+        List<Room> roomMethods = roomService.selectRoomMethod(roomLocation);
         model.addAttribute("roomMethods",roomMethods);
         //户型
-        List<Room> roomStructuress = roomService.selectRoomStructure(roomLocation,currentPage);
+        List<Room> roomStructuress = roomService.selectRoomStructure(roomLocation);
         model.addAttribute("roomStructures",roomStructuress);
+        List<String> citys = roomService.selectCountCity();
+        model.addAttribute("citys",citys);
         return "/city";
     }
 
@@ -116,22 +135,24 @@ public class RoomController {
         model.addAttribute("str",str);
         List<Room> roomList = roomService.selectByCityTitle(roomLocation,currentPage,typeId,priceId,methodId,structureId);
         for (Room room : roomList) {
-            List<RoomImage> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
+            List<Image> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
             room.setLsit(imgList);
         }
         model.addAttribute("roomList",roomList);
         //房间类型
-        List<Room> roomTypes  = roomService.selectRoomType(roomLocation,currentPage);
+        List<Room> roomTypes  = roomService.selectRoomType(roomLocation);
         model.addAttribute("roomTypes",roomTypes);
         //价格区间
-        List<Room> roomIntervals = roomService.selectRoomInterval(roomLocation,currentPage);
+        List<Room> roomIntervals = roomService.selectRoomInterval(roomLocation);
         model.addAttribute("roomIntervals",roomIntervals);
         //出租类型
-        List<Room> roomMethods = roomService.selectRoomMethod(roomLocation,currentPage);
+        List<Room> roomMethods = roomService.selectRoomMethod(roomLocation);
         model.addAttribute("roomMethods",roomMethods);
         //户型
-        List<Room> roomStructures = roomService.selectRoomStructure(roomLocation,currentPage);
+        List<Room> roomStructures = roomService.selectRoomStructure(roomLocation);
         model.addAttribute("roomStructures",roomStructures);
+        List<String> citys = roomService.selectCountCity();
+        model.addAttribute("citys",citys);
         return "/cityTitle";
     }
 
@@ -140,7 +161,7 @@ public class RoomController {
     public String findByRoomId(@PathVariable("roomId")int roomId,Model model){
         Room room = roomService.selectRoomById(roomId);
         model.addAttribute("room",room);
-        List<RoomImage> images = roomImgService.selectAllByRoomId(roomId);
+        List<Image> images = roomImgService.selectAllByRoomId(roomId);
         model.addAttribute("images",images);
         return "/room";
     }

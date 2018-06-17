@@ -72,6 +72,10 @@
 
     <!--################################  事务部分  ################################-->
 
+    <bean id="uploadConfig" class="com.muniao.utils.UploadConfig">
+        <property name="filePath" value="C:/javaFile/blog/"></property>
+    </bean>
+
 	<!-- 声明式事务配置 -->
 
 	<!-- 配置事务管理器 -->
@@ -97,7 +101,6 @@
         <property name="filterChainDefinitions">
             <value>
                 <!--anon不需要登录-->
-                /oo/pic=anon
                 /**/**=anon
                 /login/**=anon
               <!--  /login/checkLogin=anon -->

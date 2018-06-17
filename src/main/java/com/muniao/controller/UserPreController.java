@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-@RequestMapping("/")
+@RequestMapping("/user")
 @Controller
 public class UserPreController {
 
@@ -23,6 +23,8 @@ public class UserPreController {
 
     @RequestMapping("/lodgerinfo")
     public String lodgerinfo(){
-        return "/lodgerinfo";
+        System.out.println("进入lodgerindo");
+
+        return "lodgerinfo";
     }
 }

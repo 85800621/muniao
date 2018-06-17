@@ -24,4 +24,6 @@ public interface UserMapper {
     void insertSelective(User user);
 
     void updatePassword(@Param("password") String password,@Param("telephone")String telephone);
+
+    void payment(@Param("method") String method,@Param("name") String name,@Param("account") String account ,@Param("bank") String bank,@Param("telephone") String telephone);
 }

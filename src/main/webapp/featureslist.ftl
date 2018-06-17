@@ -3,6 +3,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>特色主题房间,特色房短租网-木鸟短租</title>
+    <#assign basePath=request.contextPath />
     <meta name="keywords" content="特色房间,特色短租网,主题房">
     <meta name="description" content="想体验特色住所,来木鸟短租特色房源主题,这里集合别墅日租,古镇客栈,特色四合院,海景房短租,情侣蜜月短租房,特色农家院住宿等特色主题房.">
     <meta name="viewport" content="width=1400, initial-scale=1">
@@ -72,9 +73,9 @@
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="https://www.muniao.com/"><img src="${staticRoot}/images/mn_logo.png" width="80" height="40"></a> </h2>
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="https://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="https://www.muniao.com/features.html" target="_self" class="s_mn_nav_over">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
@@ -495,7 +496,7 @@
             </div>
             <div class="s_mn_module">
                 <div class="s_mn_module2x" data-s="2">
-                    <a href="http://localhost:8080/muniao/features/1" target="_blank" class="s_mn_place2">
+                    <a href="${basePath}/features/1/1" target="_blank" class="s_mn_place2">
                         <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112850647477.jpg" alt="别墅  " title="别墅  ">
                         <div class="s_mn_module_textbox">
                             <div class="s_mn_module_label"> <span class="s_mn_module_name">别墅</span> <span class="s_mn_module_describe">公司年会，开Party，租豪华大别墅</span> </div>
@@ -503,7 +504,7 @@
                         </div>
                     </a>
                 </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="http://localhost:8080/muniao/features/2" target="_blank" class="s_mn_place1">
+                <a href="${basePath}/features/2/1" target="_blank" class="s_mn_place1">
                     <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112850790009.jpg" alt="情侣房 " title="情侣房 ">
                     <div class="s_mn_module_textbox">
                         <div class="s_mn_module_label"> <span class="s_mn_module_name">情侣房</span> <span class="s_mn_module_describe">蜜月情侣不一样的浪漫</span> </div>
@@ -511,7 +512,7 @@
                     </div>
                 </a>
             </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="http://localhost:8080/muniao/features/3" target="_blank" class="s_mn_place1">
+                <a href="${basePath}/features/3/1" target="_blank" class="s_mn_place1">
                     <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112850841837.jpg" alt="主题特色 " title="主题特色 ">
                     <div class="s_mn_module_textbox">
                         <div class="s_mn_module_label"> <span class="s_mn_module_name">主题特色房</span> <span class="s_mn_module_describe">爱TA将TA的梦变成现实</span> </div>
@@ -519,7 +520,7 @@
                     </div>
                 </a>
             </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="http://localhost:8080/muniao/features/4" target="_blank" class="s_mn_place1">
+                <a href="${basePath}/features/4/1" target="_blank" class="s_mn_place1">
                     <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112850904385.jpg" alt="海景房 " title="海景房 ">
                     <div class="s_mn_module_textbox">
                         <div class="s_mn_module_label"> <span class="s_mn_module_name">海景房</span> <span class="s_mn_module_describe">听海的声音、就在窗外</span> </div>
@@ -527,7 +528,7 @@
                     </div>
                 </a>
             </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="http://localhost:8080/muniao/features/5" target="_blank" class="s_mn_place1">
+                <a href="${basePath}/features/5/1" target="_blank" class="s_mn_place1">
                     <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112850969601.jpg" alt="古镇客栈 " title="古镇客栈 ">
                     <div class="s_mn_module_textbox">
                         <div class="s_mn_module_label"> <span class="s_mn_module_name">古镇客栈</span> <span class="s_mn_module_describe">住千年古镇，看岁月更迭，听年代流转</span> </div>
@@ -535,7 +536,7 @@
                     </div>
                 </a>
             </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="http://localhost:8080/muniao/features/6" target="_blank" class="s_mn_place1">
+                <a href="${basePath}/features/6/1" target="_blank" class="s_mn_place1">
                     <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112851022489.jpg" alt="木屋 " title="木屋 ">
                     <div class="s_mn_module_textbox">
                         <div class="s_mn_module_label"> <span class="s_mn_module_name">木屋</span> <span class="s_mn_module_describe">感受最真实大自然，从住木屋开始</span> </div>
@@ -543,7 +544,7 @@
                     </div>
                 </a>
             </div>                        <div class="s_mn_module2x" data-s="2">
-                <a href="http://localhost:8080/muniao/features/7" target="_blank" class="s_mn_place2">
+                <a href="${basePath}/features/7/1" target="_blank" class="s_mn_place2">
                     <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112852039681.jpg" alt="四合院 " title="四合院 ">
                     <div class="s_mn_module_textbox">
                         <div class="s_mn_module_label"> <span class="s_mn_module_name">四合院</span> <span class="s_mn_module_describe">感受老北京的深闺大院，品街头巷尾的家长里短</span> </div>
@@ -551,7 +552,7 @@
                     </div>
                 </a>
             </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href=http://localhost:8080/muniao/features/8 target="_blank" class="s_mn_place1">
+                <a href=${basePath}/features/8/1 target="_blank" class="s_mn_place1">
                     <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112852099413.jpg" alt="复式 " title="复式 ">
                     <div class="s_mn_module_textbox">
                         <div class="s_mn_module_label"> <span class="s_mn_module_name">复式LOFT</span> <span class="s_mn_module_describe">小资情调的感同身受</span> </div>
@@ -559,7 +560,7 @@
                     </div>
                 </a>
             </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="http://localhost:8080/muniao/features/9" target="_blank" class="s_mn_place1">
+                <a href="${basePath}/features/9/1" target="_blank" class="s_mn_place1">
                     <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112852149213.jpg" alt="窑洞 " title="窑洞 ">
                     <div class="s_mn_module_textbox">
                         <div class="s_mn_module_label"> <span class="s_mn_module_name">窑洞</span> <span class="s_mn_module_describe">西北黄土高原上的别样风情</span> </div>
@@ -567,7 +568,7 @@
                     </div>
                 </a>
             </div>                        <div class="s_mn_module1x" data-s="1">
-                <a href="http://localhost:8080/muniao/features/10" target="_blank" class="s_mn_place1">
+                <a href="${basePath}/features/10/1" target="_blank" class="s_mn_place1">
                     <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;" src="${staticRoot}/images/2016112852226537.jpg" alt="农家院 " title="农家院 ">
                     <div class="s_mn_module_textbox">
                         <div class="s_mn_module_label"> <span class="s_mn_module_name">农家院</span> <span class="s_mn_module_describe">周末出游，同学聚会，感受最地道的风土人情</span> </div>
