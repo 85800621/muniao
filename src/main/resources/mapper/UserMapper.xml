@@ -17,16 +17,26 @@
         <result column="blood" jdbcType="VARCHAR" property="blood" />
         <result column="work" jdbcType="VARCHAR" property="work" />
         <result column="edu" jdbcType="VARCHAR" property="edu" />
-        <result column="other_tel" jdbcType="VARCHAR" property="otherTEL" />
+        <result column="other_tel" jdbcType="VARCHAR" property="otherTel" />
         <result column="hobby" jdbcType="VARCHAR" property="hobby" />
         <result column="introduce" jdbcType="VARCHAR" property="introduce" />
         <result column="picture" jdbcType="VARCHAR" property="picture" />
+        <result column="user_type" jdbcType="VARCHAR" property="userType" />
+        <result column="qq" jdbcType="VARCHAR" property="qq" />
+        <result column="school" jdbcType="VARCHAR" property="school" />
+        <result column="other_hobby" jdbcType="VARCHAR" property="otherHobby" />
+        <result column="payment_method" jdbcType="VARCHAR" property="paymentMethod" />
+        <result column="payment_name" jdbcType="VARCHAR" property="paymentName" />
+        <result column="payment_account" jdbcType="VARCHAR" property="paymentAccount" />
+        <result column="payment_bank" jdbcType="VARCHAR" property="paymentBank" />
     </resultMap>
 
     <sql id="Base_Column_List">
     user_id, user_name, user_number, telephone, email, room_name, password, password_salt,
-    sex, birth, city, hometown, blood, work, edu, other_tel, hobby, introduce, picture
-  </sql>
+    sex, birth, city, hometown, blood, work, edu, other_tel, hobby, introduce, picture,
+    user_type, qq, school, other_hobby, payment_method, payment_name, payment_account,
+    payment_bank
+    </sql>
 
   <select id="selectByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
@@ -35,9 +45,7 @@
     WHERE user_id=#{userId,jdbcType=INTEGER}
   </select>
 
-
-
-    <insert id="insertSelective" keyProperty="userId" useGeneratedKeys="true" parameterType="com.muniao.entity.User">
+    <insert id="insertSelective" parameterType="com.muniao.entity.User">
         insert into tb_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
 
@@ -65,9 +73,9 @@
             <if test="sex != null">
                 sex,
             </if>
-            <if test="birth != null">
-                birth,
-            </if>
+            <!--<if test="birth != null">-->
+                <!--birth,-->
+            <!--</if>-->
             <if test="city != null">
                 city,
             </if>
@@ -83,7 +91,7 @@
             <if test="edu != null">
                 edu,
             </if>
-            <if test="otherTEL != null">
+            <if test="otherTel != null">
                 other_tel,
             </if>
             <if test="hobby != null">
@@ -95,8 +103,19 @@
             <if test="picture != null">
                 picture,
             </if>
+            <if test="userType != null">
+                user_type,
+            </if>
+            <if test="qq != null">
+                qq,
+            </if>
+            <if test="school != null">
+                school,
+            </if>
+            <if test="otherHobby != null">
+                other_hobby,
+            </if>
         </trim>
-
         <trim prefix="values (" suffix=")" suffixOverrides=",">
 
             <if test="userName != null">
@@ -123,9 +142,9 @@
             <if test="sex != null">
                 #{sex,jdbcType=VARCHAR},
             </if>
-            <if test="birth != null">
-                #{birth,jdbcType=DATE},
-            </if>
+            <!--<if test="birth != null">-->
+                <!--#{birth,jdbcType=DATE},-->
+            <!--</if>-->
             <if test="city != null">
                 #{city,jdbcType=VARCHAR},
             </if>
@@ -141,7 +160,7 @@
             <if test="edu != null">
                 #{edu,jdbcType=VARCHAR},
             </if>
-            <if test="otherTEL != null">
+            <if test="otherTel != null">
                 #{otherTel,jdbcType=VARCHAR},
             </if>
             <if test="hobby != null">
@@ -153,9 +172,30 @@
             <if test="picture != null">
                 #{picture,jdbcType=VARCHAR},
             </if>
+            <if test="userType != null">
+                #{userType,jdbcType=VARCHAR},
+            </if>
+            <if test="qq != null">
+                #{qq,jdbcType=VARCHAR},
+            </if>
+            <if test="school != null">
+                #{school,jdbcType=VARCHAR},
+            </if>
+            <if test="otherHobby != null">
+                #{otherHobby,jdbcType=VARCHAR},
+            </if>
         </trim>
     </insert>
 
+
+    <update id="payment" parameterType="java.lang.String">
+        UPDATE tb_user
+        SET payment_method = #{method},
+        payment_name = #{name},
+        payment_account = #{account},
+        payment_bank = #{bank}
+        where telephone = #{telephone}
+    </update>
 
 
     <select id="queryRolesByPhone" parameterType="java.lang.String" resultType="java.lang.String">

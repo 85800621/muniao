@@ -3,7 +3,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>海景房短租,租直面大海海景房  - 木鸟短租</title>
-<#assign basePath=request.contextPath />
+    <#assign basePath=request.contextPath />
     <meta name="keywords" content="海景房短租,海景房出租">
     <meta name="description" content="木鸟短租为有海边度假旅游寻找海景房出租的朋友提供优质、可靠的海景房住宿服务.精心搜集了海景房短租房源,全心全意为您的出行住宿保驾护航.">
     <meta name="viewport" content="width=1400, initial-scale=1">
@@ -73,9 +73,9 @@
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="https://www.muniao.com/"><img src="${staticRoot}/images/mn_logo.png" width="80" height="40"></a> </h2>
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="https://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="${basePath}/featureslist" target="_self" class="s_mn_nav_over">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>

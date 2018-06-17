@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>用户中心-木鸟短租</title>
-
+    <#assign basePath=request.contextPath />
     <meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, IE=10">
     <link rel="shortcut icon" href="http://user2.muniao.com/favicon.ico">
     <link href="${staticRoot}/images/userpublic.css" rel="stylesheet">
@@ -413,9 +413,9 @@
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活"
                                                       title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="http://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="http://www.muniao.com/features.html" target="_self">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>
@@ -1290,41 +1290,40 @@
                     //提交
                     //支付宝
                     if ($('#ChargeType').val() == 1) {
-                        $.post("/BecomeHost/Submit", {
-                            UserName: $('#UserName').val(),
-                            ChargeType: $('#ChargeType').val(),
-                            ChargeDetail: $('#AliPayAccount').val() + '|' + $('#PayeeName').val(),
+                        $.post("payment", {
+                            method: "支付宝",
+                            name: $('#PayeeName').val(),
                             Tel_M: $('#Tel_M').val(),
-                            ValidCode: $('#ValidCode').val()
-                            //RealIdCard: $('#RealIdCard').val()
+                            ValidCode: $('#ValidCode').val(),
+                            account: $('#AliPayAccount').val()
                         }, function (data) {
-                            var j = JSON.parse(data);
-                            if (j.state) {
+                          //  var j = JSON.parse(data);
+                            if (data.code == 1) {
                                 alert('恭喜！操作成功！');
-                                location.reload();
+                                location.href = 'lodgerinfo';
                             }
                             else {
-                                alert(j.msg);
+                                alert("更新失败");
                             }
                         })
                     }
                     //银行卡
                     else if ($('#ChargeType').val() == 3) {
-                        $.post("/BecomeHost/Submit", {
-                            UserName: $('#UserName').val(),
-                            ChargeType: $('#ChargeType').val(),
-                            ChargeDetail: $('#AccountBank').val() + '|' + $('#Account').val() + '|' + $('#AccountHolder').val(),
+                        $.post("payment", {
+                            method: "银行卡",
+                            name: $('#AccountHolder').val(),
                             Tel_M: $('#Tel_M').val(),
-                            ValidCode: $('#ValidCode').val()
-                            //RealIdCard: $('#RealIdCard').val()
+                            ValidCode: $('#ValidCode').val(),
+                            account:$('#Account').val(),
+                           // RealIdCard: $('#RealIdCard').val()
                         }, function (data) {
                             var j = JSON.parse(data);
                             if (j.state) {
                                 alert('恭喜！操作成功！');
-                                location.reload();
+                                location.href = 'lodgerinfo';
                             }
                             else {
-                                alert(j.msg);
+                                alert("更新失败");
                             }
                         })
                     }
@@ -1367,43 +1366,17 @@
                 /*发送短信*/
                 $.ajaxSettings.async = false;
                 $.ajaxSetup({cache: false});
-                $.get('/BecomeHost/SendValidCode', {mob: $('#Tel_M').val()}, function (data) {
-                    var State = JSON.parse(data).State;
-                    if (State == 1) {
-                        /*设置样式*/
-                        var name = $(obj).find("a").html();
-                        var color = $(obj).find("a").css('color');
-                        var i = 60;
-                        $(obj).find("a").html(i + '秒');
-                        $(obj).find("a").css('color', '#f4650a');
-                        $(obj).removeAttr("onclick");
-                        var inv = setInterval(function () {
-                            if (i == 1) {
-                                $(obj).find("a").html(name);
-                                $(obj).find("a").css('color', color);
-                                $(obj).attr("onclick", "getValidCode(this)");
-                                clearInterval(inv);
-                            }
-                            else {
-                                i--;
-                                $(obj).find("a").html(i + '秒');
-                            }
-                        }, 1000);
-                        /*设置验证码过期时间*/
-                        var outtime = setInterval(function () {
-                            IsOut = true;
-                            clearInterval(outtime);
-                        }, 120000);
-                        /*验真手机号*/
-                        //$('#hd_ValidTel').val($('#Tel_M').val());
+                $.get('getCode', {tel: $('#Tel_M').val()}, function (data) {
+                    //var State = JSON.parse(data).State;
+                    if (data.code == 3) {
                         alert('短信验证码已发送，请注意查收！');
                     }
-                    else if (State == 2) {
+                    else if (data.code == 2) {
                         alert('已达到验证次数上限，请稍后再试！');
                     }
-                    else if (State == 4) {
+                    else if (data.code == 4) {
                         alert('请输入登录的手机号！');
-                    } else if (State == 5) {
+                    } else if (data.code == 5) {
                         alert('账户有误，请重新登录！');
                     }
                     else {
@@ -1467,7 +1440,7 @@
                         </td>
                         <td width="655" height="40" align="left" valign="middle" class="uinfotd">
                             <input id="Tel_M" type="text" disabled="disabled" class="uinfoinput"
-                                   onchange="$(&#39;#msg_Tel_M&#39;).hide();" style="float:left;" value="18792074922"
+                                   onchange="$(&#39;#msg_Tel_M&#39;).hide();" style="float:left;" value="18695068291"
                                    maxlength="11">
                             <input id="ValidCode" type="text" class="teltext mT15"
                                    onchange="$(&#39;#msg_Tel_M&#39;).hide();"

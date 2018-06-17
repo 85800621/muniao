@@ -1,6 +1,9 @@
 package com.muniao.controller;
 
-import com.muniao.entity.*;
+import com.muniao.entity.Image;
+import com.muniao.entity.Room;
+import com.muniao.entity.RoomFeature;
+import com.muniao.entity.User;
 import com.muniao.service.RoomFeatureService;
 import com.muniao.service.RoomImgService;
 import com.muniao.service.RoomService;
@@ -88,8 +91,13 @@ public class RoomController {
 
     @RequestMapping(value = "city/{roomLocation}/{currentPage}")
     public String findByCity(@PathVariable("roomLocation")String roomLocation,
-                             @PathVariable("currentPage")int currentPage,Model model){
-        model.addAttribute("currentPage",currentPage);
+                             @PathVariable("currentPage")int currentPage,String indexRoomLocation,Model model){
+
+        System.out.println(indexRoomLocation);
+        if (roomLocation.equals("index")){
+            roomLocation = indexRoomLocation;
+        }
+        System.out.println(roomLocation);
         List<Room> roomList = roomService.findByCityName(roomLocation,currentPage);
         for (Room room : roomList) {
             List<Image> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
@@ -108,11 +116,6 @@ public class RoomController {
         //户型
         List<Room> roomStructuress = roomService.selectRoomStructure(roomLocation);
         model.addAttribute("roomStructures",roomStructuress);
-        //房间数量
-        int number = roomService.selectCountRooms(roomLocation);
-        model.addAttribute("number",number);
-        List<String> citys = roomService.selectCountCity();
-        model.addAttribute("citys",citys);
         return "/city";
     }
 
@@ -123,11 +126,11 @@ public class RoomController {
                                 , @PathVariable("priceId")int priceId
                                 , @PathVariable("methodId")int methodId
                                 , @PathVariable("structureId")int structureId){
-        model.addAttribute("typeId",typeId);
-        model.addAttribute("priceId",priceId);
-        model.addAttribute("methodId",methodId);
-        model.addAttribute("structureId",structureId);
-        model.addAttribute("roomLocation",roomLocation);
+        int typ = typeId;int pri=priceId;int met = methodId;int str = structureId;
+        model.addAttribute("typ",typ);
+        model.addAttribute("pri",pri);
+        model.addAttribute("met",met);
+        model.addAttribute("str",str);
         List<Room> roomList = roomService.selectByCityTitle(roomLocation,currentPage,typeId,priceId,methodId,structureId);
         for (Room room : roomList) {
             List<Image> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
@@ -146,13 +149,8 @@ public class RoomController {
         //户型
         List<Room> roomStructures = roomService.selectRoomStructure(roomLocation);
         model.addAttribute("roomStructures",roomStructures);
-        //房间数量
-        int number = roomService.selectCountRooms(roomLocation);
-        model.addAttribute("number",number);
         return "/cityTitle";
     }
-
-
 
 
     @RequestMapping("room/{roomId}")
@@ -172,44 +170,4 @@ public class RoomController {
         model.addAttribute("user",user);
         return "/landlordrooms";
     }
-
-    /**
-     * solr全文检索
-     * @param keywords 关键词
-     * @param model
-     * @return
-     */
-//    @RequestMapping("solrCity/{keywords}")
-//    public String solrFindRooms(@PathVariable("keywords")String keywords,Model model){
-//        HttpSolrClient client = new HttpSolrClient.Builder()
-//                .withBaseSolrUrl("http://39.105.123.156:8080/solr7/muniao").build();
-//        SolrQuery find = new SolrQuery();
-//        find.setQuery("keywords:"+keywords);
-//        QueryResponse response = null;
-//        try {
-//           response = client.query(find);
-//        } catch (SolrServerException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        SolrDocumentList list = response.getResults();
-//        List<Room> rooms = new ArrayList<>();
-//        for (SolrDocument document : list) {
-//            Room room = new Room();
-//            room.setTitle(document.get("title").toString());
-//            room.setBedroom((Integer) document.get("bedroom"));
-//            room.setRent_type((Integer) document.get("rent_type"));
-//            room.setUser_id((Integer)document.get("user_id"));
-//            room.setMax_num((Integer)document.get("max_num"));
-//            room.setStreet(document.get("street").toString());
-//            room.setPrice((Double) document.get("price"));
-//            room.setRoomid((Integer) document.get("roomid"));
-////            List<RoomImage> imgs = roomImgService.selectAllByRoomId(room.getRoomid());
-////            room.setLsit(imgs);
-//            rooms.add(room);
-//        }
-//        model.addAttribute("rooms",rooms);
-//        return "/solrCity";
-//    }
 }

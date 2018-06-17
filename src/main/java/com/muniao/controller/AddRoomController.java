@@ -34,6 +34,11 @@ public class AddRoomController {
     @Autowired
     private RoomImgService roomImgService;
 
+    @RequestMapping("/step1")
+    public String preadd(){
+        return "/step1";
+    }
+
     @ResponseBody
     @RequestMapping("/Submit_Step1")
     public JsonData addRoomStep1(String postData,Model model){

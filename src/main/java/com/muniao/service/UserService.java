@@ -8,4 +8,6 @@ import com.muniao.entity.User;
 
 public interface UserService {
     User selectByUserId(int userId);
+
+    void payment(String method,String name,String account,String bank,String telephone);
 }

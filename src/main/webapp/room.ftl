@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <#assign basePath=request.contextPath />
     <title>${room.roomName}</title>
     <meta name="keywords" content="北京东城区短租房,北京东城区日租房">
     <meta name="description" content="房间位于市中心交通便利，出差旅行首选！北欧风格LOFT，有可以俯瞰整个城市夜晚的大阳台，休息之余在阳">
@@ -2423,9 +2423,9 @@
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活">
     </div>
     <ul class="s_mn_nav">
-        <li><a href="https://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="https://www.muniao.com/features.html" target="_self">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>
@@ -3228,13 +3228,13 @@
                 <div class="room_Rbottom">
                     <div class="room_Rfd">
                         <div class="room_Rfdimg w_fLeft">
-                            <a href="" title="${room.title}" target="_blank"><img
-                                    onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;"
+                            <a href="${basePath}/landlordrooms/${room.user.userId}" title="${room.title}" target="_blank">
+                                <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;"
                                     src="${staticRoot}/images/${room.user.picture}"></a>
                         </div>
                         <div class="room_Rfdxx">
                             <h3 class="f16 w_fColor7">
-                                <a href="http://www.muniao.com/fangdong/363368/" title="${room.title}" target="_blank">${room.title}</a>
+                                <a href="${basePath}/landlordrooms/${room.user.userId}" title="${room.title}" target="_blank">${room.title}</a>
                             </h3>
                             <input type="hidden" name="name" value="1">
                             <div class="room_Rfdzm f12 w_fColora"><span class="zmicon"></span><span

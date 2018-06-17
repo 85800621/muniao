@@ -3,6 +3,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>${user.userName}|价格|点评-木鸟短租</title>
+    <#assign basePath=request.contextPath />
     <meta name="keywords" content="${user.userName}|价格|点评">
     <meta name="description" content="${user.userName}提供短租房预订、价格以及房屋点评信息,以特有的经营方式,打破传统的单一性,引领旅店业发展新潮流">
     <meta name="viewport" content="width=1400, initial-scale=1">
@@ -72,7 +73,7 @@
     <h2 class="s_mn_logo w_mL30" style="margin-left:30px;"> <a href="https://www.muniao.com/"><img src="${staticRoot}/images/mn_logo.png" width="80" height="40"></a> </h2>
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="https://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
         <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>

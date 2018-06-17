@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <#assign basePath=request.contextPath />
     <title>用户中心-木鸟短租</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, IE=10">
@@ -414,21 +415,21 @@
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png" alt="一间房一种生活" title="一间房一种生活">
     </div>
     <ul class="s_mn_nav">
-        <li><a href="http://www.muniao.com/">首页</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
         <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
-        <li><a href="http://www.muniao.com/features.html" target="_self">特色短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
-    <div id="div_FangKe1" class="s_mn_release w_mR30" style="">
+    <div id="div_FangKe2" class="s_mn_release w_mR30" style="">
         <a href="http://user2.muniao.com/Index/MoveHouse?utp=1" class="s_mn_navbutt" rel="nofollow">我要成为房东</a>
     </div>
-    <div id="div_User" class="s_mn_userbox" style="">
+    <div id="div_User1" class="s_mn_userbox" style="">
 
         <span>Hi,欢迎回来！</span>
         <a class="s_mu_username" style="font:15px/45px Microsoft YaHei;" target="_blank"
-           onmouseover="$(&#39;#div_FangKe&#39;).show(); $(&#39;#div_FangDong&#39;).show();">夏冰</a>
+           onmouseover="$(&#39;#div_FangKe&#39;).show();">夏冰</a>
         <!--房客弹出框-->
         <div id="div_FangKe" class="s_mu_usermenubox" style="display:none;"
              onmouseover="$(&#39;#div_FangKe&#39;).show();" onmouseout="$(&#39;#div_FangKe&#39;).hide();">
@@ -444,6 +445,15 @@
         </div>
 
     </div>
+
+
+    <div id="div_FangKe1" class="s_mn_release w_mR30" style="display:none;">
+        <a href="https://user2.muniao.com/Index/MoveHouse?utp=1" class="s_mn_navbutt" rel="nofollow">我要成为房东</a>
+    </div>
+
+
+    <div id="div_User" class="s_mn_userbox" style="">     <a href="http://user2.muniao.com/Index/MoveHouse?utp=1" class="free-publishBtn">免费发布房源</a>    <span>Hi,欢迎回来！</span>     <a class="s_mu_username" style="font:15px/45px Microsoft YaHei;" target="_blank" onmouseover="$(&#39;#div_FangKe&#39;).show(); $(&#39;#div_FangDong&#39;).show();">大世界</a>                            <!--房东弹出框-->
+    <div id="div_FangDong" class="w_user_xl" style="border-radius: 3px; opacity: 0.8; background-color: rgb(191, 82, 13); border: 0px; display: none;" onmouseover="$(&#39;#div_FangDong&#39;).show();" onmouseout="$(&#39;#div_FangDong&#39;).hide();">                            <div class="w_user_xlfd">                                <div  class="w_user_tt w_user_font" style="text-align:left;"><a href="http://user2.muniao.com/SystemMsg/Index?utp=1" rel="nofollow" target="_blank" style="font-family:微软雅黑;color:#fff;">房东中心</a></div>                                <ul class="w_user_list w_user_font clearfix">                                    <li><a href="http://user2.muniao.com/Index/MoveHouse?utp=1" style="font-size:12px;font-family:微软雅黑;color:#fff;">发布房间</a></li>                                    <li><a href="http://user2.muniao.com/Order/Index?utp=1" style="font-size:12px;font-family:微软雅黑;color:#fff;">订单管理</a></li>                                    <li><a href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3" style="font-size:12px;font-family:微软雅黑;color:#fff;">房源管理</a></li>                                    <li><a href="https://www.muniao.com/fd_mobile.html" style="font-size:12px;font-family:微软雅黑;color:#fff;">房东助手</a></li>                                </ul>                                <div class="w_user_tt w_user_font w_ft10" style="text-align:left;"><a href="http://user2.muniao.com/SystemMsg/Index?utp=2" rel="nofollow" target="_blank" style="font-family:微软雅黑;color:#fff;">房客中心</a></div>                                <ul class="w_user_list w_user_font clearfix">                                    <li><a href="http://user2.muniao.com/Order/Index?utp=2&amp;type=8" style="font-size:12px;font-family:微软雅黑;color:#fff;">我的订单</a></li>                                    <li><a href="https://www.muniao.com/mobile.html" style="font-size:12px;font-family:微软雅黑;color:#fff;">木鸟APP</a></li>                                </ul>                                <div class="w_user_tc w_user_font" style="margin:60px auto 0;"><a href="javascript:void(0);" onclick="logout()" style="font-size:12px;font-family:微软雅黑;color:#fff;">退出</a></div>                            </div>                        </div>                  </div>
 
 
 </div>
@@ -785,6 +795,27 @@
         height: 36px;
     }
 </style>
+
+<script language="JavaScript">
+    $(function () {
+        var a = ${user.userType};
+
+        if (a == '2'){
+            $("#div_User1").show();
+            $("#div_User").hide();
+            $("#div_FangDong").hide();
+
+
+        }else {
+            $("#div_FangKe").hide();
+            $("#div_User").show();
+            $("#div_User1").hide();
+            $("#div_FangKe2").hide();
+
+        }
+    })
+</script>
+
 
 <script>
     function toLogin(tp) {
@@ -1188,7 +1219,7 @@
         <script src="${staticRoot}/images/base-validator.js.下载"></script>
         <script>
             $(function () {
-                var usertype = '2';
+                var usertype = ${user.userType};
                 //判断其他爱好选中则显示其他爱好文本框
                 showHobbyOther();
                 //左侧菜单选中样式
@@ -1221,9 +1252,9 @@
                             return false;
                         }
                         //验证邮箱
-                        if ($('#Email').val() != '') {
-                            if (!isEmail($('#Email').val())) {
-                                $('#Email').focus();
+                        if ($('#email').val() != '') {
+                            if (!isEmail($('#email').val())) {
+                                $('#email').focus();
                                 $('#msg_Email').html('&nbsp;&nbsp;请输入正确的邮箱地址！');
                                 $('#msg_Email').show();
                                 return false;
@@ -1239,9 +1270,9 @@
                             }
                         }
                         //验证qq
-                        if ($('#QQ').val() != '') {
-                            if (!isLenNum($('#QQ').val(), 15)) {
-                                $('#QQ').focus();
+                        if ($('#qq').val() != '') {
+                            if (!isLenNum($('#qq').val(), 15)) {
+                                $('#qq').focus();
                                 $('#msg_QQ').html('&nbsp;&nbsp;请输入正确的QQ号码！');
                                 $('#msg_QQ').show();
                                 return false;
@@ -1256,34 +1287,28 @@
                         }
 
                         var json_data = "";
-                        $.post("/UserInfo/AjaxSubmit", {
-                            "UserType": 1,
-                            "UserName": $("#UserName").val(),
-                            "Sex": getSex(),
-                            "BirthDay": getBirthday(),
-                            "CityId": $("#City").val(),
-                            "HomeCityId": $("#HomeCity").val(),
-                            "BloodType": $("#BloodType").val(),
-                            "Profession": $("#Profession").val(),
-                            "edu": $("#Education").val(),
-                            "School": $("#School").val(),
-                            "Email": $("#Email").val(),
-                            "Tel_M": $("#Tel_M").html(),
-                            "Tel": $("#Tel").val(),
-                            "QQ": $("#QQ").val(),
-                            "WeChat": $("#WeChat").val(),
-                            "Hobby": getHobby(),
-                            "HobbyOther": $("#HobbyOther").val(),
-                            "introduce": $("#Profile").val(),
-                            "UserPhotoUrl": getImg(),
-                            "LivingPhoto": getImg1()
-                        }, function (data) {
-                            if (!!data) {
-                                var dt = JSON.parse(data);
-                                window.location.reload();
-                                alert(dt.msg);
+                        var formData = new FormData($("#uinfoform")[0]);
+                        $.ajax({
+                            async: false,//要求同步 不是不需看你的需求
+                            url : "setPersonInfo",
+                            type : 'POST',
+                            data : formData,
+                            fileElementId : 'file',
+                            processData : false,  //必须false才会避开jQuery对 formdata 的默认处理
+                            contentType : false,  //必须false才会自动加上正确的Content-Type
+                            success : function(result) {
+                                if(result.code==1){
+                                    forward=true;
+                                }else{
+                                    $(".myModal-click").trigger("click");
+                                    forward=false;
+                                }
+                            },
+                            error : function(result) {
+                                $(".myModal-click").trigger("click");
+                                forward=false;
                             }
-                        })
+                        });
                     }
                     else if (usertype == "2") {
                         //验证选择省份不选城市情况
@@ -1303,8 +1328,8 @@
                             return false;
                         }
                         //验证邮箱
-                        if ($('#Email').val() != '') {
-                            if (!isEmail($('#Email').val())) {
+                        if ($('#email').val() != '') {
+                            if (!isEmail($('#email').val())) {
                                 $('#Email').focus();
                                 $('#msg_Email').html('&nbsp;&nbsp;请输入正确的邮箱地址！');
                                 $('#msg_Email').show();
@@ -1312,46 +1337,45 @@
                             }
                         }
                         //验证qq
-                        if ($('#QQ').val() != '') {
-                            if (!isLenNum($('#QQ').val(), 15)) {
-                                $('#QQ').focus();
+                        if ($('#qq').val() != '') {
+                            if (!isLenNum($('#qq').val(), 15)) {
+                                $('#qq').focus();
                                 $('#msg_QQ').html('&nbsp;&nbsp;请输入正确的QQ号码！');
                                 $('#msg_QQ').show();
                                 return false;
                             }
                         }
                         //验证个人简介字数
-                        if (!isLenStr1($('#Profile').val(), 200)) {
-                            $('#Profile').focus();
+                        if (!isLenStr1($('#introduce').val(), 200)) {
+                            $('#introduce').focus();
                             $('#msg_Profile').html('&nbsp;&nbsp;字符超出限制，最多200字');
                             $('#msg_Profile').show();
                             return false;
                         }
                         var json_data = "";
-                        $.post("/UserInfo/AjaxSubmit", {
-                            "userType": 2,
-                            "sex": getSex(),
-                            "birth": getBirthday(),
-                            "city": $("#City").val(),
-                            "hometown": $("#HomeCity").val(),
-                            "blood": $("#BloodType").val(),
-                            "work": $("#Profession").val(),
-                            "edu": $("#Education").val(),
-                            "school": $("#School").val(),
-                            "email": $("#Email").val(),
-                            "otherTEL": $("#Tel_M").html(),
-                            "QQ": $("#QQ").val(),
-                            "hobby": getHobby(),
-                            "otherHobby": $("#HobbyOther").val(),
-                            "introduce": $("#Profile").val(),
-                            "picture": getImg()
-                        }, function (data) {
-                            if (!!data) {
-                                var dt = JSON.parse(data);
-                                window.location.reload();
-                                alert(dt.msg);
+                        var formData = new FormData($("#uinfoform")[0]);
+                        $.ajax({
+                            async: false,//要求同步 不是不需看你的需求
+                            url : "setPersonInfo",
+                            type : 'POST',
+                            data : formData,
+                            fileElementId : 'file',
+                            processData : false,  //必须false才会避开jQuery对 formdata 的默认处理
+                            contentType : false,  //必须false才会自动加上正确的Content-Type
+                            success : function(result) {
+                                if(result.code==1){
+                                    forward=true;
+                                }else{
+
+                                    $(".myModal-click").trigger("click");
+                                    forward=false;
+                                }
+                            },
+                            error : function(result) {
+                                $(".myModal-click").trigger("click");
+                                forward=false;
                             }
-                        })
+                        });
                     }
                 })
 
@@ -1383,13 +1407,14 @@
                     return $('#BirthDay').html();
                 }
                 else {
-                    return $("#Year").val() + "-" + $("#Month").val() + "-" + $("#Day").val();
+                    var birth = $("#Year").val() + "-" + $("#Month").val() + "-" + $("#Day").val();
+                    return birth;
                 }
             }
 
             //得到爱好选择
             function getHobby() {
-                var vl = "";
+                var hobby = "";
                 var temp = document.getElementsByName("Hobby");
                 for (var i = 0; i < temp.length; i++) {
                     if (temp[i].checked) {
@@ -1401,7 +1426,7 @@
                         }
                     }
                 }
-                return vl;
+                return hobby;
             }
 
             //得到头像图片
@@ -2057,7 +2082,7 @@
                 <input type="hidden">
                 <h4 style="color:#444;">完善个人信息</h4>
             </div>
-            <form name="uinfoform" id="uinfoform" method="post" style="background-color:#ffffff;">
+            <form name="uinfoform" id="uinfoform" method="post" style="background-color:#ffffff;" enctype="multipart/form-data">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tbody>
                     <tr style="border-top:1px solid #dcdcdc; display:none">
@@ -2065,7 +2090,7 @@
                             <span class="aRed">*</span>房东昵称：
                         </td>
                         <td width="655" height="40" align="left" valign="middle" class="uinfotd">
-                            <input id="UserName" type="text" class="uinfoinput" value="夏冰" maxlength="20"
+                            <input id="UserName"  type="text" class="uinfoinput" value="夏冰" maxlength="20"
                                    onchange="$(&#39;#msg_UserName&#39;).hide();">
                             <span id="msg_UserName" class="aRed" style="display:none;"></span>
                         </td>
@@ -2076,14 +2101,14 @@
                         </td>
                         <td height="30" align="left" valign="middle" class="uinfotd">
                             <div id="div_Tel">
-                                <div id="Tel_M" class="fLeft mL5" style="font-weight:bolder;">18602727805</div>
+                                <div id="Tel_M" class="fLeft mL5" style="font-weight:bolder;">${user.telephone}</div>
                                 <div class="fLeft mL10"><a href="javascript:void(0);" class="aBlue" onclick="editTel()">修改</a>
                                 </div>
                             </div>
                             <div id="div_Tel1" style="display:none;">
                                 <input id="edit_Tel" type="text" class="uinfoinput"
                                        onchange="$(&#39;#msg_edit_Tel&#39;).hide();" style="float:left;"
-                                       value="18602727805" maxlength="11">
+                                       name="otherTEL" maxlength="11">
                                 <input id="hd_ValidTel" type="hidden">
                                 <input id="hd_ValidCode" type="hidden">
                                 <input id="ValidCode" type="text" class="teltext mT15"
@@ -2106,10 +2131,10 @@
                             <span class="aRed">*</span>性别：
                         </td>
                         <td width="655" height="40" align="left" valign="middle" class="uinfotd">
-                            <input id="Sex1" name="Sex" type="radio" value="男" checked="&#39;checked&#39;"
+                            <input id="Sex1" name="sex" type="radio" value="男" checked="&#39;checked&#39;"
                                    style="margin-left:5px; vertical-align:middle;"><label for="Sex1"
                                                                                           style="cursor:pointer;">男</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input id="Sex2" name="Sex" type="radio" value="女" style="vertical-align:middle;"><label
+                            <input id="Sex2" name="sex" type="radio" value="女" style="vertical-align:middle;"><label
                                 for="Sex2" style="cursor:pointer;">女</label>
                             <span id="msg_Sex" class="aRed"></span>
                         </td>
@@ -2221,7 +2246,7 @@
                                 <option value="中国" selected="selected">中国</option>
 
                             </select>
-                            <select id="Province" onchange="getCityList(this.value)">
+                            <select id="city" onchange="getCityList(this.value)">
                                 <option style="color:#aaa;" value="0">省</option>
                                 <option value="1" selected="selected">北京</option>
                                 <option value="2">河北</option>
@@ -2259,7 +2284,7 @@
                                 <option value="34">天津</option>
                                 <option value="35">钓鱼岛</option>
                             </select>
-                            <select id="City" onchange="$(&#39;msg_City&#39;).hide();">
+                            <select id="City" name="city" onchange="$(&#39;msg_City&#39;).hide();">
                                 <option style="color:#aaa;" value="0">市</option>
                                 <option value="1" selected="selected">北京</option>
                             </select>
@@ -2271,8 +2296,9 @@
                             <span class="aRed"></span>故乡：
                         </td>
                         <td width="655" height="30" align="left" valign="middle" class="uinfotd">
-                            <select id="HomeProvince" style="margin-left:5px;" onchange="getCityList1(this.value)">
+                            <select id="hometown" style="margin-left:5px;" onchange="getCityList1(this.value)">
                                 <option style="color:#aaa;" value="0">省</option>
+                                <option value="" selected="&#39;selected&#39;">${user.blood}</option>
                                 <option value="1" selected="selected">北京</option>
                                 <option value="2">河北</option>
                                 <option value="3">山西</option>
@@ -2309,7 +2335,7 @@
                                 <option value="34">天津</option>
                                 <option value="35">钓鱼岛</option>
                             </select>
-                            <select id="HomeCity">
+                            <select id="HomeCity" name="hometown">
                                 <option style="color:#aaa;" value="0">市</option>
                                 <option value="1" selected="selected">北京</option>
                             </select>
@@ -2320,13 +2346,15 @@
                             <span class="aRed"></span>血型：
                         </td>
                         <td width="655" height="30" align="left" valign="middle" class="uinfotd">
-                            <select id="BloodType" style="margin-left:5px;">
+                            <select id="BloodType" name="blood" style="margin-left:5px;">
                                 <option style="color:#aaa;">--请选择--</option>
-                                <option value="A型血" selected="&#39;selected&#39;">A型血</option>
+                                <option value="" selected="&#39;selected&#39;">${user.blood}</option>
+                                <option value="A型血">A型血</option>
                                 <option value="B型血">B型血</option>
                                 <option value="AB型血">AB型血</option>
                                 <option value="O型血">O型血</option>
                                 <option value="其他">其他</option>
+
                             </select>
                         </td>
                     </tr>
@@ -2335,7 +2363,7 @@
                             <span class="aRed"></span>职业：
                         </td>
                         <td width="655" height="30" align="left" valign="middle" class="uinfotd">
-                            <input id="Profession" type="text" class="uinfoinput" value="作家" maxlength="15">
+                            <input id="Profession" value="${user.work}" name="work" type="text" class="uinfoinput"  maxlength="15">
                         </td>
                     </tr>
                     <tr>
@@ -2343,37 +2371,38 @@
                             <span class="aRed"></span>教育：
                         </td>
                         <td width="655" height="30" align="left" valign="middle" class="uinfotd">
-                            <select id="Education" style="margin-left:5px;">
+                            <select id="Education" name="edu" style="margin-left:5px;">
                                 <option style="color:#aaa;">--请选择--</option>
+                                <option value="" selected="&#39;selected&#39;">${user.edu}</option>
                                 <option value="初中">初中</option>
                                 <option value="高中">高中</option>
                                 <option value="大专">大专</option>
                                 <option value="本科">本科</option>
                                 <option value="硕士">硕士</option>
-                                <option value="博士" selected="&#39;selected&#39;">博士</option>
+                                <option value="博士">博士</option>
                             </select>
-                            <input id="School" type="text" class="uinfoinput" value="北京大学" maxlength="25">
+                            <input id="School" name="school" type="text" class="uinfoinput" value="${user.school}" maxlength="25">
                         </td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">电子邮箱：</td>
                         <td height="30" align="left" valign="middle" class="uinfotd">
-                            <input id="Email" type="text" class="uinfoinput" value="85800621@qq.com"
-                                   onchange="$(&#39;#msg_Email&#39;).hide();">
+                            <input id="email" name="email" type="text" class="uinfoinput"
+                                   onchange="$(&#39;#msg_Email&#39;).hide();" value="${user.email}">
                             <span id="msg_Email" class="aRed" style="display:none;"></span>
                         </td>
                     </tr>
                     <tr style="display:none">
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">备用电话：</td>
                         <td height="30" align="left" valign="middle" class="uinfotd">
-                            <input id="Tel" type="text" class="uinfoinput">
+                            <input id="Tel" type="text" class="uinfoinput" value="${user.otherTel}">
                             <span id="msg_Tel" class="aRed"></span><span style="color:#f4650a;margin-left:5px;">温馨提示：用于木鸟短租客服与您联系使用</span>
                         </td>
                     </tr>
                     <tr>
                         <td height="30" align="right" valign="middle" bgcolor="#f5f5f5" class="uinfotd">QQ：</td>
                         <td height="30" align="left" valign="middle" class="uinfotd">
-                            <input id="QQ" type="text" class="uinfoinput" value="85800621"
+                            <input id="qq" name="QQ" type="text" class="uinfoinput" value="${user.qq}"
                                    onchange="$(&#39;#msg_QQ&#39;).hide();">
                             <span id="msg_QQ" class="aRed" style="display:none;"></span>
                         </td>
@@ -2403,7 +2432,7 @@
                             <input id="Hobby6" name="Hobby" type="checkbox" value="其他" style="vertical-align:middle;"
                                    onclick="showHobbyOther()"><label for="Hobby6" style="cursor:pointer;"
                                                                      onclick="showHobbyOther()">其他</label>&nbsp;&nbsp;
-                            <input id="HobbyOther" type="text" class="uinfoinput" maxlength="50" style="display:none;">
+                            <input id="HobbyOther" name="otherHobby" type="text" class="uinfoinput" maxlength="50" style="display:none;">
                         </td>
                     </tr>
                     <tr>
@@ -2411,9 +2440,9 @@
                         <td height="30" align="left" valign="middle" class="uinfotd">
                             <div style="float:left;">
                                 <div>
-                                    <textarea id="Profile" class="uinfotextarea"
+                                    <textarea id="introduce" name="introduce" class="uinfotextarea"
                                               style="margin-left:5px;border:1px solid #dcdcdc;resize: none; height:80px;"
-                                              onchange="$(&#39;#msg_Profile&#39;).hide();">暂不介绍</textarea>
+                                              onchange="$(&#39;#msg_Profile&#39;).hide();">${user.introduce}</textarea>
                                     <span id="msg_Profile" class="aRed" style="display:none;"></span>
                                 </div>
                                 <div style="float:left; color:#f4650a; margin-left:5px;">温馨提示：可输入200字</div>
@@ -2435,8 +2464,8 @@
                                         <div class="webuploader-pick">选择图片</div>
                                         <div id="rt_rt_1cfmmatut1evn1ume50eet01cgi1"
                                              style="position: absolute; top: 0px; left: 0px; width: 78px; height: 60px; overflow: hidden; bottom: auto; right: auto;">
-                                            <input type="file" name="file" class="webuploader-element-invisible"
-                                                   multiple="multiple" accept="image/*"><label
+                                            <input type="file" name="file" id="file" class="webuploader-element-invisible"
+                                                   multiple="multiple"><label
                                                 style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label>
                                         </div>
                                     </div>
@@ -2452,6 +2481,7 @@
                     </tbody>
                 </table>
             </form>
+
             <style>
                 .userinfo_tijiao {
                     border-radius: 2px;

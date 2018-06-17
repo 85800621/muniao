@@ -3,6 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <#assign basePath=request.contextPath />
     <script charset="utf-8" src="${staticRoot}/images/v.js.下载"></script>
     <style type="text/css">.amap-indoor-map .label-canvas {
         position: absolute;
@@ -2560,9 +2561,9 @@
     <div class="w_slogan" style="display:block;"><img src="${staticRoot}/images/slogan_2015.png"
                                                       alt="一间房一种生活" title="一间房一种生活"></div>
     <ul class="s_mn_nav">
-        <li><a href="https://www.muniao.com/">首页</a></li>
-        <li style="display:none;"><a href="${basePath}/index" target="_self">海外短租</a></li>
-        <li><a href="${basePath}/fearureList" target="_self">特色短租</a></li>
+        <li><a href="${basePath}/index" class="s_mn_nav_over">首页</a></li>
+        <li style="display:none;"><a href="http://international.muniao.com/" target="_self">海外短租</a></li>
+        <li><a href="${basePath}/featureslist" target="_self">特色短租</a></li>
         <li><a href="https://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>
@@ -3655,9 +3656,9 @@
                                     <span class="w_listspan3">
                                            <!--/beijing/-->
                                         <a href="javascript:void(0);" class="s_mn_screen_aover" title="不限"
-                                            target="_self">不限</a>
+                                           target="_self">不限</a>
                                     </span>
-                                    <#list roomTypes as type >
+                                <#list roomTypes as type >
                                     <span class="w_listspan3">
                                         <a rel="nofollow"
                                            href="${basePath}/cityTitle/${roomList[1].city}/1/${type.roomType.typeId}/0/0/0"
@@ -3665,7 +3666,7 @@
                                         ${type.roomType.roomType}
                                         </a>
                                     </span>
-                                    </#list>
+                                </#list>
                                 </div>
                             </div>
                         </li>
@@ -3678,7 +3679,7 @@
                                         <a href="javascript:void(0);" class="s_mn_screen_aover" title="不限 target=" _self"="">不限</a>
                                     </span>
                                     <#list roomIntervals as interval>
-                                    <span class="w_listspan3">
+                                        <span class="w_listspan3">
                                         <a rel="nofollow" href="${basePath}/cityTitle/${roomList[1].city}/1/0/${interval.priceInterval.priceIntervalId}/0/0" title="${interval.priceInterval.priceInterval}">
                                         ${interval.priceInterval.priceInterval}
                                         </a>
@@ -3848,7 +3849,7 @@
                             <div class="house_details_r">
                                 <div class="s_mn_landlord_information">
                                     <div class="s_mn_landlordpic2">
-                                        <a href="${basePath}/room/${room.roomid}" rel="nofollow"
+                                        <a href="${basePath}/landlordrooms/${room.user.userId}" rel="nofollow"
                                            target="_blank">
                                             <img onerror="javascript: this.src = &#39;//assets.muniao.com/assets/2013/image/pic13.jpg&#39;;"
                                                  src="${staticRoot}/images/${room.landlord.picture}"
