@@ -4,14 +4,9 @@ package com.muniao.controller;
 
 import com.muniao.entity.*;
 import com.muniao.service.CheckInCustomerService;
-import com.muniao.service.Impl.CheckInCustomerServiceImpl;
-import com.muniao.service.Impl.OrderDetailServiceImpl;
-import com.muniao.service.Impl.OrderServiceImpl;
-import com.muniao.service.Impl.RoomServiceImpl;
 import com.muniao.service.OrderDetailService;
 import com.muniao.service.OrderService;
 import com.muniao.service.RoomService;
-import org.apache.ibatis.scripting.xmltags.ForEachSqlNode;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +14,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import javax.xml.bind.annotation.XmlElementRef;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -126,7 +119,7 @@ public class BookingController {
         order.setOrderSellerId(room.getUser().getUserId());
         User user= (User) request.getSession().getAttribute("user");
         order.setOrderDetail(orderDetail);
-        order.setOrderBuyerId(2);
+        order.setOrderBuyerId(user.getUserId());
         orderService.insertOneOrder(order);
         model.addAttribute(order);
         return "/pay";
