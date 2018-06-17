@@ -2873,15 +2873,16 @@
             <#list images as img>
                 <div class="owl-item cloned" style="width: auto;">
                     <div class="item"><img
-                            src="${staticRoot}/images/${img.img_url}"
+                            src="${staticRoot}${img.img_url}"
                             style="display: inline-block;"><span></span></div>
                 </div>
-            </#list>
                 <div class="owl-item cloned" style="width: auto;">
                     <div class="item"><img
-                            src="${staticRoot}/images/9054e39679664a2c8ecb37e150d1a5de20180521022347008.jpg_610_385.jpg"
-                            style="display: inline-block;"><span></span></div>
+                            src="${staticRoot}${img.img_url}"
+                            style="display: inline-block;">
+                        <span></span></div>
                 </div>
+            </#list>
             </div>
         </div>
         <div class="owl-nav">

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +41,8 @@ public class RoomController {
 
 
     @RequestMapping(value = "features/{featureId}/{currentPage}")
-    public String list(@PathVariable("featureId")int featureId,@PathVariable("currentPage")int currentPage,Model model){
+    public String list(@PathVariable("featureId")int featureId, @PathVariable("currentPage")int currentPage, Model model, HttpSession session){
+        User user = (User)session.getAttribute("user");
         //分页
         List<Room> rooms = roomService.findAllByFeature(featureId,currentPage);
         //房间图片
@@ -74,7 +76,6 @@ public class RoomController {
         model.addAttribute("cityList",cityList);
         RoomFeature roomFeature = roomFeatureService.selectFeature(featureId);
         model.addAttribute("roomFeature",roomFeature);
-
         return "/cityfeatures";
     }
 
@@ -97,7 +98,6 @@ public class RoomController {
         if (roomLocation.equals("index")){
             roomLocation = indexRoomLocation;
         }
-        System.out.println(roomLocation);
         List<Room> roomList = roomService.findByCityName(roomLocation,currentPage);
         for (Room room : roomList) {
             List<Image> imgList = roomImgService.selectAllByRoomId(room.getRoomid());
@@ -116,6 +116,8 @@ public class RoomController {
         //户型
         List<Room> roomStructuress = roomService.selectRoomStructure(roomLocation);
         model.addAttribute("roomStructures",roomStructuress);
+        List<String> citys = roomService.selectCountCity();
+        model.addAttribute("citys",citys);
         return "/city";
     }
 
@@ -149,6 +151,8 @@ public class RoomController {
         //户型
         List<Room> roomStructures = roomService.selectRoomStructure(roomLocation);
         model.addAttribute("roomStructures",roomStructures);
+        List<String> citys = roomService.selectCountCity();
+        model.addAttribute("citys",citys);
         return "/cityTitle";
     }
 

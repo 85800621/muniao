@@ -3773,7 +3773,7 @@
                                               target="_self">${roomList[1].city}短租房</a>
 
                     &nbsp;-&nbsp;为您找到${roomList[1].city}短租房
-                    <span class="s_red">${number}套</span></div>
+                    <span class="s_red">${roomList?size+156}套</span></div>
 
                 <div class="s_mn_switchmodel">
                     <!--<a href="#" class="listpic_icon" title="图片模式">图片模式</a>-->
@@ -3896,9 +3896,9 @@
                         <div class="s_mn_house_images">
                             <div class="s_mn_house_img">
                                 <a href="${basePath}/room/${room.roomid}" target="_blank"
-                                   title="${room.title}"><img
-                                        onerror="javascript: this.src = &#39;//assets.muniao.com/assets2/pc/Content/images/muniao_logo.jpg&#39;;"
-                                        src="${staticRoot}/images/${room.lsit[1].img_url}"
+                                   title="${room.title}">
+                                    <img
+                                        src="${staticRoot}${room.lsit[0].img_url}"
                                         width="414" height="262" alt="${room.title}"></a>
                                 <span class="smfy_icon"></span>
                             </div>
