@@ -2430,151 +2430,137 @@
         <li><a href="https://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img
                 src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
-    <div id="div_FangKe1" class="s_mn_release w_mR30" style="display:none;">
-        <a href="https://user2.muniao.com/Index/MoveHouse?utp=1" class="s_mn_navbutt" rel="nofollow">我要成为房东</a>
+<#-- ###################################### ###### 顶部登录区域开始 ################################# ########### -->
+<#if user.userType == 1>
+    <div id="div_FangKe1" class="s_mn_release w_mR30">
+        <a href="#" class="s_mn_navbutt" rel="nofollow">我要成为房东</a>
     </div>
-    <div id="div_User" class="s_mn_userbox" style=""><a href="http://user2.muniao.com/Index/MoveHouse?utp=1"
-                                                        class="free-publishBtn">免费发布房源</a> <span>Hi,欢迎回来！</span> <a
-            class="s_mu_username" style="font:15px/45px Microsoft YaHei;" target="_blank"
-            onmouseover="$(&#39;#div_FangKe&#39;).show(); $(&#39;#div_FangDong&#39;).show();">嘉利学府</a><!--房东弹出框-->
-        <div id="div_FangDong" class="w_user_xl"
-             style="display:none;border-radius: 3px;opacity:0.8;background-color:rgb(191, 82, 13);border:0;"
-             onmouseover="$(&#39;#div_FangDong&#39;).show();" onmouseout="$(&#39;#div_FangDong&#39;).hide();">
+    <div id="div_User" class="s_mn_userbox" style="display: block">
+        <span>Hi,欢迎回来！</span>
+        <a class="s_mu_username" style="font:15px/45px Microsoft YaHei;" target="_blank" onmouseover="$('#div_FangKe').show(); $('#div_FangDong').show();">${user.userName}</a>
+        <!--房客弹出框-->
+        <div id="div_FangDong" class="w_user_xl" style="display:none;border-radius: 3px;opacity:0.8;background-color:rgb(191, 82, 13);border:0;" onmouseover="$('#div_FangDong').show();" onmouseout="$('#div_FangDong').hide();">
             <div class="w_user_xlfd">
-                <div class="w_user_tt w_user_font" style="text-align:left;"><a
-                        href="http://user2.muniao.com/SystemMsg/Index?utp=1" rel="nofollow" target="_blank"
-                        style="font-family:微软雅黑;color:#fff;">房东中心</a></div>
+                <div class="w_user_tt w_user_font w_ft10" style="text-align:left;">
+                    <a href="www.baidu.com" rel="nofollow" target="_blank" style="font-family:微软雅黑;color:#fff;">房客中心</a>
+                </div>
                 <ul class="w_user_list w_user_font clearfix">
-                    <li><a href="http://user2.muniao.com/Index/MoveHouse?utp=1"
-                           style="font-size:12px;font-family:微软雅黑;color:#fff;">发布房间</a></li>
-                    <li><a href="http://user2.muniao.com/Order/Index?utp=1"
-                           style="font-size:12px;font-family:微软雅黑;color:#fff;">订单管理</a></li>
-                    <li><a href="http://user2.muniao.com/Room/Index?utp=1&amp;c=3"
-                           style="font-size:12px;font-family:微软雅黑;color:#fff;">房源管理</a></li>
-                    <li><a href="https://www.muniao.com/fd_mobile.html"
-                           style="font-size:12px;font-family:微软雅黑;color:#fff;">房东助手</a></li>
+                    <li><a href="${basePath}/lodgerorder/${user.userId}" style="font-size:12px;font-family:微软雅黑;color:#fff;">我的订单</a></li>
+                    <li><a href="https://www.muniao.com/mobile.html" style="font-size:12px;font-family:微软雅黑;color:#fff;">木鸟APP</a></li>
                 </ul>
-                <div class="w_user_tt w_user_font w_ft10" style="text-align:left;"><a
-                        href="http://user2.muniao.com/SystemMsg/Index?utp=2" rel="nofollow" target="_blank"
-                        style="font-family:微软雅黑;color:#fff;">房客中心</a></div>
-                <ul class="w_user_list w_user_font clearfix">
-                    <li><a href="http://user2.muniao.com/Order/Index?utp=2&amp;type=8"
-                           style="font-size:12px;font-family:微软雅黑;color:#fff;">我的订单</a></li>
-                    <li><a href="https://www.muniao.com/mobile.html"
-                           style="font-size:12px;font-family:微软雅黑;color:#fff;">木鸟APP</a></li>
-                </ul>
-                <div class="w_user_tc w_user_font" style="margin:60px auto 0;"><a href="javascript:void(0);"
-                                                                                  onclick="logout()"
-                                                                                  style="font-size:12px;font-family:微软雅黑;color:#fff;">退出</a>
+                <div class="w_user_tc w_user_font" style="margin:60px auto 0;">
+                    <a href="${basePath}/logout" onclick="logout()" style="font-size:12px;font-family:微软雅黑;color:#fff;">退出</a>
                 </div>
             </div>
         </div>
     </div>
-    <div id="div_Login" class="s_mn_loginbox w_mR30" style="display: none;">
-
-        <a href="javascript:void(0);" id="Login1" class="free-publishBtn">免费发布房源</a>
-        <div class="s_mn_login">
-            <a href="javascript:void(0);" id="Login1" class="s_mn_loginbutt1" rel="nofollow">登录</a>·
-            <a href="http://user2.muniao.com/Regist/Index" class="s_mn_loginbutt" rel="nofollow">注册</a>
+<#elseif user.userType == 2>
+    <div id="div_User" class="s_mn_userbox" style="display: block">
+        <a href="${basePath}/preadd" class="free-publishBtn">免费发布房源</a>
+        <span>Hi,欢迎回来！</span>
+        <a class="s_mu_username" style="font:15px/45px Microsoft YaHei;" target="_blank" onmouseover="$('#div_FangKe').show(); $('#div_FangDong').show();">${user.userName}</a>
+        <!--房东弹出框-->
+        <div id="div_FangDong" class="w_user_xl" style="display:none;border-radius: 3px;opacity:0.8;background-color:rgb(191, 82, 13);border:0;" onmouseover="$('#div_FangDong').show();" onmouseout="$('#div_FangDong').hide();">
+            <div class="w_user_xlfd">
+                <div class="w_user_tt w_user_font" style="text-align:left;">
+                    <a href="${basePath}/Room/index" rel="nofollow" target="_blank" style="font-family:微软雅黑;color:#fff;">房东中心</a>
+                </div>
+                <ul class="w_user_list w_user_font clearfix">
+                    <li><a href="${basePath}/preadd" style="font-size:12px;font-family:微软雅黑;color:#fff;">发布房间</a></li>
+                    <li><a href="${basePath}/lodgerorder/${user.userId}" style="font-size:12px;font-family:微软雅黑;color:#fff;">订单管理</a></li>
+                    <li><a href="${basePath}/Room/index" style="font-size:12px;font-family:微软雅黑;color:#fff;">房源管理</a></li>
+                    <li><a href="#" style="font-size:12px;font-family:微软雅黑;color:#fff;">房东助手</a></li>
+                </ul>
+                <div class="w_user_tt w_user_font w_ft10" style="text-align:left;">
+                    <a href="www.baidu.com" rel="nofollow" target="_blank" style="font-family:微软雅黑;color:#fff;">房客中心</a>
+                </div>
+                <ul class="w_user_list w_user_font clearfix">
+                    <li><a href="${basePath}/lodgerorder/${user.userId}" style="font-size:12px;font-family:微软雅黑;color:#fff;">我的订单</a></li>
+                    <li><a href="https://www.muniao.com/mobile.html" style="font-size:12px;font-family:微软雅黑;color:#fff;">木鸟APP</a></li>
+                </ul>
+                <div class="w_user_tc w_user_font" style="margin:60px auto 0;">
+                    <a href="${basePath}/logout" onclick="logout()" style="font-size:12px;font-family:微软雅黑;color:#fff;">退出</a>
+                </div>
+            </div>
         </div>
     </div>
+</#if>
+<#if user == null>
+    <div id="div_Login" class="s_mn_loginbox w_mR30">
+        <a href="javascript:void(0);" id="Login1" class="free-publishBtn">免费发布房源</a>
+        <div class="s_mn_login">
+            <a href="javascript:void(0);" id="Login1" class="s_mn_loginbutt1" rel="nofollow">登录</a>&middot;
+            <a href="${basePath}/register" class="s_mn_loginbutt" rel="nofollow">注册</a>
+        </div>
+    </div>
+</#if>
 </div>
-<!--登录弹出框-->
+<#-- ############################################  顶部登录区域开始 ############################################  -->
 
 <script src="${staticRoot}/images/base-validator.js.下载"></script>
 <link href="${staticRoot}/images/LoginDiv.css" rel="stylesheet">
 
 <script>
     function toLogin(tp) {
-        var backurl = $("#backurl").val();
-        var backparm = $("#backparm").val();
-        var ss = $("#reurl").val();
-        var backurlparm = "";
-        if (backurl != "" && backurl != null && backparm != null && backparm != "") {
-            backparm = backparm.replace(/\*/g, "&");
-            backparm = backparm.replace(/A/g, "=");
-            backurl = backurl.replace(/F/, "/");
-            backurlparm = "/" + backurl + "?" + backparm + "&t=" + 131728129143160438;
-        }
-        else if (backurl != "") {
-            backurlparm = "/" + backurl;
-        } else if (ss != null && ss != "") {
-            backurlparm = "https://www.muniao.com/" + ss + "?t=" + 131728129143160438;
-        }
-
         if (tp == 0) {
             //手机号为空验证
             if ($('#login_Tel_M').val().trim() == '') {
                 $('#login_Tel_M').focus();
                 $('.newa_tips_text').html('请输入手机号码');
-                $(".newa_tips").css({"margin-left": -(newa_len * 12 + 82) / 2, "top": 66}).addClass("newa_tips_show");
+                $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 66 }).addClass("newa_tips_show");
                 return false;
             }
             //手机号是否正确
             if (!isMobile($('#login_Tel_M').val().trim())) {
                 $('#login_Tel_M').focus();
                 $('.newa_tips_text').html('手机号格式错误');
-                $(".newa_tips").css({"margin-left": -(newa_len * 12 + 82) / 2, "top": 66}).addClass("newa_tips_show");
+                $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 66 }).addClass("newa_tips_show");
                 return false;
             }
             //验证图形验证码空判断
             if ($('#login_ValidCode').val().trim() == '') {
                 $('#login_ValidCode').focus();
                 $('.newa_tips_text').html('请输入图形验证码');
-                $(".newa_tips").css({"margin-left": -(newa_len * 12 + 82) / 2, "top": 126}).addClass("newa_tips_show");
+                $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 126 }).addClass("newa_tips_show");
                 return false;
             }
             //验证短信验证码空判断
             if ($('#login_MsgCode').val().trim() == '') {
                 $('#login_MsgCode').focus();
                 $('.newa_tips_text').html('请输入短信验证码');
-                $(".newa_tips").css({"margin-left": -(newa_len * 12 + 82) / 2, "top": 186}).addClass("newa_tips_show");
+                $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
                 return false;
             }
             //登录
-            $.post("/Login/CheckLoginFast", {
+            $.post("CheckLoginFast", {
                 Tel_M: $('#login_Tel_M').val().trim(),
                 ValidCode: $('#login_ValidCode').val().trim(),
-                MsgCode: $('#login_MsgCode').val().trim()
+                MsgCode: $('#login_MsgCode').val().trim(),
             }, function (data) {
-                var j = JSON.parse(data);
-                if (j.state == -1) {//图形验证码错误
-                    getImageCode();
+                //   var j = JSON.parse(data);
+                if (data.code == -1) {//图形验证码错误
+                    getImageCode($("#ValidImg"));
                     $('#login_ValidCode').focus();
                     $('.newa_tips_text').html('图形验证码错误');
-                    $(".newa_tips").css({
-                        "margin-left": -(newa_len * 12 + 82) / 2,
-                        "top": 126
-                    }).addClass("newa_tips_show");
+                    $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 126 }).addClass("newa_tips_show");
                     return false;
                 }
-                else if (j.state == -2) {//短信验证码错误
+                else if (data.code == -2) {//短信验证码错误
                     $('#login_MsgCode').focus();
                     $('.newa_tips_text').html('短信验证码错误');
-                    $(".newa_tips").css({
-                        "margin-left": -(newa_len * 12 + 82) / 2,
-                        "top": 186
-                    }).addClass("newa_tips_show");
+                    $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
                     return false;
-                }
-                else if (j.state == -22) {//短信验证码错误
+                } else if (data.code ==-22) {
                     $('#login_MsgCode').focus();
                     $('.newa_tips_text').html('验证码已经失效，请重新获取验证码！');
-                    $(".newa_tips").css({
-                        "margin-left": -(newa_len * 12 + 82) / 2,
-                        "top": 186
-                    }).addClass("newa_tips_show");
+                    $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
                     return false;
                 }
-                else if (j.state == 1) {
-                    if (backurlparm != "") {
-                        location.href = backurlparm;
-                    } else {
-                        location.reload();
-                    }
+                else if (data.code == 1) {
+                    location.href = 'http://www.muniao.com';
                 }
-                else {
-                    alert("登录失败！");
+                else if (data.code == 3) {
+                    alert(j.mgs);
                 }
             });
 
@@ -2584,61 +2570,52 @@
             if ($('#Login_Email_Tel_M').val().trim() == '') {
                 $('#Login_Email_Tel_M').focus();
                 $('.newa_tips_text').html('请输入手机号码');
-                $(".newa_tips").css({"margin-left": -(newa_len * 12 + 82) / 2, "top": 66}).addClass("newa_tips_show");
+                $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 66 }).addClass("newa_tips_show");
                 return false;
             }
             //手机号是否正确
             if (!isMobile($('#Login_Email_Tel_M').val().trim())) {
                 $('#Login_Email_Tel_M').focus();
                 $('.newa_tips_text').html('手机号格式错误');
-                $(".newa_tips").css({"margin-left": -(newa_len * 12 + 82) / 2, "top": 66}).addClass("newa_tips_show");
+                $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 66 }).addClass("newa_tips_show");
                 return false;
             }
             //密码为空验证
             if ($('#Login_Pwd').val().trim() == '') {
                 $('#Login_Pwd').focus();
                 $('.newa_tips_text').html('请输入密码');
-                $(".newa_tips").css({"margin-left": -(newa_len * 12 + 82) / 2, "top": 126}).addClass("newa_tips_show");
+                $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 126 }).addClass("newa_tips_show");
                 return false;
             }
-            //普通登录
-            $.post("/Login/CheckLogin", {
-                Account: $('#Login_Email_Tel_M').val().trim(),
-                Password: $('#Login_Pwd').val().trim()
+            //普通登录 ---$('#newa_auto_l').val().trim()
+            $.post("checkLogin", {
+                tel: $('#Login_Email_Tel_M').val().trim(),
+                password: $('#Login_Pwd').val().trim(),
+                rememberMe: "false"
             }, function (data) {
-                var j = JSON.parse(data);
-                if (j.state == 1) {
-                    if (backurlparm != "") {
-                        location.href = backurlparm;
-                    } else {
-                        location.reload();
-                    }
+                // var j = JSON.parse(data);
+                alert(data.code)
+                if (data.code == 1) {
+                    location.href = 'user/lodgerinfo';
                 }
-                else if (j.state == -1) {
+                else if (data.code == -1) {
+                    alert("您还不是木鸟用户，请先注册")
                     $('#Login_Email_Tel_M').focus();
                     $('.newa_tips_text').html('您还不是木鸟用户，请注册!');
-                    $(".newa_tips").css({
-                        "margin-left": -(newa_len * 12 + 82) / 2,
-                        "top": 186
-                    }).addClass("newa_tips_show");
+                    $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
                     return false;
                 }
-                else if (j.state == -2) {
+                else if (data.code == -2) {
                     $('#Login_Email_Tel_M').focus();
                     $('.newa_tips_text').html('账号已锁定');
-                    $(".newa_tips").css({
-                        "margin-left": -(newa_len * 12 + 82) / 2,
-                        "top": 186
-                    }).addClass("newa_tips_show");
+                    $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
                     return false;
                 }
-                else if (j.state == -3) {
+                else if (data.code == -3) {
+                    alert("密码错误")
                     $('#Login_Pwd').focus();
                     $('.newa_tips_text').html('登录密码错误');
-                    $(".newa_tips").css({
-                        "margin-left": -(newa_len * 12 + 82) / 2,
-                        "top": 186
-                    }).addClass("newa_tips_show");
+                    $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 186 }).addClass("newa_tips_show");
                     return false;
                 }
                 else {
@@ -2648,91 +2625,86 @@
         }
     }
 
-    //获取验证码
+    //获取短信验证码
     var Login_IsOut = false;//验证码是否过期
     function getLoginValidCode(obj) {
         //手机号为空验证
         if ($('#login_Tel_M').val().trim() == '') {
             $('#login_Tel_M').focus();
             $('.newa_tips_text').html('请输入手机号码');
-            $(".newa_tips").css({"margin-left": -(newa_len * 12 + 82) / 2, "top": 66}).addClass("newa_tips_show");
+            $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 66 }).addClass("newa_tips_show");
             return false;
         }
         //手机号是否正确
         if (!isMobile($('#login_Tel_M').val().trim())) {
             $('#login_Tel_M').focus();
             $('.newa_tips_text').html('手机号格式错误');
-            $(".newa_tips").css({"margin-left": -(newa_len * 12 + 82) / 2, "top": 66}).addClass("newa_tips_show");
+            $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 66 }).addClass("newa_tips_show");
             return false;
         }
         //验证图形验证码空判断
         if ($('#login_ValidCode').val().trim() == '') {
             $('#login_ValidCode').focus();
             $('.newa_tips_text').html('请输入图形验证码');
-            $(".newa_tips").css({"margin-left": -(newa_len * 12 + 82) / 2, "top": 126}).addClass("newa_tips_show");
+            $(".newa_tips").css({ "margin-left": -(newa_len * 12 + 82) / 2, "top": 126 }).addClass("newa_tips_show");
             return false;
         }
         /*发送短信*/
         $.ajaxSettings.async = false;
-        $.ajaxSetup({cache: false});
-        $.get('/Login/SendValidCode', {
-            mob: $('#login_Tel_M').val(),
-            ValidCode: $('#login_ValidCode').val().trim()
-        }, function (data) {
-            var State = JSON.parse(data).State;
-            if (State == 1) {
-                //$('#hd_MsgCode').val(JSON.parse(data).Code);
+        $.ajaxSetup({ cache: false });
+        $.get('getCode', {
+                    tel: $('#login_Tel_M').val(),
+                    ValidCode: $('#login_ValidCode').val().trim() },
+                function (data) {
+                    var State = JSON.parse(data).State;
+                    if (State == 1) {
+                        //$('#hd_MsgCode').val(JSON.parse(data).UtilsCode);
 
-                /*设置样式*/
-                var name = $(obj).html();
-                var color = $(obj).css('color');
-                var i = 60;
-                $(obj).html(i + '秒');
-                $(obj).css('color', '#fe7e71');
-                $(obj).removeAttr("onclick");
-                var inv = setInterval(function () {
-                    if (i == 1) {
-                        $(obj).html(name);
-                        $(obj).css('color', color);
-                        $(obj).attr("onclick", "getLoginValidCode(this)");
-                        clearInterval(inv);
+                        /*设置样式*/
+                        var name = $(obj).html();
+                        var color = $(obj).css('color');
+                        var i = 60;
+                        $(obj).html(i + '秒');
+                        $(obj).css('color', '#fe7e71');
+                        $(obj).removeAttr("onclick");
+                        var inv = setInterval(function () {
+                            if (i == 1) {
+                                $(obj).html(name);
+                                $(obj).css('color', color);
+                                $(obj).attr("onclick", "getLoginValidCode(this)");
+                                clearInterval(inv);
+                            }
+                            else {
+                                i--;
+                                $(obj).html(i + '秒');
+                            }
+                        }, 1000);
+                        /*设置验证码过期时间*/
+                        var outtime = setInterval(function () {
+                            Login_IsOut = true;
+                            clearInterval(outtime);
+                        }, 120000);
+                        /*验真手机号*/
+                        $('#hd_ValidTel').val($('#edit_Tel').val());
+                        alert('短信验证码已发送，请注意查收！');
+                    }
+                    else if (State == 2) {
+                        alert('已达到验证次数上限，请稍后再试！');
+                    }
+                    else if (State == 4) {
+                        alert('您还不是木鸟用户，请注册！');
+                    } else if (State == 5) {
+                        alert('图形验证码错误！');
                     }
                     else {
-                        i--;
-                        $(obj).html(i + '秒');
+                        alert('发送失败，请稍后重试！');
                     }
-                }, 1000);
-                /*设置验证码过期时间*/
-                var outtime = setInterval(function () {
-                    Login_IsOut = true;
-                    clearInterval(outtime);
-                }, 120000);
-                /*验真手机号*/
-                $('#hd_ValidTel').val($('#edit_Tel').val());
-                alert('短信验证码已发送，请注意查收！');
-            }
-            else if (State == 2) {
-                alert('已达到验证次数上限，请稍后再试！');
-            }
-            else if (State == 4) {
-                alert('您还不是木鸟用户，请注册!');
-            }
-            else if (State == 3) {
-                var Code = JSON.parse(data).Code;
-                alert(Code);
-            } else if (State == 5) {
-                alert('图形验证码错误！');
-            }
-            else {
-                alert('发送失败，请稍后重试！');
-            }
 
-        })
+                })
     }
-
     //获取图片验证码
-    function getImageCode(obj) {
-        document.getElementById("ValidImg").src = '/Login/VerifyCode?' + Math.random();
+    function getImageCode() {
+        document.getElementById("ValidImg").src = "pic?random=" + Math.random();
     }
 </script>
 
@@ -2861,7 +2833,6 @@
     })
 </script>
 
-<h1 onclick="load_calendar()">dianwoceshi</h1>
 <div style="height:385px;width:100%;overflow:hidden;">
     <input type="hidden" id="minNights" value="1">
     <input type="hidden" id="maxNights" value="0">

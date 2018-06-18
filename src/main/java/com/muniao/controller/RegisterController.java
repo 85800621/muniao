@@ -3,14 +3,18 @@ package com.muniao.controller;
 
 import com.muniao.entity.JsonResult;
 import com.muniao.entity.User;
+import com.muniao.service.Impl.LoginService;
 import com.muniao.service.Impl.PreRegisterService;
 import com.muniao.service.Impl.RegisterService;
 import com.muniao.utils.UtilsTools;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
+
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -23,6 +27,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 public class RegisterController {
 
 
+    @Autowired
+    private LoginService loginService;
 
     @Autowired
     private PreRegisterService preRegisterService;
@@ -30,11 +36,12 @@ public class RegisterController {
     @Autowired
     private RegisterService registerService;
 
+
     String codeStr = null ;
 
     @RequestMapping("/RegistSubmit")
     @ResponseBody
-    public Object userRegister(String tel_M,String email,String userName,String pwd, String userType ){
+    public Object userRegister(HttpSession session, String tel_M, String email, String userName, String pwd, String userType ){
 
 
         System.out.println("---------------------------");
@@ -46,15 +53,23 @@ public class RegisterController {
         }else {
             User user1 = new User();
             user1.setTelephone(tel_M);
-           // user1.setPassword(pwd);
             user1.setEmail(email);
             user1.setUserName(userName);
-            Integer integer = registerService.registerUser(user1,pwd);
+            user1.setUserType(userType);
+            SimpleHash md5 = new SimpleHash("MD5", pwd, "12345");
+            String password = md5.toString();
+            user1.setPassword(password);
+            user1.setPasswordSalt("12345");
+            //  Integer integer = registerService.registerUser(user1,pwd);
             System.out.println("userType============="+userType);
             if(userType.equals("1")){
-                registerService.insertRoleUser(2,integer);
+                loginService.setPersonInfo(user1);
+                //    registerService.insertRoleUser(2,integer);
+                session.setAttribute("user",user1);
             }else {
-                registerService.insertRoleUser(1,integer);
+                loginService.setPersonInfo(user1);
+                //     registerService.insertRoleUser(1,integer);
+                session.setAttribute("user",user1);
             }
             jsonResult = UtilsTools.returnJsonResult(1,user1.getUserName(),userType);
             return jsonResult;

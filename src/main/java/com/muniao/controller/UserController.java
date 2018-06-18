@@ -66,9 +66,12 @@ public class UserController {
             jsonResult.setCode(1);
             User user = loginService.checkTelePhone(tel);
             session.setAttribute("user",user);
-            String userType = user.getUserType();
-            session.setAttribute("userType",userType);
-            jsonResult.setUsertype(userType);
+
+            System.out.println(user.getUserName() + user.getUserType()+"-----------------");
+
+//            String userType = user.getUserType();
+//            session.setAttribute("userType",userType);
+//            jsonResult.setUsertype(userType);
             return jsonResult;
         }catch (UnknownAccountException e){
             e.printStackTrace();
@@ -294,5 +297,13 @@ public class UserController {
             jsonResult.setCode(-1);
         }
       return jsonResult;
+    }
+
+    @RequestMapping("/logout")
+    public String logout(HttpSession session){
+        if (session.getAttribute("user") != null){
+            session.removeAttribute("user");
+        }
+        return "/index";
     }
 }
