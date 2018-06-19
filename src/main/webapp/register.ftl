@@ -92,9 +92,9 @@
                 if (data.code == 1) {
                     alert('注册成功！');
                     if (panduan == 1) {
-                        window.location.href = "https://www.muniao.com";
+                        window.location.href = "${basePath}/index";
                     } else {
-                        window.location.href = "https://www.muniao.com";
+                        window.location.href = "${basePath}/index";
                     }
                 }
                 else if (data.code == -1) {
@@ -215,26 +215,71 @@
         <li><a href="http://www.muniao.com/list_story_0_1.html" target="_self">发现</a></li>
         <li><a href="http://www.muniao.com/mobile.html" target="_blank">手机木鸟<i class="give"><img src="${staticRoot}/images/give88.png"></i></a></li>
     </ul>
-    <div id="div_Login" class="s_mn_loginbox w_mR30" style="">
-
-        <div class="s_mn_login">
-            <a href="javascript:void(0);" id="Login" class="s_mn_loginbutt" rel="nofollow">登录</a>·
-            <a href="http://user2.muniao.com/Regist/Index" class="s_mn_loginbutt" rel="nofollow">注册</a>
+<#-- ###################################### ###### 顶部登录区域开始 ################################# ########### -->
+<#if user.userType == 1>
+    <div id="div_FangKe1" class="s_mn_release w_mR30">
+        <a href="#" class="s_mn_navbutt" rel="nofollow">我要成为房东</a>
+    </div>
+    <div id="div_User" class="s_mn_userbox" style="display: block">
+        <span>Hi,欢迎回来！</span>
+        <a class="s_mu_username" style="font:15px/45px Microsoft YaHei;" target="_blank" onmouseover="$('#div_FangKe').show(); $('#div_FangDong').show();">${user.userName}</a>
+        <!--房客弹出框-->
+        <div id="div_FangDong" class="w_user_xl" style="display:none;border-radius: 3px;opacity:0.8;background-color:rgb(191, 82, 13);border:0;" onmouseover="$('#div_FangDong').show();" onmouseout="$('#div_FangDong').hide();">
+            <div class="w_user_xlfd">
+                <div class="w_user_tt w_user_font w_ft10" style="text-align:left;">
+                    <a href="www.baidu.com" rel="nofollow" target="_blank" style="font-family:微软雅黑;color:#fff;">房客中心</a>
+                </div>
+                <ul class="w_user_list w_user_font clearfix">
+                    <li><a href="${basePath}/lodgerorder/${user.userId}" style="font-size:12px;font-family:微软雅黑;color:#fff;">我的订单</a></li>
+                    <li><a href="https://www.muniao.com/mobile.html" style="font-size:12px;font-family:微软雅黑;color:#fff;">木鸟APP</a></li>
+                </ul>
+                <div class="w_user_tc w_user_font" style="margin:60px auto 0;">
+                    <a href="${basePath}/logout" onclick="logout()" style="font-size:12px;font-family:微软雅黑;color:#fff;">退出</a>
+                </div>
+            </div>
         </div>
     </div>
-
-
-
+<#elseif user.userType == 2>
+    <div id="div_User" class="s_mn_userbox" style="display: block">
+        <a href="${basePath}/preadd" class="free-publishBtn">免费发布房源</a>
+        <span>Hi,欢迎回来！</span>
+        <a class="s_mu_username" style="font:15px/45px Microsoft YaHei;" target="_blank" onmouseover="$('#div_FangKe').show(); $('#div_FangDong').show();">${user.userName}</a>
+        <!--房东弹出框-->
+        <div id="div_FangDong" class="w_user_xl" style="display:none;border-radius: 3px;opacity:0.8;background-color:rgb(191, 82, 13);border:0;" onmouseover="$('#div_FangDong').show();" onmouseout="$('#div_FangDong').hide();">
+            <div class="w_user_xlfd">
+                <div class="w_user_tt w_user_font" style="text-align:left;">
+                    <a href="${basePath}/Room/index" rel="nofollow" target="_blank" style="font-family:微软雅黑;color:#fff;">房东中心</a>
+                </div>
+                <ul class="w_user_list w_user_font clearfix">
+                    <li><a href="${basePath}/preadd" style="font-size:12px;font-family:微软雅黑;color:#fff;">发布房间</a></li>
+                    <li><a href="${basePath}/lodgerorder/${user.userId}" style="font-size:12px;font-family:微软雅黑;color:#fff;">订单管理</a></li>
+                    <li><a href="${basePath}/Room/index" style="font-size:12px;font-family:微软雅黑;color:#fff;">房源管理</a></li>
+                    <li><a href="#" style="font-size:12px;font-family:微软雅黑;color:#fff;">房东助手</a></li>
+                </ul>
+                <div class="w_user_tt w_user_font w_ft10" style="text-align:left;">
+                    <a href="www.baidu.com" rel="nofollow" target="_blank" style="font-family:微软雅黑;color:#fff;">房客中心</a>
+                </div>
+                <ul class="w_user_list w_user_font clearfix">
+                    <li><a href="${basePath}/lodgerorder/${user.userId}" style="font-size:12px;font-family:微软雅黑;color:#fff;">我的订单</a></li>
+                    <li><a href="https://www.muniao.com/mobile.html" style="font-size:12px;font-family:微软雅黑;color:#fff;">木鸟APP</a></li>
+                </ul>
+                <div class="w_user_tc w_user_font" style="margin:60px auto 0;">
+                    <a href="${basePath}/logout" onclick="logout()" style="font-size:12px;font-family:微软雅黑;color:#fff;">退出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</#if>
+<#if user == null>
+    <div id="div_Login" class="s_mn_loginbox w_mR30">
+        <div class="s_mn_login">
+            <a href="javascript:void(0);" id="Login" class="s_mn_loginbutt1" rel="nofollow">登录</a>&middot;
+            <a href="${basePath}/register" class="s_mn_loginbutt" rel="nofollow">注册</a>
+        </div>
+    </div>
+</#if>
 </div>
-<!--登录弹出框-->
-
-
-
-
-
-
-
-<title></title>
+<#-- ############################################  顶部登录区域开始 ############################################  -->
 <script src="${staticRoot}/images/base-validator.js.下载"></script>
 <style>
     .newa_login_bg {
@@ -609,7 +654,7 @@
             $.post("CheckLoginFast", {
                 Tel_M: $('#login_Tel_M').val().trim(),
                 ValidCode: $('#login_ValidCode').val().trim(),
-                MsgCode: $('#login_MsgCode').val().trim()
+                MsgCode: $('#login_MsgCode').val().trim(),
             }, function (data) {
              //   var j = JSON.parse(data);
                 if (data.code == -1) {//图形验证码错误
@@ -726,7 +771,10 @@
         /*发送短信*/
         $.ajaxSettings.async = false;
         $.ajaxSetup({ cache: false });
-        $.get('getCode', { tel: $('#login_Tel_M').val(), ValidCode: $('#login_ValidCode').val().trim() }, function (data) {
+        $.get('getCode', {
+            tel: $('#login_Tel_M').val(),
+            ValidCode: $('#login_ValidCode').val().trim() },
+            function (data) {
             var State = JSON.parse(data).State;
             if (State == 1) {
                 //$('#hd_MsgCode').val(JSON.parse(data).UtilsCode);
