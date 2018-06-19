@@ -55,6 +55,14 @@
                     }
             );
         }
+        <#--setInterval(function () {judgetime()},1)-->
+        <#--function judgetime() {-->
+            <#--$.post("${basePath}/judgetime",{"orderId":id}),function (data) {-->
+                <#--if(data.equals("已超时!"))-->
+                    <#--alert(data);-->
+            <#--}-->
+
+        <#--}-->
     })
 </script>
 <!--<div id="webim" class="webim webim-state-active">-->
