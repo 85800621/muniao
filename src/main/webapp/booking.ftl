@@ -1027,13 +1027,13 @@
                                 </ul>
                             </div>
                         </div>
-                        <input type="text" id="start_date" name="start_date_a" readonly="" value="2018-07-28">
+                        <input type="text" id="start_date" name="start_date_a" readonly="" value="${start_date}">
                     </div>
                 </li>
                 <li>
                     <span>退房时间</span>
                     <div class="order_date_wrap"><input type="text" id="end_date" name="end_date_a" readonly=""
-                                                        value="2018-07-29"></div>
+                                                        value="${end_date}"></div>
                 </li>
                 <li>
                     <span>预订房源数</span>
@@ -1060,7 +1060,7 @@
                 </li>
             </ul>
         </div>
-        <form id="form1" action="testbooking" method="post">
+        <form id="form1" action="prebooking" method="post">
             <!---入住人信息-->
             <div class="order_class w_mT28">
                 <h3 class="order_class_title">
@@ -1145,10 +1145,10 @@
 
 
                 <div style="display:none;">
-                    <input type="hidden" name="RoomId" id="RoomId" value="39733">
+                    <input type="hidden" name="RoomId" id="RoomId" value="${myroomid}">
                     <input type="hidden" name="RentCount" id="RentCount" value="1">
-                    <input type="hidden" name="StartDate" id="StartDate" value="2018-07-28">
-                    <input type="hidden" name="EndDate" id="EndDate" value="2018-07-29">
+                    <input type="hidden" name="StartDate" id="StartDate" value="${start_date}">
+                    <input type="hidden" name="EndDate" id="EndDate" value="${end_date}">
                     <input type="hidden" name="RentNumber" id="RentNumber" value="1">
                     <input type="hidden" name="BonusId" id="BonusId" value="0">
                     <input type="hidden" name="RentMoneyAccounts" id="RentMoneyAccounts" value="0">

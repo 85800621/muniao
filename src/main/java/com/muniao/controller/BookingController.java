@@ -81,8 +81,11 @@ public class BookingController {
     public String probooking(HttpServletRequest request,Model model,HttpSession httpSession){
         User user= (User) httpSession.getAttribute("user");
         String roomId = request.getParameter("RoomId");
+        System.out.println(roomId+"------------------------");
         String startDate=request.getParameter("StartDate");
+        System.out.println(startDate);
         String endDate=request.getParameter("EndDate");
+        System.out.println(endDate);
         String[] fullNames = request.getParameterValues("fullname");
         String[] idCards=request.getParameterValues("idcard");
         List<CheckInCustomer> checkInCustomers=new ArrayList <>();
@@ -103,7 +106,7 @@ public class BookingController {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-       Room room = roomService.selectRoomById(Integer.parseInt(roomId));
+        Room room = roomService.selectRoomById(Integer.parseInt(roomId));
         orderDetail.setRoom(room);
         int differdays=0;
         double eachDayPrice=room.getPrice();
@@ -131,6 +134,15 @@ public class BookingController {
         orderService.insertOneOrder(order);
         model.addAttribute(order);
         return "/pay";
+    }
+
+    @RequestMapping(value = "/bookingready")
+    public String bookingready(HttpServletRequest request,Model model){
+        model.addAttribute("myroomid",request.getParameter("id"));
+        System.out.println(request.getParameter("id"));
+        model.addAttribute("start_date",request.getParameter("start_date"));
+        model.addAttribute("end_date",request.getParameter("end_date"));
+        return "/booking";
     }
 
 }

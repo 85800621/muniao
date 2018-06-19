@@ -1,6 +1,7 @@
 package com.muniao.controller;
 
 import com.muniao.entity.OrderDetail;
+import com.muniao.entity.User;
 import com.muniao.service.OrderDetailService;
 import com.muniao.service.OrderService;
 import com.sun.org.apache.xpath.internal.SourceTree;
@@ -13,8 +14,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -77,7 +80,8 @@ public class OrderController {
     @RequestMapping(value = "landlordcommit/{orderId}/{orderStatus}/{buyerId}")
     public String commitOrder(@PathVariable("orderId")int orderId,
                               @PathVariable("orderStatus")String orderStatus,
-                              @PathVariable("buyerId")int buyerId){
+                              @PathVariable("buyerId")int buyerId,
+                              Model model){
         if(orderStatus.equals("4-6")) {
 
             orderService.changeOrderStatus("4", orderId);
@@ -95,9 +99,11 @@ public class OrderController {
          * @Author: Scot
          * @Date: 2018/6/12 15:24
          */
-    @RequestMapping(value = "waitcommitorder/{type}/{buyerId}")
-    public String waitCommitOrder(@PathVariable("type")String type,@PathVariable("buyerId")int buyerId , Model model){
-        List<com.muniao.entity.Order> orders=orderService.selectWaitCommitOrders(type,buyerId);
+    @RequestMapping(value = "waitcommitorder/{type}")
+    public String waitCommitOrder(@PathVariable("type")String type, HttpSession httpSession, Model model){
+        User user= (User) httpSession.getAttribute("user");
+
+        List<com.muniao.entity.Order> orders=orderService.selectWaitCommitOrders(type,user.getUserId());
         model.addAttribute("orders",orders);
         System.out.println(orders);
 
@@ -106,13 +112,15 @@ public class OrderController {
 
     /**
      * 查找当前用户下所有订单
-     * @param id
+     * @param httpSession
      * @param model
      * @return
      */
-    @RequestMapping(value = "lodgerorder/{currentUserId}")
-    public String selectAllOrders(@PathVariable("currentUserId")int id ,Model model){
-        List <com.muniao.entity.Order> orders=orderService.selectAllOrders(id);
+    @RequestMapping(value = "lodgerorder/all")
+    public String selectAllOrders(HttpSession httpSession ,Model model){
+        User user= (User) httpSession.getAttribute("user");
+
+        List <com.muniao.entity.Order> orders=orderService.selectAllOrders(user.getUserId());
         model.addAttribute("orders",orders);
 
         return "/lodgerorder";
@@ -189,5 +197,23 @@ public class OrderController {
 
 
         return "/lodgerorder";
+    }
+
+    @RequestMapping(value = "/judgetime")
+    @ResponseBody
+    public String judgetime(Model model,HttpServletRequest request){
+        int id =Integer.parseInt(request.getParameter("orderId"));
+        com.muniao.entity.Order order=orderService.selectOneOrder(id);
+        Date date = new Date();
+        Date date1=order.getOrderDetail().getBookingTime();
+        long differ= Math.abs(date.getTime()-date1.getTime());
+        String status="";
+        if(differ>60*1000*30){
+            orderService.changeOrderStatus("7",id);
+            status="已超时!";
+        }else{
+            status="还未付款!";
+       }
+       return status;
     }
 }

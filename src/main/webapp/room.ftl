@@ -2861,7 +2861,7 @@
     })
 </script>
 
-<h1 onclick="load_calendar()">dianwoceshi</h1>
+<#--<h1 onclick="load_calendar()">dianwoceshi</h1>-->
 <div style="height:385px;width:100%;overflow:hidden;">
     <input type="hidden" id="minNights" value="1">
     <input type="hidden" id="maxNights" value="0">
@@ -3082,9 +3082,9 @@
         <div id="right_w" class="clearfix"
              style="position:relative; float:left; top: -86px; width:300px; margin-left:20px; display:inline;">
             <div id="right_person" class="room_right" style="position: absolute;">
-                <form method="get" action="https://www.muniao.com/Home/Booking" id="rentform" name="rentform">
+                <form method="get" action="${basePath}/bookingready" id="rentform" name="rentform">
                     <div style="display:none">
-                        <input type="hidden" name="id" value="132979" id="roomid" data-status="1">
+                        <input type="hidden" name="id" value="${room.roomid}" id="roomid" data-status="1">
                         <input type="radio" checked="checked" value="1" onclick="" name="renttype">
                         <input class="none" type="radio" value="1" name="renttype">
                         <input type="hidden" id="num_r" name="rentnumber" value="1">
@@ -3246,9 +3246,9 @@
                                 </div>
                             </div>
                             <input type="text" class="room_Rdatetext w_fColor7" id="start_date" name="start_date"
-                                   readonly="true" value="入住时间" style="cursor:pointer;"><span>至</span><input
+                                   readonly="true" value="2018-06-22" style="cursor:pointer;"><span>至</span><input
                                 class="room_Rdatetext w_fColor7" id="end_date" name="end_date" readonly="true"
-                                value="离店时间" style="cursor:pointer; margin-left:20px;">
+                                value="2018-06-24" style="cursor:pointer; margin-left:20px;">
                         </div>
                         <div class="room_Rxx clearfix w_fColor7">
                             <div class="room_Rfjs">

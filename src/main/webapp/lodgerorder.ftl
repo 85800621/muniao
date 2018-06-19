@@ -1411,14 +1411,14 @@
             <div class="userR">
                 <div class="myordercon">
                     <ul>
-                        <li><a href="${base}/lodgerorder/2">全部订单</a></li>
-                        <li><a href="${base}/waitcommitorder/2/2">已付款</a></li>
-                        <li><a href="${base}/waitcommitorder/3/2">待入住</a></li>
-                        <li><a href="${base}/waitcommitorder/4/2">未付款</a></li>
-                        <li><a href="${base}/waitcommitorder/5/2">退款</a></li>
+                        <li><a href="${base}/lodgerorder/all">全部订单</a></li>
+                        <li><a href="${base}/waitcommitorder/2">已付款</a></li>
+                        <li><a href="${base}/waitcommitorder/3">待入住</a></li>
+                        <li><a href="${base}/waitcommitorder/4">未付款</a></li>
+                        <li><a href="${base}/waitcommitorder/5">退款</a></li>
                         <!--<li><a href="?act=order&type=4">收取订金</a></li>-->
-                        <li><a href="${base}/waitcommitorder/6/2">等待确认</a></li>
-                        <li><a href="${base}/waitcommitorder/7/2">取消订单</a></li>
+                        <li><a href="${base}/waitcommitorder/6">等待确认</a></li>
+                        <li><a href="${base}/waitcommitorder/7">取消订单</a></li>
                         <div class="clear"></div>
                     </ul>
                     <table width="756" border="0" cellspacing="0" cellpadding="0" style="border-left: 1px solid #ddd;">
@@ -1498,22 +1498,22 @@
                                 style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;"></td>
                             <td width="77" height="205" align="center" valign="middle"
                                 style="border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;">
-                            <#if orders.orderBuyerId == currentUserId>
+                            <#if orders.orderBuyerId == user.user>
                                 <#if orders.orderStatus?contains("4")>
                                     <a href="${base}/payment/test/${orders.orderDetail.room.title}/${orders.orderId}"
                                             class="aBlue" >付款</a><br><br>
                                 </#if>
                             </#if>
-                            <#if orders.orderSellerId==currentUserId>
+                            <#if orders.orderSellerId==user.userId>
                                 <#if orders.orderStatus?contains("5")>
                                     <a href="${base}/refundCommit/" class="aBlue">退款审核</a><br><br>
                                 </#if>
                             </#if>
-                            <#if orders.orderBuyerId == currentUserId>
+                            <#if orders.orderBuyerId == user.userId>
                                 <a href="http://www.muniao.com/home/detail?id=108419" class="aBlue"
                                    target="_blank">再次预订</a><br><br>
                             </#if>
-                            <#if orders.orderSellerId== currentUserId>
+                            <#if orders.orderSellerId== user.userId>
                                 <#if orders.orderStatus?contains("6")>
                                 <a href="${base}/landlordcommit/${orders.orderId}/${orders.orderStatus}/${orders.orderSellerId}" class="aBlue">确认</a><br><br>
                                 </#if>
